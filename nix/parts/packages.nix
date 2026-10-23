@@ -63,7 +63,7 @@
         {
           name = "SteamworksPy";
           path = pkgs.fetchFromGitHub {
-            owner = "RimDeck";
+            owner = "RimSort";
             repo = "SteamworksPy";
             rev = "7b35e08ed33055b15e6581fce7fc65da3e3e3e53";
             hash = "sha256-3abd5W/6sDjIWfhBK8JqPgLmBHwGdjEmKr29laWPF5Y=";
