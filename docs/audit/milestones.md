@@ -52,8 +52,8 @@ Sorting is the product. It must be correct, repeatable and respectful of the use
 
 Done when: sorting an already sorted list changes nothing, results are identical across launches, dependencies order correctly by default, cycles produce a partial result with a readable report, and list icons and the sort dialog agree.
 
-- [ ] [F20](findings.md#f20) Sort discards the user's order
-- [ ] [F21](findings.md#f21) Sort is not deterministic
+- [x] ~~[F20](findings.md#f20) Sort discards the user's order~~ Won't do: alphabetical order within each level is deliberate, so the same set of mods gives everyone the same load order.
+- [x] [F21](findings.md#f21) Sort is not deterministic. Done with F17: same-name ties are ordered by folder path.
 - [ ] [F22](findings.md#f22) Every sort moves dividers to the bottom
 - [ ] [F23](findings.md#f23) Dependencies don't affect load order by default
 - [ ] [F24](findings.md#f24) Any cycle aborts the whole sort
