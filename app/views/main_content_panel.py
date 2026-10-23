@@ -1109,6 +1109,8 @@ class MainContent(QObject):
         success, new_order_paths = sorter.sort()
         if sorter.cycles:
             self._report_rule_cycles(sorter)
+        if sorter.tier_conflicts:
+            self._report_tier_conflicts(sorter)
 
         # Bridge: translate paths back to UUIDs for the list widget
         path_to_uuid: dict[str, str] = {}
@@ -1196,6 +1198,25 @@ class MainContent(QObject):
                 " to resolve it."
             ),
             details="\n\n".join(loops),
+        )
+
+    def _report_tier_conflicts(self, sorter: Sorter) -> None:
+        """Explain "load last" mods that other rules forced to load early."""
+        name = self.metadata_controller.get_mod_name_from_package_id
+        lines = [
+            self.tr(
+                "{mod} is marked to load last, but {early}, which loads near the"
+                " top, has to load after it."
+            ).format(mod=name(pid), early=name(early))
+            for pid, early in sorter.tier_conflicts
+        ]
+        dialogue.show_warning(
+            title=self.tr("Some mods could not load last"),
+            text=self.tr(
+                "Other rules require these mods near the top of the list, so"
+                ' their "load last" rule was not applied.'
+            ),
+            details="\n".join(lines),
         )
 
     def _do_import_list_file_xml(self) -> None:

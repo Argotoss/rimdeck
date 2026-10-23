@@ -32,3 +32,25 @@ def test_loop_report_names_mods_and_rule_sources(
         "Alpha loads after Beta (your rules)\n"
         "Beta loads after Alpha (its About.xml, community rules)"
     )
+
+
+def test_tier_conflict_report_names_both_mods(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    content = MagicMock()
+    content.tr = lambda text: text
+    content.metadata_controller.get_mod_name_from_package_id = {
+        "mod.z": "Z Last",
+        "mod.h": "HugsLib",
+    }.get
+    sorter = MagicMock()
+    sorter.tier_conflicts = [("mod.z", "mod.h")]
+    warning = MagicMock()
+    monkeypatch.setattr(main_content_panel.dialogue, "show_warning", warning)
+
+    MainContent._report_tier_conflicts(content, sorter)
+
+    assert warning.call_args.kwargs["details"] == (
+        "Z Last is marked to load last, but HugsLib, which loads near the top,"
+        " has to load after it."
+    )

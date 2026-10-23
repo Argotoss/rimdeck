@@ -1336,714 +1336,729 @@ Manage mods installed from GitHub releases.</source>
         <translation>선택된 정렬 알고리즘은 구현되지 않았습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1331"/>
+        <location filename="../app/views/main_content_panel.py" line="1352"/>
         <source>Failed to export to file</source>
         <translation>파일로 내보내기에 실패했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1332"/>
+        <location filename="../app/views/main_content_panel.py" line="1353"/>
         <source>Failed to export active mods to file:</source>
         <translation>활성화된 모드를 파일로 내보내기에 실패했습니다:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1401"/>
+        <location filename="../app/views/main_content_panel.py" line="1422"/>
         <source>Important</source>
         <translation>중요</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1452"/>
+        <location filename="../app/views/main_content_panel.py" line="1473"/>
         <source>Steam client integration not set up</source>
         <translation>Steam 클라이언트 통합이 설정되지 않았습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1454"/>
+        <location filename="../app/views/main_content_panel.py" line="1475"/>
         <source>Steam client integration is not set up. Please set it up to download mods using Steam</source>
         <translation>Steam 클라이언트 통합이 설정되지 않았습니다. Steam을 사용하여 모드를 다운로드하려면 설정해 주세요</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1464"/>
+        <location filename="../app/views/main_content_panel.py" line="1485"/>
         <source>Download Rentry Mods</source>
         <translation>Rentry 모드 다운로드</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1465"/>
+        <location filename="../app/views/main_content_panel.py" line="1486"/>
         <source>Please select a download method.</source>
         <translation>다운로드 방법을 선택해 주세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1467"/>
+        <location filename="../app/views/main_content_panel.py" line="1488"/>
         <source>Select which method you want to use to download missing Rentry mods.</source>
         <translation>누락된 Rentry 모드를 다운로드하는 데 사용할 방법을 선택해 주세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1567"/>
+        <location filename="../app/views/main_content_panel.py" line="1588"/>
         <source>Export active mod list</source>
         <translation>활성 모드를 파일로 내보내기</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1568"/>
+        <location filename="../app/views/main_content_panel.py" line="1589"/>
         <source>Copied active mod list report to clipboard...</source>
         <translation>활성 모드를 파일로 내보냈습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1569"/>
-        <location filename="../app/views/main_content_panel.py" line="1644"/>
+        <location filename="../app/views/main_content_panel.py" line="1590"/>
+        <location filename="../app/views/main_content_panel.py" line="1665"/>
         <source>Click &quot;Show Details&quot; to see the full report!</source>
         <translation>&apos;상세 정보 표시&apos;를 클릭하여 전체 보고서를 확인하세요!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1602"/>
-        <location filename="../app/views/main_content_panel.py" line="1610"/>
+        <location filename="../app/views/main_content_panel.py" line="1623"/>
+        <location filename="../app/views/main_content_panel.py" line="1631"/>
         <source>Report too long</source>
         <translation>보고서가 너무 깁니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1604"/>
+        <location filename="../app/views/main_content_panel.py" line="1625"/>
         <source>Even the first mod exceeds the 200,000 character limit.</source>
         <translation>첫 번째 모드만으로도 20만 자 제한을 초과합니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1606"/>
+        <location filename="../app/views/main_content_panel.py" line="1627"/>
         <source>Cannot upload this report to Rentry.co.</source>
         <translation>이 보고서는 Rentry.co에 업로드할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1611"/>
+        <location filename="../app/views/main_content_panel.py" line="1632"/>
         <source>The mod list report exceeds 200,000 characters.</source>
         <translation>모드 목록 보고서가 20만 자를 초과합니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1613"/>
+        <location filename="../app/views/main_content_panel.py" line="1634"/>
         <source>Rentry.co may reject uploads that are too long. Would you like to truncate the report to the first {max_mods} mods or cancel the upload?</source>
         <translation>Rentry.co는 너무 긴 업로드를 거부할 수 있습니다. 보고서를 처음 {max_mods}개의 모드까지만 자르시겠습니까, 아니면 업로드를 취소하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1616"/>
-        <location filename="../app/views/main_content_panel.py" line="1621"/>
+        <location filename="../app/views/main_content_panel.py" line="1637"/>
+        <location filename="../app/views/main_content_panel.py" line="1642"/>
         <source>Truncate to the first {max_mods} mods</source>
         <translation>처음 {max_mods}개의 모드까지 자르기</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1640"/>
+        <location filename="../app/views/main_content_panel.py" line="1661"/>
         <source>Uploaded active mod list</source>
         <translation>활성 모드를 Rentry.co에 업로드</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1642"/>
+        <location filename="../app/views/main_content_panel.py" line="1663"/>
         <source>Uploaded active mod list report to Rentry.co! The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{url}</source>
         <translation>활성 모드 목록 보고서를 Rentry.co에 업로드했습니다! URL이 클립보드에 복사되었습니다:&lt;br&gt;&lt;br&gt;{url}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1649"/>
+        <location filename="../app/views/main_content_panel.py" line="1670"/>
         <source>Failed to upload</source>
         <translation>업로드에 실패했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1650"/>
+        <location filename="../app/views/main_content_panel.py" line="1671"/>
         <source>Failed to upload exported active mod list to Rentry.co</source>
         <translation>활성화된 모드를 Rentry.co로 내보냈습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1765"/>
+        <location filename="../app/views/main_content_panel.py" line="1786"/>
         <source>Could not open directory</source>
         <translation>디렉터리를 열 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1766"/>
+        <location filename="../app/views/main_content_panel.py" line="1787"/>
         <source>{directory_name} path does not exist or is not set.</source>
         <translation>{directory_name} 경로가 존재하지 않거나 설정되지 않았습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1769"/>
+        <location filename="../app/views/main_content_panel.py" line="1790"/>
         <source>Would you like to set the path now?</source>
         <translation>지금 경로를 설정하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1770"/>
-        <location filename="../app/views/main_content_panel.py" line="1773"/>
+        <location filename="../app/views/main_content_panel.py" line="1791"/>
+        <location filename="../app/views/main_content_panel.py" line="1794"/>
         <source>Open settings</source>
         <translation>설정 열기</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1780"/>
-        <location filename="../app/views/main_content_panel.py" line="2783"/>
+        <location filename="../app/views/main_content_panel.py" line="1801"/>
+        <location filename="../app/views/main_content_panel.py" line="2804"/>
         <source>File not found</source>
         <translation>파일을 찾을 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1781"/>
+        <location filename="../app/views/main_content_panel.py" line="1802"/>
         <source>The file you are trying to upload does not exist.</source>
         <translation>업로드하려는 파일이 존재하지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1782"/>
+        <location filename="../app/views/main_content_panel.py" line="1803"/>
         <source>File: {path}</source>
         <translation>파일: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1811"/>
+        <location filename="../app/views/main_content_panel.py" line="1832"/>
         <source>Uploaded file</source>
         <translation>파일을 업로드했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3267"/>
+        <location filename="../app/views/main_content_panel.py" line="3288"/>
         <source>You may experience longer loading times or higher memory usage.&lt;br&gt;&lt;br&gt;Check the todds output window for details.</source>
         <translation>로딩 시간이 길어지거나 메모리 사용량이 높아질 수 있습니다.&lt;br&gt;&lt;br&gt;자세한 내용은 todds 출력 창을 확인하세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1822"/>
+        <location filename="../app/views/main_content_panel.py" line="1843"/>
         <source>Failed to upload file.</source>
         <translation>파일 업로드에 실패했습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1165"/>
+        <location filename="../app/views/main_content_panel.py" line="1167"/>
         <source>its About.xml</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1166"/>
+        <location filename="../app/views/main_content_panel.py" line="1168"/>
         <source>community rules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1167"/>
+        <location filename="../app/views/main_content_panel.py" line="1169"/>
         <source>your rules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1180"/>
+        <location filename="../app/views/main_content_panel.py" line="1182"/>
         <source>{later} loads after {earlier} ({sources})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1183"/>
+        <location filename="../app/views/main_content_panel.py" line="1185"/>
         <source>dependency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1188"/>
+        <location filename="../app/views/main_content_panel.py" line="1190"/>
         <source>Some load rules contradict each other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1190"/>
+        <location filename="../app/views/main_content_panel.py" line="1192"/>
         <source>{count} group(s) of mods each require loading after one another, which is impossible.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1194"/>
+        <location filename="../app/views/main_content_panel.py" line="1196"/>
         <source>Everything else was sorted normally, and each group was placed after everything it depends on. Change one of the rules below to resolve it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1222"/>
+        <location filename="../app/views/main_content_panel.py" line="1208"/>
+        <source>{mod} is marked to load last, but {early}, which loads near the top, has to load after it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1214"/>
+        <source>Some mods could not load last</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1216"/>
+        <source>Other rules require these mods near the top of the list, so their &quot;load last&quot; rule was not applied.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1243"/>
         <source>Import failed</source>
         <translation>가져오기 실패</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1223"/>
+        <location filename="../app/views/main_content_panel.py" line="1244"/>
         <source>Could not read the selected mod list file.</source>
         <translation>선택한 모드 목록 파일을 읽을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1802"/>
+        <location filename="../app/views/main_content_panel.py" line="1823"/>
         <source>Upload failed</source>
         <translation>Upload failed</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1803"/>
+        <location filename="../app/views/main_content_panel.py" line="1824"/>
         <source>Failed to upload log file to RimDeck Logs.</source>
         <translation>Failed to upload log file to RimDeck Logs.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1847"/>
+        <location filename="../app/views/main_content_panel.py" line="1868"/>
         <source>Game or config location is not set</source>
         <translation>게임 또는 구성 위치가 설정되지 않았습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1849"/>
+        <location filename="../app/views/main_content_panel.py" line="1870"/>
         <source>Configure game and config locations before saving a mod list.</source>
         <translation>모드 목록을 저장하기 전에 게임 및 구성 위치를 구성하세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1862"/>
+        <location filename="../app/views/main_content_panel.py" line="1883"/>
         <source>Configured game location: {path}</source>
         <translation>구성된 게임 위치: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1863"/>
-        <location filename="../app/views/main_content_panel.py" line="3190"/>
+        <location filename="../app/views/main_content_panel.py" line="1884"/>
+        <location filename="../app/views/main_content_panel.py" line="3211"/>
         <source>Checked content locations: {paths}</source>
         <translation>확인된 콘텐츠 위치: {paths}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1866"/>
+        <location filename="../app/views/main_content_panel.py" line="1887"/>
         <source>Discovered Data location: {path}</source>
         <translation>발견된 데이터 위치: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1869"/>
+        <location filename="../app/views/main_content_panel.py" line="1890"/>
         <source>Not found</source>
         <translation>찾을 수 없음</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1871"/>
+        <location filename="../app/views/main_content_panel.py" line="1892"/>
         <source>Missing official modules: {package_ids}</source>
         <translation>누락된 공식 모듈: {package_ids}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1877"/>
+        <location filename="../app/views/main_content_panel.py" line="1898"/>
         <source>The existing ModsConfig.xml could not be read or validated.</source>
         <translation>기존 ModsConfig.xml을 읽거나 유효성을 검사할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1880"/>
+        <location filename="../app/views/main_content_panel.py" line="1901"/>
         <source>Incomplete game content discovery</source>
         <translation>불완전한 게임 콘텐츠 검색</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1882"/>
+        <location filename="../app/views/main_content_panel.py" line="1903"/>
         <source>RimDeck could not verify all official game content. Saving this list may remove Core or enabled DLC from ModsConfig.xml. Check the game content paths before continuing.</source>
         <translation>RimDeck는 모든 공식 게임 콘텐츠를 확인할 수 없습니다. 이 목록을 저장하면 ModsConfig.xml에서 Core 또는 활성화된 DLC가 제거될 수 있습니다. 계속하기 전에 게임 콘텐츠 경로를 확인하세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1884"/>
+        <location filename="../app/views/main_content_panel.py" line="1905"/>
         <source>Save anyway</source>
         <translation>무시하고 저장</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1920"/>
+        <location filename="../app/views/main_content_panel.py" line="1941"/>
         <source>Could not save active mods</source>
         <translation>활성화된 모드를 저장할 수 없었습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1921"/>
+        <location filename="../app/views/main_content_panel.py" line="1942"/>
         <source>Failed to save active mods to file:</source>
         <translation>활성화된 모드를 파일에 저장할 수 없었습니다:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2016"/>
+        <location filename="../app/views/main_content_panel.py" line="2037"/>
         <source>Confirm texture deletion</source>
         <translation>텍스처 삭제 확인</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2018"/>
+        <location filename="../app/views/main_content_panel.py" line="2039"/>
         <source>This will delete all optimized .dds textures from your active mods</source>
         <translation>활성 모드에서 최적화된 .dds 텍스처가 모두 삭제됩니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2021"/>
+        <location filename="../app/views/main_content_panel.py" line="2042"/>
         <source>Are you sure you want to delete all .dds textures? You can re-optimize them later if needed.</source>
         <translation>모든 .dds 텍스처를 삭제하시겠습니까? 필요한 경우 나중에 다시 최적화할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2025"/>
-        <location filename="../app/views/main_content_panel.py" line="2028"/>
+        <location filename="../app/views/main_content_panel.py" line="2046"/>
+        <location filename="../app/views/main_content_panel.py" line="2049"/>
         <source>Delete textures</source>
         <translation>텍스처 삭제</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2046"/>
+        <location filename="../app/views/main_content_panel.py" line="2067"/>
         <source>No valid paths for todds</source>
         <translation>todds에 유효한 경로가 없습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2047"/>
+        <location filename="../app/views/main_content_panel.py" line="2068"/>
         <source>todds could not find any valid mod folders to process.</source>
         <translation>todds가 처리할 유효한 모드 폴더를 찾을 수 없었습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2063"/>
+        <location filename="../app/views/main_content_panel.py" line="2084"/>
         <source>Confirm ACF import</source>
         <translation>ACF 가져오기 확인</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2064"/>
+        <location filename="../app/views/main_content_panel.py" line="2085"/>
         <source>This will replace your current steamcmd .acf file</source>
         <translation>이로 인해 현재 steamcmd .acf 파일이 교체됩니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2066"/>
+        <location filename="../app/views/main_content_panel.py" line="2087"/>
         <source>Are you sure you want to import .acf? This only works for steamcmd</source>
         <translation>.acf 파일을 가져오시겠습니까? 이 기능은 steamcmd에서만 작동합니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2069"/>
-        <location filename="../app/views/main_content_panel.py" line="2074"/>
+        <location filename="../app/views/main_content_panel.py" line="2090"/>
+        <location filename="../app/views/main_content_panel.py" line="2095"/>
         <source>Import .acf</source>
         <translation>.acf 가져오기</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2097"/>
-        <location filename="../app/views/main_content_panel.py" line="2128"/>
-        <location filename="../app/views/main_content_panel.py" line="2132"/>
+        <location filename="../app/views/main_content_panel.py" line="2118"/>
+        <location filename="../app/views/main_content_panel.py" line="2149"/>
+        <location filename="../app/views/main_content_panel.py" line="2153"/>
         <source>Export Error</source>
         <translation>내보내기 오류</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2098"/>
+        <location filename="../app/views/main_content_panel.py" line="2119"/>
         <source>ACF file not found at: {acf_path}</source>
         <translation>다음 위치에서 ACF 파일을 찾을 수 없습니다: {acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2118"/>
+        <location filename="../app/views/main_content_panel.py" line="2139"/>
         <source>Export Success</source>
         <translation>내보내기 성공</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2119"/>
+        <location filename="../app/views/main_content_panel.py" line="2140"/>
         <source>Successfully exported ACF to {file_path}</source>
         <translation>ACF가 {file_path}에 성공적으로 내보내졌습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2125"/>
+        <location filename="../app/views/main_content_panel.py" line="2146"/>
         <source>Export failed: Permission denied - check file permissions</source>
         <translation>내보내기 실패: 권한이 거부되었습니다 - 파일 권한을 확인하십시오.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2130"/>
+        <location filename="../app/views/main_content_panel.py" line="2151"/>
         <source>Export failed: {e}</source>
         <translation>내보내기 실패: {e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2251"/>
+        <location filename="../app/views/main_content_panel.py" line="2272"/>
         <source>Checking Steam Workshop mods for updates...</source>
         <translation>Steam 워크숍 모드 업데이트를 확인하는 중...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2255"/>
+        <location filename="../app/views/main_content_panel.py" line="2276"/>
         <source>Failed to check for Workshop updates</source>
         <translation>Failed to check for Workshop updates</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2259"/>
+        <location filename="../app/views/main_content_panel.py" line="2280"/>
         <source>No Workshop mods to check for updates</source>
         <translation>업데이트를 확인할 워크샵 모드가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2264"/>
+        <location filename="../app/views/main_content_panel.py" line="2285"/>
         <source>Unable to check for updates</source>
         <translation>업데이트를 확인하지 못했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2294"/>
+        <location filename="../app/views/main_content_panel.py" line="2315"/>
         <source>All Workshop mods appear to be up to date!</source>
         <translation>모든 워크숍 모드가 최신 상태입니다!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2311"/>
-        <location filename="../app/views/main_content_panel.py" line="3296"/>
+        <location filename="../app/views/main_content_panel.py" line="2332"/>
+        <location filename="../app/views/main_content_panel.py" line="3317"/>
         <source>Steam Client Integration is disabled</source>
         <translation>Steam 클라이언트 통합이 비활성화되어 있습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2336"/>
-        <location filename="../app/views/main_content_panel.py" line="2349"/>
-        <location filename="../app/views/main_content_panel.py" line="2360"/>
+        <location filename="../app/views/main_content_panel.py" line="2357"/>
+        <location filename="../app/views/main_content_panel.py" line="2370"/>
+        <location filename="../app/views/main_content_panel.py" line="2381"/>
         <source>RimDeck - SteamCMD setup</source>
         <translation>RimDeck - SteamCMD 설정</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2337"/>
-        <location filename="../app/views/main_content_panel.py" line="2428"/>
+        <location filename="../app/views/main_content_panel.py" line="2358"/>
+        <location filename="../app/views/main_content_panel.py" line="2449"/>
         <source>Unable to create SteamCMD runner!</source>
         <translation>SteamCMD 러너를 생성하지 못했습니다!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2338"/>
-        <location filename="../app/views/main_content_panel.py" line="2429"/>
+        <location filename="../app/views/main_content_panel.py" line="2359"/>
+        <location filename="../app/views/main_content_panel.py" line="2450"/>
         <source>There is an active process already running!</source>
         <translation>이미 활성 프로세스가 실행 중입니다!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2362"/>
+        <location filename="../app/views/main_content_panel.py" line="2383"/>
         <source>Unable to initiate SteamCMD installation. Local mods path not set!</source>
         <translation>SteamCMD 설치를 시작할 수 없습니다. 로컬 모드 경로가 설정되지 않았습니다!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2365"/>
+        <location filename="../app/views/main_content_panel.py" line="2386"/>
         <source>Please configure local mods path in Settings before attempting to install.</source>
         <translation>설치를 시도하기 전에 설정에서 로컬 모드 경로를 설정해 주세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2413"/>
-        <location filename="../app/views/main_content_panel.py" line="2427"/>
-        <location filename="../app/views/main_content_panel.py" line="2603"/>
+        <location filename="../app/views/main_content_panel.py" line="2434"/>
+        <location filename="../app/views/main_content_panel.py" line="2448"/>
+        <location filename="../app/views/main_content_panel.py" line="2624"/>
         <source>RimDeck</source>
         <translation>RimDeck</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2414"/>
-        <location filename="../app/views/main_content_panel.py" line="2604"/>
+        <location filename="../app/views/main_content_panel.py" line="2435"/>
+        <location filename="../app/views/main_content_panel.py" line="2625"/>
         <source>No PublishedFileIds were supplied in operation.</source>
         <translation>작업에 PublishedFileId가 제공되지 않았습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2416"/>
-        <location filename="../app/views/main_content_panel.py" line="2606"/>
+        <location filename="../app/views/main_content_panel.py" line="2437"/>
+        <location filename="../app/views/main_content_panel.py" line="2627"/>
         <source>Please add mods to list before attempting to download.</source>
         <translation>다운로드를 시도하기 전에 모드를 목록에 추가해 주세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2449"/>
+        <location filename="../app/views/main_content_panel.py" line="2470"/>
         <source>RimDeck - SteamCMD downloader</source>
         <translation>RimDeck - SteamCMD 다운로더</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2466"/>
+        <location filename="../app/views/main_content_panel.py" line="2487"/>
         <source>SteamCMD not found</source>
         <translation>SteamCMD를 찾을 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2467"/>
+        <location filename="../app/views/main_content_panel.py" line="2488"/>
         <source>SteamCMD executable was not found.</source>
         <translation>SteamCMD 실행 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2469"/>
+        <location filename="../app/views/main_content_panel.py" line="2490"/>
         <source>Please setup an existing SteamCMD prefix, or setup a new prefix with &quot;Setup SteamCMD&quot;.</source>
         <translation>기존 SteamCMD 접두사를 설정하거나 &quot;Setup SteamCMD&quot;를 통해 새 접두사를 설정해 주세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2620"/>
+        <location filename="../app/views/main_content_panel.py" line="2641"/>
         <source>Processing Steam subscription action(s) via Steamworks API...</source>
         <translation>Steamworks API를 통해 Steam 구독 작업을 처리 중입니다...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2647"/>
+        <location filename="../app/views/main_content_panel.py" line="2668"/>
         <source>Download or select from local</source>
         <translation>다운로드하거나 로컬에서 선택해 주세요</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2649"/>
+        <location filename="../app/views/main_content_panel.py" line="2670"/>
         <source>Please select a ZIP file to add to the local mods directory.</source>
         <translation>로컬 모드 디렉토리에 추가할 ZIP 파일을 선택해 주세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2652"/>
+        <location filename="../app/views/main_content_panel.py" line="2673"/>
         <source>You can download a ZIP file from the internet, or select a file from your local machine.</source>
         <translation>인터넷에서 ZIP 파일을 다운로드하거나 로컬 머신에서 파일을 선택할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2663"/>
+        <location filename="../app/views/main_content_panel.py" line="2684"/>
         <source>Enter zip file url</source>
         <translation>ZIP 파일의 URL을 입력해 주세요</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2664"/>
+        <location filename="../app/views/main_content_panel.py" line="2685"/>
         <source>Enter a zip file url (http/https) to download to local mods:</source>
         <translation>로컬 모드에 다운로드할 ZIP 파일의 URL(http/https)을 입력해 주세요:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2751"/>
+        <location filename="../app/views/main_content_panel.py" line="2772"/>
         <source>Failed to download zip file</source>
         <translation>ZIP 파일 다운로드에 실패했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2752"/>
+        <location filename="../app/views/main_content_panel.py" line="2773"/>
         <source>The zip file could not be downloaded.</source>
         <translation>ZIP 파일을 다운로드할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2784"/>
+        <location filename="../app/views/main_content_panel.py" line="2805"/>
         <source>The selected file does not exist.</source>
         <translation>선택한 파일이 존재하지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2785"/>
+        <location filename="../app/views/main_content_panel.py" line="2806"/>
         <source>File: {file_path}</source>
         <translation>파일: {file_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2798"/>
+        <location filename="../app/views/main_content_panel.py" line="2819"/>
         <source>Unsupported Compression Method</source>
         <translation>지원되지 않는 압축 방식</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2800"/>
+        <location filename="../app/views/main_content_panel.py" line="2821"/>
         <source>This ZIP file uses a compression method that is not supported by this version.</source>
         <translation>이 ZIP 파일은 이 버전에서 지원하지 않는 압축 방식을 사용하고 있습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2809"/>
+        <location filename="../app/views/main_content_panel.py" line="2830"/>
         <source>Failed to extract zip file</source>
         <translation>ZIP 파일 압축 해제에 실패했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2810"/>
+        <location filename="../app/views/main_content_panel.py" line="2831"/>
         <source>The zip file could not be extracted.</source>
         <translation>ZIP 파일을 압축 해제할 수 없었습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2843"/>
-        <location filename="../app/views/main_content_panel.py" line="2859"/>
+        <location filename="../app/views/main_content_panel.py" line="2864"/>
+        <location filename="../app/views/main_content_panel.py" line="2880"/>
         <source>Existing files or directories found</source>
         <translation>기존 파일 또는 디렉터리가 발견되었습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2845"/>
+        <location filename="../app/views/main_content_panel.py" line="2866"/>
         <source>All files in the archive already exist in the target path.</source>
         <translation>아카이브 내의 모든 파일이 대상 경로에 이미 존재합니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2861"/>
+        <location filename="../app/views/main_content_panel.py" line="2882"/>
         <source>The following files or directories already exist in the target path:</source>
         <translation>다음 파일 또는 디렉터리가 대상 경로에 이미 존재합니다:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2923"/>
+        <location filename="../app/views/main_content_panel.py" line="2944"/>
         <source>Extraction completed</source>
         <translation>압축 해제가 완료되었습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2924"/>
+        <location filename="../app/views/main_content_panel.py" line="2945"/>
         <source>The ZIP file was successfully extracted!</source>
         <translation>ZIP 파일의 압축을 성공적으로 해제했습니다!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2929"/>
+        <location filename="../app/views/main_content_panel.py" line="2950"/>
         <source>Extraction failed</source>
         <translation>추출에 실패했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2930"/>
+        <location filename="../app/views/main_content_panel.py" line="2951"/>
         <source>An error occurred during extraction.</source>
         <translation>추출 중에 오류가 발생했습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2941"/>
+        <location filename="../app/views/main_content_panel.py" line="2962"/>
         <source>git not found</source>
         <translation>git을 찾을 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2942"/>
+        <location filename="../app/views/main_content_panel.py" line="2963"/>
         <source>git executable was not found in $PATH!</source>
         <translation>git 실행 파일을 $PATH에서 찾을 수 없습니다!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3009"/>
+        <location filename="../app/views/main_content_panel.py" line="3030"/>
         <source>Edit Steam DB repo</source>
         <translation>Steam DB 저장소 편집</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3010"/>
-        <location filename="../app/views/main_content_panel.py" line="3025"/>
+        <location filename="../app/views/main_content_panel.py" line="3031"/>
+        <location filename="../app/views/main_content_panel.py" line="3046"/>
         <source>Enter URL (https://github.com/AccountName/RepositoryName):</source>
         <translation>URL을 입력해 주세요(https://github.com/AccountName/RepositoryName):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3024"/>
+        <location filename="../app/views/main_content_panel.py" line="3045"/>
         <source>Edit Community Rules DB repo</source>
         <translation>커뮤니티 규칙 DB 저장소 편집</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3060"/>
+        <location filename="../app/views/main_content_panel.py" line="3081"/>
         <source>Edit Steam WebAPI key</source>
         <translation>Steam WebAPI 키 편집</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3061"/>
+        <location filename="../app/views/main_content_panel.py" line="3082"/>
         <source>Enter your personal 32 character Steam WebAPI key here:</source>
         <translation>여기에 개인의 32자리 Steam WebAPI 키를 입력하십시오:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3098"/>
+        <location filename="../app/views/main_content_panel.py" line="3119"/>
         <source>Path: {path}</source>
         <translation>경로: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3112"/>
+        <location filename="../app/views/main_content_panel.py" line="3133"/>
         <source>RimDeck - DB Builder</source>
         <translation>RimDeck - DB 빌더</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3113"/>
+        <location filename="../app/views/main_content_panel.py" line="3134"/>
         <source>Do you want to continue?</source>
         <translation>계속하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3132"/>
+        <location filename="../app/views/main_content_panel.py" line="3153"/>
         <source>Edit SteamDB expiry:</source>
         <translation>SteamDB 만료 시간 편집:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3134"/>
+        <location filename="../app/views/main_content_panel.py" line="3155"/>
         <source>Enter your preferred expiry duration in seconds (default 1 week/604800 sec):</source>
         <translation>원하는 만료 시간을 초 단위로 입력하세요 (기본값은 1주일/604800초):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3145"/>
+        <location filename="../app/views/main_content_panel.py" line="3166"/>
         <source>Tried configuring Dynamic Query with a value that is not an integer.</source>
         <translation>정수가 아닌 값으로 동적 쿼리를 구성하려고 시도했습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3148"/>
+        <location filename="../app/views/main_content_panel.py" line="3169"/>
         <source>Please reconfigure the expiry value with an integer in terms of the seconds from epoch you would like your query to expire.</source>
         <translation>쿼리 만료까지의 에포크 이후 초 단위를 정수로 재구성하십시오.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3175"/>
+        <location filename="../app/views/main_content_panel.py" line="3196"/>
         <source>Invalid game folder</source>
         <translation>잘못된 게임 폴더</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3177"/>
+        <location filename="../app/views/main_content_panel.py" line="3198"/>
         <source>RimWorld executable was not found in the configured game location.</source>
         <translation>구성된 게임 위치에서 RimWorld 실행 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3185"/>
+        <location filename="../app/views/main_content_panel.py" line="3206"/>
         <source>Game content not found</source>
         <translation>게임 콘텐츠를 찾을 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3187"/>
+        <location filename="../app/views/main_content_panel.py" line="3208"/>
         <source>The game executable is valid, but RimDeck could not locate its content. The game may not find its Data or Mods folders. Check the game content paths before continuing.</source>
         <translation>게임 실행 파일은 유효하지만 RimDeck가 해당 콘텐츠를 찾을 수 없습니다. 게임에서 Data 또는 Mods 폴더를 찾지 못할 수 있습니다. 계속하기 전에 게임 콘텐츠 경로를 확인하세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3189"/>
+        <location filename="../app/views/main_content_panel.py" line="3210"/>
         <source>Run anyway</source>
         <translation>어쨌든 실행</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3262"/>
+        <location filename="../app/views/main_content_panel.py" line="3283"/>
         <source>todds Optimization Failed</source>
         <translation>todds 최적화에 실패했습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3264"/>
+        <location filename="../app/views/main_content_panel.py" line="3285"/>
         <source>todds texture optimization failed (exit code: {exit_code}), but the game will launch anyway.</source>
         <translation>todds 텍스처 최적화에 실패했습니다 (종료 코드: {exit_code}). 하지만 게임은 실행됩니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3298"/>
+        <location filename="../app/views/main_content_panel.py" line="3319"/>
         <source>Steam protocol launch requires Steam Client Integration to be enabled.</source>
         <translation>Steam 프로토콜을 실행하려면 Steam 클라이언트 통합을 활성화해야 합니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3301"/>
+        <location filename="../app/views/main_content_panel.py" line="3322"/>
         <source>Please enable Steam Client Integration in Settings → Steam to use this feature.</source>
         <translation>이 기능을 사용하려면 &apos;설정&apos; -&gt; &apos;Steam&apos;에서 Steam 클라이언트 통합을 활성화하십시오.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3326"/>
-        <location filename="../app/views/main_content_panel.py" line="3340"/>
+        <location filename="../app/views/main_content_panel.py" line="3347"/>
+        <location filename="../app/views/main_content_panel.py" line="3361"/>
         <source>Use This Instead</source>
         <translation>대신 이것을 사용</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3328"/>
+        <location filename="../app/views/main_content_panel.py" line="3349"/>
         <source>Please configure &quot;Use This Instead&quot; database in settings.</source>
         <translation>설정에서 &apos;대신 이것을 사용&apos; 데이터베이스를 구성하십시오.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3342"/>
+        <location filename="../app/views/main_content_panel.py" line="3363"/>
         <source>No suggestions were found in the &quot;Use This Instead&quot; database.</source>
         <translation>&apos;대신 이것을 사용&apos; 데이터베이스에서 제안을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3096"/>
+        <location filename="../app/views/main_content_panel.py" line="3117"/>
         <source>Failed to read existing database</source>
         <translation>기존 데이터베이스를 로드하는 데 실패했습니다</translation>
     </message>
@@ -2063,162 +2078,162 @@ Manage mods installed from GitHub releases.</source>
         <translation>이는 잘못된 설정이나 버전 간 또는 다른 모드 관리자 간의 부적절한 마이그레이션으로 인해 발생할 수 있습니다.&lt;br&gt;&lt;br&gt;설정을 재설정하거나, 다른 정렬 알고리즘을 선택하거나, 설정 파일을 삭제해 보세요.&lt;br&gt;&lt;br&gt;문제가 지속되면 개발자에게 신고해 주세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1403"/>
+        <location filename="../app/views/main_content_panel.py" line="1424"/>
         <source>You will need to redo Rentry import again after downloads complete.&lt;br&gt;&lt;br&gt;If there missing mods after download completes, they will be shown inside the missing mods panel.&lt;br&gt;&lt;br&gt;If RimDeck is still not able to download some mods, It&apos;s due to the mod data not being available in both Rentry link and steam database.</source>
         <translation>다운로드가 완료된 후 Rentry 가져오기를 다시 실행해야 합니다.&lt;br&gt;&lt;br&gt;다운로드가 완료된 후 누락된 모드가 있는 경우 누락된 모드 패널 내에 표시됩니다.&lt;br&gt;&lt;br&gt;RimDeck가 여전히 일부 모드를 다운로드할 수 없는 경우 이는 Rentry 링크와 Steam 데이터베이스 모두에서 모드 데이터를 사용할 수 없기 때문입니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1792"/>
+        <location filename="../app/views/main_content_panel.py" line="1813"/>
         <source>Uploading {path_name} to RimDeck Logs...</source>
         <translation>RimDeck 로그에 {path_name} 업로드 중...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1812"/>
+        <location filename="../app/views/main_content_panel.py" line="1833"/>
         <source>Uploaded {path_name} to RimDeck Logs</source>
         <translation>RimDeck 로그에 {path_name}을(를) 업로드했습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1816"/>
+        <location filename="../app/views/main_content_panel.py" line="1837"/>
         <source>The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{ret}</source>
         <translation>URL이 클립보드에 복사되었습니다:&lt;br&gt;&lt;br&gt;{ret}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1823"/>
+        <location filename="../app/views/main_content_panel.py" line="1844"/>
         <source>Failed to upload to RimDeck Logs</source>
         <translation>RimDeck 로그에 업로드하지 못했습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2049"/>
+        <location filename="../app/views/main_content_panel.py" line="2070"/>
         <source>None of the configured mod folder paths exist on disk.&lt;br&gt;&lt;br&gt;Please verify your Local Mods and Workshop folders are correctly set in Settings, then try again.</source>
         <translation>구성된 mod 폴더 경로가 디스크에 존재하지 않습니다.&lt;br&gt;&lt;br&gt;로컬 Mods 및 Workshop 폴더가 설정에서 올바르게 설정되었는지 확인한 후 다시 시도하십시오.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2266"/>
+        <location filename="../app/views/main_content_panel.py" line="2287"/>
         <source>RimDeck was unable to check your Workshop mods for updates.</source>
         <translation>RimDeck가 워크샵 모드의 업데이트를 확인할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2274"/>
+        <location filename="../app/views/main_content_panel.py" line="2295"/>
         <source>Update check partially completed</source>
         <translation>업데이트 확인이 부분적으로 완료되었습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2276"/>
+        <location filename="../app/views/main_content_panel.py" line="2297"/>
         <source>{failed} out of {total} Workshop mods could not be checked for updates.</source>
         <translation>{total}개의 워크샵 모드 중 {failed}개에 대한 업데이트를 확인할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2313"/>
+        <location filename="../app/views/main_content_panel.py" line="2334"/>
         <source>This feature requires Steam Client Integration to be enabled in Settings.&lt;br&gt;&lt;br&gt;Please enable Steam Client Integration if you own the game on Steam.</source>
         <translation>이 기능을 사용하려면 설정에서 Steam 클라이언트 통합을 활성화해야 합니다.&lt;br&gt;&lt;br&gt;Steam에서 게임을 소유하고 있다면 Steam 클라이언트 통합을 활성화하세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2753"/>
-        <location filename="../app/views/main_content_panel.py" line="2802"/>
-        <location filename="../app/views/main_content_panel.py" line="2811"/>
+        <location filename="../app/views/main_content_panel.py" line="2774"/>
+        <location filename="../app/views/main_content_panel.py" line="2823"/>
+        <location filename="../app/views/main_content_panel.py" line="2832"/>
         <source>File: {file_path}&lt;br&gt;Error: {e}</source>
         <translation>파일: {file_path}&lt;br&gt;오류: {e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2848"/>
+        <location filename="../app/views/main_content_panel.py" line="2869"/>
         <source>How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Cancel — Abort the operation.</source>
         <translation>어떻게 진행하시겠습니까?&lt;br&gt;&lt;br&gt;1) 모두 덮어쓰기 — 기존 파일과 디렉터리를 모두 교체합니다.&lt;br&gt;2) 취소 — 작업을 중단합니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2864"/>
+        <location filename="../app/views/main_content_panel.py" line="2885"/>
         <source>{conflicts_list}&lt;br&gt;&lt;br&gt;How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Skip Existing — Extract only new files and leave existing ones untouched.&lt;br&gt;3) Cancel — Abort the extraction.</source>
         <translation>&lt;br&gt;&lt;br&gt;어떻게 진행하시겠습니까?&lt;br&gt;&lt;br&gt;1) 모두 덮어쓰기 — 기존 파일 및 디렉터리를 모두 교체합니다.&lt;br&gt;2) 기존 파일 건너뛰기 — 새 파일만 추출하고 기존 파일은 그대로 둡니다.&lt;br&gt;3) 취소 — 추출을 중단합니다. {conflicts_list}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2945"/>
+        <location filename="../app/views/main_content_panel.py" line="2966"/>
         <source>Git integration will not work without Git installed! Do you want to open download page for Git?&lt;br&gt;&lt;br&gt;If you just installed Git, please restart RimDeck for the PATH changes to take effect.</source>
         <translation>Git 통합은 Git을 설치하지 않으면 작동하지 않습니다! Git 다운로드 페이지를 열시겠습니까?&lt;br&gt;&lt;br&gt;Git를 방금 설치한 경우 PATH 변경 사항을 적용하려면 RimDeck를 다시 시작하세요.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3097"/>
+        <location filename="../app/views/main_content_panel.py" line="3118"/>
         <source>Failed to read the existing database!</source>
         <translation>기존 데이터베이스를 불러오는 데 실패했습니다!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3115"/>
+        <location filename="../app/views/main_content_panel.py" line="3136"/>
         <source>This operation will overwrite the {rules_source} database located at the following path:&lt;br&gt;&lt;br&gt;{path}</source>
         <translation>이 작업은 다음 경로에 있는 {rules_source} 데이터베이스를 덮어씁니다:&lt;br&gt;&lt;br&gt;{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3227"/>
+        <location filename="../app/views/main_content_panel.py" line="3248"/>
         <source>Unsaved Changes</source>
         <translation>저장되지 않은 변경 사항</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3228"/>
+        <location filename="../app/views/main_content_panel.py" line="3249"/>
         <source>You have unsaved changes. What would you like to do?</source>
         <translation>저장되지 않은 변경 사항이 있습니다. 어떻게 하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3229"/>
-        <location filename="../app/views/main_content_panel.py" line="3231"/>
+        <location filename="../app/views/main_content_panel.py" line="3250"/>
+        <location filename="../app/views/main_content_panel.py" line="3252"/>
         <source>Save and Run</source>
         <translation>저장 후 실행</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3229"/>
-        <location filename="../app/views/main_content_panel.py" line="3237"/>
+        <location filename="../app/views/main_content_panel.py" line="3250"/>
+        <location filename="../app/views/main_content_panel.py" line="3258"/>
         <source>Run Anyway</source>
         <translation>그대로 실행</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1670"/>
+        <location filename="../app/views/main_content_panel.py" line="1691"/>
         <source>Import from RimWorld Save File</source>
         <translation>RimWorld 저장 파일에서 가져오기</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1672"/>
+        <location filename="../app/views/main_content_panel.py" line="1693"/>
         <source>RimWorld save (*.rws);;All files (*.*)</source>
         <translation>RimWorld 저장 파일 (*.rws);;모든 파일 (*.*)</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2136"/>
-        <location filename="../app/views/main_content_panel.py" line="2153"/>
+        <location filename="../app/views/main_content_panel.py" line="2157"/>
+        <location filename="../app/views/main_content_panel.py" line="2174"/>
         <source>Reset SteamCMD ACF data file</source>
         <translation>SteamCMD ACF 데이터 파일을 초기화합니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2137"/>
+        <location filename="../app/views/main_content_panel.py" line="2158"/>
         <source>Are you sure you want to reset SteamCMD ACF data file?</source>
         <translation>SteamCMD ACF 데이터 파일을 초기화하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2139"/>
+        <location filename="../app/views/main_content_panel.py" line="2160"/>
         <source>This file is created and used by steamcmd to track mod informaton, This action cannot be undone.</source>
         <translation>이 파일은 STEAMCMD가 모드 정보를 추적하기 위해 생성하고 사용하지만, 이 작업은 되돌릴 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2155"/>
+        <location filename="../app/views/main_content_panel.py" line="2176"/>
         <source>Successfully deleted SteamCMD ACF data file: {steamcmd_appworkshop_acf_path}</source>
         <translation>Steamcmd ACF 데이터 파일을 성공적으로 삭제했습니다: {steamcmd_appworkshop_acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2160"/>
+        <location filename="../app/views/main_content_panel.py" line="2181"/>
         <source>ACF data file will be recreated when you download mods using steamcmd next time.</source>
         <translation>ACF 데이터 파일은 다음에 STEAMCMD를 사용하여 모드를 다운로드할 때 다시 생성됩니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2168"/>
+        <location filename="../app/views/main_content_panel.py" line="2189"/>
         <source>SteamCMD ACF data file does not exist</source>
         <translation>SteamCMD ACF 데이터 파일이 존재하지 않습니다</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2170"/>
+        <location filename="../app/views/main_content_panel.py" line="2191"/>
         <source>ACf file does not exist. It will be created when you download mods using steamcmd.</source>
         <translation>ACF 파일이 존재하지 않습니다. STEAMCMD를 사용하여 모드를 다운로드하면 생성됩니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1837"/>
+        <location filename="../app/views/main_content_panel.py" line="1858"/>
         <source>Failed to open file.</source>
         <translation>파일을 열 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1839"/>
+        <location filename="../app/views/main_content_panel.py" line="1860"/>
         <source>Failed to open the file with default text editor. It may not exist.</source>
         <translation>기본 텍스트 편집기로 파일을 여는 데 실패했습니다. 파일이 존재하지 않을 수 있습니다.</translation>
     </message>

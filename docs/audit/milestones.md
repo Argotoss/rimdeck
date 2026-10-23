@@ -57,7 +57,7 @@ Done when: sorting an already sorted list changes nothing, results are identical
 - [x] [F22](findings.md#f22) Every sort moves dividers to the bottom
 - [x] ~~[F23](findings.md#f23) Dependencies don't affect load order by default~~ Won't do: only shown in a synthetic test; frameworks are tiered first and community rules fill missing load-after entries, so the default stays and the setting remains available.
 - [x] [F24](findings.md#f24) Any cycle aborts the whole sort
-- [ ] [F25](findings.md#f25) Tier contradictions resolved silently
+- [x] [F25](findings.md#f25) Tier contradictions resolved silently
 - [ ] [F26](findings.md#f26) Three dependency checks that disagree
 - [ ] [F27](findings.md#f27) Rule data dropped or unused
 - [x] [F28](findings.md#f28) Remove alphabetical sort

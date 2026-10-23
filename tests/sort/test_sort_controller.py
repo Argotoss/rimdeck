@@ -602,3 +602,33 @@ class TestTierModsWithNoEdges:
         graphs = sorter.generate_dependency_graphs()
         assert "author.framework" in graphs[1]
         assert "author.framework" not in graphs[2]
+
+
+class TestTierConflicts:
+    def _sorter(self, tier_three: set[str]) -> Sorter:
+        mods: dict[str, ListedMod] = {
+            "/mods/z": make_listed_mod("/mods/z", name="Z Last", package_id="mod.z"),
+            "/mods/x": make_listed_mod("/mods/x", name="X", package_id="mod.x"),
+            "/mods/h": make_listed_mod("/mods/h", name="HugsLib", package_id="mod.h"),
+        }
+        compiled = _build_compiled(
+            deps={"mod.h": {"mod.x"}, "mod.x": {"mod.z"}, "mod.z": set()},
+            rev_deps={"mod.x": {"mod.h"}, "mod.z": {"mod.x"}},
+            tier_one={"mod.h"},
+            tier_three=tier_three,
+        )
+        return Sorter(SortMethod.TOPOLOGICAL, compiled, mods, set(mods))
+
+    def test_load_last_mod_needed_by_early_mod_is_reported(self) -> None:
+        sorter = self._sorter(tier_three={"mod.z"})
+        success, result = sorter.sort()
+
+        assert success
+        assert result[0] == "/mods/z"
+        assert sorter.tier_conflicts == [("mod.z", "mod.h")]
+
+    def test_no_conflict_without_load_last_rules(self) -> None:
+        sorter = self._sorter(tier_three=set())
+        sorter.sort()
+
+        assert sorter.tier_conflicts == []

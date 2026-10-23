@@ -31,6 +31,7 @@ class Sorter:
     ):
         self.compiled_data = compiled_data
         self.cycles: list[list[str]] = []
+        self.tier_conflicts: list[tuple[str, str]] = []
         self.mods_metadata = mods_metadata
         self.active_mod_paths = active_mod_paths.copy()
 
@@ -99,6 +100,30 @@ class Sorter:
                 )
         return tier_three_mods & self._active_package_ids
 
+    def _find_tier_conflicts(
+        self, early_mods: set[str], deps_graph: dict[str, set[str]]
+    ) -> list[tuple[str, str]]:
+        """Find "load last" mods that an early-loading mod has to load after.
+
+        Such a mod is pulled into the early tiers with its dependents, so it
+        ends up near the top despite its rule.
+
+        :return: (load-last package ID, early package ID that needs it) pairs.
+        """
+        conflicts: list[tuple[str, str]] = []
+        load_last = self.compiled_data.tier_three_mods & early_mods
+        known_early = (
+            self.compiled_data.tier_zero_mods | self.compiled_data.tier_one_mods
+        ) & self._active_package_ids
+        for pid in sorted(load_last):
+            needed_by = sorted(
+                early
+                for early in known_early
+                if pid in get_dependencies_recursive(early, deps_graph, set())
+            )
+            conflicts.append((pid, needed_by[0] if needed_by else pid))
+        return conflicts
+
     def generate_dependency_graphs(self) -> list[dict[str, set[str]]]:
         """Build tier-specific dependency subgraphs from compiled data.
 
@@ -119,6 +144,9 @@ class Sorter:
             self.compiled_data.tier_one_mods, active_deps
         )
         tier_three_mods = self._collect_tier_three_mods(active_rev_deps)
+        self.tier_conflicts = self._find_tier_conflicts(
+            tier_zero_mods | tier_one_mods, active_deps
+        )
 
         tier_zero_graph = extract_tier_subgraph(active_deps, tier_zero_mods)
         tier_one_graph = extract_tier_subgraph(active_deps, tier_one_mods)
