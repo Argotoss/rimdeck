@@ -67,7 +67,7 @@ cp -a "${APP_DIST}/." "${APPDIR}/usr/share/RimDeck/"
 
 # Create usr/bin symlink pointing to the actual binary
 mkdir -p "${APPDIR}/usr/bin"
-ln -rs "${APPDIR}/usr/share/Argotoss/rimdeck" "${APPDIR}/usr/bin/RimDeck"
+ln -rs "${APPDIR}/usr/share/RimDeck/RimDeck" "${APPDIR}/usr/bin/RimDeck"
 
 # Install desktop integration files
 echo "Installing desktop integration files..."
@@ -91,7 +91,7 @@ cat >"${APPDIR}/AppRun" <<'APPRUN_EOF'
 SELF="$(readlink -f "${BASH_SOURCE[0]}")"
 HERE="${SELF%/*}"
 cd "$HERE"
-exec "${HERE}/usr/share/Argotoss/rimdeck" "$@"
+exec "${HERE}/usr/share/RimDeck/RimDeck" "$@"
 APPRUN_EOF
 chmod +x "${APPDIR}/AppRun"
 
