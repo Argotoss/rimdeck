@@ -687,19 +687,24 @@ def _create_about_mod_from_xml(
     prefer_versioned: bool = True,
 ) -> tuple[bool, AboutXmlMod]:
     try:
-        mod_data = xml_path_to_json(str(mod_xml_path))
+        mod_data = xml_path_to_json(str(mod_xml_path), strict=True)
     except Exception:
         logger.error(
             f"Unable to parse {mod_xml_path} with the exception: {traceback.format_exc()}"
         )
-        return False, AboutXmlMod(valid=False)
+        mod_data = {}
 
     mod_data = {k.lower(): v for k, v in mod_data.items()}
     mod_data = mod_data.get("modmetadata", {})
 
     if not mod_data:
+        # RimWorld refuses to load a mod whose About.xml is malformed, so the
+        # mod is kept in the list as invalid rather than parsed leniently.
         logger.error(f"Could not parse {mod_xml_path}.")
-        return False, AboutXmlMod(valid=False)
+        invalid = AboutXmlMod(valid=False)
+        invalid.name = base_path.name
+        invalid.mod_path = base_path
+        return False, invalid
 
     valid, mod = create_about_mod(mod_data, target_version, prefer_versioned)
 

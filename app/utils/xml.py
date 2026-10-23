@@ -86,12 +86,15 @@ def dict_to_etree(d: dict[str, Any]) -> Any:
     return node
 
 
-def xml_path_to_json(path: str) -> dict[str, Any]:
+def xml_path_to_json(path: str, strict: bool = False) -> dict[str, Any]:
     """
     Return the contents of an XML file as a dictionary. The XML file can be a compressed file supported by __open_file_maybe_compressed.
     If the file does not exist, return an empty dict.
 
     :param path: Path to the XML file.
+    :param strict: Return an empty dict for malformed XML instead of trying a
+        lenient parser. Use it for files RimWorld itself rejects when malformed,
+        such as About.xml.
     :return: Dictionary of XML file contents.
     """
     data: dict[str, Any] = {}
@@ -105,6 +108,9 @@ def xml_path_to_json(path: str) -> dict[str, Any]:
             root = tree.getroot()
             data = etree_to_dict(root)
     except Exception as e:
+        if strict:
+            logger.error(f"Malformed XML in {path}: {e}")
+            return data
         # If ET parsing fails, attempt parsing with BeautifulSoup
         logger.debug(f"Error parsing XML file with xml.etree.ElementTree: {e}")
         logger.debug("Trying to parse with BeautifulSoup as a fallback")

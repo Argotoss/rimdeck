@@ -61,7 +61,7 @@ Done when: sorting an already sorted list changes nothing, results are identical
 - [x] [F26](findings.md#f26) Three dependency checks that disagree
 - [x] [F27](findings.md#f27) Rule data dropped or unused
 - [x] [F28](findings.md#f28) Remove alphabetical sort
-- [ ] [F29](findings.md#f29) Lenient XML fallback accepts broken mods
+- [x] [F29](findings.md#f29) Lenient XML fallback accepts broken mods
 - [ ] [F30](findings.md#f30) File-watcher reload parses differently from full refresh
 
 ## M4. Qt-free core and speed
