@@ -25,7 +25,7 @@ def sorter_returns(monkeypatch: pytest.MonkeyPatch) -> list[list[str]]:
 
     class FakeSorter:
         def __init__(self, *args: object, **kwargs: object) -> None:
-            pass
+            self.cycles: list[list[str]] = []
 
         def sort(self) -> tuple[bool, list[str]]:
             return True, results[0]

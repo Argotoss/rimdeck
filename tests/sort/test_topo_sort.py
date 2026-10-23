@@ -1,8 +1,3 @@
-from unittest.mock import MagicMock, patch
-
-import pytest
-from toposort import CircularDependencyError
-
 from app.sort.topo_sort import do_topo_sort
 from tests.sort.conftest import (
     assert_diamond_ordering,
@@ -51,16 +46,16 @@ class TestDoTopoSort:
         assert "/mods/a" in result
         assert "/mods/bad" not in result
 
-    @patch("app.sort.topo_sort.show_warning")
-    def test_circular_dependency_raises(self, mock_warning: MagicMock) -> None:
+    def test_circular_dependency_is_placed_not_dropped(self) -> None:
         mods = {
             "/mods/a": make_listed_mod("/mods/a", name="A", package_id="mod.a"),
             "/mods/b": make_listed_mod("/mods/b", name="B", package_id="mod.b"),
         }
         graph: dict[str, set[str]] = {"mod.a": {"mod.b"}, "mod.b": {"mod.a"}}
-        with pytest.raises(CircularDependencyError):
-            do_topo_sort(graph, {"/mods/a", "/mods/b"}, mods)
-        mock_warning.assert_called_once()
+        assert do_topo_sort(graph, {"/mods/a", "/mods/b"}, mods) == [
+            "/mods/a",
+            "/mods/b",
+        ]
 
     def test_diamond_dag(self) -> None:
         mods, graph, active = diamond_mods()

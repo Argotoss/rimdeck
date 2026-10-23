@@ -3,7 +3,7 @@
 import sys
 from collections.abc import Mapping
 from pathlib import Path
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 
 if "steamworks" not in sys.modules:
     sys.modules["steamworks"] = MagicMock()
@@ -126,7 +126,7 @@ class TestConflictResolutionPipeline:
 class TestUserRulesOverride:
     def test_user_load_after_overrides_about_load_before(self) -> None:
         """User says A loads after B, even though about.xml says A loads before B.
-        Creates contradiction → cycle → sort fails."""
+        The contradiction forms a loop, which is reported but still sorted."""
         mod_a = make_listed_mod(
             "/mods/a", name="A", package_id="mod.a", load_before={"mod.b"}
         )
@@ -137,9 +137,18 @@ class TestUserRulesOverride:
 
         mods: dict[str, ListedMod] = {"/mods/a": mod_a, "/mods/b": mod_b}
 
-        with patch("app.sort.topo_sort.show_warning"):
-            success, _ = _pipeline(mods)
-        assert not success
+        sorter = Sorter(
+            SortMethod.TOPOLOGICAL,
+            CompiledDependencyData.build(mods, False),
+            mods,
+            set(mods),
+        )
+        success, result = sorter.sort()
+        assert success
+        assert sorted(result) == ["/mods/a", "/mods/b"]
+        assert sorter.cycles == [["mod.a", "mod.b"]]
+        assert sorter.cycle_edge_sources("mod.a", "mod.b") == ["user"]
+        assert sorter.cycle_edge_sources("mod.b", "mod.a") == ["about"]
 
     def test_user_load_first_promotes_to_tier_one(self) -> None:
         """User marking a mod as load_first should place it in tier one."""
@@ -234,8 +243,8 @@ class TestEdgeCases:
 
 
 class TestSadPaths:
-    def test_two_mod_cycle_returns_false(self) -> None:
-        """A↔B cycle through full pipeline → sort returns (False, [])."""
+    def test_two_mod_cycle_still_sorts(self) -> None:
+        """A↔B cycle: both mods are kept and the sort still succeeds."""
         mods = {
             "/mods/a": make_listed_mod(
                 "/mods/a", name="A", package_id="mod.a", load_after={"mod.b"}
@@ -244,12 +253,11 @@ class TestSadPaths:
                 "/mods/b", name="B", package_id="mod.b", load_after={"mod.a"}
             ),
         }
-        with patch("app.sort.topo_sort.show_warning"):
-            success, result = _pipeline(mods)
-        assert not success
-        assert result == []
+        success, result = _pipeline(mods)
+        assert success
+        assert result == ["/mods/a", "/mods/b"]
 
-    def test_three_mod_cycle_returns_false(self) -> None:
+    def test_three_mod_cycle_still_sorts(self) -> None:
         """A→B→C→A cycle — exercises toposort with 3+ node cycle."""
         # Build circular chain: each mod loads after the next, C closes the loop
         names = ["X", "Y", "Z"]
@@ -261,10 +269,31 @@ class TestSadPaths:
             )
             for n, pid, dep in zip(names, ids, deps)
         }
-        with patch("app.sort.topo_sort.show_warning"):
-            success, result = _pipeline(mods)
-        assert not success
-        assert result == []
+        success, result = _pipeline(mods)
+        assert success
+        assert result == ["/mods/x", "/mods/y", "/mods/z"]
+
+    def test_cycle_does_not_stop_unrelated_mods_from_sorting(self) -> None:
+        """Mods outside a loop keep their rule-driven order."""
+        mods = {
+            "/mods/a": make_listed_mod(
+                "/mods/a", name="A", package_id="mod.a", load_after={"mod.b"}
+            ),
+            "/mods/b": make_listed_mod(
+                "/mods/b", name="B", package_id="mod.b", load_after={"mod.a"}
+            ),
+            "/mods/late": make_listed_mod(
+                "/mods/late",
+                name="Aaa Late",
+                package_id="mod.late",
+                load_after={"mod.z"},
+            ),
+            "/mods/z": make_listed_mod("/mods/z", name="Zed", package_id="mod.z"),
+        }
+        success, result = _pipeline(mods)
+        assert success
+        assert result.index("/mods/z") < result.index("/mods/late")
+        assert set(result) == set(mods)
 
     def test_listed_mod_without_package_id_kept_last(self) -> None:
         """Non-AboutXmlMod entries can't be ordered, so they stay at the end."""

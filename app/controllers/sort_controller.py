@@ -12,7 +12,7 @@ from app.sort.dependencies import (
     get_dependencies_recursive,
     get_reverse_dependencies_recursive,
 )
-from app.sort.topo_sort import CircularDependencyError, do_topo_sort
+from app.sort.topo_sort import do_topo_sort, find_rule_cycles
 from app.utils.constants import SortMethod
 
 
@@ -30,6 +30,7 @@ class Sorter:
         active_mod_paths: set[str],
     ):
         self.compiled_data = compiled_data
+        self.cycles: list[list[str]] = []
         self.mods_metadata = mods_metadata
         self.active_mod_paths = active_mod_paths.copy()
 
@@ -130,25 +131,52 @@ class Sorter:
 
         return [tier_zero_graph, tier_one_graph, tier_two_graph, tier_three_graph]
 
+    def cycle_edge_sources(self, later: str, earlier: str) -> list[str]:
+        """Name the rule sets that make ``later`` load after ``earlier``.
+
+        :param later: Package ID that has to load after ``earlier``.
+        :param earlier: Package ID that has to load first.
+        :return: Any of "about", "community", "user", in that order.
+        """
+        mods = {
+            str(mod.package_id): mod
+            for path in self.active_mod_paths
+            if isinstance(mod := self.mods_metadata.get(path), AboutXmlMod)
+        }
+        later_mod, earlier_mod = mods.get(later), mods.get(earlier)
+        sources: list[str] = []
+        for source in ("about", "community", "user"):
+            later_rules = getattr(later_mod, f"{source}_rules", None)
+            earlier_rules = getattr(earlier_mod, f"{source}_rules", None)
+            if (later_rules is not None and earlier in later_rules.load_after) or (
+                earlier_rules is not None and later in earlier_rules.load_before
+            ):
+                sources.append(source)
+        return sources
+
     def sort(self) -> tuple[bool, list[str]]:
         """Sort mods using the configured sort method.
+
+        Rule loops don't stop the sort: their mods are placed as a group and
+        listed in :attr:`cycles` (package IDs, each loading after the next,
+        the last after the first) so the caller can report them.
 
         :return: (success, sorted_mod_paths)
         """
         dependency_graphs = self.generate_dependency_graphs()
 
         sorted_paths: list[str] = []
-        try:
-            for i, graph in enumerate(dependency_graphs):
-                logger.info(f"Sorting tier {i}")
-                sorted_mods = self.sort_method(
-                    graph, self.active_mod_paths, self.mods_metadata
-                )
-                logger.info(f"Tier {i} sorted: {len(sorted_mods)}")
-                sorted_paths += sorted_mods
-        except CircularDependencyError:
-            logger.info("Circular dependency detected, abandoning sort")
-            return False, []
+        self.cycles = []
+        for i, graph in enumerate(dependency_graphs):
+            logger.info(f"Sorting tier {i}")
+            sorted_mods = self.sort_method(
+                graph, self.active_mod_paths, self.mods_metadata
+            )
+            logger.info(f"Tier {i} sorted: {len(sorted_mods)}")
+            sorted_paths += sorted_mods
+            self.cycles += find_rule_cycles(graph)
+        if self.cycles:
+            logger.warning(f"Sorted around {len(self.cycles)} rule loop(s)")
 
         result = list(dict.fromkeys(sorted_paths))
         # Entries the graph can't place (scenarios, folders without a valid

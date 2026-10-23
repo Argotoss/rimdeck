@@ -1107,6 +1107,8 @@ class MainContent(QObject):
             return
 
         success, new_order_paths = sorter.sort()
+        if sorter.cycles:
+            self._report_rule_cycles(sorter)
 
         # Bridge: translate paths back to UUIDs for the list widget
         path_to_uuid: dict[str, str] = {}
@@ -1156,6 +1158,45 @@ class MainContent(QObject):
             logger.warning("Failed to sort mods. Skipping insertion.")
         else:
             logger.warning("Unknown error occurred. Skipping insertion.")
+
+    def _report_rule_cycles(self, sorter: Sorter) -> None:
+        """Explain which rules form loops after a sort placed them as groups."""
+        source_names = {
+            "about": self.tr("its About.xml"),
+            "community": self.tr("community rules"),
+            "user": self.tr("your rules"),
+        }
+        name = self.metadata_controller.get_mod_name_from_package_id
+        loops: list[str] = []
+        for cycle in sorter.cycles:
+            lines = []
+            for position, later in enumerate(cycle):
+                earlier = cycle[(position + 1) % len(cycle)]
+                sources = [
+                    source_names[source]
+                    for source in sorter.cycle_edge_sources(later, earlier)
+                ]
+                lines.append(
+                    self.tr("{later} loads after {earlier} ({sources})").format(
+                        later=name(later),
+                        earlier=name(earlier),
+                        sources=", ".join(sources) or self.tr("dependency"),
+                    )
+                )
+            loops.append("\n".join(lines))
+        dialogue.show_warning(
+            title=self.tr("Some load rules contradict each other"),
+            text=self.tr(
+                "{count} group(s) of mods each require loading after one another,"
+                " which is impossible."
+            ).format(count=len(sorter.cycles)),
+            information=self.tr(
+                "Everything else was sorted normally, and each group was placed"
+                " after everything it depends on. Change one of the rules below"
+                " to resolve it."
+            ),
+            details="\n\n".join(loops),
+        )
 
     def _do_import_list_file_xml(self) -> None:
         """

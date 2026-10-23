@@ -1339,602 +1339,642 @@ Manage mods installed from GitHub releases.</source>
         <translation>Выбранный алгоритм сортировки не реализован</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1181"/>
+        <location filename="../app/views/main_content_panel.py" line="1165"/>
+        <source>its About.xml</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1166"/>
+        <source>community rules</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1167"/>
+        <source>your rules</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1180"/>
+        <source>{later} loads after {earlier} ({sources})</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1183"/>
+        <source>dependency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1188"/>
+        <source>Some load rules contradict each other</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1190"/>
+        <source>{count} group(s) of mods each require loading after one another, which is impossible.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1194"/>
+        <source>Everything else was sorted normally, and each group was placed after everything it depends on. Change one of the rules below to resolve it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/views/main_content_panel.py" line="1222"/>
         <source>Import failed</source>
         <translation>Не удалось выполнить импорт</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1182"/>
+        <location filename="../app/views/main_content_panel.py" line="1223"/>
         <source>Could not read the selected mod list file.</source>
         <translation>Не удалось прочитать выбранный файл списка модов.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1290"/>
+        <location filename="../app/views/main_content_panel.py" line="1331"/>
         <source>Failed to export to file</source>
         <translation>Не удалось экспортировать в файл</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1291"/>
+        <location filename="../app/views/main_content_panel.py" line="1332"/>
         <source>Failed to export active mods to file:</source>
         <translation>Не удалось экспортировать активные моды в файл:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1360"/>
+        <location filename="../app/views/main_content_panel.py" line="1401"/>
         <source>Important</source>
         <translation>Важно</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1411"/>
+        <location filename="../app/views/main_content_panel.py" line="1452"/>
         <source>Steam client integration not set up</source>
         <translation>Интеграция с клиентом Steam не настроена</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1413"/>
+        <location filename="../app/views/main_content_panel.py" line="1454"/>
         <source>Steam client integration is not set up. Please set it up to download mods using Steam</source>
         <translation>Интеграция с клиентом Steam не настроена. Настройте её, чтобы загружать моды через Steam</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1423"/>
+        <location filename="../app/views/main_content_panel.py" line="1464"/>
         <source>Download Rentry Mods</source>
         <translation>Скачать моды из Rentry</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1424"/>
+        <location filename="../app/views/main_content_panel.py" line="1465"/>
         <source>Please select a download method.</source>
         <translation>Выберите способ загрузки.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1426"/>
+        <location filename="../app/views/main_content_panel.py" line="1467"/>
         <source>Select which method you want to use to download missing Rentry mods.</source>
         <translation>Выберите способ загрузки отсутствующих модов из Rentry.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1526"/>
+        <location filename="../app/views/main_content_panel.py" line="1567"/>
         <source>Export active mod list</source>
         <translation>Экспорт списка активных модов</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1527"/>
+        <location filename="../app/views/main_content_panel.py" line="1568"/>
         <source>Copied active mod list report to clipboard...</source>
         <translation>Отчёт о списке активных модов скопирован в буфер обмена...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1528"/>
-        <location filename="../app/views/main_content_panel.py" line="1603"/>
+        <location filename="../app/views/main_content_panel.py" line="1569"/>
+        <location filename="../app/views/main_content_panel.py" line="1644"/>
         <source>Click &quot;Show Details&quot; to see the full report!</source>
         <translation>Нажмите «Показать подробности», чтобы увидеть полный отчёт!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1561"/>
-        <location filename="../app/views/main_content_panel.py" line="1569"/>
+        <location filename="../app/views/main_content_panel.py" line="1602"/>
+        <location filename="../app/views/main_content_panel.py" line="1610"/>
         <source>Report too long</source>
         <translation>Отчёт слишком длинный</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1563"/>
+        <location filename="../app/views/main_content_panel.py" line="1604"/>
         <source>Even the first mod exceeds the 200,000 character limit.</source>
         <translation>Даже первый мод превышает лимит в 200 000 символов.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1565"/>
+        <location filename="../app/views/main_content_panel.py" line="1606"/>
         <source>Cannot upload this report to Rentry.co.</source>
         <translation>Невозможно загрузить этот отчёт на Rentry.co.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1570"/>
+        <location filename="../app/views/main_content_panel.py" line="1611"/>
         <source>The mod list report exceeds 200,000 characters.</source>
         <translation>Отчёт о списке модов превышает 200 000 символов.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1572"/>
+        <location filename="../app/views/main_content_panel.py" line="1613"/>
         <source>Rentry.co may reject uploads that are too long. Would you like to truncate the report to the first {max_mods} mods or cancel the upload?</source>
         <translation>Rentry.co может отклонить слишком длинную загрузку. Обрезать отчёт до первых {max_mods} модов или отменить загрузку?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1575"/>
-        <location filename="../app/views/main_content_panel.py" line="1580"/>
+        <location filename="../app/views/main_content_panel.py" line="1616"/>
+        <location filename="../app/views/main_content_panel.py" line="1621"/>
         <source>Truncate to the first {max_mods} mods</source>
         <translation>Обрезать до первых {max_mods} модов</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1599"/>
+        <location filename="../app/views/main_content_panel.py" line="1640"/>
         <source>Uploaded active mod list</source>
         <translation>Список активных модов загружен</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1601"/>
+        <location filename="../app/views/main_content_panel.py" line="1642"/>
         <source>Uploaded active mod list report to Rentry.co! The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{url}</source>
         <translation>Отчёт о списке активных модов загружен на Rentry.co! Ссылка скопирована в буфер обмена:&lt;br&gt;&lt;br&gt;{url}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1608"/>
+        <location filename="../app/views/main_content_panel.py" line="1649"/>
         <source>Failed to upload</source>
         <translation>Не удалось загрузить</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1609"/>
+        <location filename="../app/views/main_content_panel.py" line="1650"/>
         <source>Failed to upload exported active mod list to Rentry.co</source>
         <translation>Не удалось загрузить экспортированный список активных модов на Rentry.co</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1724"/>
+        <location filename="../app/views/main_content_panel.py" line="1765"/>
         <source>Could not open directory</source>
         <translation>Не удалось открыть папку</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1725"/>
+        <location filename="../app/views/main_content_panel.py" line="1766"/>
         <source>{directory_name} path does not exist or is not set.</source>
         <translation>Путь {directory_name} не существует или не задан.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1728"/>
+        <location filename="../app/views/main_content_panel.py" line="1769"/>
         <source>Would you like to set the path now?</source>
         <translation>Задать путь сейчас?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1729"/>
-        <location filename="../app/views/main_content_panel.py" line="1732"/>
+        <location filename="../app/views/main_content_panel.py" line="1770"/>
+        <location filename="../app/views/main_content_panel.py" line="1773"/>
         <source>Open settings</source>
         <translation>Открыть настройки</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1739"/>
-        <location filename="../app/views/main_content_panel.py" line="2742"/>
+        <location filename="../app/views/main_content_panel.py" line="1780"/>
+        <location filename="../app/views/main_content_panel.py" line="2783"/>
         <source>File not found</source>
         <translation>Файл не найден</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1740"/>
+        <location filename="../app/views/main_content_panel.py" line="1781"/>
         <source>The file you are trying to upload does not exist.</source>
         <translation>Файл, который вы пытаетесь загрузить, не существует.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1741"/>
+        <location filename="../app/views/main_content_panel.py" line="1782"/>
         <source>File: {path}</source>
         <translation>Файл: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1761"/>
+        <location filename="../app/views/main_content_panel.py" line="1802"/>
         <source>Upload failed</source>
         <translation>Upload failed</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1762"/>
+        <location filename="../app/views/main_content_panel.py" line="1803"/>
         <source>Failed to upload log file to RimDeck Logs.</source>
         <translation>Failed to upload log file to RimDeck Logs.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1770"/>
+        <location filename="../app/views/main_content_panel.py" line="1811"/>
         <source>Uploaded file</source>
         <translation>Файл загружен</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1781"/>
+        <location filename="../app/views/main_content_panel.py" line="1822"/>
         <source>Failed to upload file.</source>
         <translation>Не удалось загрузить файл.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1806"/>
+        <location filename="../app/views/main_content_panel.py" line="1847"/>
         <source>Game or config location is not set</source>
         <translation>Местоположение игры или конфигурации не установлено.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1808"/>
+        <location filename="../app/views/main_content_panel.py" line="1849"/>
         <source>Configure game and config locations before saving a mod list.</source>
         <translation>Настройте местоположение игры и конфигурации перед сохранением списка модов.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1821"/>
+        <location filename="../app/views/main_content_panel.py" line="1862"/>
         <source>Configured game location: {path}</source>
         <translation>Настроенное местоположение игры: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1822"/>
-        <location filename="../app/views/main_content_panel.py" line="3149"/>
+        <location filename="../app/views/main_content_panel.py" line="1863"/>
+        <location filename="../app/views/main_content_panel.py" line="3190"/>
         <source>Checked content locations: {paths}</source>
         <translation>Проверенные местоположения контента: {paths}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1825"/>
+        <location filename="../app/views/main_content_panel.py" line="1866"/>
         <source>Discovered Data location: {path}</source>
         <translation>Местоположение обнаруженных данных: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1828"/>
+        <location filename="../app/views/main_content_panel.py" line="1869"/>
         <source>Not found</source>
         <translation>Не найдено</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1830"/>
+        <location filename="../app/views/main_content_panel.py" line="1871"/>
         <source>Missing official modules: {package_ids}</source>
         <translation>Отсутствуют официальные модули: {package_ids}.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1836"/>
+        <location filename="../app/views/main_content_panel.py" line="1877"/>
         <source>The existing ModsConfig.xml could not be read or validated.</source>
         <translation>Существующий файл ModsConfig.xml не удалось прочитать или проверить.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1839"/>
+        <location filename="../app/views/main_content_panel.py" line="1880"/>
         <source>Incomplete game content discovery</source>
         <translation>Неполное обнаружение игрового контента</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1841"/>
+        <location filename="../app/views/main_content_panel.py" line="1882"/>
         <source>RimDeck could not verify all official game content. Saving this list may remove Core or enabled DLC from ModsConfig.xml. Check the game content paths before continuing.</source>
         <translation>RimDeck не удалось проверить весь официальный контент игры. Сохранение этого списка может привести к удалению ядра или включенного DLC из ModsConfig.xml. Прежде чем продолжить, проверьте пути к содержимому игры.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1843"/>
+        <location filename="../app/views/main_content_panel.py" line="1884"/>
         <source>Save anyway</source>
         <translation>Все равно сохранить</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1879"/>
+        <location filename="../app/views/main_content_panel.py" line="1920"/>
         <source>Could not save active mods</source>
         <translation>Не удалось сохранить активные моды</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1880"/>
+        <location filename="../app/views/main_content_panel.py" line="1921"/>
         <source>Failed to save active mods to file:</source>
         <translation>Не удалось сохранить активные моды в файл:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1975"/>
+        <location filename="../app/views/main_content_panel.py" line="2016"/>
         <source>Confirm texture deletion</source>
         <translation>Подтвердите удаление текстур</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1977"/>
+        <location filename="../app/views/main_content_panel.py" line="2018"/>
         <source>This will delete all optimized .dds textures from your active mods</source>
         <translation>Это удалит все оптимизированные текстуры .dds из ваших активных модов</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1980"/>
+        <location filename="../app/views/main_content_panel.py" line="2021"/>
         <source>Are you sure you want to delete all .dds textures? You can re-optimize them later if needed.</source>
         <translation>Вы уверены, что хотите удалить все текстуры .dds? При необходимости вы сможете оптимизировать их заново позже.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1984"/>
-        <location filename="../app/views/main_content_panel.py" line="1987"/>
+        <location filename="../app/views/main_content_panel.py" line="2025"/>
+        <location filename="../app/views/main_content_panel.py" line="2028"/>
         <source>Delete textures</source>
         <translation>Удалить текстуры</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2005"/>
+        <location filename="../app/views/main_content_panel.py" line="2046"/>
         <source>No valid paths for todds</source>
         <translation>Нет допустимых путей для todds</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2006"/>
+        <location filename="../app/views/main_content_panel.py" line="2047"/>
         <source>todds could not find any valid mod folders to process.</source>
         <translation>todds не смог найти ни одной допустимой папки модов для обработки.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2022"/>
+        <location filename="../app/views/main_content_panel.py" line="2063"/>
         <source>Confirm ACF import</source>
         <translation>Подтвердите импорт ACF</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2023"/>
+        <location filename="../app/views/main_content_panel.py" line="2064"/>
         <source>This will replace your current steamcmd .acf file</source>
         <translation>Это заменит текущий файл .acf SteamCMD</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2025"/>
+        <location filename="../app/views/main_content_panel.py" line="2066"/>
         <source>Are you sure you want to import .acf? This only works for steamcmd</source>
         <translation>Вы уверены, что хотите импортировать .acf? Это работает только для SteamCMD</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2028"/>
-        <location filename="../app/views/main_content_panel.py" line="2033"/>
+        <location filename="../app/views/main_content_panel.py" line="2069"/>
+        <location filename="../app/views/main_content_panel.py" line="2074"/>
         <source>Import .acf</source>
         <translation>Импортировать .acf</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2056"/>
-        <location filename="../app/views/main_content_panel.py" line="2087"/>
-        <location filename="../app/views/main_content_panel.py" line="2091"/>
+        <location filename="../app/views/main_content_panel.py" line="2097"/>
+        <location filename="../app/views/main_content_panel.py" line="2128"/>
+        <location filename="../app/views/main_content_panel.py" line="2132"/>
         <source>Export Error</source>
         <translation>Ошибка экспорта</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2057"/>
+        <location filename="../app/views/main_content_panel.py" line="2098"/>
         <source>ACF file not found at: {acf_path}</source>
         <translation>Файл ACF не найден по пути: {acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2077"/>
+        <location filename="../app/views/main_content_panel.py" line="2118"/>
         <source>Export Success</source>
         <translation>Экспорт выполнен успешно</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2078"/>
+        <location filename="../app/views/main_content_panel.py" line="2119"/>
         <source>Successfully exported ACF to {file_path}</source>
         <translation>ACF успешно экспортирован в {file_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2084"/>
+        <location filename="../app/views/main_content_panel.py" line="2125"/>
         <source>Export failed: Permission denied - check file permissions</source>
         <translation>Не удалось экспортировать: доступ запрещён — проверьте права доступа к файлу</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2089"/>
+        <location filename="../app/views/main_content_panel.py" line="2130"/>
         <source>Export failed: {e}</source>
         <translation>Не удалось экспортировать: {e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2210"/>
+        <location filename="../app/views/main_content_panel.py" line="2251"/>
         <source>Checking Steam Workshop mods for updates...</source>
         <translation>Проверка модов Мастерской Steam на наличие обновлений...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2214"/>
+        <location filename="../app/views/main_content_panel.py" line="2255"/>
         <source>Failed to check for Workshop updates</source>
         <translation>Failed to check for Workshop updates</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2218"/>
+        <location filename="../app/views/main_content_panel.py" line="2259"/>
         <source>No Workshop mods to check for updates</source>
         <translation>Нет модов Мастерской для проверки обновлений</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2223"/>
+        <location filename="../app/views/main_content_panel.py" line="2264"/>
         <source>Unable to check for updates</source>
         <translation>Не удалось проверить наличие обновлений</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2253"/>
+        <location filename="../app/views/main_content_panel.py" line="2294"/>
         <source>All Workshop mods appear to be up to date!</source>
         <translation>Все моды Мастерской, похоже, обновлены!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2270"/>
-        <location filename="../app/views/main_content_panel.py" line="3255"/>
+        <location filename="../app/views/main_content_panel.py" line="2311"/>
+        <location filename="../app/views/main_content_panel.py" line="3296"/>
         <source>Steam Client Integration is disabled</source>
         <translation>Интеграция с клиентом Steam отключена</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2295"/>
-        <location filename="../app/views/main_content_panel.py" line="2308"/>
-        <location filename="../app/views/main_content_panel.py" line="2319"/>
+        <location filename="../app/views/main_content_panel.py" line="2336"/>
+        <location filename="../app/views/main_content_panel.py" line="2349"/>
+        <location filename="../app/views/main_content_panel.py" line="2360"/>
         <source>RimDeck - SteamCMD setup</source>
         <translation>RimDeck — настройка SteamCMD</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2296"/>
-        <location filename="../app/views/main_content_panel.py" line="2387"/>
+        <location filename="../app/views/main_content_panel.py" line="2337"/>
+        <location filename="../app/views/main_content_panel.py" line="2428"/>
         <source>Unable to create SteamCMD runner!</source>
         <translation>Не удалось создать процесс запуска SteamCMD!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2297"/>
-        <location filename="../app/views/main_content_panel.py" line="2388"/>
+        <location filename="../app/views/main_content_panel.py" line="2338"/>
+        <location filename="../app/views/main_content_panel.py" line="2429"/>
         <source>There is an active process already running!</source>
         <translation>Уже выполняется активный процесс!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2321"/>
+        <location filename="../app/views/main_content_panel.py" line="2362"/>
         <source>Unable to initiate SteamCMD installation. Local mods path not set!</source>
         <translation>Не удалось начать установку SteamCMD. Путь к локальным модам не задан!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2324"/>
+        <location filename="../app/views/main_content_panel.py" line="2365"/>
         <source>Please configure local mods path in Settings before attempting to install.</source>
         <translation>Перед установкой настройте путь к локальным модам в параметрах.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2372"/>
-        <location filename="../app/views/main_content_panel.py" line="2386"/>
-        <location filename="../app/views/main_content_panel.py" line="2562"/>
+        <location filename="../app/views/main_content_panel.py" line="2413"/>
+        <location filename="../app/views/main_content_panel.py" line="2427"/>
+        <location filename="../app/views/main_content_panel.py" line="2603"/>
         <source>RimDeck</source>
         <translation>RimDeck</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2373"/>
-        <location filename="../app/views/main_content_panel.py" line="2563"/>
+        <location filename="../app/views/main_content_panel.py" line="2414"/>
+        <location filename="../app/views/main_content_panel.py" line="2604"/>
         <source>No PublishedFileIds were supplied in operation.</source>
         <translation>В операции не было передано ни одного PublishedFileID.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2375"/>
-        <location filename="../app/views/main_content_panel.py" line="2565"/>
+        <location filename="../app/views/main_content_panel.py" line="2416"/>
+        <location filename="../app/views/main_content_panel.py" line="2606"/>
         <source>Please add mods to list before attempting to download.</source>
         <translation>Перед загрузкой добавьте моды в список.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2408"/>
+        <location filename="../app/views/main_content_panel.py" line="2449"/>
         <source>RimDeck - SteamCMD downloader</source>
         <translation>RimDeck — загрузчик SteamCMD</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2425"/>
+        <location filename="../app/views/main_content_panel.py" line="2466"/>
         <source>SteamCMD not found</source>
         <translation>SteamCMD не найден</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2426"/>
+        <location filename="../app/views/main_content_panel.py" line="2467"/>
         <source>SteamCMD executable was not found.</source>
         <translation>Исполняемый файл SteamCMD не найден.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2428"/>
+        <location filename="../app/views/main_content_panel.py" line="2469"/>
         <source>Please setup an existing SteamCMD prefix, or setup a new prefix with &quot;Setup SteamCMD&quot;.</source>
         <translation>Настройте существующий префикс SteamCMD или создайте новый с помощью «Настроить SteamCMD».</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2579"/>
+        <location filename="../app/views/main_content_panel.py" line="2620"/>
         <source>Processing Steam subscription action(s) via Steamworks API...</source>
         <translation>Обработка действий подписки Steam через Steamworks API...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2606"/>
+        <location filename="../app/views/main_content_panel.py" line="2647"/>
         <source>Download or select from local</source>
         <translation>Скачать или выбрать локальный файл</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2608"/>
+        <location filename="../app/views/main_content_panel.py" line="2649"/>
         <source>Please select a ZIP file to add to the local mods directory.</source>
         <translation>Выберите ZIP-файл для добавления в папку локальных модов.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2611"/>
+        <location filename="../app/views/main_content_panel.py" line="2652"/>
         <source>You can download a ZIP file from the internet, or select a file from your local machine.</source>
         <translation>Вы можете скачать ZIP-файл из интернета или выбрать файл на своём компьютере.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2622"/>
+        <location filename="../app/views/main_content_panel.py" line="2663"/>
         <source>Enter zip file url</source>
         <translation>Введите ссылку на ZIP-файл</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2623"/>
+        <location filename="../app/views/main_content_panel.py" line="2664"/>
         <source>Enter a zip file url (http/https) to download to local mods:</source>
         <translation>Введите ссылку (http/https) на ZIP-файл для загрузки в локальные моды:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2710"/>
+        <location filename="../app/views/main_content_panel.py" line="2751"/>
         <source>Failed to download zip file</source>
         <translation>Не удалось скачать ZIP-файл</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2711"/>
+        <location filename="../app/views/main_content_panel.py" line="2752"/>
         <source>The zip file could not be downloaded.</source>
         <translation>Не удалось скачать ZIP-файл.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2743"/>
+        <location filename="../app/views/main_content_panel.py" line="2784"/>
         <source>The selected file does not exist.</source>
         <translation>Выбранный файл не существует.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2744"/>
+        <location filename="../app/views/main_content_panel.py" line="2785"/>
         <source>File: {file_path}</source>
         <translation>Файл: {file_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2757"/>
+        <location filename="../app/views/main_content_panel.py" line="2798"/>
         <source>Unsupported Compression Method</source>
         <translation>Неподдерживаемый метод сжатия</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2759"/>
+        <location filename="../app/views/main_content_panel.py" line="2800"/>
         <source>This ZIP file uses a compression method that is not supported by this version.</source>
         <translation>Этот ZIP-файл использует метод сжатия, не поддерживаемый данной версией.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2768"/>
+        <location filename="../app/views/main_content_panel.py" line="2809"/>
         <source>Failed to extract zip file</source>
         <translation>Не удалось распаковать ZIP-файл</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2769"/>
+        <location filename="../app/views/main_content_panel.py" line="2810"/>
         <source>The zip file could not be extracted.</source>
         <translation>Не удалось распаковать ZIP-файл.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2802"/>
-        <location filename="../app/views/main_content_panel.py" line="2818"/>
+        <location filename="../app/views/main_content_panel.py" line="2843"/>
+        <location filename="../app/views/main_content_panel.py" line="2859"/>
         <source>Existing files or directories found</source>
         <translation>Обнаружены существующие файлы или папки</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2804"/>
+        <location filename="../app/views/main_content_panel.py" line="2845"/>
         <source>All files in the archive already exist in the target path.</source>
         <translation>Все файлы из архива уже существуют по целевому пути.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2820"/>
+        <location filename="../app/views/main_content_panel.py" line="2861"/>
         <source>The following files or directories already exist in the target path:</source>
         <translation>Следующие файлы или папки уже существуют по целевому пути:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2882"/>
+        <location filename="../app/views/main_content_panel.py" line="2923"/>
         <source>Extraction completed</source>
         <translation>Распаковка завершена</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2883"/>
+        <location filename="../app/views/main_content_panel.py" line="2924"/>
         <source>The ZIP file was successfully extracted!</source>
         <translation>ZIP-файл успешно распакован!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2888"/>
+        <location filename="../app/views/main_content_panel.py" line="2929"/>
         <source>Extraction failed</source>
         <translation>Не удалось распаковать</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2889"/>
+        <location filename="../app/views/main_content_panel.py" line="2930"/>
         <source>An error occurred during extraction.</source>
         <translation>Во время распаковки произошла ошибка.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2904"/>
+        <location filename="../app/views/main_content_panel.py" line="2945"/>
         <source>Git integration will not work without Git installed! Do you want to open download page for Git?&lt;br&gt;&lt;br&gt;If you just installed Git, please restart RimDeck for the PATH changes to take effect.</source>
         <translation>Интеграция с Git не будет работать без установленного Git! Открыть страницу загрузки Git?&lt;br&gt;&lt;br&gt;Если вы только что установили Git, перезапустите RimDeck, чтобы изменения PATH вступили в силу.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3074"/>
+        <location filename="../app/views/main_content_panel.py" line="3115"/>
         <source>This operation will overwrite the {rules_source} database located at the following path:&lt;br&gt;&lt;br&gt;{path}</source>
         <translation>Эта операция перезапишет базу данных {rules_source}, расположенную по следующему пути:&lt;br&gt;&lt;br&gt;{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3134"/>
+        <location filename="../app/views/main_content_panel.py" line="3175"/>
         <source>Invalid game folder</source>
         <translation>Неверная папка с игрой</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3136"/>
+        <location filename="../app/views/main_content_panel.py" line="3177"/>
         <source>RimWorld executable was not found in the configured game location.</source>
         <translation>Исполняемый файл RimWorld не найден в указанном месте игры.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3144"/>
+        <location filename="../app/views/main_content_panel.py" line="3185"/>
         <source>Game content not found</source>
         <translation>Контент игры не найден</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3146"/>
+        <location filename="../app/views/main_content_panel.py" line="3187"/>
         <source>The game executable is valid, but RimDeck could not locate its content. The game may not find its Data or Mods folders. Check the game content paths before continuing.</source>
         <translation>Исполняемый файл игры действителен, но RimDeck не смог найти его содержимое. Игра может не найти папки Data или Mods. Прежде чем продолжить, проверьте пути к содержимому игры.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3148"/>
+        <location filename="../app/views/main_content_panel.py" line="3189"/>
         <source>Run anyway</source>
         <translation>Все равно беги</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3221"/>
+        <location filename="../app/views/main_content_panel.py" line="3262"/>
         <source>todds Optimization Failed</source>
         <translation>Не удалось выполнить оптимизацию todds</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3223"/>
+        <location filename="../app/views/main_content_panel.py" line="3264"/>
         <source>todds texture optimization failed (exit code: {exit_code}), but the game will launch anyway.</source>
         <translation>Оптимизация текстур todds завершилась с ошибкой (код выхода: {exit_code}), но игра всё равно будет запущена.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3257"/>
+        <location filename="../app/views/main_content_panel.py" line="3298"/>
         <source>Steam protocol launch requires Steam Client Integration to be enabled.</source>
         <translation>Для запуска через протокол Steam требуется включённая интеграция с клиентом Steam.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3260"/>
+        <location filename="../app/views/main_content_panel.py" line="3301"/>
         <source>Please enable Steam Client Integration in Settings → Steam to use this feature.</source>
         <translation>Чтобы использовать эту функцию, включите интеграцию с клиентом Steam в разделе «Настройки → Steam».</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3287"/>
+        <location filename="../app/views/main_content_panel.py" line="3328"/>
         <source>Please configure &quot;Use This Instead&quot; database in settings.</source>
         <translation>Настройте базу данных «Использовать вместо» в параметрах.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3301"/>
+        <location filename="../app/views/main_content_panel.py" line="3342"/>
         <source>No suggestions were found in the &quot;Use This Instead&quot; database.</source>
         <translation>В базе данных «Использовать вместо» не найдено подходящих замен.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2900"/>
+        <location filename="../app/views/main_content_panel.py" line="2941"/>
         <source>git not found</source>
         <translation>git не найден</translation>
     </message>
@@ -1954,234 +1994,234 @@ Manage mods installed from GitHub releases.</source>
         <translation>Это может быть вызвано некорректными настройками или неправильным переносом данных между версиями или другим менеджером модов.&lt;br&gt;&lt;br&gt;Попробуйте сбросить настройки, выбрать другой алгоритм сортировки или удалить файл настроек.&lt;br&gt;&lt;br&gt;Если проблема сохраняется, сообщите о ней разработчикам.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1362"/>
+        <location filename="../app/views/main_content_panel.py" line="1403"/>
         <source>You will need to redo Rentry import again after downloads complete.&lt;br&gt;&lt;br&gt;If there missing mods after download completes, they will be shown inside the missing mods panel.&lt;br&gt;&lt;br&gt;If RimDeck is still not able to download some mods, It&apos;s due to the mod data not being available in both Rentry link and steam database.</source>
         <translation>После завершения загрузки вам нужно будет повторить импорт из Rentry.&lt;br&gt;&lt;br&gt;Если после загрузки останутся отсутствующие моды, они будут показаны на панели отсутствующих модов.&lt;br&gt;&lt;br&gt;Если RimDeck по-прежнему не может загрузить некоторые моды, это означает, что данные о них отсутствуют как в ссылке Rentry, так и в базе данных Steam.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1751"/>
+        <location filename="../app/views/main_content_panel.py" line="1792"/>
         <source>Uploading {path_name} to RimDeck Logs...</source>
         <translation>Загрузка {path_name} в RimDeck Logs...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1771"/>
+        <location filename="../app/views/main_content_panel.py" line="1812"/>
         <source>Uploaded {path_name} to RimDeck Logs</source>
         <translation>{path_name} загружен в RimDeck Logs</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1775"/>
+        <location filename="../app/views/main_content_panel.py" line="1816"/>
         <source>The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{ret}</source>
         <translation>Ссылка скопирована в буфер обмена:&lt;br&gt;&lt;br&gt;{ret}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1782"/>
+        <location filename="../app/views/main_content_panel.py" line="1823"/>
         <source>Failed to upload to RimDeck Logs</source>
         <translation>Не удалось загрузить в RimDeck Logs</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2008"/>
+        <location filename="../app/views/main_content_panel.py" line="2049"/>
         <source>None of the configured mod folder paths exist on disk.&lt;br&gt;&lt;br&gt;Please verify your Local Mods and Workshop folders are correctly set in Settings, then try again.</source>
         <translation>Ни один из заданных путей к папкам модов не существует на диске.&lt;br&gt;&lt;br&gt;Убедитесь, что папки «Локальные моды» и «Мастерская» правильно указаны в настройках, затем повторите попытку.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2225"/>
+        <location filename="../app/views/main_content_panel.py" line="2266"/>
         <source>RimDeck was unable to check your Workshop mods for updates.</source>
         <translation>RimDeck не смог проверить обновления ваших модов Мастерской.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2233"/>
+        <location filename="../app/views/main_content_panel.py" line="2274"/>
         <source>Update check partially completed</source>
         <translation>Проверка обновлений завершена частично</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2235"/>
+        <location filename="../app/views/main_content_panel.py" line="2276"/>
         <source>{failed} out of {total} Workshop mods could not be checked for updates.</source>
         <translation>Не удалось проверить обновления {failed} из {total} модов Мастерской.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2272"/>
+        <location filename="../app/views/main_content_panel.py" line="2313"/>
         <source>This feature requires Steam Client Integration to be enabled in Settings.&lt;br&gt;&lt;br&gt;Please enable Steam Client Integration if you own the game on Steam.</source>
         <translation>Для этой функции требуется включённая интеграция с клиентом Steam в настройках.&lt;br&gt;&lt;br&gt;Включите интеграцию с клиентом Steam, если у вас есть игра в Steam.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2712"/>
-        <location filename="../app/views/main_content_panel.py" line="2761"/>
-        <location filename="../app/views/main_content_panel.py" line="2770"/>
+        <location filename="../app/views/main_content_panel.py" line="2753"/>
+        <location filename="../app/views/main_content_panel.py" line="2802"/>
+        <location filename="../app/views/main_content_panel.py" line="2811"/>
         <source>File: {file_path}&lt;br&gt;Error: {e}</source>
         <translation>Файл: {file_path}&lt;br&gt;Ошибка: {e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2807"/>
+        <location filename="../app/views/main_content_panel.py" line="2848"/>
         <source>How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Cancel — Abort the operation.</source>
         <translation>Как поступить?&lt;br&gt;&lt;br&gt;1) Перезаписать всё — заменить все существующие файлы и папки.&lt;br&gt;2) Отмена — прервать операцию.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2823"/>
+        <location filename="../app/views/main_content_panel.py" line="2864"/>
         <source>{conflicts_list}&lt;br&gt;&lt;br&gt;How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Skip Existing — Extract only new files and leave existing ones untouched.&lt;br&gt;3) Cancel — Abort the extraction.</source>
         <translation>{conflicts_list}&lt;br&gt;&lt;br&gt;Как поступить?&lt;br&gt;&lt;br&gt;1) Перезаписать всё — заменить все существующие файлы и папки.&lt;br&gt;2) Пропустить существующие — распаковать только новые файлы, не трогая существующие.&lt;br&gt;3) Отмена — прервать распаковку.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2901"/>
+        <location filename="../app/views/main_content_panel.py" line="2942"/>
         <source>git executable was not found in $PATH!</source>
         <translation>Исполняемый файл git не найден в $PATH!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2968"/>
+        <location filename="../app/views/main_content_panel.py" line="3009"/>
         <source>Edit Steam DB repo</source>
         <translation>Изменить репозиторий базы данных Steam</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2969"/>
-        <location filename="../app/views/main_content_panel.py" line="2984"/>
+        <location filename="../app/views/main_content_panel.py" line="3010"/>
+        <location filename="../app/views/main_content_panel.py" line="3025"/>
         <source>Enter URL (https://github.com/AccountName/RepositoryName):</source>
         <translation>Введите URL (https://github.com/ИмяАккаунта/ИмяРепозитория):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2983"/>
+        <location filename="../app/views/main_content_panel.py" line="3024"/>
         <source>Edit Community Rules DB repo</source>
         <translation>Изменить репозиторий базы данных правил сообщества</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3019"/>
+        <location filename="../app/views/main_content_panel.py" line="3060"/>
         <source>Edit Steam WebAPI key</source>
         <translation>Изменить ключ Steam WebAPI</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3020"/>
+        <location filename="../app/views/main_content_panel.py" line="3061"/>
         <source>Enter your personal 32 character Steam WebAPI key here:</source>
         <translation>Введите здесь свой личный 32-символьный ключ Steam WebAPI:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3055"/>
+        <location filename="../app/views/main_content_panel.py" line="3096"/>
         <source>Failed to read existing database</source>
         <translation>Не удалось прочитать существующую базу данных</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3056"/>
+        <location filename="../app/views/main_content_panel.py" line="3097"/>
         <source>Failed to read the existing database!</source>
         <translation>Не удалось прочитать существующую базу данных!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3057"/>
+        <location filename="../app/views/main_content_panel.py" line="3098"/>
         <source>Path: {path}</source>
         <translation>Путь: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3071"/>
+        <location filename="../app/views/main_content_panel.py" line="3112"/>
         <source>RimDeck - DB Builder</source>
         <translation>RimDeck — Конструктор БД</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3072"/>
+        <location filename="../app/views/main_content_panel.py" line="3113"/>
         <source>Do you want to continue?</source>
         <translation>Продолжить?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3091"/>
+        <location filename="../app/views/main_content_panel.py" line="3132"/>
         <source>Edit SteamDB expiry:</source>
         <translation>Изменить срок действия SteamDB:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3093"/>
+        <location filename="../app/views/main_content_panel.py" line="3134"/>
         <source>Enter your preferred expiry duration in seconds (default 1 week/604800 sec):</source>
         <translation>Введите желаемый срок действия в секундах (по умолчанию 1 неделя / 604800 сек):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3104"/>
+        <location filename="../app/views/main_content_panel.py" line="3145"/>
         <source>Tried configuring Dynamic Query with a value that is not an integer.</source>
         <translation>Попытка настроить динамический запрос со значением, не являющимся целым числом.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3107"/>
+        <location filename="../app/views/main_content_panel.py" line="3148"/>
         <source>Please reconfigure the expiry value with an integer in terms of the seconds from epoch you would like your query to expire.</source>
         <translation>Задайте срок действия целым числом секунд от начала эпохи Unix, когда запрос должен истечь.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3226"/>
+        <location filename="../app/views/main_content_panel.py" line="3267"/>
         <source>You may experience longer loading times or higher memory usage.&lt;br&gt;&lt;br&gt;Check the todds output window for details.</source>
         <translation>Возможно увеличение времени загрузки или потребления памяти.&lt;br&gt;&lt;br&gt;Подробности можно посмотреть в окне вывода todds.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3285"/>
-        <location filename="../app/views/main_content_panel.py" line="3299"/>
+        <location filename="../app/views/main_content_panel.py" line="3326"/>
+        <location filename="../app/views/main_content_panel.py" line="3340"/>
         <source>Use This Instead</source>
         <translation>Использовать вместо</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3186"/>
+        <location filename="../app/views/main_content_panel.py" line="3227"/>
         <source>Unsaved Changes</source>
         <translation>Несохранённые изменения</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3187"/>
+        <location filename="../app/views/main_content_panel.py" line="3228"/>
         <source>You have unsaved changes. What would you like to do?</source>
         <translation>У вас есть несохранённые изменения. Что вы хотите сделать?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3188"/>
-        <location filename="../app/views/main_content_panel.py" line="3190"/>
+        <location filename="../app/views/main_content_panel.py" line="3229"/>
+        <location filename="../app/views/main_content_panel.py" line="3231"/>
         <source>Save and Run</source>
         <translation>Сохранить и запустить</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3188"/>
-        <location filename="../app/views/main_content_panel.py" line="3196"/>
+        <location filename="../app/views/main_content_panel.py" line="3229"/>
+        <location filename="../app/views/main_content_panel.py" line="3237"/>
         <source>Run Anyway</source>
         <translation>Всё равно запустить</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1629"/>
+        <location filename="../app/views/main_content_panel.py" line="1670"/>
         <source>Import from RimWorld Save File</source>
         <translation>Импорт из файла сохранения RimWorld</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1631"/>
+        <location filename="../app/views/main_content_panel.py" line="1672"/>
         <source>RimWorld save (*.rws);;All files (*.*)</source>
         <translation>Сохранение RimWorld (*.rws);;Все файлы (*.*)</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2095"/>
-        <location filename="../app/views/main_content_panel.py" line="2112"/>
+        <location filename="../app/views/main_content_panel.py" line="2136"/>
+        <location filename="../app/views/main_content_panel.py" line="2153"/>
         <source>Reset SteamCMD ACF data file</source>
         <translation>Сбросить файл данных ACF SteamCMD</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2096"/>
+        <location filename="../app/views/main_content_panel.py" line="2137"/>
         <source>Are you sure you want to reset SteamCMD ACF data file?</source>
         <translation>Вы уверены, что хотите сбросить файл данных ACF SteamCMD?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2098"/>
+        <location filename="../app/views/main_content_panel.py" line="2139"/>
         <source>This file is created and used by steamcmd to track mod informaton, This action cannot be undone.</source>
         <translation>Этот файл создаётся и используется SteamCMD для отслеживания информации о модах. Это действие невозможно отменить.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2114"/>
+        <location filename="../app/views/main_content_panel.py" line="2155"/>
         <source>Successfully deleted SteamCMD ACF data file: {steamcmd_appworkshop_acf_path}</source>
         <translation>Файл данных ACF SteamCMD успешно удалён: {steamcmd_appworkshop_acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2119"/>
+        <location filename="../app/views/main_content_panel.py" line="2160"/>
         <source>ACF data file will be recreated when you download mods using steamcmd next time.</source>
         <translation>Файл данных ACF будет создан заново при следующей загрузке модов через SteamCMD.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2127"/>
+        <location filename="../app/views/main_content_panel.py" line="2168"/>
         <source>SteamCMD ACF data file does not exist</source>
         <translation>Файл данных ACF SteamCMD не существует</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2129"/>
+        <location filename="../app/views/main_content_panel.py" line="2170"/>
         <source>ACf file does not exist. It will be created when you download mods using steamcmd.</source>
         <translation>Файл ACF не существует. Он будет создан при загрузке модов через SteamCMD.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1796"/>
+        <location filename="../app/views/main_content_panel.py" line="1837"/>
         <source>Failed to open file.</source>
         <translation>Не удалось открыть файл.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1798"/>
+        <location filename="../app/views/main_content_panel.py" line="1839"/>
         <source>Failed to open the file with default text editor. It may not exist.</source>
         <translation>Не удалось открыть файл в текстовом редакторе по умолчанию. Возможно, он не существует.</translation>
     </message>
@@ -7987,20 +8027,6 @@ The following table displays Workshop mods available for update from Steam.</sou
         <location filename="../app/controllers/settings_tabs/locations_tab_controller.py" line="251"/>
         <source>Invalid Local Mods Folder</source>
         <translation>Неверная папка локальных модов</translation>
-    </message>
-</context>
-<context>
-    <name>find_circular_dependencies</name>
-    <message>
-        <location filename="../app/sort/topo_sort.py" line="87"/>
-        <location filename="../app/sort/topo_sort.py" line="90"/>
-        <source>Unable to Sort</source>
-        <translation>Не удалось выполнить сортировку</translation>
-    </message>
-    <message>
-        <location filename="../app/sort/topo_sort.py" line="91"/>
-        <source>RimDeck found circular dependencies in your mods list. Please see the details for dependency loops.</source>
-        <translation>RimDeck обнаружил циклические зависимости в списке модов. Подробности о циклах зависимостей см. в деталях.</translation>
     </message>
 </context>
 <context>
