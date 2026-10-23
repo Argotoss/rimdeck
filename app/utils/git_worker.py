@@ -111,58 +111,11 @@ def process_batch_repository(
 
     except Exception as e:
         error_msg = str(e)
-        error_lower = error_msg.lower()
-
-        # Check for corruption indicators and attempt automatic repair
-        corruption_indicators = [
-            "object not found",
-            "missing object",
-            "bad object",
-            "corrupted",
-            "pack corruption",
-        ]
-        is_corrupted = any(
-            indicator in error_lower for indicator in corruption_indicators
-        )
-
-        if is_corrupted:
-            logger.warning(
-                f"Detected repository corruption in {repo_path}, attempting repair"
-            )
-            try:
-                # Attempt to repair the corrupted repository
-                repo_path_str = str(repo_path)
-                if git_utils._attempt_repository_repair(repo_path_str, repo=None):
-                    logger.info(
-                        f"Successfully repaired corrupted repository: {repo_path}"
-                    )
-                    # Try the operation again after repair
-                    try:
-                        with git_utils.git_repository(repo_path, config) as repo:
-                            if repo is not None:
-                                result = operation_func(repo, **kwargs)
-                                if result.is_successful():
-                                    return True, None
-                                else:
-                                    return (
-                                        False,
-                                        f"Operation failed after repair: {result}",
-                                    )
-                    except Exception as retry_e:
-                        logger.error(f"Failed {operation_name} after repair: {retry_e}")
-                        return (
-                            False,
-                            f"Failed {operation_name} after repair: {retry_e!s}",
-                        )
-                else:
-                    logger.error(f"Failed to repair corrupted repository: {repo_path}")
-                    return False, f"Corrupted repository - repair failed: {error_msg}"
-            except Exception as repair_e:
-                logger.error(f"Exception during corruption repair: {repair_e}")
-                return False, f"Corruption repair failed: {repair_e!s}"
-        else:
-            logger.error(f"Failed {operation_name} {repo_path}: {error_msg}")
-            return False, error_msg
+        if git_utils.looks_corrupted(error_msg):
+            logger.error(f"Possibly damaged repository {repo_path}: {error_msg}")
+            return False, f"{git_utils.CORRUPTION_HINT} ({error_msg})"
+        logger.error(f"Failed {operation_name} {repo_path}: {error_msg}")
+        return False, error_msg
 
     # This should never be reached, but added to satisfy linter
     return False, "Unknown error"

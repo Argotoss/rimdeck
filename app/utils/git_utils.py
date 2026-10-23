@@ -154,40 +154,6 @@ def _fetch_with_timeout(repo: Repository, remote: pygit2.Remote, timeout: int) -
     return bool(result["success"])
 
 
-def _is_repository_corrupted(repo_path: str | Path) -> bool:
-    """Check if a git repository is corrupted by looking for common error patterns.
-
-    Args:
-        repo_path: Path to the git repository.
-
-    Returns:
-        True if the repository appears to be corrupted, False otherwise.
-    """
-    repo_path_str = str(repo_path)
-    try:
-        repo = Repository(repo_path_str)
-        # Try to walk through commits to detect missing objects
-        if not repo.head_is_unborn:
-            walker = repo.walk(repo.head.target)
-            # Try to iterate to detect missing objects
-            for _ in walker:
-                pass
-        repo.free()
-        return False
-    except Exception as e:
-        error_str = str(e).lower()
-        # Check for common corruption indicators
-        corruption_indicators = [
-            "object not found",
-            "missing object",
-            "bad object",
-            "corrupted",
-            "fatal",
-            "pack corruption",
-        ]
-        return any(indicator in error_str for indicator in corruption_indicators)
-
-
 def _attempt_repository_repair(
     repo_path: str | Path,
     repo_url: str | None = None,
@@ -272,53 +238,50 @@ def _attempt_repository_repair(
         return False
 
 
+CORRUPTION_INDICATORS = (
+    "object not found",
+    "missing object",
+    "bad object",
+    "corrupted",
+    "pack corruption",
+)
+CORRUPTION_HINT = (
+    "The repository may be damaged. Nothing was deleted; remove the mod and add"
+    " it again to download a fresh copy."
+)
+
+
+def looks_corrupted(error: Exception | str) -> bool:
+    """Return True if a git error message suggests a damaged repository."""
+    text = str(error).lower()
+    return any(indicator in text for indicator in CORRUPTION_INDICATORS)
+
+
 def _handle_git_error(
     operation: GitOperationType,
     error: Exception,
     config: GitOperationConfig,
     context: str = "",
-    repo_path: str | Path | None = None,
-    repo_url: str | None = None,
-    repo: Repository | None = None,
     **kwargs: Any,
-) -> bool:
+) -> None:
     """Centralized error handling for git operations.
+
+    Errors are logged and, if configured, shown to the user. Nothing on disk is
+    ever deleted here: "object not found" also occurs on healthy shallow
+    clones and after upstream force-pushes, so deleting the repository would
+    destroy local history for a recoverable error.
 
     Args:
         operation: The type of git operation that failed.
         error: The exception that occurred.
         config: Configuration for error handling.
         context: Additional context about the operation.
-        repo_path: Path to the repository (used for corruption repair).
-        repo_url: URL of the repository (used for re-cloning).
-        repo: Repository object (used for cleanup before repair).
         **kwargs: Additional context for error messages.
-
-    Returns:
-        True if the error was due to corruption and repair was attempted, False otherwise.
     """
     error_msg = str(error)
     logger.error(
         f"Git {operation.value} operation failed{f' ({context})' if context else ''}: {error_msg}"
     )
-
-    # Check for repository corruption
-    corruption_indicators = [
-        "object not found",
-        "missing object",
-        "bad object",
-        "corrupted",
-        "pack corruption",
-    ]
-
-    if (
-        any(indicator in error_msg.lower() for indicator in corruption_indicators)
-        and repo_path
-    ):
-        logger.warning(f"Detected repository corruption in: {repo_path}")
-        if _attempt_repository_repair(repo_path, repo_url, repo):
-            logger.info(f"Repository corruption repair successful: {repo_path}")
-            return True
 
     if config.notify_errors:
         title_map = {
@@ -333,16 +296,14 @@ def _handle_git_error(
         }
 
         message = f"Failed to {operation.value} {context}".strip()
-        if any(indicator in error_msg.lower() for indicator in corruption_indicators):
-            message += " (Repository corruption detected and repair attempted)"
+        if looks_corrupted(error_msg):
+            message += f" ({CORRUPTION_HINT})"
 
         config.get_handler().show_error(
             title=title_map.get(operation, "Git Operation Error"),
             message=message,
             details=error_msg,
         )
-
-    return False
 
 
 @contextmanager
@@ -887,22 +848,11 @@ def git_check_updates(
         return walker
 
     except pygit2.GitError as e:
-        # Try to get the remote URL for re-cloning if needed
-        remote_url = None
-        try:
-            remote = repo.remotes["origin"]
-            remote_url = remote.url
-        except Exception:  # noqa: S110
-            pass
-
         _handle_git_error(
             GitOperationType.PULL,
             e,
             config,
             context=f"updates check for repository: {repo.path}",
-            repo_path=repo.path,
-            repo_url=remote_url,
-            repo=repo,
         )
         return None
 
@@ -965,25 +915,13 @@ def git_pull(
                 return GitPullResult.GIT_ERROR
         except Exception as e:
             logger.error(f"Fetch operation failed: {e!s}")
-            # Check for corruption and attempt repair
-            error_str = str(e).lower()
-            if "object not found" in error_str or "missing object" in error_str:
-                remote_url = None
-                try:
-                    remote_url = remote.url
-                except Exception:  # noqa: S110
-                    pass
-                repaired = _handle_git_error(
+            if looks_corrupted(e):
+                _handle_git_error(
                     GitOperationType.PULL,
                     e,
                     config,
                     context=f"fetch for repository: {repo.path}",
-                    repo_path=repo.path,
-                    repo_url=remote_url,
-                    repo=repo,
                 )
-                if repaired:
-                    return GitPullResult.UP_TO_DATE
             return GitPullResult.GIT_ERROR
 
         # Stash changes before pull if requested
@@ -1097,27 +1035,12 @@ def git_pull(
             return GitPullResult.UNKNOWN
 
     except pygit2.GitError as e:
-        # Try to get the remote URL for re-cloning if needed
-        remote_url = None
-        try:
-            if remote:
-                remote_url = remote.url
-        except Exception:  # noqa: S110
-            pass
-
-        repaired = _handle_git_error(
+        _handle_git_error(
             GitOperationType.PULL,
             e,
             config,
             context=f"repository: {repo.path}",
-            repo_path=repo.path,
-            repo_url=remote_url,
-            repo=repo,
         )
-
-        # If corruption was repaired, return success indication
-        if repaired:
-            return GitPullResult.UP_TO_DATE
 
         return GitPullResult.GIT_ERROR
 
