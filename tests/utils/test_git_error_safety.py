@@ -73,7 +73,7 @@ def test_failed_fetch_is_an_error_not_up_to_date(
     def broken_fetch(*args: object, **kwargs: object) -> None:
         raise pygit2.GitError(CORRUPTION_ERROR)
 
-    monkeypatch.setattr(pygit2.remotes.Remote, "fetch", broken_fetch)
+    monkeypatch.setattr(pygit2.Remote, "fetch", broken_fetch)
 
     result = git_utils.git_pull(mod_repo, config=GitOperationConfig.create_silent())
 
