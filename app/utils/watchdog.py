@@ -290,3 +290,47 @@ class WatchdogHandler(FileSystemEventHandler, QObject):
                         "path": mod_path,
                     }
                 )
+
+    def on_moved(self, event: FileSystemEvent) -> None:
+        """A function called when a file or directory is moved or renamed.
+
+        A renamed mod folder is the old mod disappearing and a new one
+        appearing. Many editors (and Steam for .acf files) save by writing a
+        temporary file and renaming it over the original, which never raises
+        a modified event, so the destination is checked like a modification.
+
+        :param event: The event object representing the move.
+        :type event: FileSystemEvent
+
+        :return: None
+        """
+        src_path_str = str(event.src_path)
+        dest_path_str = str(event.dest_path)
+        if self.__check_acf_file(event, Path(dest_path_str)):
+            return
+        if event.is_directory:
+            if src_path_str in self.metadata_controller.mods_metadata:
+                logger.debug(f"Mod directory moved away: {src_path_str}")
+                self.__cooldown_mod_change(
+                    callback={"operation": "deleted", "path": src_path_str}
+                )
+            data_source = resolve_data_source(self._instance, dest_path_str)
+            if (
+                data_source is not None
+                and dest_path_str not in self.metadata_controller.mods_metadata
+            ):
+                logger.debug(f"Mod directory moved in: {dest_path_str}")
+                self.__cooldown_mod_change(
+                    callback={
+                        "operation": "created",
+                        "data_source": data_source,
+                        "path": dest_path_str,
+                    }
+                )
+            return
+        mod_path = self.metadata_controller.resolve_about_xml_to_mod_path(dest_path_str)
+        if mod_path is not None:
+            logger.debug(f"Mod metadata replaced: {dest_path_str}")
+            self.__cooldown_mod_change(
+                callback={"operation": "updated", "path": mod_path}
+            )

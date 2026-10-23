@@ -144,3 +144,78 @@ class TestWatchdogHandlerStart:
         handler.watchdog_mods_observer = None
 
         handler.start()  # should not raise
+
+
+def _make_move_handler(known: set[str], about_to_mod: dict[str, str]) -> Any:
+    """Handler with a fake metadata controller and a recording cooldown."""
+    from app.utils.watchdog import WatchdogHandler
+
+    handler: Any = WatchdogHandler.__new__(WatchdogHandler)
+    QObject.__init__(handler)
+    handler.workshop_acf_path = None
+    handler.steamcmd_appworkshop_acf_path = "/nonexistent/appworkshop_294100.acf"
+    handler._instance = MagicMock()
+    handler.metadata_controller = MagicMock()
+    handler.metadata_controller.mods_metadata = dict.fromkeys(known)
+    handler.metadata_controller.resolve_about_xml_to_mod_path.side_effect = (
+        about_to_mod.get
+    )
+    handler.calls = []
+    handler._WatchdogHandler__cooldown_mod_change = lambda callback: (
+        handler.calls.append(callback)
+    )
+    return handler
+
+
+def _moved(src: str, dest: str, is_directory: bool) -> Any:
+    from watchdog.events import DirMovedEvent, FileMovedEvent
+
+    if is_directory:
+        return DirMovedEvent(src, dest)
+    return FileMovedEvent(src, dest)
+
+
+class TestWatchdogHandlerMoves:
+    def test_renamed_mod_folder_is_removed_and_added(
+        self, qapp: object, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        monkeypatch.setattr(
+            "app.utils.watchdog.resolve_data_source", lambda instance, path: "local"
+        )
+        handler = _make_move_handler({"/Mods/Old"}, {})
+
+        handler.on_moved(_moved("/Mods/Old", "/Mods/New", is_directory=True))
+
+        assert handler.calls == [
+            {"operation": "deleted", "path": "/Mods/Old"},
+            {"operation": "created", "data_source": "local", "path": "/Mods/New"},
+        ]
+
+    def test_mod_folder_moved_outside_mod_sources_is_only_removed(
+        self, qapp: object, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        monkeypatch.setattr(
+            "app.utils.watchdog.resolve_data_source", lambda instance, path: None
+        )
+        handler = _make_move_handler({"/Mods/Old"}, {})
+
+        handler.on_moved(_moved("/Mods/Old", "/Trash/Old", is_directory=True))
+
+        assert handler.calls == [{"operation": "deleted", "path": "/Mods/Old"}]
+
+    def test_about_xml_saved_by_rename_updates_the_mod(self, qapp: object) -> None:
+        about = "/Mods/A/About/About.xml"
+        handler = _make_move_handler({"/Mods/A"}, {about: "/Mods/A"})
+
+        handler.on_moved(
+            _moved("/Mods/A/About/About.xml.tmp", about, is_directory=False)
+        )
+
+        assert handler.calls == [{"operation": "updated", "path": "/Mods/A"}]
+
+    def test_unrelated_file_move_is_ignored(self, qapp: object) -> None:
+        handler = _make_move_handler({"/Mods/A"}, {})
+
+        handler.on_moved(_moved("/Mods/A/a.txt", "/Mods/A/b.txt", is_directory=False))
+
+        assert handler.calls == []
