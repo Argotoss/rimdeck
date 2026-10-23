@@ -162,4 +162,15 @@ class Sorter:
             logger.info("Circular dependency detected, abandoning sort")
             return False, []
 
-        return True, list(dict.fromkeys(sorted_paths))
+        result = list(dict.fromkeys(sorted_paths))
+        # Entries the graph can't place (scenarios, folders without a valid
+        # About.xml) stay active at the end instead of being dropped.
+        placed = set(result)
+        unplaced = sorted(
+            path
+            for path in self.active_mod_paths
+            if path not in placed and path in self.mods_metadata
+        )
+        if unplaced:
+            logger.info(f"Keeping {len(unplaced)} unsortable entries at the end")
+        return True, result + unplaced

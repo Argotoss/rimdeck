@@ -2,7 +2,10 @@
 
 import sys
 from collections.abc import Mapping
+from pathlib import Path
 from unittest.mock import MagicMock, patch
+
+import pytest
 
 if "steamworks" not in sys.modules:
     sys.modules["steamworks"] = MagicMock()
@@ -15,6 +18,7 @@ from app.models.metadata.metadata_structure import (
     DependencyMod,
     ListedMod,
     Rules,
+    ScenarioMod,
 )
 from app.utils.constants import SortMethod
 from tests.sort.conftest import make_listed_mod
@@ -204,9 +208,8 @@ class TestEdgeCases:
         assert "/mods/a" in result
         assert "/mods/nonexistent" not in result
 
-    def test_duplicate_package_ids_last_path_wins(self) -> None:
-        """Two paths with the same package_id: one mod silently disappears.
-        Documents current behavior — may be a bug worth fixing."""
+    def test_duplicate_package_ids_keep_every_copy(self) -> None:
+        """Two paths with the same package_id both stay active, in a stable order."""
         mods = {
             "/mods/copy1": make_listed_mod(
                 "/mods/copy1", name="ModCopy1", package_id="author.shared"
@@ -217,8 +220,22 @@ class TestEdgeCases:
         }
         success, result = _pipeline(mods)
         assert success
-        assert len(result) == 1
-        assert result[0] in {"/mods/copy1", "/mods/copy2"}
+        assert result == ["/mods/copy1", "/mods/copy2"]
+
+    @pytest.mark.parametrize(
+        "method", [SortMethod.TOPOLOGICAL, SortMethod.ALPHABETICAL]
+    )
+    def test_entries_without_about_xml_stay_active(self, method: SortMethod) -> None:
+        """A scenario or invalid folder in the active list is kept, after the mods."""
+        scenario = ScenarioMod(name="My Scenario")
+        scenario.mod_path = Path("/mods/scenario")
+        mods: dict[str, ListedMod] = {
+            "/mods/a": make_listed_mod("/mods/a", name="A", package_id="mod.a"),
+            "/mods/scenario": scenario,
+        }
+        success, result = _pipeline(mods, sort_method=method)
+        assert success
+        assert result == ["/mods/a", "/mods/scenario"]
 
 
 class TestSadPaths:
@@ -254,8 +271,8 @@ class TestSadPaths:
         assert not success
         assert result == []
 
-    def test_listed_mod_without_package_id_skipped(self) -> None:
-        """Non-AboutXmlMod entries in metadata are silently skipped."""
+    def test_listed_mod_without_package_id_kept_last(self) -> None:
+        """Non-AboutXmlMod entries can't be ordered, so they stay at the end."""
         from pathlib import Path
 
         from app.models.metadata.metadata_structure import ListedMod as BaseListed
@@ -268,8 +285,7 @@ class TestSadPaths:
         }
         success, result = _pipeline(mods, active_paths={"/mods/a", "/mods/invalid"})
         assert success
-        assert "/mods/a" in result
-        assert "/mods/invalid" not in result
+        assert result == ["/mods/a", "/mods/invalid"]
 
     def test_self_dependency_is_ignored(self) -> None:
         """A mod depending on itself is silently ignored (not a cycle)."""

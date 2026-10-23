@@ -22,7 +22,7 @@ def do_alphabetical_sort(
     # jscpd:ignore-end
 
     packageid_to_name: dict[str, str] = {}
-    packageid_to_path: dict[str, str] = {}
+    packageid_to_paths: dict[str, list[str]] = {}
 
     for path in active_mod_paths:
         mod = mods_metadata.get(path)
@@ -32,7 +32,7 @@ def do_alphabetical_sort(
         packageid_to_name[pid] = (
             mod.name if isinstance(mod.name, str) else "name error in mod about.xml"
         )
-        packageid_to_path[pid] = path
+        packageid_to_paths.setdefault(pid, []).append(path)
 
     def safe_name(name: object) -> str:
         if isinstance(name, str):
@@ -63,8 +63,7 @@ def do_alphabetical_sort(
 
     reordered: list[str] = []
     for package_id in mods_load_order:
-        if package_id in packageid_to_path:
-            reordered.append(packageid_to_path[package_id])
+        reordered.extend(sorted(packageid_to_paths.get(package_id, [])))
 
     logger.info(f"Finished Alphabetical sort with {len(reordered)} mods")
     return reordered

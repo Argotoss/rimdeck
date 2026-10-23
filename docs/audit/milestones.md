@@ -39,7 +39,7 @@ Done when: no feature deletes or corrupts user data, Refresh time is flat across
 
 - [x] [F15](findings.md#f15) Git repair deletes the repository history
 - [x] [F16](findings.md#f16) Game mod list written in place
-- [ ] [F17](findings.md#f17) Sort drops duplicate and invalid entries
+- [x] [F17](findings.md#f17) Sort drops duplicate and invalid entries
 - [ ] [F18](findings.md#f18) IDs containing "_steam" activate both copies
 - [ ] [F19](findings.md#f19) Moved or renamed mod folders leave stale entries
 - [ ] [F31](findings.md#f31) Refresh leaks a panel and gets slower every time

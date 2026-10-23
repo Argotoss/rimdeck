@@ -32,7 +32,7 @@ def do_topo_sort(
         find_circular_dependencies(dependency_graph)
         raise
 
-    packageid_to_path: dict[str, str] = {}
+    packageid_to_paths: dict[str, list[str]] = {}
     path_to_name: dict[str, str] = {}
 
     for path in active_mod_paths:
@@ -41,7 +41,7 @@ def do_topo_sort(
             logger.warning(f"Missing or non-AboutXmlMod for path {path}, skipping")
             continue
         pid = str(mod.package_id)
-        packageid_to_path[pid] = path
+        packageid_to_paths.setdefault(pid, []).append(path)
         name = mod.name if isinstance(mod.name, str) else "name error in mod about.xml"
         path_to_name[path] = name
 
@@ -53,14 +53,15 @@ def do_topo_sort(
     reordered: list[str] = []
     for level in sorted_dependencies:
         temp_mod_list = [
-            packageid_to_path[package_id]
+            path
             for package_id in level
-            if package_id in packageid_to_path
+            for path in packageid_to_paths.get(package_id, [])
         ]
+        # Duplicate copies of one package ID share a name; the path keeps
+        # their relative order stable.
         sorted_temp = sorted(
             temp_mod_list,
-            key=lambda p: safe_name(path_to_name.get(p)),
-            reverse=False,
+            key=lambda p: (safe_name(path_to_name.get(p)), p),
         )
         reordered.extend(sorted_temp)
 
