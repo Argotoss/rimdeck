@@ -702,7 +702,7 @@ class MainContent(QObject):
             duplicate_mods_panel = DuplicateModsPanel(
                 self.duplicate_mods, metadata_controller=self.metadata_controller
             )
-            self.window_manager.register(duplicate_mods_panel)
+            self.window_manager.register(duplicate_mods_panel, key="duplicate_mods")
             duplicate_mods_panel.setWindowModality(Qt.WindowModality.ApplicationModal)
             duplicate_mods_panel.show()
         else:
@@ -725,16 +725,14 @@ class MainContent(QObject):
                 f"Found {missing_mods_count} missing mods. Opening MissingModsPrompt..."
             )
             # Always open the MissingModsPrompt panel, allowing manual entry if Steam database is unavailable
-            self.missing_mods_prompt = MissingModsPrompt(
+            missing_mods_prompt = MissingModsPrompt(
                 packageids=self.missing_mods,
                 metadata_controller=self.metadata_controller,
             )
-            self.window_manager.register_attr(self, "missing_mods_prompt")
-            self.missing_mods_prompt._populate_from_metadata()
-            self.missing_mods_prompt.setWindowModality(
-                Qt.WindowModality.ApplicationModal
-            )
-            self.missing_mods_prompt.show()
+            self.window_manager.register(missing_mods_prompt, key="missing_mods")
+            missing_mods_prompt._populate_from_metadata()
+            missing_mods_prompt.setWindowModality(Qt.WindowModality.ApplicationModal)
+            missing_mods_prompt.show()
         else:
             logger.info("No missing mods found. Skipping...")
 

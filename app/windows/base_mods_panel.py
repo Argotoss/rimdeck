@@ -10,7 +10,7 @@ from typing import Any, TypeVar
 
 from loguru import logger
 from PySide6.QtCore import QCoreApplication, QEvent, QObject, Qt
-from PySide6.QtGui import QKeyEvent, QStandardItem, QStandardItemModel
+from PySide6.QtGui import QKeyEvent, QShowEvent, QStandardItem, QStandardItemModel
 from PySide6.QtWidgets import (
     QAbstractItemView,
     QCheckBox,
@@ -111,9 +111,26 @@ class BaseModsPanel(QWidget):
         """Set up metadata controller and settings controller."""
         self.metadata_controller = self._metadata_controller
         self.settings = self.metadata_controller.settings
-        self.metadata_controller.metadata_refreshed.connect(
-            self._populate_from_metadata
-        )
+        self._stale_while_hidden = False
+        self.metadata_controller.metadata_refreshed.connect(self._on_metadata_refreshed)
+
+    def _on_metadata_refreshed(self) -> None:
+        """Repopulate after a metadata refresh, deferring it while hidden.
+
+        Closed panels stay alive until their owner drops them, and
+        repopulating every hidden one on each refresh made Refresh slower
+        the longer the app ran.
+        """
+        if self.isVisible():
+            self._populate_from_metadata()
+        else:
+            self._stale_while_hidden = True
+
+    def showEvent(self, event: QShowEvent) -> None:
+        super().showEvent(event)
+        if self._stale_while_hidden:
+            self._stale_while_hidden = False
+            self._populate_from_metadata()
 
     def _get_steam_client_integration_enabled(self) -> bool:
         """
