@@ -21,15 +21,15 @@ Done when: a fork build only sees fork releases, refuses unsigned updates, insta
 
 - [x] [F01](findings.md#f01) Updater checks upstream releases
 - [x] [F02](findings.md#f02) Windows installer shares upstream's product ID
-- [ ] [F03](findings.md#f03) Copy existing data from the original app on first launch
-- [ ] [F04](findings.md#f04) Updater verifies nothing but file size
-- [ ] [F05](findings.md#f05) Predictable update temp folder used with root rights on Linux
-- [ ] [F06](findings.md#f06) Updater holds the whole download in memory twice
-- [ ] [F07](findings.md#f07) Edge builds are always offered a downgrade
-- [ ] [F08](findings.md#f08) Builds without a version accept any update
-- [ ] [F09](findings.md#f09) Two Linux downloads match the updater's filter
+- [x] [F03](findings.md#f03) Copy existing data from the original app on first launch
+- [x] [F04](findings.md#f04) Updater verifies nothing but file size
+- [x] [F05](findings.md#f05) Predictable update temp folder used with root rights on Linux
+- [x] [F06](findings.md#f06) Updater holds the whole download in memory twice
+- [x] [F07](findings.md#f07) Edge builds are always offered a downgrade
+- [x] [F08](findings.md#f08) Builds without a version accept any update
+- [x] [F09](findings.md#f09) Two Linux downloads match the updater's filter
 - [x] [F13](findings.md#f13) Rebrand everything that pointed at the original project
-- [ ] [F14](findings.md#f14) Missing theme folder crashes the app
+- [x] [F14](findings.md#f14) Missing theme folder crashes the app
 
 ## M2. Data safety and blocking bugs
 

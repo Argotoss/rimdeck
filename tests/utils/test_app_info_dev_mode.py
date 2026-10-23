@@ -148,3 +148,20 @@ class TestDevModeCustomDir:
         monkeypatch.setenv("RIMDECK_DEV_DIR", str(custom_dir))
         info = AppInfo()
         assert info.app_storage_folder != custom_dir / "data"
+
+
+class TestEdgeVersion:
+    """Edge builds append the short commit to their version."""
+
+    @pytest.mark.usefixtures("_suppress_mock_app_info")
+    def test_edge_version_gets_short_commit(
+        self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+    ) -> None:
+        monkeypatch.delenv("RIMDECK_DEV", raising=False)
+        monkeypatch.delenv("RIMDECK_DEV_DIR", raising=False)
+        (tmp_path / "fake_repo" / "version.xml").write_text(
+            "<root><version>v2.0.1-edge4</version>"
+            "<commit>abc1234def5678</commit></root>"
+        )
+
+        assert AppInfo().app_version == "v2.0.1-edge4+abc1234"

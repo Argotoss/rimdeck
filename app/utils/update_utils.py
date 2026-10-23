@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import os
 import platform
 import re
@@ -14,8 +15,7 @@ import time
 import traceback
 from datetime import datetime
 from pathlib import Path
-from tempfile import gettempdir
-from typing import TYPE_CHECKING, Any, TypedDict, cast
+from typing import TYPE_CHECKING, Any, BinaryIO, TypedDict, cast
 
 import requests
 from loguru import logger
@@ -25,6 +25,12 @@ from PySide6.QtWidgets import QApplication, QMessageBox
 from app.utils import http
 from app.utils.app_info import AppInfo
 from app.utils.generic import check_internet_connection
+from app.utils.update_signing import (
+    MANIFEST_ASSET_NAME,
+    SIGNATURE_ASSET_NAME,
+    ManifestError,
+    verify_manifest,
+)
 from app.utils.zip_extractor import (
     BadZipFile,
     ZipExtractThread,
@@ -39,9 +45,11 @@ from packaging import version
 # Pre-compiled regex patterns for performance
 VERSION_PATTERN = re.compile(r"v?\d+[\.\-_]\d+")
 TAG_PREFIX_PATTERN = re.compile(r"^v", re.IGNORECASE)
+PRERELEASE_SUFFIX_PATTERN = re.compile(r"-(?:edge|auto)(\d+)", re.IGNORECASE)
 
 # API and network constants
 GITHUB_API_URL = "https://api.github.com/repos/Argotoss/rimdeck/releases/latest"
+RELEASES_PAGE_URL = "https://github.com/Argotoss/rimdeck/releases"
 API_TIMEOUT = 15
 DOWNLOAD_TIMEOUT = 30
 
@@ -77,10 +85,6 @@ THREAD_JOIN_TIMEOUT = 5  # 5 seconds for thread join
 # Platform-specific constants
 # Note: TEMP_DIR_DARWIN and TEMP_DIR_DEFAULT are unused and can be removed
 
-# No Version Dialog Constants
-UNKNOWN_VERSION_TITLE = "Unknown Version Detected"
-UNKNOWN_VERSION_TEXT = "Could not find version Information of RimDeck, This may indicate that the application is not an offical release and may be a custom build."
-UNKNOWN_VERSION_INFO = "Are you sure you want to still update anyway?"
 
 # Standardized error messages
 ERR_UPDATE_SKIPPED_TITLE = "Update skipped"
@@ -106,6 +110,25 @@ ERR_RETRIEVE_RELEASE_TEXT = "Please check your internet connection and try again
 
 if TYPE_CHECKING:
     from app.models.settings import Settings
+
+
+def parse_version_string(raw: str) -> version.Version | None:
+    """Parse an app version or release tag into a comparable version.
+
+    Edge and auto builds are tagged like ``v2.0.1-edge4+abc1234``, which is not
+    valid PEP 440; they become ``2.0.1.dev4+abc1234`` so they sort before the
+    stable ``2.0.1`` they lead up to and after ``2.0.0``.
+
+    :param raw: Version string or tag name.
+    :return: Parsed version, or None if it isn't a recognisable version.
+    """
+    text = PRERELEASE_SUFFIX_PATTERN.sub(
+        r".dev\1", TAG_PREFIX_PATTERN.sub("", raw.strip())
+    )
+    try:
+        return version.parse(text)
+    except version.InvalidVersion:
+        return None
 
 
 class UpdateError(Exception):
@@ -134,6 +157,7 @@ class ReleaseInfo(TypedDict):
     version: version.Version
     tag_name: str
     download_url: str
+    sha256: str
     is_msi: bool
     is_appimage: bool
     is_tar_gz: bool
@@ -511,7 +535,7 @@ class UpdateManager(QObject):
         self.settings = settings
         self.main_content = main_content
         self.mod_info_panel = mod_info_panel
-        self._update_content: bytes | None = None
+        self._update_file: Path | None = None
         self._extracted_path: Path | None = None
         self._elevation_needed: bool | None = None  # Cache elevation check result
         # Cache platform info to avoid repeated calls
@@ -745,6 +769,8 @@ class UpdateManager(QObject):
 
         # Compare versions
         current_version_parsed = self._parse_current_version(current_version)
+        if current_version_parsed is None:
+            return None
         if current_version_parsed >= latest_version:
             logger.info("Already running the latest version")
             return None
@@ -755,6 +781,7 @@ class UpdateManager(QObject):
 
         return {
             "download_url": download_url,
+            "sha256": latest_release_info["sha256"],
             "tag_name": latest_tag_name,
             "latest_version": latest_version,
             "needs_elevation": needs_elevation,
@@ -763,39 +790,36 @@ class UpdateManager(QObject):
             "is_tar_gz": latest_release_info.get("is_tar_gz", False),
         }
 
-    def _parse_current_version(self, current_version: str) -> version.Version:
+    def _parse_current_version(self, current_version: str) -> version.Version | None:
         """
-        Parse the current version string, handling special cases.
+        Parse the running app's version.
+
+        A build without version information can't be compared with a release,
+        so it never installs updates itself; the user is pointed at the
+        releases page instead.
 
         Args:
             current_version: The current version string
 
         Returns:
-            Parsed version object
+            Parsed version, or None if this build has no usable version
         """
-        try:
-            if current_version == "Unknown version":
-                logger.warning(
-                    f"Current version is: {current_version}, assuming custom build"
-                )
-                answer = dialogue.show_dialogue_conditional(
-                    title=self.tr(UNKNOWN_VERSION_TITLE),
-                    text=self.tr(UNKNOWN_VERSION_TEXT),
-                    information=self.tr(UNKNOWN_VERSION_INFO),
-                )
-                if answer == QMessageBox.StandardButton.Yes:
-                    logger.info(f"User chose to update version: {current_version}")
-                    # If user confirms, continue with update by returning a dummy version
-                    return version.parse("0.0.0")
-                else:
-                    logger.info(f"User chose not to update version: {current_version}")
-                    # If user declines, return a dummy version that's higher than any valid version
-                    return version.parse("999.999.999")
-
-            return version.parse(current_version)
-        except Exception as e:
-            logger.warning(f"Failed to parse version '{current_version}': {e}")
-            return version.parse("0.0.0")
+        parsed = parse_version_string(current_version)
+        if parsed is None:
+            logger.warning(
+                f"Current version {current_version!r} is not a release version;"
+                " refusing to self-update"
+            )
+            dialogue.show_information(
+                title=self.tr("Update unavailable"),
+                text=self.tr(
+                    "This build has no release version, so it can't update itself."
+                ),
+                information=self.tr(
+                    "Download the latest release from {url} instead."
+                ).format(url=RELEASES_PAGE_URL),
+            )
+        return parsed
 
     def _prompt_user_for_update(
         self, latest_tag_name: str, current_version: str
@@ -830,13 +854,21 @@ class UpdateManager(QObject):
         """
         download_url = update_info["download_url"]
         tag_name = update_info["tag_name"]
+        expected_sha256 = str(update_info["sha256"])
 
         is_msi = bool(update_info.get("is_msi", False))
         is_appimage = bool(update_info.get("is_appimage", False))
         is_tar_gz = bool(update_info.get("is_tar_gz", False))
 
         try:
-            self._perform_update(download_url, tag_name, is_msi, is_appimage, is_tar_gz)
+            self._perform_update(
+                download_url,
+                tag_name,
+                is_msi,
+                is_appimage,
+                is_tar_gz,
+                expected_sha256=expected_sha256,
+            )
         except UpdateError as e:
             logger.error(f"Update process failed: {e}")
             raise
@@ -868,15 +900,10 @@ class UpdateManager(QObject):
             response.raise_for_status()
             release_data = response.json()
 
-            tag_name = release_data.get("tag_name", "")
-            # Normalize tag name by removing prefix 'v' if present
-            normalized_tag = TAG_PREFIX_PATTERN.sub("", str(tag_name))
-
-            # Parse version
-            try:
-                latest_version = version.parse(normalized_tag)
-            except Exception as e:
-                logger.warning(f"Failed to parse version from tag {tag_name}: {e}")
+            tag_name = str(release_data.get("tag_name", ""))
+            latest_version = parse_version_string(tag_name)
+            if latest_version is None:
+                logger.warning(f"Failed to parse version from tag {tag_name}")
                 self.show_update_error()
                 return None
 
@@ -894,10 +921,29 @@ class UpdateManager(QObject):
                 )
                 return None
 
+            assets = release_data.get("assets", [])
+            try:
+                expected_sha256 = self._verified_asset_hash(
+                    assets, tag_name, download_info["name"], headers
+                )
+            except ManifestError as e:
+                logger.error(f"Refusing update from {tag_name}: {e}")
+                dialogue.show_warning(
+                    title=self.tr("Update refused"),
+                    text=self.tr(
+                        "The latest release could not be verified, so it was not installed."
+                    ),
+                    information=self.tr(
+                        "Reason: {reason}<br><br>You can download releases manually from {url}."
+                    ).format(reason=str(e), url=RELEASES_PAGE_URL),
+                )
+                return None
+
             return {
                 "version": latest_version,
                 "tag_name": tag_name,
                 "download_url": download_info["url"],
+                "sha256": expected_sha256,
                 "is_msi": download_info.get("is_msi", False),
                 "is_appimage": download_info.get("is_appimage", False),
                 "is_tar_gz": download_info.get("is_tar_gz", False),
@@ -943,6 +989,49 @@ class UpdateManager(QObject):
             logger.warning(f"Unexpected error fetching release info: {e}")
             self.show_update_error()
             return None
+
+    def _verified_asset_hash(
+        self,
+        assets: list[dict[str, Any]],
+        tag_name: str,
+        asset_name: str,
+        headers: dict[str, str],
+    ) -> str:
+        """
+        Download the release's signed manifest and return the asset's hash.
+
+        Args:
+            assets: Assets of the release from the GitHub API
+            tag_name: Tag of the release
+            asset_name: File name of the asset that will be installed
+            headers: Request headers (GitHub token, if configured)
+
+        Returns:
+            Expected lowercase hex SHA-256 of the asset
+
+        Raises:
+            ManifestError: If the manifest is missing, unsigned, or doesn't list the asset
+        """
+        urls = {
+            str(asset.get("name", "")): str(asset.get("browser_download_url", ""))
+            for asset in assets
+        }
+        manifest_url = urls.get(MANIFEST_ASSET_NAME)
+        signature_url = urls.get(SIGNATURE_ASSET_NAME)
+        if not manifest_url or not signature_url:
+            raise ManifestError("The release has no signed update manifest")
+        try:
+            manifest = http.get(manifest_url, timeout=API_TIMEOUT, headers=headers)
+            manifest.raise_for_status()
+            signature = http.get(signature_url, timeout=API_TIMEOUT, headers=headers)
+            signature.raise_for_status()
+        except requests.RequestException as e:
+            raise ManifestError(f"Could not download the update manifest: {e}") from e
+        hashes = verify_manifest(manifest.content, signature.content, tag_name)
+        expected = hashes.get(asset_name)
+        if expected is None:
+            raise ManifestError(f"The update manifest does not list {asset_name}")
+        return expected
 
     def _asset_matches(
         self,
@@ -1065,8 +1154,10 @@ class UpdateManager(QObject):
         """
         candidate = None
 
-        # Single pass: prefer arch-specific match, fallback to system-only
-        for asset in assets:
+        # Sorted by name so that when several builds match (e.g. two Ubuntu
+        # versions) the choice is stable and lands on the oldest, most
+        # compatible one.
+        for asset in sorted(assets, key=lambda a: str(a.get("name", ""))):
             asset_name = str(asset.get("name", ""))
             download_url = asset.get("browser_download_url")
 
@@ -1172,9 +1263,9 @@ class UpdateManager(QObject):
     def _on_download_cancel(self) -> None:
         self._download_cancelled = True
 
-    def _download_update_worker(self, url: str) -> None:
+    def _download_update_worker(self, url: str, expected_sha256: str) -> None:
         try:
-            self._download_update(url)
+            self._download_update(url, expected_sha256)
             self.download_complete.emit(True, "")
         except Exception as e:
             self.download_complete.emit(False, str(e))
@@ -1186,6 +1277,8 @@ class UpdateManager(QObject):
         is_msi: bool,
         is_appimage: bool = False,
         is_tar_gz: bool = False,
+        *,
+        expected_sha256: str,
     ) -> None:
         """
         Download and extract the update, then launch the update script.
@@ -1196,6 +1289,7 @@ class UpdateManager(QObject):
             is_msi: Whether the update is an MSI installer
             is_appimage: Whether the update is an AppImage file
             is_tar_gz: Whether the update is a tar.gz archive
+            expected_sha256: Hash of the asset from the signed release manifest
         """
         try:
             logger.debug(
@@ -1239,7 +1333,9 @@ class UpdateManager(QObject):
             self.download_complete.connect(on_complete)
 
             worker = threading.Thread(
-                target=self._download_update_worker, args=(download_url,), daemon=True
+                target=self._download_update_worker,
+                args=(download_url, expected_sha256),
+                daemon=True,
             )
             worker.start()
 
@@ -1256,7 +1352,7 @@ class UpdateManager(QObject):
             # Wait for download to complete without blocking event loop
             loop.exec()
 
-            if not download_result["success"] or self._update_content is None:
+            if not download_result["success"] or self._update_file is None:
                 if self._download_cancelled:
                     raise UpdateDownloadError("Download cancelled by user")
                 raise UpdateDownloadError(
@@ -1394,19 +1490,24 @@ class UpdateManager(QObject):
         return f"{size:.1f} {units[i]}"
 
     def _download_with_progress(
-        self, response: requests.Response, total_size: int
-    ) -> bytes:
+        self,
+        response: requests.Response,
+        total_size: int,
+        sink: BinaryIO,
+        digest: hashlib._Hash,
+    ) -> int:
         """
-        Download content with progress tracking.
+        Stream the response into a file while hashing it, with progress tracking.
 
         Args:
             response: Streaming response object
             total_size: Total file size for progress calculation
+            sink: Open binary file the content is written to
+            digest: Hash object updated with every chunk
 
         Returns:
-            Downloaded content as bytes
+            Number of bytes written
         """
-        content = bytearray()
         downloaded_size = 0
         chunk_count = 0
         downloaded_since_last_emit = 0
@@ -1419,7 +1520,8 @@ class UpdateManager(QObject):
             if self._download_cancelled:
                 raise UpdateDownloadError("Download cancelled by user")
             if chunk:
-                content.extend(chunk)
+                sink.write(chunk)
+                digest.update(chunk)
                 downloaded_size += len(chunk)
                 chunk_count += 1
                 downloaded_since_last_emit += len(chunk)
@@ -1449,9 +1551,9 @@ class UpdateManager(QObject):
                     downloaded_since_last_emit = 0  # reset counter
 
         total_time = (datetime.now() - start_time).total_seconds()  # noqa: DTZ005
-        avg_speed = len(content) / total_time if total_time > 0 else 0
+        avg_speed = downloaded_size / total_time if total_time > 0 else 0
         logger.debug(
-            f"Downloaded {len(content)} bytes in {chunk_count} chunks over {total_time:.2f}s (avg speed: {avg_speed:.2f} B/s)"
+            f"Downloaded {downloaded_size} bytes in {chunk_count} chunks over {total_time:.2f}s (avg speed: {avg_speed:.2f} B/s)"
         )
         if self._download_cancelled:
             raise UpdateDownloadError("Download cancelled by user")
@@ -1460,38 +1562,45 @@ class UpdateManager(QObject):
             self.update_progress.emit(100, "Download complete")
         else:
             self.update_progress.emit(
-                100, f"Download complete ({self._format_size(len(content))})"
+                100, f"Download complete ({self._format_size(downloaded_size)})"
             )
-        return bytes(content)
+        return downloaded_size
 
-    def _validate_download(self, content: bytes) -> None:
+    def _validate_download(self, size: int, actual: str, expected: str) -> None:
         """
-        Validate downloaded content.
+        Validate the downloaded file against the signed manifest.
 
         Args:
-            content: Downloaded content
+            size: Size of the downloaded file in bytes
+            actual: SHA-256 of the downloaded file
+            expected: SHA-256 listed in the signed release manifest
 
         Raises:
             UpdateDownloadError: If validation fails
         """
-        if len(content) == 0:
+        if size == 0:
             raise UpdateDownloadError("Downloaded file is empty")
-        if len(content) < MIN_UPDATE_SIZE:
+        if size < MIN_UPDATE_SIZE:
+            raise UpdateDownloadError(f"Downloaded file too small ({size} bytes)")
+        if actual != expected:
             raise UpdateDownloadError(
-                f"Downloaded file too small ({len(content)} bytes)"
+                "Downloaded file does not match the signed release manifest"
             )
 
-    def _download_update(self, url: str) -> None:
+    def _download_update(self, url: str, expected_sha256: str) -> None:
         """
-        Download the update to memory using requests with progress tracking.
+        Download the update into a private temporary directory, verifying its hash.
 
         Args:
             url: URL to download from
+            expected_sha256: Hash of the asset from the signed release manifest
 
         Raises:
-            UpdateDownloadError: If download fails
+            UpdateDownloadError: If the download fails or doesn't match the manifest
         """
         logger.info(f"Starting download from URL: {url}")
+        download_dir = self._create_temp_dir()
+        target = download_dir / (Path(url.split("?", 1)[0]).name or "update")
         try:
             # Get file size first for progress tracking
             total_size = self._get_file_size(url)
@@ -1502,44 +1611,46 @@ class UpdateManager(QObject):
             response.raise_for_status()
             logger.debug(f"HTTP response status: {response.status_code}")
 
-            # Download with progress tracking
-            content = self._download_with_progress(response, total_size)
+            digest = hashlib.sha256()
+            with target.open("wb") as sink:
+                size = self._download_with_progress(response, total_size, sink, digest)
 
-            # Validate downloaded content
-            self._validate_download(content)
+            self._validate_download(size, digest.hexdigest(), expected_sha256)
 
-            self._update_content = content
-            logger.info("Update downloaded and validated successfully")
+            self._update_file = target
+            logger.info("Update downloaded and verified against the signed manifest")
 
         except requests.RequestException as e:
             logger.error(f"Download failed: {e}")
+            shutil.rmtree(download_dir, ignore_errors=True)
             raise UpdateDownloadError(f"Failed to download update: {e}") from e
         except UpdateError:
+            shutil.rmtree(download_dir, ignore_errors=True)
             raise
         except Exception as e:
             logger.error(f"Unexpected error during download: {e}")
+            shutil.rmtree(download_dir, ignore_errors=True)
             raise UpdateDownloadError(f"Failed to download update: {e}") from e
 
     def _create_temp_dir(self) -> Path:
         """
-        Create a unique temporary directory for update extraction.
+        Create a private, unpredictable temporary directory for the update.
+
+        ``mkdtemp`` creates it with mode 0700 under a random name, so another
+        local user can't pre-create or tamper with it before the installer
+        script (which may run elevated) reads from it.
 
         Returns:
             Path to the created temporary directory
         """
-        temp_base = (
-            Path(gettempdir())
-            / f"RimDeck_update_{datetime.now().strftime('%Y%m%d_%H%M%S')}"  # noqa: DTZ005
-        )
-        temp_base.mkdir(exist_ok=True)
-        return temp_base
+        return Path(tempfile.mkdtemp(prefix="RimDeck_update_"))
 
-    def _extract_zip(self, content: bytes, temp_base: Path) -> int:
+    def _extract_zip(self, archive: Path, temp_base: Path) -> int:
         """
-        Extract ZIP content to the temporary directory using ZipExtractThread with UI progress.
+        Extract a ZIP archive to the temporary directory using ZipExtractThread with UI progress.
 
         Args:
-            content: ZIP file content as bytes
+            archive: Downloaded ZIP file
             temp_base: Temporary directory to extract to
 
         Returns:
@@ -1550,9 +1661,7 @@ class UpdateManager(QObject):
         """
         logger.info("Extracting update from ZIP")
 
-        # Write content to temporary ZIP file for extraction
-        temp_zip_path = temp_base.parent / f"{temp_base.name}.zip"
-        temp_zip_path.write_bytes(content)
+        temp_zip_path = archive
 
         try:
             # Validate ZIP integrity
@@ -1658,7 +1767,7 @@ class UpdateManager(QObject):
                 except Exception as e:
                     logger.debug(f"Failed to clean up temp ZIP file: {e}")
 
-    def _extract_tar_gz(self, content: bytes, temp_base: Path) -> int:
+    def _extract_tar_gz(self, archive: Path, temp_base: Path) -> int:
         """
         Extract tar.gz content to the temporary directory using
         TarExtractThread with UI progress.
@@ -1667,7 +1776,7 @@ class UpdateManager(QObject):
         so the UI stays responsive and extraction can be aborted.
 
         Args:
-            content: tar.gz file content as bytes
+            archive: Downloaded tar.gz file
             temp_base: Temporary directory to extract to
 
         Returns:
@@ -1678,8 +1787,7 @@ class UpdateManager(QObject):
         """
         logger.info("Extracting update from tar.gz")
 
-        temp_tar_path = temp_base.parent / f"{temp_base.name}.tar.gz"
-        temp_tar_path.write_bytes(content)
+        temp_tar_path = archive
 
         try:
             # Validate and count members before spawning the thread
@@ -1854,7 +1962,7 @@ class UpdateManager(QObject):
                 "Cannot determine AppImage path from environment"
             )
 
-        if self._update_content is None:
+        if self._update_file is None:
             raise UpdateExtractionError("No update content available")
 
         new_path = appimage_path.with_suffix(appimage_path.suffix + ".new")
@@ -1867,10 +1975,10 @@ class UpdateManager(QObject):
             )
 
         logger.info(f"Writing new AppImage to: {new_path}")
-        new_path.write_bytes(self._update_content)
+        shutil.copyfile(self._update_file, new_path)
         os.chmod(new_path, 0o755)
         self._extracted_path = new_path
-        logger.info(f"AppImage prepared ({len(self._update_content)} bytes)")
+        logger.info(f"AppImage prepared ({new_path.stat().st_size} bytes)")
         return new_path
 
     def _extract_update(self, is_msi: bool = False, is_tar_gz: bool = False) -> Path:
@@ -1887,17 +1995,16 @@ class UpdateManager(QObject):
         """
         logger.info("Extracting update")
         try:
-            if self._update_content is None:
+            if self._update_file is None:
                 logger.error("No update content available")
                 raise UpdateExtractionError(
                     "No update content available for extraction"
                 )
 
             if is_msi:
-                # For MSI, just save the file to temp location
-                temp_base = self._create_temp_dir()
-                msi_path = temp_base / "RimDeck_Update.msi"
-                msi_path.write_bytes(self._update_content)
+                # MSI installs as-is from the private download directory
+                msi_path = self._update_file.with_name("RimDeck_Update.msi")
+                self._update_file.replace(msi_path)
                 logger.info("MSI prepared")
                 self._extracted_path = msi_path
                 return msi_path
@@ -1905,11 +2012,9 @@ class UpdateManager(QObject):
                 temp_base = self._create_temp_dir()
 
                 if is_tar_gz:
-                    extracted_files = self._extract_tar_gz(
-                        self._update_content, temp_base
-                    )
+                    extracted_files = self._extract_tar_gz(self._update_file, temp_base)
                 else:
-                    extracted_files = self._extract_zip(self._update_content, temp_base)
+                    extracted_files = self._extract_zip(self._update_file, temp_base)
                 logger.info(f"Extracted {extracted_files} files")
 
                 # Normalize structure

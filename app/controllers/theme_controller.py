@@ -171,7 +171,7 @@ class ThemeController:
                     title=QCoreApplication.translate("ThemeController", "Theme Error"),
                     text=QCoreApplication.translate(
                         "ThemeController",
-                        "Failed to apply theme: {selected_theme_name},Resetting to default theme: {self.default_theme}",
+                        "Failed to apply theme: {selected_theme_name},Resetting to default theme: {default_theme}",
                     ).format(
                         selected_theme_name=selected_theme_name,
                         default_theme=self.default_theme,

@@ -5492,17 +5492,17 @@ Alternative Dependencies:</source>
 <context>
     <name>RimDeck</name>
     <message>
-        <location filename="../app/__main__.py" line="249"/>
+        <location filename="../app/__main__.py" line="253"/>
         <source>RimDeck Already Running</source>
         <translation>リムソートはすでに実行中です</translation>
     </message>
     <message>
-        <location filename="../app/__main__.py" line="252"/>
+        <location filename="../app/__main__.py" line="256"/>
         <source>Another instance of RimDeck is already running.</source>
         <translation>rimDeck の別のインスタンスがすでに実行されています。</translation>
     </message>
     <message>
-        <location filename="../app/__main__.py" line="257"/>
+        <location filename="../app/__main__.py" line="261"/>
         <source>Please close the existing instance before starting a new one.</source>
         <translation>新しいインスタンスを開始する前に、既存のインスタンスを閉じてください。</translation>
     </message>
@@ -7270,8 +7270,8 @@ Please choose one of the following options to proceed.</source>
     </message>
     <message>
         <location filename="../app/controllers/theme_controller.py" line="172"/>
-        <source>Failed to apply theme: {selected_theme_name},Resetting to default theme: {self.default_theme}</source>
-        <translation>テーマ&apos;{selected_theme_name}&apos;の適用に失敗しました。デフォルトテーマ&apos;{self.default_theme}&apos;にリセットします。</translation>
+        <source>Failed to apply theme: {selected_theme_name},Resetting to default theme: {default_theme}</source>
+        <translation>テーマ&apos;{selected_theme_name}&apos;の適用に失敗しました。デフォルトテーマ&apos;{default_theme}&apos;にリセットします。</translation>
     </message>
 </context>
 <context>
@@ -7835,62 +7835,92 @@ Please reach out to us for support at: {support_url}</source>
 <context>
     <name>UpdateManager</name>
     <message>
-        <location filename="../app/utils/update_utils.py" line="814"/>
+        <location filename="../app/utils/update_utils.py" line="838"/>
         <source>RimDeck update found</source>
         <translation>RIMDECKアップデートが見つかりました</translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="816"/>
+        <location filename="../app/utils/update_utils.py" line="840"/>
         <source>An update to RimDeck has been released: {latest_tag_name}</source>
         <translation>rimdeckのアップデートがリリースされました： {latest_tag_name}</translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="911"/>
+        <location filename="../app/utils/update_utils.py" line="932"/>
+        <source>Update refused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/utils/update_utils.py" line="934"/>
+        <source>The latest release could not be verified, so it was not installed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/utils/update_utils.py" line="937"/>
+        <source>Reason: {reason}&lt;br&gt;&lt;br&gt;You can download releases manually from {url}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/utils/update_utils.py" line="957"/>
         <source>Requests will be accepted again {when}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="918"/>
+        <location filename="../app/utils/update_utils.py" line="964"/>
         <source>RimDeck Update Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="919"/>
+        <location filename="../app/utils/update_utils.py" line="965"/>
         <source>GitHub&apos;s API rate limit has been reached</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="921"/>
+        <location filename="../app/utils/update_utils.py" line="967"/>
         <source>Too many requests were sent from your network, so GitHub declined this update check. Nothing is wrong with your installation.&lt;br&gt;&lt;br&gt;{reset}&lt;br&gt;&lt;br&gt;Adding a GitHub personal access token under Settings - Advanced raises the limit substantially and usually removes this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="1214"/>
+        <location filename="../app/utils/update_utils.py" line="1308"/>
         <source>Downloading RimDeck {tag_name} release...</source>
         <translation>rimdeck {tag_name}リリースのダウンロード...</translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="2613"/>
+        <location filename="../app/utils/update_utils.py" line="2718"/>
         <source>Creating backup... (this may take several minutes)</source>
         <translation>バックアップを作成しています... (これには数分かかる場合があります)</translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="1289"/>
+        <location filename="../app/utils/update_utils.py" line="1385"/>
         <source>Update downloaded</source>
         <translation>ダウンロードされた更新</translation>
     </message>
     <message>
+        <location filename="../app/utils/update_utils.py" line="814"/>
+        <source>Update unavailable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/utils/update_utils.py" line="816"/>
+        <source>This build has no release version, so it can&apos;t update itself.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../app/utils/update_utils.py" line="819"/>
+        <source>Download the latest release from {url} instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/utils/update_utils.py" line="843"/>
         <source>You are running RimDeck {current_version}&lt;br&gt;Do you want to update now?</source>
         <translation>rimDeck {current_version} を実行しています&lt;br&gt;今すぐ更新しますか?</translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="1290"/>
+        <location filename="../app/utils/update_utils.py" line="1386"/>
         <source>Do you want to proceed with the update?</source>
         <translation>アップデートを進めたいですか？</translation>
     </message>
     <message>
-        <location filename="../app/utils/update_utils.py" line="1292"/>
+        <location filename="../app/utils/update_utils.py" line="1388"/>
         <source>&lt;br&gt;Successfully retrieved latest release.&lt;br&gt;The update will be installed from: {update_source_path}</source>
         <translation>&lt;br&gt;最新リリースを正常に取得しました。&lt;br&gt;アップデートは次の場所からインストールされます: {update_source_path}</translation>
     </message>

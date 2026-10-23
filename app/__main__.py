@@ -38,6 +38,7 @@ from loguru import logger
 
 from app.controllers.app_controller import AppController
 from app.utils.app_info import AppInfo
+from app.utils.legacy_data import import_legacy_data, legacy_data_folder
 from app.utils.single_instance import SingleInstanceLock
 from app.views.dialogue import show_fatal_error
 
@@ -233,6 +234,9 @@ if __name__ == "__main__":
         logger.info(
             f"Running in dev mode - data stored at {AppInfo().app_storage_folder.parent}"
         )
+
+    if not AppInfo().is_dev_mode:
+        import_legacy_data(AppInfo().app_storage_folder, legacy_data_folder())
 
     # Single-instance lock: prevent multiple RimDeck instances from running
     lock: SingleInstanceLock | None = None

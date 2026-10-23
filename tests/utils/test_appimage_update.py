@@ -376,8 +376,10 @@ class TestPrepareAppImageUpdate:
         fake.write_bytes(b"old content")
         monkeypatch.setenv("APPIMAGE", str(fake))
 
+        download = tmp_path / "download.AppImage"
+        download.write_bytes(b"new appimage content")
         mgr = MagicMock(spec=UpdateManager)
-        mgr._update_content = b"new appimage content"
+        mgr._update_file = download
         mgr._extracted_path = None
         mgr._prepare_appimage_update = UpdateManager._prepare_appimage_update.__get__(
             mgr
@@ -395,7 +397,7 @@ class TestPrepareAppImageUpdate:
         monkeypatch.delenv("APPIMAGE", raising=False)
 
         mgr = MagicMock(spec=UpdateManager)
-        mgr._update_content = b"content"
+        mgr._update_file = Path("unused")
         mgr._prepare_appimage_update = UpdateManager._prepare_appimage_update.__get__(
             mgr
         )
@@ -423,7 +425,7 @@ class TestPrepareAppImageUpdate:
         fake.parent.chmod(0o555)
         try:
             mgr = MagicMock(spec=UpdateManager)
-            mgr._update_content = b"content"
+            mgr._update_file = tmp_path / "unused"
             mgr._prepare_appimage_update = (
                 UpdateManager._prepare_appimage_update.__get__(mgr)
             )
@@ -562,8 +564,10 @@ class TestExtractTarGzIntegration:
 
         from app.utils.update_utils import UpdateExtractionError
 
+        archive = tmp_path / "update.tar.gz"
+        archive.write_bytes(b"not a tarball")
         with pytest.raises(UpdateExtractionError, match="Invalid tar.gz"):
-            _make_extract_mgr()._extract_tar_gz(b"not a tarball", extract_dir)
+            _make_extract_mgr()._extract_tar_gz(archive, extract_dir)
 
     def test_raises_on_empty_tar_gz(self, tmp_path: Path) -> None:
         import io
@@ -578,5 +582,7 @@ class TestExtractTarGzIntegration:
 
         from app.utils.update_utils import UpdateExtractionError
 
+        archive = tmp_path / "update.tar.gz"
+        archive.write_bytes(buf.getvalue())
         with pytest.raises(UpdateExtractionError, match="empty"):
-            _make_extract_mgr()._extract_tar_gz(buf.getvalue(), extract_dir)
+            _make_extract_mgr()._extract_tar_gz(archive, extract_dir)

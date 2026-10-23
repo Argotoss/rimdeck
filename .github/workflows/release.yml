@@ -166,6 +166,15 @@ jobs:
           rm -rf -- ./!(*.zip|*.tar.gz|*.msi|*.AppImage)
         shell: bash
 
+      - name: Sign update manifest
+        env:
+          UPDATE_SIGNING_KEY: ${{ secrets.UPDATE_SIGNING_KEY }}
+          RELEASE_TAG: ${{ steps.tag.outputs.tag }}
+        run: |
+          python3 -m pip install --quiet "cryptography==48.0.1"
+          python3 packaging/sign_update_manifest.py artifacts "$RELEASE_TAG"
+        shell: bash
+
       - name: Create body
         id: body
         run: |
@@ -190,7 +199,7 @@ jobs:
         uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         id: release
         with:
-          artifacts: "artifacts/*.zip,artifacts/*.tar.gz,artifacts/*.msi,artifacts/*.AppImage"
+          artifacts: "artifacts/*.zip,artifacts/*.tar.gz,artifacts/*.msi,artifacts/*.AppImage,artifacts/manifest.json,artifacts/manifest.json.sig"
           tag: ${{ steps.tag.outputs.tag }}
           generateReleaseNotes: true
           prerelease: ${{ needs.pre-build.outputs.prerelease }}
