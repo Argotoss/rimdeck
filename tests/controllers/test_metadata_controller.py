@@ -795,6 +795,50 @@ def test_get_mods_from_list_happy_path(
     assert missing == []
 
 
+def test_get_mods_from_list_id_containing_steam_activates_one_copy(
+    metadata_controller: MetadataController,
+) -> None:
+    """An ID that merely contains "_steam" is not a Workshop suffix."""
+    local = _make_about_xml_mod(
+        "Works", "author.my_steamworks", ModType.LOCAL, "/local/works"
+    )
+    workshop = _make_about_xml_mod(
+        "Works", "author.my_steamworks", ModType.STEAM_WORKSHOP, "/workshop/111"
+    )
+    metadata_controller.metadata_mediator._mods_metadata = {
+        "/local/works": local,
+        "/workshop/111": workshop,
+    }
+
+    active, _inactive, _duplicates, missing = metadata_controller.get_mods_from_list(
+        ["author.my_steamworks"]
+    )
+
+    assert active == ["/local/works"]
+    assert missing == []
+
+
+def test_get_mods_from_list_steam_suffix_prefers_workshop_copy(
+    metadata_controller: MetadataController,
+) -> None:
+    """A trailing "_steam" picks the Workshop copy of a duplicated mod."""
+    local = _make_about_xml_mod("Mod", "author.mod", ModType.LOCAL, "/local/mod")
+    workshop = _make_about_xml_mod(
+        "Mod", "author.mod", ModType.STEAM_WORKSHOP, "/workshop/222"
+    )
+    metadata_controller.metadata_mediator._mods_metadata = {
+        "/local/mod": local,
+        "/workshop/222": workshop,
+    }
+
+    active, _inactive, _duplicates, missing = metadata_controller.get_mods_from_list(
+        ["author.mod_steam"]
+    )
+
+    assert active == ["/workshop/222"]
+    assert missing == []
+
+
 def test_get_mods_from_list_missing_mods(
     metadata_controller: MetadataController,
 ) -> None:

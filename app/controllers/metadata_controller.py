@@ -542,10 +542,12 @@ class MetadataController(QObject):
         for package_id in package_ids_to_import:
             package_id_normalized = package_id.lower()
             package_id_steam_suffix = "_steam"
-            package_id_normalized_stripped = package_id_normalized.replace(
-                package_id_steam_suffix, ""
+            # Only a trailing "_steam" marks the Workshop copy; IDs like
+            # "author.my_steamworks" merely contain the text.
+            is_steam = package_id_normalized.endswith(package_id_steam_suffix)
+            package_id_normalized_stripped = package_id_normalized.removesuffix(
+                package_id_steam_suffix
             )
-            is_steam = package_id_steam_suffix in package_id_normalized
             target_id = (
                 package_id_normalized_stripped if is_steam else package_id_normalized
             )
