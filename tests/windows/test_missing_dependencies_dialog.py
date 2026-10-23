@@ -39,7 +39,7 @@ def _find_button(parent: QWidget, text: str) -> QPushButton:
     raise AssertionError(f"Button {text!r} not found")
 
 
-def test_show_dialog_is_non_modal_and_returns_selected(
+def test_show_dialog_without_parent_is_non_modal_and_returns_selected(
     dialog: MissingDependenciesDialog,
 ) -> None:
     def accept_with_selection() -> None:
@@ -52,6 +52,19 @@ def test_show_dialog_is_non_modal_and_returns_selected(
 
     assert dialog.windowModality() == Qt.WindowModality.NonModal
     assert selected == {"dep.local"}
+
+
+def test_show_dialog_with_parent_blocks_only_that_window(
+    qtbot: QtBot, metadata_controller: MagicMock
+) -> None:
+    main_window = QWidget()
+    qtbot.addWidget(main_window)
+    parented = MissingDependenciesDialog(metadata_controller, parent=main_window)
+    QTimer.singleShot(100, parented.reject)
+
+    parented.show_dialog(_LOCAL_DEPS_SUMMARY, _LOCAL_MISSING_DEPS)
+
+    assert parented.windowModality() == Qt.WindowModality.WindowModal
 
 
 def test_show_dialog_reject_returns_empty(dialog: MissingDependenciesDialog) -> None:

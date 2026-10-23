@@ -345,6 +345,7 @@ class MainContent(QObject):
         self.duplicate_mods: dict[str, Any] = {}
         self._extract_progress_widget: TaskProgressWindow | None = None
         self.window_manager = WindowManager()
+        self._sort_in_progress = False
         self._active_loading_loop: QEventLoop | None = None
         self._refresh_in_progress: bool = False
 
@@ -1000,6 +1001,18 @@ class MainContent(QObject):
         Trigger sorting of all active mods using user-configured algorithm
         & all available & configured metadata
         """
+        # The dependency dialog waits in a nested event loop; a second sort
+        # started from there would finish first and then be overwritten.
+        if self._sort_in_progress:
+            logger.info("Sort already in progress, ignoring request")
+            return
+        self._sort_in_progress = True
+        try:
+            self._sort_active_mods(check_deps)
+        finally:
+            self._sort_in_progress = False
+
+    def _sort_active_mods(self, check_deps: bool) -> None:
         # Get the live list of active and inactive mods. This is because the user
         # will likely sort before saving.
         logger.debug("Starting sorting mods")
@@ -1021,7 +1034,8 @@ class MainContent(QObject):
             )
             if missing_deps:
                 dialog = MissingDependenciesDialog(
-                    metadata_controller=self.metadata_controller
+                    metadata_controller=self.metadata_controller,
+                    parent=self.mods_panel.active_mods_list.window(),
                 )
                 self.window_manager.register(dialog)
                 dialog.download_requested.connect(self._download_single_workshop_mod)

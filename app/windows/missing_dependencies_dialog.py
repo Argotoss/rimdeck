@@ -139,7 +139,13 @@ class MissingDependenciesDialog(QDialog):
         self.selected_mods.clear()
         self._populate_dependencies(deps_summary)
 
-        self.setWindowModality(Qt.WindowModality.NonModal)
+        # Modal to its parent window only: the main window can't start another
+        # sort underneath it, while download windows it opens stay usable.
+        self.setWindowModality(
+            Qt.WindowModality.WindowModal
+            if self.parentWidget() is not None
+            else Qt.WindowModality.NonModal
+        )
         loop = QEventLoop()
         self.finished.connect(loop.quit)
         self.show()
