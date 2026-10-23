@@ -1,3 +1,36 @@
+from collections.abc import Iterable
+
+from app.utils.constants import KNOWN_MOD_REPLACEMENTS
+
+
+def dependency_satisfied(
+    dependency: str,
+    alternatives: Iterable[str],
+    present: set[str],
+    use_alternatives: bool,
+) -> bool:
+    """Decide whether a mod's dependency is met by the mods in ``present``.
+
+    This is the single rule used by the mod list, the Sort dependency check
+    and the dependency dialog, so they can't disagree.
+
+    :param dependency: Package ID the mod depends on.
+    :param alternatives: The dependency's ``alternativePackageIds``.
+    :param present: Package IDs that count as available.
+    :param use_alternatives: Whether alternative package IDs satisfy it.
+    :return: True if the dependency, an allowed alternative, or a known
+        replacement (e.g. Prepatcher for Harmony) is present.
+    """
+    if dependency in present:
+        return True
+    if use_alternatives and any(alt in present for alt in alternatives):
+        return True
+    return any(
+        replacement in present
+        for replacement in KNOWN_MOD_REPLACEMENTS.get(dependency, set())
+    )
+
+
 def extract_tier_subgraph(
     full_graph: dict[str, set[str]],
     tier_mods: set[str],

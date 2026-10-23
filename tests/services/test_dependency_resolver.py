@@ -303,6 +303,30 @@ class TestBuildDependenciesDialogContext:
         assert "author.parent" not in missing_deps
         assert dep_resolve == {}
 
+    def test_known_replacement_satisfies_dependency(self) -> None:
+        """Prepatcher stands in for Harmony, as it does in the mod list."""
+        parent = _make_mod(
+            "some.mod",
+            "/mods/some",
+            dependencies={
+                "brrainz.harmony": DependencyMod(
+                    package_id=CaseInsensitiveStr("brrainz.harmony")
+                )
+            },
+        )
+        prepatcher = _make_mod("zetrith.prepatcher", "/mods/prepatcher")
+        metadata = MagicMockMetadata(
+            mods_metadata={"/mods/some": parent, "/mods/prepatcher": prepatcher},
+            active_paths={"/mods/some", "/mods/prepatcher"},
+        )
+
+        deps_summary, missing_deps, _ = build_dependencies_dialog_context(
+            cast(MetadataController, metadata), {"/mods/some", "/mods/prepatcher"}
+        )
+
+        assert deps_summary["some.mod"]["satisfied"] == {"brrainz.harmony"}
+        assert missing_deps == {}
+
     def test_alternative_package_id_satisfies_dependency(self) -> None:
         paths = {"/mods/parent", "/mods/alt"}
         metadata = _make_alt_dependency_metadata(paths)

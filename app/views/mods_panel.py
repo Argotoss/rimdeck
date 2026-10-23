@@ -70,6 +70,7 @@ from app.models.divider import DividerData, generate_divider_uuid, is_divider_uu
 from app.models.filter_state import FilterState
 from app.models.metadata.metadata_structure import AboutXmlMod, ListedMod, ModType
 from app.models.settings import Settings
+from app.sort.dependencies import dependency_satisfied
 from app.sort.mod_sorting import (
     _FOLDER_SIZE_CACHE,
     FolderSizeWorker,
@@ -87,9 +88,6 @@ from app.utils.aux_db_utils import (
     auxdb_replace_mod_tags,
     auxdb_update_all_mod_colors,
     auxdb_update_mod_color,
-)
-from app.utils.constants import (
-    KNOWN_MOD_REPLACEMENTS,
 )
 from app.utils.custom_list_widget_item import CustomListWidgetItem
 from app.utils.custom_list_widget_item_metadata import CustomListWidgetItemMetadata
@@ -3416,15 +3414,9 @@ class ModListWidget(QListWidget):
         for dep_id, dep_mod in mod_data.overall_rules.dependencies.items():
             alt_ids: set[str] = {str(a) for a in dep_mod.alternative_package_ids}
 
-            satisfied = str(dep_id) in package_ids_set
-            if not satisfied and consider_alternatives:
-                satisfied = any(alt in package_ids_set for alt in alt_ids)
-            if not satisfied and self._has_replacement(
-                str(mod_data.package_id), str(dep_id), package_ids_set
+            if not dependency_satisfied(
+                str(dep_id), alt_ids, package_ids_set, consider_alternatives
             ):
-                satisfied = True
-
-            if not satisfied:
                 missing_deps.add(str(dep_id))
                 if consider_alternatives:
                     alt_candidates = {a for a in alt_ids if a not in package_ids_set}
@@ -3894,21 +3886,6 @@ class ModListWidget(QListWidget):
             return self._latest_save_package_ids
         except Exception:
             return None
-
-    def _has_replacement(
-        self, package_id: str, dep: str, package_ids_set: set[str]
-    ) -> bool:
-        # Get a list of mods that can replace this mod
-        replacements = KNOWN_MOD_REPLACEMENTS.get(dep, set())
-        # Return true if any of the above mods (replacements) are in the mod list
-        # If no replacements exist for dep, returns false
-        for replacement in replacements:
-            if replacement in package_ids_set:
-                logger.debug(
-                    f"Missing dependency [{dep}] for [{package_id}] replaced with [{replacement}]"
-                )
-                return True
-        return False
 
     def recreate_mod_list_and_sort(
         self,

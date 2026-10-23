@@ -422,32 +422,6 @@ class MetadataController(QObject):
             use_alternative_package_ids,
         )
 
-    def get_missing_dependencies(
-        self, active_mod_paths: set[str]
-    ) -> dict[str, set[str]]:
-        """Compute missing dependencies for the given active mod paths.
-
-        :param active_mod_paths: Set of active mod paths
-        :return: Mapping from package ID to set of missing dependency package IDs
-        """
-        active_package_ids: set[str] = set()
-        for path in active_mod_paths:
-            mod = self.mods_metadata.get(path)
-            if isinstance(mod, AboutXmlMod):
-                active_package_ids.add(str(mod.package_id))
-
-        missing: dict[str, set[str]] = {}
-        for path in active_mod_paths:
-            mod = self.mods_metadata.get(path)
-            if not isinstance(mod, AboutXmlMod):
-                continue
-            pid = str(mod.package_id)
-            for dep_id in mod.overall_rules.dependencies:
-                dep_str = str(dep_id)
-                if dep_str not in active_package_ids:
-                    missing.setdefault(pid, set()).add(dep_str)
-        return missing
-
     def is_version_mismatch(self, path: str) -> bool:
         """Check if a mod has version mismatch with the current game version.
 

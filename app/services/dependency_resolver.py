@@ -8,6 +8,7 @@ from xml.etree.ElementTree import Element
 
 from app.controllers.metadata_controller import MetadataController
 from app.models.metadata.metadata_structure import AboutXmlMod
+from app.sort.dependencies import dependency_satisfied
 
 
 @dataclass
@@ -198,18 +199,12 @@ def build_dependencies_dialog_context(
             dep_id = str(dep_id_key)
             alt_ids = {str(a) for a in dep_mod.alternative_package_ids}
 
-            is_satisfied = dep_id in active_ids
-            if not is_satisfied and consider_alternatives:
-                is_satisfied = any(alt in active_ids for alt in alt_ids)
-
-            if is_satisfied:
+            if dependency_satisfied(dep_id, alt_ids, active_ids, consider_alternatives):
                 satisfied.add(dep_id)
             else:
-                is_local = dep_id in all_local_package_ids or (
-                    consider_alternatives
-                    and any(alt in all_local_package_ids for alt in alt_ids)
-                )
-                if is_local:
+                if dependency_satisfied(
+                    dep_id, alt_ids, all_local_package_ids, consider_alternatives
+                ):
                     local.add(dep_id)
                 else:
                     download.add(dep_id)
