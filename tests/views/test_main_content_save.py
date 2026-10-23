@@ -182,7 +182,8 @@ def test_actual_xml_write_failure_does_not_advance_saved_state(
         raising=False,
     )
     with patch(
-        "app.utils.xml.open", side_effect=PermissionError("denied"), create=True
+        "app.utils.json_utils._replace_with_retry",
+        side_effect=PermissionError("denied"),
     ):
         assert MainContent._do_save(mc) is False
     assert config.read_bytes() == original

@@ -62,15 +62,29 @@ def _replace_with_retry(source: str, destination: str) -> None:
             attempt += 1
 
 
-def atomic_json_dump(data: Any, path: str, **kwargs: Any) -> None:
+def atomic_write_text(text: str, path: str, suffix: str = "") -> None:
+    """Write text so that ``path`` holds either the old or the new content.
+
+    The text goes to a temporary file in the same directory, is flushed to
+    disk, then replaces ``path`` in one step, so a crash mid-write can't leave
+    a truncated file behind.
+
+    :param text: Content to write (UTF-8).
+    :param path: Destination file.
+    :param suffix: Suffix for the temporary file.
+    """
     dirpath = os.path.dirname(path) or "."
-    fd, tmp = tempfile.mkstemp(suffix=".json", dir=dirpath)
+    fd, tmp = tempfile.mkstemp(suffix=suffix, dir=dirpath)
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump(data, f, **kwargs)
+            f.write(text)
             f.flush()
             os.fsync(fd)
         _replace_with_retry(tmp, path)
     except BaseException:
         os.unlink(tmp)
         raise
+
+
+def atomic_json_dump(data: Any, path: str, **kwargs: Any) -> None:
+    atomic_write_text(json.dumps(data, **kwargs), path, suffix=".json")

@@ -8,6 +8,8 @@ import zstandard as zstd
 from bs4 import BeautifulSoup
 from loguru import logger
 
+from app.utils.json_utils import atomic_write_text
+
 
 def etree_to_dict(t: Any) -> dict[str, Any]:
     """
@@ -143,8 +145,9 @@ def json_to_xml_write(
         rough_string = ET.tostring(root, encoding="utf-8")
         # Use minidom for pretty printing since ET doesn't have pretty_print
         reparsed = minidom.parseString(rough_string)
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(reparsed.toprettyxml(indent="  ", encoding=None))
+        atomic_write_text(
+            reparsed.toprettyxml(indent="  ", encoding=None), path, suffix=".xml"
+        )
     except Exception as e:
         if raise_errs:
             raise

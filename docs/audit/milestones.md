@@ -38,7 +38,7 @@ Stops the app from destroying data or appearing frozen.
 Done when: no feature deletes or corrupts user data, Refresh time is flat across repeated runs, and Sort never waits on an invisible window.
 
 - [x] [F15](findings.md#f15) Git repair deletes the repository history
-- [ ] [F16](findings.md#f16) Game mod list written in place
+- [x] [F16](findings.md#f16) Game mod list written in place
 - [ ] [F17](findings.md#f17) Sort drops duplicate and invalid entries
 - [ ] [F18](findings.md#f18) IDs containing "_steam" activate both copies
 - [ ] [F19](findings.md#f19) Moved or renamed mod folders leave stale entries
