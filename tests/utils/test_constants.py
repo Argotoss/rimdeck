@@ -11,11 +11,10 @@ from app.utils.constants import (
 
 class TestSortMethod:
     def test_values(self) -> None:
-        assert SortMethod.ALPHABETICAL == "Alphabetical"
         assert SortMethod.TOPOLOGICAL == "Topological"
 
     def test_is_string_enum(self) -> None:
-        assert isinstance(SortMethod.ALPHABETICAL, str)
+        assert isinstance(SortMethod.TOPOLOGICAL, str)
 
 
 class TestRimworldDlcMetadata:

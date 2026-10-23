@@ -52,67 +52,67 @@
         <translation>Tümünü seç</translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="285"/>
+        <location filename="../app/windows/base_mods_panel.py" line="302"/>
         <source>Do nothing and exit</source>
         <translation>Hiçbir şey yapma ve çık</translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1129"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1146"/>
         <location filename="../app/windows/missing_mods_panel.py" line="52"/>
         <source>Name</source>
         <translation type="unfinished">İsim</translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1130"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1147"/>
         <source>Author</source>
         <translation type="unfinished">Yazar</translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1131"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1148"/>
         <location filename="../app/windows/missing_mods_panel.py" line="53"/>
         <source>Package ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1132"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1149"/>
         <location filename="../app/windows/missing_mods_panel.py" line="56"/>
         <source>Published File Id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1133"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1150"/>
         <location filename="../app/windows/missing_mods_panel.py" line="54"/>
         <source>Supported Versions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1134"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1151"/>
         <source>Mod Downloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1135"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1152"/>
         <source>Updated on Workshop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1136"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1153"/>
         <source>Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1137"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1154"/>
         <source>Path</source>
         <translation type="unfinished">Yol</translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="1138"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1155"/>
         <location filename="../app/windows/missing_mods_panel.py" line="57"/>
         <source>Workshop Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="615"/>
+        <location filename="../app/windows/base_mods_panel.py" line="632"/>
         <source>Open Page</source>
         <translation>Sayfayı Aç</translation>
     </message>
@@ -152,8 +152,8 @@
         <translation>Seçilen aboneliği iptal et</translation>
     </message>
     <message>
-        <location filename="../app/windows/base_mods_panel.py" line="672"/>
-        <location filename="../app/windows/base_mods_panel.py" line="1197"/>
+        <location filename="../app/windows/base_mods_panel.py" line="689"/>
+        <location filename="../app/windows/base_mods_panel.py" line="1214"/>
         <source>Delete</source>
         <translation>Silmek</translation>
     </message>
@@ -1307,881 +1307,881 @@ Manage mods installed from GitHub releases.</source>
 <context>
     <name>MainContent</name>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="490"/>
+        <location filename="../app/views/main_content_panel.py" line="491"/>
         <source>Essential path(s)</source>
         <translation>Temel yol(lar)</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="491"/>
+        <location filename="../app/views/main_content_panel.py" line="492"/>
         <source>Essential path(s) are invalid or not set!</source>
         <translation>Temel yollar geçersiz veya ayarlanmamış!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="494"/>
+        <location filename="../app/views/main_content_panel.py" line="495"/>
         <source>RimDeck requires the below paths to be set.&lt;br/&gt;&lt;br/&gt;1) Game folder (Folder where RimWorld is installed).&lt;br/&gt;&lt;br/&gt;2) Config folder (Folder where ModsConfig.xml is located)&lt;br/&gt;&lt;br/&gt;3) Local mods folder (Mods folder inside the RimWorld installation).&lt;br/&gt;&lt;br/&gt;4) Steam mods folder (Only set if you use Steam user also enable Steam Client Integration)&lt;br/&gt;&lt;br/&gt;Try Using the autodetect functionality to set all paths automatically.&lt;br/&gt;&lt;br/&gt;Would you like to open the settings to configure them now?</source>
         <translation>RimDeck aşağıdaki yolların ayarlanmasını gerektirir.&lt;br/&gt;&lt;br/&gt;1) Oyun klasörü (RimWorld&apos;ün kurulu olduğu klasör).&lt;br/&gt;&lt;br/&gt;2) Config klasörü (ModsConfig.xml&apos;nin bulunduğu klasör)&lt;br/&gt;&lt;br/&gt;3) Yerel modlar klasörü (RimWorld kurulumunun içindeki Modlar klasörü).&lt;br/&gt;&lt;br/&gt;4) Steam modları klasörü (Yalnızca Steam kullanıcısı Steam İstemcisini de etkinleştiriyorsa ayarlayın. Entegrasyon)&lt;br/&gt;&lt;br/&gt;Tüm yolları otomatik olarak ayarlamak için otomatik algılama işlevini kullanmayı deneyin.&lt;br/&gt;&lt;br/&gt;Ayarları şimdi yapılandırmak için açmak ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="898"/>
+        <location filename="../app/views/main_content_panel.py" line="897"/>
         <source>Scanning mod sources and populating metadata...</source>
         <translation>Mod kaynakları kontrol ediliyor ve metaveriler güncelleniyor...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1058"/>
+        <location filename="../app/views/main_content_panel.py" line="1071"/>
         <source>Metadata not loaded</source>
         <translation>Meta veriler yüklenmedi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1060"/>
+        <location filename="../app/views/main_content_panel.py" line="1073"/>
         <source>Mod metadata has not finished loading. Please wait and try again.</source>
         <translation>Mod meta verilerinin yüklenmesi tamamlanmadı. Lütfen bekleyin ve tekrar deneyin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1083"/>
+        <location filename="../app/views/main_content_panel.py" line="1094"/>
         <source>Sorting algorithm not implemented</source>
         <translation>Sıralama algoritması tanımlanmamış</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1084"/>
+        <location filename="../app/views/main_content_panel.py" line="1095"/>
         <source>The selected sorting algorithm is not implemented</source>
         <translation>Seçilen sıralama algoritması tanımlanmamış</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1087"/>
+        <location filename="../app/views/main_content_panel.py" line="1098"/>
         <source>This may be caused by malformed settings or improper migration between versions or different mod manager.&lt;br&gt;&lt;br&gt;Try resetting your settings, selecting a different sorting algorithm, or deleting your settings file.&lt;br&gt;&lt;br&gt;If the issue persists, please report it to the developers.</source>
         <translation>Bunun nedeni, hatalı biçimlendirilmiş ayarlar veya sürümler arasında hatalı geçiş veya farklı mod yöneticisi olabilir.&lt;br&gt;&lt;br&gt;Ayarlarınızı sıfırlamayı, farklı bir sıralama algoritması seçmeyi veya ayarlar dosyanızı silmeyi deneyin.&lt;br&gt;&lt;br&gt;Sorun devam ederse, lütfen bunu geliştiricilere bildirin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1169"/>
+        <location filename="../app/views/main_content_panel.py" line="1181"/>
         <source>Import failed</source>
         <translation>İçe aktarma başarısız oldu</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1170"/>
+        <location filename="../app/views/main_content_panel.py" line="1182"/>
         <source>Could not read the selected mod list file.</source>
         <translation>Seçilen mod listesi dosyası okunamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1278"/>
+        <location filename="../app/views/main_content_panel.py" line="1290"/>
         <source>Failed to export to file</source>
         <translation>Dosyaya aktarma başarısız oldu</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1279"/>
+        <location filename="../app/views/main_content_panel.py" line="1291"/>
         <source>Failed to export active mods to file:</source>
         <translation>Aktif modları dosyaya aktarma başarısız oldu</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1348"/>
+        <location filename="../app/views/main_content_panel.py" line="1360"/>
         <source>Important</source>
         <translation>Önemli</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1350"/>
+        <location filename="../app/views/main_content_panel.py" line="1362"/>
         <source>You will need to redo Rentry import again after downloads complete.&lt;br&gt;&lt;br&gt;If there missing mods after download completes, they will be shown inside the missing mods panel.&lt;br&gt;&lt;br&gt;If RimDeck is still not able to download some mods, It&apos;s due to the mod data not being available in both Rentry link and steam database.</source>
         <translation>İndirme işlemi tamamlandıktan sonra Rentry&apos;yi yeniden içe aktarmanız gerekecektir.&lt;br&gt;&lt;br&gt;İndirme tamamlandıktan sonra eksik modlar varsa, bunlar eksik modlar panelinde gösterilecektir.&lt;br&gt;&lt;br&gt;RimDeck hala bazı modları indiremiyorsa, bunun nedeni mod verilerinin hem Rentry bağlantısında hem de Steam veritabanında mevcut olmamasıdır.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1399"/>
+        <location filename="../app/views/main_content_panel.py" line="1411"/>
         <source>Steam client integration not set up</source>
         <translation>Steam istemci entegrasyonu ayarlanmamış</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1401"/>
+        <location filename="../app/views/main_content_panel.py" line="1413"/>
         <source>Steam client integration is not set up. Please set it up to download mods using Steam</source>
         <translation>Steam istemci entegrasyonu ayarlanmamış. Steam&apos;i kullanarak mod indirmek istiyorsanız lütfen
                 ayarlayın
             </translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1411"/>
+        <location filename="../app/views/main_content_panel.py" line="1423"/>
         <source>Download Rentry Mods</source>
         <translation>Renrty modlarını indirin</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1412"/>
+        <location filename="../app/views/main_content_panel.py" line="1424"/>
         <source>Please select a download method.</source>
         <translation>Lütfen bir indirme yöntemi seçin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1414"/>
+        <location filename="../app/views/main_content_panel.py" line="1426"/>
         <source>Select which method you want to use to download missing Rentry mods.</source>
         <translation>Kayıp Rentry modlarını indirmek için kullanmak istediğiniz yöntemi seçin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1514"/>
+        <location filename="../app/views/main_content_panel.py" line="1526"/>
         <source>Export active mod list</source>
         <translation>Aktif mod listesini dışarı aktar</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1515"/>
+        <location filename="../app/views/main_content_panel.py" line="1527"/>
         <source>Copied active mod list report to clipboard...</source>
         <translation>Aktif mod listesi raporu kopyalandı...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1516"/>
-        <location filename="../app/views/main_content_panel.py" line="1591"/>
+        <location filename="../app/views/main_content_panel.py" line="1528"/>
+        <location filename="../app/views/main_content_panel.py" line="1603"/>
         <source>Click &quot;Show Details&quot; to see the full report!</source>
         <translation>Tüm raporu görmek için &quot;Detayları Göster&quot; butonuna tıklayın!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1549"/>
-        <location filename="../app/views/main_content_panel.py" line="1557"/>
+        <location filename="../app/views/main_content_panel.py" line="1561"/>
+        <location filename="../app/views/main_content_panel.py" line="1569"/>
         <source>Report too long</source>
         <translation>Rapor çok uzun</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1551"/>
+        <location filename="../app/views/main_content_panel.py" line="1563"/>
         <source>Even the first mod exceeds the 200,000 character limit.</source>
         <translation>İlk mod bile 200.000 karakter sınırını aşıyor.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1553"/>
+        <location filename="../app/views/main_content_panel.py" line="1565"/>
         <source>Cannot upload this report to Rentry.co.</source>
         <translation>Bu rapor Rentry.co&apos;ya yüklenemiyor.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1558"/>
+        <location filename="../app/views/main_content_panel.py" line="1570"/>
         <source>The mod list report exceeds 200,000 characters.</source>
         <translation>Mod listesi raporu 200.000 karakteri aşıyor.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1560"/>
+        <location filename="../app/views/main_content_panel.py" line="1572"/>
         <source>Rentry.co may reject uploads that are too long. Would you like to truncate the report to the first {max_mods} mods or cancel the upload?</source>
         <translation>Rentry.co çok uzun yüklemeleri reddedebilir.Raporu ilk {max_mods} modu içerecek şekilde kısaltmak mı yoksa yüklemeyi iptal etmek mi istiyorsunuz?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1563"/>
-        <location filename="../app/views/main_content_panel.py" line="1568"/>
+        <location filename="../app/views/main_content_panel.py" line="1575"/>
+        <location filename="../app/views/main_content_panel.py" line="1580"/>
         <source>Truncate to the first {max_mods} mods</source>
         <translation>İlk {max_mods} modu kısaltın</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1587"/>
+        <location filename="../app/views/main_content_panel.py" line="1599"/>
         <source>Uploaded active mod list</source>
         <translation>Aktif mod listesi yüklendi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1596"/>
+        <location filename="../app/views/main_content_panel.py" line="1608"/>
         <source>Failed to upload</source>
         <translation>Yükleme başarısız</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1597"/>
+        <location filename="../app/views/main_content_panel.py" line="1609"/>
         <source>Failed to upload exported active mod list to Rentry.co</source>
         <translation>Dışa aktarılan etkin mod listesi Rentry.co&apos;ya yüklenemedi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1712"/>
+        <location filename="../app/views/main_content_panel.py" line="1724"/>
         <source>Could not open directory</source>
         <translation>Klasör açılamadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1713"/>
+        <location filename="../app/views/main_content_panel.py" line="1725"/>
         <source>{directory_name} path does not exist or is not set.</source>
         <translation>{directory_name} Yolu mevcut değil veya ayarlanmamış.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1716"/>
+        <location filename="../app/views/main_content_panel.py" line="1728"/>
         <source>Would you like to set the path now?</source>
         <translation>Yolu şimdi ayarlamak istermisiniz?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1717"/>
-        <location filename="../app/views/main_content_panel.py" line="1720"/>
+        <location filename="../app/views/main_content_panel.py" line="1729"/>
+        <location filename="../app/views/main_content_panel.py" line="1732"/>
         <source>Open settings</source>
         <translation>Ayarları aç</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1727"/>
-        <location filename="../app/views/main_content_panel.py" line="2730"/>
+        <location filename="../app/views/main_content_panel.py" line="1739"/>
+        <location filename="../app/views/main_content_panel.py" line="2742"/>
         <source>File not found</source>
         <translation>Dosya bulunamadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1728"/>
+        <location filename="../app/views/main_content_panel.py" line="1740"/>
         <source>The file you are trying to upload does not exist.</source>
         <translation>Yüklemeye çalıştığınız dosya mevcut değiş</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1729"/>
+        <location filename="../app/views/main_content_panel.py" line="1741"/>
         <source>File: {path}</source>
         <translation>Dosya: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1749"/>
+        <location filename="../app/views/main_content_panel.py" line="1761"/>
         <source>Upload failed</source>
         <translation>Upload failed</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1750"/>
+        <location filename="../app/views/main_content_panel.py" line="1762"/>
         <source>Failed to upload log file to RimDeck Logs.</source>
         <translation>Failed to upload log file to RimDeck Logs.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1758"/>
+        <location filename="../app/views/main_content_panel.py" line="1770"/>
         <source>Uploaded file</source>
         <translation>Dosya yüklendi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1763"/>
+        <location filename="../app/views/main_content_panel.py" line="1775"/>
         <source>The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{ret}</source>
         <translation>URL panonuza kopyalandı:&lt;br&gt;&lt;br&gt;{ret}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1769"/>
+        <location filename="../app/views/main_content_panel.py" line="1781"/>
         <source>Failed to upload file.</source>
         <translation>Dosya yükleme başarısız.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1794"/>
+        <location filename="../app/views/main_content_panel.py" line="1806"/>
         <source>Game or config location is not set</source>
         <translation>Oyun veya yapılandırma konumu ayarlanmamış</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1796"/>
+        <location filename="../app/views/main_content_panel.py" line="1808"/>
         <source>Configure game and config locations before saving a mod list.</source>
         <translation>Mod listesini kaydetmeden önce oyun ve yapılandırma konumlarını yapılandırın.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1809"/>
+        <location filename="../app/views/main_content_panel.py" line="1821"/>
         <source>Configured game location: {path}</source>
         <translation>Yapılandırılmış oyun konumu: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1810"/>
-        <location filename="../app/views/main_content_panel.py" line="3137"/>
+        <location filename="../app/views/main_content_panel.py" line="1822"/>
+        <location filename="../app/views/main_content_panel.py" line="3149"/>
         <source>Checked content locations: {paths}</source>
         <translation>Kontrol edilen içerik konumları: {paths}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1813"/>
+        <location filename="../app/views/main_content_panel.py" line="1825"/>
         <source>Discovered Data location: {path}</source>
         <translation>Keşfedilen Veri konumu: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1816"/>
+        <location filename="../app/views/main_content_panel.py" line="1828"/>
         <source>Not found</source>
         <translation>Bulunamadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1818"/>
+        <location filename="../app/views/main_content_panel.py" line="1830"/>
         <source>Missing official modules: {package_ids}</source>
         <translation>Eksik resmi modüller: {package_ids}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1824"/>
+        <location filename="../app/views/main_content_panel.py" line="1836"/>
         <source>The existing ModsConfig.xml could not be read or validated.</source>
         <translation>Mevcut ModsConfig.xml okunamadı veya doğrulanamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1827"/>
+        <location filename="../app/views/main_content_panel.py" line="1839"/>
         <source>Incomplete game content discovery</source>
         <translation>Eksik oyun içeriği keşfi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1829"/>
+        <location filename="../app/views/main_content_panel.py" line="1841"/>
         <source>RimDeck could not verify all official game content. Saving this list may remove Core or enabled DLC from ModsConfig.xml. Check the game content paths before continuing.</source>
         <translation>RimDeck tüm resmi oyun içeriğini doğrulayamadı. Bu listenin kaydedilmesi, Core veya etkinleştirilmiş DLC&apos;nin ModsConfig.xml&apos;den kaldırılmasına neden olabilir. Devam etmeden önce oyun içeriği yollarını kontrol edin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1831"/>
+        <location filename="../app/views/main_content_panel.py" line="1843"/>
         <source>Save anyway</source>
         <translation>Yine de kaydet</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1867"/>
+        <location filename="../app/views/main_content_panel.py" line="1879"/>
         <source>Could not save active mods</source>
         <translation>Aktif modlar kaydedilemedi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1868"/>
+        <location filename="../app/views/main_content_panel.py" line="1880"/>
         <source>Failed to save active mods to file:</source>
         <translation>Aktif modlar dosyaya kaydedilemedi:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1963"/>
+        <location filename="../app/views/main_content_panel.py" line="1975"/>
         <source>Confirm texture deletion</source>
         <translation>Doku silme işlemini onaylayın</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1965"/>
+        <location filename="../app/views/main_content_panel.py" line="1977"/>
         <source>This will delete all optimized .dds textures from your active mods</source>
         <translation>Bu, optimize edilmiş tüm .dds dokularını etkin modlarınızdan silecektir</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1968"/>
+        <location filename="../app/views/main_content_panel.py" line="1980"/>
         <source>Are you sure you want to delete all .dds textures? You can re-optimize them later if needed.</source>
         <translation>Tüm .dds dokularını silmek istediğinizden emin misiniz? Gerekirse bunları daha sonra yeniden optimize edebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1972"/>
-        <location filename="../app/views/main_content_panel.py" line="1975"/>
+        <location filename="../app/views/main_content_panel.py" line="1984"/>
+        <location filename="../app/views/main_content_panel.py" line="1987"/>
         <source>Delete textures</source>
         <translation>Dokuları sil</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1993"/>
+        <location filename="../app/views/main_content_panel.py" line="2005"/>
         <source>No valid paths for todds</source>
         <translation>Todds için geçerli yol yok</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1994"/>
+        <location filename="../app/views/main_content_panel.py" line="2006"/>
         <source>todds could not find any valid mod folders to process.</source>
         <translation>todds işlenecek geçerli mod klasörü bulamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2010"/>
+        <location filename="../app/views/main_content_panel.py" line="2022"/>
         <source>Confirm ACF import</source>
         <translation>ACF içe aktarmayı onaylayın</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2011"/>
+        <location filename="../app/views/main_content_panel.py" line="2023"/>
         <source>This will replace your current steamcmd .acf file</source>
         <translation>Bu, mevcut steamcmd .acf dosyanızın yerini alacak</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2013"/>
+        <location filename="../app/views/main_content_panel.py" line="2025"/>
         <source>Are you sure you want to import .acf? This only works for steamcmd</source>
         <translation>.acf dosyasını içe aktarmak istediğinizden emin misiniz? Bu yalnızca steamcmd için çalışır</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2016"/>
-        <location filename="../app/views/main_content_panel.py" line="2021"/>
+        <location filename="../app/views/main_content_panel.py" line="2028"/>
+        <location filename="../app/views/main_content_panel.py" line="2033"/>
         <source>Import .acf</source>
         <translation>.acf&apos;yi içe aktar</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2044"/>
-        <location filename="../app/views/main_content_panel.py" line="2075"/>
-        <location filename="../app/views/main_content_panel.py" line="2079"/>
+        <location filename="../app/views/main_content_panel.py" line="2056"/>
+        <location filename="../app/views/main_content_panel.py" line="2087"/>
+        <location filename="../app/views/main_content_panel.py" line="2091"/>
         <source>Export Error</source>
         <translation>Dışa Aktarma Hatası</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2045"/>
+        <location filename="../app/views/main_content_panel.py" line="2057"/>
         <source>ACF file not found at: {acf_path}</source>
         <translation>ACF dosyası şurada bulunamadı: {acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2065"/>
+        <location filename="../app/views/main_content_panel.py" line="2077"/>
         <source>Export Success</source>
         <translation>İhracat Başarısı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2066"/>
+        <location filename="../app/views/main_content_panel.py" line="2078"/>
         <source>Successfully exported ACF to {file_path}</source>
         <translation>ACF başarıyla {file_path} yoluna aktarıldı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2072"/>
+        <location filename="../app/views/main_content_panel.py" line="2084"/>
         <source>Export failed: Permission denied - check file permissions</source>
         <translation>Dışa aktarma başarısız oldu: İzin reddedildi - dosya izinlerini kontrol edin</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2077"/>
+        <location filename="../app/views/main_content_panel.py" line="2089"/>
         <source>Export failed: {e}</source>
         <translation>Dışa aktarma başarısız oldu: {e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2198"/>
+        <location filename="../app/views/main_content_panel.py" line="2210"/>
         <source>Checking Steam Workshop mods for updates...</source>
         <translation>Mod güncellemeleri için Steam Atölyesi kontrol ediliyor...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2202"/>
+        <location filename="../app/views/main_content_panel.py" line="2214"/>
         <source>Failed to check for Workshop updates</source>
         <translation>Failed to check for Workshop updates</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2206"/>
+        <location filename="../app/views/main_content_panel.py" line="2218"/>
         <source>No Workshop mods to check for updates</source>
         <translation>Güncellemeleri kontrol edecek Atölye modu yok</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2211"/>
+        <location filename="../app/views/main_content_panel.py" line="2223"/>
         <source>Unable to check for updates</source>
         <translation>Güncellemeler kontrol edilemedi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2241"/>
+        <location filename="../app/views/main_content_panel.py" line="2253"/>
         <source>All Workshop mods appear to be up to date!</source>
         <translation>Tüm Atölye modları güncel!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2258"/>
-        <location filename="../app/views/main_content_panel.py" line="3243"/>
+        <location filename="../app/views/main_content_panel.py" line="2270"/>
+        <location filename="../app/views/main_content_panel.py" line="3255"/>
         <source>Steam Client Integration is disabled</source>
         <translation>Steam İstemcisi Entegrasyonu devre dışı bırakıldı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2283"/>
-        <location filename="../app/views/main_content_panel.py" line="2296"/>
-        <location filename="../app/views/main_content_panel.py" line="2307"/>
+        <location filename="../app/views/main_content_panel.py" line="2295"/>
+        <location filename="../app/views/main_content_panel.py" line="2308"/>
+        <location filename="../app/views/main_content_panel.py" line="2319"/>
         <source>RimDeck - SteamCMD setup</source>
         <translation>RimDeck - SteamCMD Kurulumu</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2284"/>
-        <location filename="../app/views/main_content_panel.py" line="2375"/>
+        <location filename="../app/views/main_content_panel.py" line="2296"/>
+        <location filename="../app/views/main_content_panel.py" line="2387"/>
         <source>Unable to create SteamCMD runner!</source>
         <translation>SteamCMD çalıştırıcısı oluşturulamadı!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2285"/>
-        <location filename="../app/views/main_content_panel.py" line="2376"/>
+        <location filename="../app/views/main_content_panel.py" line="2297"/>
+        <location filename="../app/views/main_content_panel.py" line="2388"/>
         <source>There is an active process already running!</source>
         <translation>Halihazırda çalışan bir işlem mevcut!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2309"/>
+        <location filename="../app/views/main_content_panel.py" line="2321"/>
         <source>Unable to initiate SteamCMD installation. Local mods path not set!</source>
         <translation>SteamCMD kurulumu başlatılamadı. Yerel modlar için dosya yolu ayarlanmamış!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2312"/>
+        <location filename="../app/views/main_content_panel.py" line="2324"/>
         <source>Please configure local mods path in Settings before attempting to install.</source>
         <translation>Kuruluma başlamadan önce lütfen yerel modlar için dosya yolunu ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2360"/>
-        <location filename="../app/views/main_content_panel.py" line="2374"/>
-        <location filename="../app/views/main_content_panel.py" line="2550"/>
+        <location filename="../app/views/main_content_panel.py" line="2372"/>
+        <location filename="../app/views/main_content_panel.py" line="2386"/>
+        <location filename="../app/views/main_content_panel.py" line="2562"/>
         <source>RimDeck</source>
         <translation>RimDeck</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2361"/>
-        <location filename="../app/views/main_content_panel.py" line="2551"/>
+        <location filename="../app/views/main_content_panel.py" line="2373"/>
+        <location filename="../app/views/main_content_panel.py" line="2563"/>
         <source>No PublishedFileIds were supplied in operation.</source>
         <translation>İşlem sırasında hiçbir PublishedFileId sağlanmadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2363"/>
-        <location filename="../app/views/main_content_panel.py" line="2553"/>
+        <location filename="../app/views/main_content_panel.py" line="2375"/>
+        <location filename="../app/views/main_content_panel.py" line="2565"/>
         <source>Please add mods to list before attempting to download.</source>
         <translation>İndirmeye başlamadan önce lütfen modları listeye ekleyin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2396"/>
+        <location filename="../app/views/main_content_panel.py" line="2408"/>
         <source>RimDeck - SteamCMD downloader</source>
         <translation>RimDeck - SteamCMD indiricisi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2413"/>
+        <location filename="../app/views/main_content_panel.py" line="2425"/>
         <source>SteamCMD not found</source>
         <translation>SteamCMD bulunamadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2414"/>
+        <location filename="../app/views/main_content_panel.py" line="2426"/>
         <source>SteamCMD executable was not found.</source>
         <translation>SteamCMD çalıştırıcısı bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2567"/>
+        <location filename="../app/views/main_content_panel.py" line="2579"/>
         <source>Processing Steam subscription action(s) via Steamworks API...</source>
         <translation>Steam abonelik işlemleri Steamworks API aracılığıyla işleniyor...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2594"/>
+        <location filename="../app/views/main_content_panel.py" line="2606"/>
         <source>Download or select from local</source>
         <translation>Yerel bir kaynaktan indirin veya seçin</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2596"/>
+        <location filename="../app/views/main_content_panel.py" line="2608"/>
         <source>Please select a ZIP file to add to the local mods directory.</source>
         <translation>Yerel mod klasörüne eklemek için lütfen bir ZIP dosyası seçin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2599"/>
+        <location filename="../app/views/main_content_panel.py" line="2611"/>
         <source>You can download a ZIP file from the internet, or select a file from your local machine.</source>
         <translation>ZIP dosyasını internetten indirebilir veya cihazınızdan seçebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2610"/>
+        <location filename="../app/views/main_content_panel.py" line="2622"/>
         <source>Enter zip file url</source>
         <translation>ZIP dosyası bağlantısını girin</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2611"/>
+        <location filename="../app/views/main_content_panel.py" line="2623"/>
         <source>Enter a zip file url (http/https) to download to local mods:</source>
         <translation>Yerel modlara indirmek için bir zip dosyası bağlantısı girin (http/https):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2698"/>
+        <location filename="../app/views/main_content_panel.py" line="2710"/>
         <source>Failed to download zip file</source>
         <translation>Zip dosya indirmesi başarısız</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2699"/>
+        <location filename="../app/views/main_content_panel.py" line="2711"/>
         <source>The zip file could not be downloaded.</source>
         <translation>Zip dosyası indirilemedi.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2700"/>
-        <location filename="../app/views/main_content_panel.py" line="2749"/>
-        <location filename="../app/views/main_content_panel.py" line="2758"/>
+        <location filename="../app/views/main_content_panel.py" line="2712"/>
+        <location filename="../app/views/main_content_panel.py" line="2761"/>
+        <location filename="../app/views/main_content_panel.py" line="2770"/>
         <source>File: {file_path}&lt;br&gt;Error: {e}</source>
         <translation>Dosya:  {file_path} {e} &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2731"/>
+        <location filename="../app/views/main_content_panel.py" line="2743"/>
         <source>The selected file does not exist.</source>
         <translation>Seçilen dosya mevcut değil.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2732"/>
+        <location filename="../app/views/main_content_panel.py" line="2744"/>
         <source>File: {file_path}</source>
         <translation>Dosya: {file_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2745"/>
+        <location filename="../app/views/main_content_panel.py" line="2757"/>
         <source>Unsupported Compression Method</source>
         <translation>Desteklenmeyen Sıkıştırma Yöntemi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2747"/>
+        <location filename="../app/views/main_content_panel.py" line="2759"/>
         <source>This ZIP file uses a compression method that is not supported by this version.</source>
         <translation>Seçilen ZIP dosyası bu sürümde desteklenmeyen bir sıkıştırma yöntemi kullanıyor.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2756"/>
+        <location filename="../app/views/main_content_panel.py" line="2768"/>
         <source>Failed to extract zip file</source>
         <translation>Zip dosyasını çıkartma başarısız oldu.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2757"/>
+        <location filename="../app/views/main_content_panel.py" line="2769"/>
         <source>The zip file could not be extracted.</source>
         <translation>Zip dosyası çıkartılınamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2790"/>
-        <location filename="../app/views/main_content_panel.py" line="2806"/>
+        <location filename="../app/views/main_content_panel.py" line="2802"/>
+        <location filename="../app/views/main_content_panel.py" line="2818"/>
         <source>Existing files or directories found</source>
         <translation>Mevcut dosyalar veya dosya yolları bulundu</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2792"/>
+        <location filename="../app/views/main_content_panel.py" line="2804"/>
         <source>All files in the archive already exist in the target path.</source>
         <translation>Arşivdeki tüm dosyalar zaten hedef yolda mevcut.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2795"/>
+        <location filename="../app/views/main_content_panel.py" line="2807"/>
         <source>How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Cancel — Abort the operation.</source>
         <translation>Nasıl devam etmek istersiniz?&lt;br&gt;&lt;br&gt;1) Tümünün Üzerine Yaz — Mevcut tüm dosya ve dizinleri değiştirin.&lt;br&gt;2) İptal — İşlemi iptal edin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2808"/>
+        <location filename="../app/views/main_content_panel.py" line="2820"/>
         <source>The following files or directories already exist in the target path:</source>
         <translation>Aşağıdaki dosyalar veya dosya yolları zaten hedef yolda mevcut:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2811"/>
+        <location filename="../app/views/main_content_panel.py" line="2823"/>
         <source>{conflicts_list}&lt;br&gt;&lt;br&gt;How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Skip Existing — Extract only new files and leave existing ones untouched.&lt;br&gt;3) Cancel — Abort the extraction.</source>
         <translation>{conflicts_list} &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2870"/>
+        <location filename="../app/views/main_content_panel.py" line="2882"/>
         <source>Extraction completed</source>
         <translation>Çıkartma tamamlandı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2871"/>
+        <location filename="../app/views/main_content_panel.py" line="2883"/>
         <source>The ZIP file was successfully extracted!</source>
         <translation>ZIP dosyası başarıyla çıkartıldı!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2876"/>
+        <location filename="../app/views/main_content_panel.py" line="2888"/>
         <source>Extraction failed</source>
         <translation>Çıkartma başarısız</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2877"/>
+        <location filename="../app/views/main_content_panel.py" line="2889"/>
         <source>An error occurred during extraction.</source>
         <translation>Çıkartma sırasında bir hata oluştu.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2892"/>
+        <location filename="../app/views/main_content_panel.py" line="2904"/>
         <source>Git integration will not work without Git installed! Do you want to open download page for Git?&lt;br&gt;&lt;br&gt;If you just installed Git, please restart RimDeck for the PATH changes to take effect.</source>
         <translation>Git entegrasyonu Git kurulmadan çalışmaz! Git için indirme sayfasını açmak istiyor musunuz?&lt;br&gt;&lt;br&gt;Git&apos;i yeni yüklediyseniz, PATH değişikliklerinin etkili olması için lütfen RimDeck&apos;u yeniden başlatın.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3062"/>
+        <location filename="../app/views/main_content_panel.py" line="3074"/>
         <source>This operation will overwrite the {rules_source} database located at the following path:&lt;br&gt;&lt;br&gt;{path}</source>
         <translation>Bu işlem şu yolda bulunan {rules_source} veritabanının üzerine yazacaktır:&lt;br&gt;&lt;br&gt;{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3122"/>
+        <location filename="../app/views/main_content_panel.py" line="3134"/>
         <source>Invalid game folder</source>
         <translation>Geçersiz oyun klasörü</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3124"/>
+        <location filename="../app/views/main_content_panel.py" line="3136"/>
         <source>RimWorld executable was not found in the configured game location.</source>
         <translation>RimWorld çalıştırılabilir dosyası, yapılandırılan oyun konumunda bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3132"/>
+        <location filename="../app/views/main_content_panel.py" line="3144"/>
         <source>Game content not found</source>
         <translation>Oyun içeriği bulunamadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3134"/>
+        <location filename="../app/views/main_content_panel.py" line="3146"/>
         <source>The game executable is valid, but RimDeck could not locate its content. The game may not find its Data or Mods folders. Check the game content paths before continuing.</source>
         <translation>Oyunun yürütülebilir dosyası geçerli, ancak RimDeck içeriğini bulamadı. Oyun, Veri veya Modlar klasörlerini bulamayabilir. Devam etmeden önce oyun içeriği yollarını kontrol edin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3136"/>
+        <location filename="../app/views/main_content_panel.py" line="3148"/>
         <source>Run anyway</source>
         <translation>Yine de koş</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3209"/>
+        <location filename="../app/views/main_content_panel.py" line="3221"/>
         <source>todds Optimization Failed</source>
         <translation>todds Optimizasyonu Başarısız</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3211"/>
+        <location filename="../app/views/main_content_panel.py" line="3223"/>
         <source>todds texture optimization failed (exit code: {exit_code}), but the game will launch anyway.</source>
         <translation>todds doku optimizasyonu başarısız oldu (çıkış kodu: {exit_code}), ancak oyun yine de başlayacak.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3245"/>
+        <location filename="../app/views/main_content_panel.py" line="3257"/>
         <source>Steam protocol launch requires Steam Client Integration to be enabled.</source>
         <translation>Steam protokolünün başlatılması Steam İstemci Entegrasyonunun etkinleştirilmesini gerektirir.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3248"/>
+        <location filename="../app/views/main_content_panel.py" line="3260"/>
         <source>Please enable Steam Client Integration in Settings → Steam to use this feature.</source>
         <translation>Bu özelliği kullanmak için lütfen Ayarlar → Steam&apos;de Steam İstemci Entegrasyonunu etkinleştirin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3275"/>
+        <location filename="../app/views/main_content_panel.py" line="3287"/>
         <source>Please configure &quot;Use This Instead&quot; database in settings.</source>
         <translation>Lütfen ayarlarda &quot;Bunun Yerine Bunu Kullan&quot; veritabanını yapılandırın.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3289"/>
+        <location filename="../app/views/main_content_panel.py" line="3301"/>
         <source>No suggestions were found in the &quot;Use This Instead&quot; database.</source>
         <translation>&quot;Use This Instead&quot; veritabanında bir öneri bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2888"/>
+        <location filename="../app/views/main_content_panel.py" line="2900"/>
         <source>git not found</source>
         <translation>git bulunamadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1589"/>
+        <location filename="../app/views/main_content_panel.py" line="1601"/>
         <source>Uploaded active mod list report to Rentry.co! The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{url}</source>
         <translation>Aktif mod listesi raporu Rentry.co&apos;ya yüklendi! URL panonuza kopyalandı:&lt;br&gt;&lt;br&gt;{url}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1739"/>
+        <location filename="../app/views/main_content_panel.py" line="1751"/>
         <source>Uploading {path_name} to RimDeck Logs...</source>
         <translation>{path_name}, RimDeck Günlüklerine yükleniyor...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1759"/>
+        <location filename="../app/views/main_content_panel.py" line="1771"/>
         <source>Uploaded {path_name} to RimDeck Logs</source>
         <translation>{path_name}, RimDeck Günlüklerine yüklendi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1770"/>
+        <location filename="../app/views/main_content_panel.py" line="1782"/>
         <source>Failed to upload to RimDeck Logs</source>
         <translation>RimDeck Günlüklerine yüklenemedi</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1996"/>
+        <location filename="../app/views/main_content_panel.py" line="2008"/>
         <source>None of the configured mod folder paths exist on disk.&lt;br&gt;&lt;br&gt;Please verify your Local Mods and Workshop folders are correctly set in Settings, then try again.</source>
         <translation>Yapılandırılmış mod klasörü yollarının hiçbiri diskte mevcut değil.&lt;br&gt;&lt;br&gt;Lütfen Yerel Modlar ve Atölye klasörlerinizin Ayarlar&apos;da doğru şekilde ayarlandığını doğrulayın ve ardından tekrar deneyin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2213"/>
+        <location filename="../app/views/main_content_panel.py" line="2225"/>
         <source>RimDeck was unable to check your Workshop mods for updates.</source>
         <translation>RimDeck, Atölye modlarınızı güncellemeler için kontrol edemedi.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2221"/>
+        <location filename="../app/views/main_content_panel.py" line="2233"/>
         <source>Update check partially completed</source>
         <translation>Güncelleme kontrolü kısmen tamamlandı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2223"/>
+        <location filename="../app/views/main_content_panel.py" line="2235"/>
         <source>{failed} out of {total} Workshop mods could not be checked for updates.</source>
         <translation>{total} Atölye modundan {failed} tanesi güncelleme açısından kontrol edilemedi.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2260"/>
+        <location filename="../app/views/main_content_panel.py" line="2272"/>
         <source>This feature requires Steam Client Integration to be enabled in Settings.&lt;br&gt;&lt;br&gt;Please enable Steam Client Integration if you own the game on Steam.</source>
         <translation>Bu özellik, Steam İstemcisi Entegrasyonunun Ayarlar&apos;da etkinleştirilmesini gerektirir.&lt;br&gt;&lt;br&gt;Steam&apos;de oyun sahibiyseniz lütfen Steam İstemcisi Entegrasyonunu etkinleştirin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2889"/>
+        <location filename="../app/views/main_content_panel.py" line="2901"/>
         <source>git executable was not found in $PATH!</source>
         <translation>git çalıştırıcısı $PATH yolunda bulunamadı!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2956"/>
+        <location filename="../app/views/main_content_panel.py" line="2968"/>
         <source>Edit Steam DB repo</source>
         <translation>Steam DB repo&apos;yu düzenle</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2957"/>
-        <location filename="../app/views/main_content_panel.py" line="2972"/>
+        <location filename="../app/views/main_content_panel.py" line="2969"/>
+        <location filename="../app/views/main_content_panel.py" line="2984"/>
         <source>Enter URL (https://github.com/AccountName/RepositoryName):</source>
         <translation>URL&apos;ye girin (https://github.com/accountname/repositoryname):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2971"/>
+        <location filename="../app/views/main_content_panel.py" line="2983"/>
         <source>Edit Community Rules DB repo</source>
         <translation>Topluluk Kurallarını Düzenle DB Repo</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3007"/>
+        <location filename="../app/views/main_content_panel.py" line="3019"/>
         <source>Edit Steam WebAPI key</source>
         <translation>Steam Webapi Anahtarını Düzenle</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3008"/>
+        <location filename="../app/views/main_content_panel.py" line="3020"/>
         <source>Enter your personal 32 character Steam WebAPI key here:</source>
         <translation>Kişisel 32 karakterlik Steam Webapi anahtarınızı buraya girin:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3043"/>
+        <location filename="../app/views/main_content_panel.py" line="3055"/>
         <source>Failed to read existing database</source>
         <translation>Mevcut veritabanını okuyamadı</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3044"/>
+        <location filename="../app/views/main_content_panel.py" line="3056"/>
         <source>Failed to read the existing database!</source>
         <translation>Mevcut veritabanını okuyamadı!</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3045"/>
+        <location filename="../app/views/main_content_panel.py" line="3057"/>
         <source>Path: {path}</source>
         <translation>Yol:  {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3059"/>
+        <location filename="../app/views/main_content_panel.py" line="3071"/>
         <source>RimDeck - DB Builder</source>
         <translation>Rimdeck - DB Builder</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3060"/>
+        <location filename="../app/views/main_content_panel.py" line="3072"/>
         <source>Do you want to continue?</source>
         <translation>Devam etmek ister misin?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3079"/>
+        <location filename="../app/views/main_content_panel.py" line="3091"/>
         <source>Edit SteamDB expiry:</source>
         <translation>Steamdb Expiry&apos;i Düzenle:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3081"/>
+        <location filename="../app/views/main_content_panel.py" line="3093"/>
         <source>Enter your preferred expiry duration in seconds (default 1 week/604800 sec):</source>
         <translation>Tercih ettiğiniz son kullanma süresini saniyeler içinde girin (varsayılan 1 hafta/604800 sn):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3092"/>
+        <location filename="../app/views/main_content_panel.py" line="3104"/>
         <source>Tried configuring Dynamic Query with a value that is not an integer.</source>
         <translation>Dinamik sorguyu bir tamsayı olmayan bir değerle yapılandırmayı denedi.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3214"/>
+        <location filename="../app/views/main_content_panel.py" line="3226"/>
         <source>You may experience longer loading times or higher memory usage.&lt;br&gt;&lt;br&gt;Check the todds output window for details.</source>
         <translation>Daha uzun yükleme süreleri veya daha yüksek bellek kullanımıyla karşılaşabilirsiniz.&lt;br&gt;&lt;br&gt;Ayrıntılar için todds çıktı penceresini kontrol edin.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3273"/>
-        <location filename="../app/views/main_content_panel.py" line="3287"/>
+        <location filename="../app/views/main_content_panel.py" line="3285"/>
+        <location filename="../app/views/main_content_panel.py" line="3299"/>
         <source>Use This Instead</source>
         <translation>Bunun yerine bunu kullan</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3174"/>
+        <location filename="../app/views/main_content_panel.py" line="3186"/>
         <source>Unsaved Changes</source>
         <translation>Kaydetilmemiş değişiklikler</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3175"/>
+        <location filename="../app/views/main_content_panel.py" line="3187"/>
         <source>You have unsaved changes. What would you like to do?</source>
         <translation>Kaydedilmemiş değişiklikleriniz var.Ne yapmak istersiniz?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3176"/>
-        <location filename="../app/views/main_content_panel.py" line="3178"/>
+        <location filename="../app/views/main_content_panel.py" line="3188"/>
+        <location filename="../app/views/main_content_panel.py" line="3190"/>
         <source>Save and Run</source>
         <translation>Kaydet ve Koş</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3176"/>
-        <location filename="../app/views/main_content_panel.py" line="3184"/>
+        <location filename="../app/views/main_content_panel.py" line="3188"/>
+        <location filename="../app/views/main_content_panel.py" line="3196"/>
         <source>Run Anyway</source>
         <translation>Yine de koş</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1617"/>
+        <location filename="../app/views/main_content_panel.py" line="1629"/>
         <source>Import from RimWorld Save File</source>
         <translation>Rimworld Kaydet dosyasından içe aktarın</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1619"/>
+        <location filename="../app/views/main_content_panel.py" line="1631"/>
         <source>RimWorld save (*.rws);;All files (*.*)</source>
         <translation>Rimworld Save (*.rws) ;; tüm dosyalar (*.*)</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2416"/>
+        <location filename="../app/views/main_content_panel.py" line="2428"/>
         <source>Please setup an existing SteamCMD prefix, or setup a new prefix with &quot;Setup SteamCMD&quot;.</source>
         <translation>Lütfen mevcut bir Steamcmd önekini ayarlayın veya &quot;Kurulum Steamcmd&quot; ile yeni bir önek ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3095"/>
+        <location filename="../app/views/main_content_panel.py" line="3107"/>
         <source>Please reconfigure the expiry value with an integer in terms of the seconds from epoch you would like your query to expire.</source>
         <translation>Lütfen son kullanma değerini, sorgunuzun süresinin dolmasını istediğiniz dönemden saniyeler açısından bir tamsayı ile yeniden yapılandırın.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2083"/>
-        <location filename="../app/views/main_content_panel.py" line="2100"/>
+        <location filename="../app/views/main_content_panel.py" line="2095"/>
+        <location filename="../app/views/main_content_panel.py" line="2112"/>
         <source>Reset SteamCMD ACF data file</source>
         <translation>Steamcmd ACF veri dosyasını sıfırla</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2084"/>
+        <location filename="../app/views/main_content_panel.py" line="2096"/>
         <source>Are you sure you want to reset SteamCMD ACF data file?</source>
         <translation>Steamcmd ACF veri dosyasını sıfırlamak istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2086"/>
+        <location filename="../app/views/main_content_panel.py" line="2098"/>
         <source>This file is created and used by steamcmd to track mod informaton, This action cannot be undone.</source>
         <translation>Bu dosya Steamcmd tarafından Mod Informaton&apos;u izlemek için oluşturulur ve kullanılır, bu eylem geri alınamaz.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2102"/>
+        <location filename="../app/views/main_content_panel.py" line="2114"/>
         <source>Successfully deleted SteamCMD ACF data file: {steamcmd_appworkshop_acf_path}</source>
         <translation>Başarılı bir şekilde silindi Steamcmd ACF veri dosyası:  {steamcmd_appworkshop_acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2107"/>
+        <location filename="../app/views/main_content_panel.py" line="2119"/>
         <source>ACF data file will be recreated when you download mods using steamcmd next time.</source>
         <translation>ACF veri dosyası, bir dahaki sefere Steamcmd kullanarak modları indirdiğinizde yeniden oluşturulur.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2115"/>
+        <location filename="../app/views/main_content_panel.py" line="2127"/>
         <source>SteamCMD ACF data file does not exist</source>
         <translation>Steamcmd ACF veri dosyası mevcut değil</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2117"/>
+        <location filename="../app/views/main_content_panel.py" line="2129"/>
         <source>ACf file does not exist. It will be created when you download mods using steamcmd.</source>
         <translation>ACF dosyası yok. Steamcmd kullanarak modları indirdiğinizde oluşturulacaktır.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1784"/>
+        <location filename="../app/views/main_content_panel.py" line="1796"/>
         <source>Failed to open file.</source>
         <translation>Dosyayı açılamadı.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1786"/>
+        <location filename="../app/views/main_content_panel.py" line="1798"/>
         <source>Failed to open the file with default text editor. It may not exist.</source>
         <translation>Dosyayı varsayılan metin düzenleyicisiyle açılamadı.Var olmayabilir.</translation>
     </message>
@@ -3503,52 +3503,52 @@ Aktif modlar listenize hangi eksik bağımlılıkların ekleneceğini seçin.</t
         <translation>Eklemeden Sırala</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="166"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="172"/>
         <source>No dependencies found for any active mod.</source>
         <translation>Herhangi bir aktif mod için bağımlılık bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="200"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="206"/>
         <source>&lt;b&gt;Summary:&lt;/b&gt; {total_deps} total dependencies across {mods_with_deps} mods — ✅ {total_satisfied} fulfilled, ⚠️ {total_missing} missing ({total_local} local, {total_download} download) across {total_missing_per_mod} mod(s)</source>
         <translation>&lt;b&gt;Özet:&lt;/b&gt; {mods_with_deps} mod genelinde {total_deps} toplam bağımlılık — ✅ {total_satisfied} yerine getirildi, ⚠️ {total_missing_per_mod} modda {total_missing} eksik ({total_local} yerel, {total_download} indirme)</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="214"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="220"/>
         <source>&lt;b&gt;Summary:&lt;/b&gt; {total_deps} total dependencies across {mods_with_deps} mods — ✅ All {total_satisfied} dependencies fulfilled</source>
         <translation>&lt;b&gt;Özet:&lt;/b&gt; {mods_with_deps} mod genelinde toplam {total_deps} bağımlılık — ✅ {total_satisfied} bağımlılığın tümü yerine getirildi</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="266"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="272"/>
         <source>  ✅ Satisfied: </source>
         <translation>✅ Memnun oldum:</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="280"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="286"/>
         <source>Available locally - add to active list</source>
         <translation>Yerel olarak mevcut - etkin listeye ekle</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="300"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="306"/>
         <source>Needs to be downloaded - requires SteamCMD</source>
         <translation>İndirilmesi gerekiyor - SteamCMD gerektirir</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="310"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="316"/>
         <source>Open Workshop</source>
         <translation>Açık Atölye</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="316"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="322"/>
         <source>Download</source>
         <translation>İndirmek</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="334"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="340"/>
         <source>Workshop ID not found — open Workshop to find manually</source>
         <translation>Atölye Kimliği bulunamadı — manuel olarak bulmak için Atölye&apos;yi açın</translation>
     </message>
     <message>
-        <location filename="../app/windows/missing_dependencies_dialog.py" line="347"/>
+        <location filename="../app/windows/missing_dependencies_dialog.py" line="353"/>
         <source>
 All dependencies are satisfied. No missing dependencies found.</source>
         <translation>Tüm bağımlılıklar karşılanır. Eksik bağımlılık bulunamadı.</translation>
@@ -5862,8 +5862,8 @@ An alternative updated mod is recommended:
         <location filename="../app/views/settings_dialog.py" line="248"/>
         <location filename="../app/views/settings_dialog.py" line="276"/>
         <location filename="../app/views/settings_dialog.py" line="594"/>
-        <location filename="../app/views/settings_dialog.py" line="1166"/>
-        <location filename="../app/views/settings_dialog.py" line="1296"/>
+        <location filename="../app/views/settings_dialog.py" line="1142"/>
+        <location filename="../app/views/settings_dialog.py" line="1272"/>
         <source>Choose…</source>
         <translation>Seç...</translation>
     </message>
@@ -6000,16 +6000,6 @@ An alternative updated mod is recommended:
         <translation>Sıralıyor</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="769"/>
-        <source>Alphabetically</source>
-        <translation>Alfabetik olarak</translation>
-    </message>
-    <message>
-        <location filename="../app/views/settings_dialog.py" line="765"/>
-        <source>Topologically</source>
-        <translation>Topolojik olarak</translation>
-    </message>
-    <message>
         <location filename="../app/views/settings_dialog.py" line="144"/>
         <source>Game location</source>
         <translation>Oyun konumu</translation>
@@ -6095,31 +6085,26 @@ Bu, temel olarak mod renklendirmenizi, kullanıcı notlarınızı vb. silme işl
     </message>
     <message>
         <location filename="../app/views/settings_dialog.py" line="762"/>
-        <source>Sorting Method</source>
-        <translation>Sıralama Yöntemi</translation>
-    </message>
-    <message>
-        <location filename="../app/views/settings_dialog.py" line="786"/>
         <source>Dependencies Handling Behavior</source>
         <translation>Bağımlılıkları Yönetme Davranışı</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="791"/>
+        <location filename="../app/views/settings_dialog.py" line="767"/>
         <source>Use dependency rules for sorting.</source>
         <translation>Sıralama için bağımlılık kurallarını kullan</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="815"/>
+        <location filename="../app/views/settings_dialog.py" line="791"/>
         <source>Prompt user to download dependencies when click in Sort</source>
         <translation>Sıralama yaparken kullanıcıya gerekli modları indirmek için sor.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="824"/>
+        <location filename="../app/views/settings_dialog.py" line="800"/>
         <source>XML Parsing Behavior</source>
         <translation>XML Ayrıştırma Davranışı</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="832"/>
+        <location filename="../app/views/settings_dialog.py" line="808"/>
         <source>When enabled, *ByVersion tags take precedence over the base tags, 
 If a matching version tag exists but is empty, the base tag is ignored. 
 e.g.(modDependenciesByVersion, loadAfterByVersion, loadBeforeByVersion, incompatibleWithByVersion, descriptionsByVersion)</source>
@@ -6128,12 +6113,12 @@ Eşleşen bir sürüm etiketi mevcut ancak boşsa temel etiket dikkate alınmaz.
 ör.(modDependegencyByVersion, loadAfterByVersion, loadBeforeByVersion, in uyumsuzWithByVersion, açıklamalarByVersion)</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="843"/>
+        <location filename="../app/views/settings_dialog.py" line="819"/>
         <source>Case-insensitive About.xml lookup</source>
         <translation>Büyük/küçük harfe duyarlı About.xml araması</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="847"/>
+        <location filename="../app/views/settings_dialog.py" line="823"/>
         <source>Enable case-insensitive lookup for About/About.xml.
 Some mods use incorrect casing (e.g., about/about.xml) which breaks on
 case-sensitive filesystems (Linux). Per the RimWorld modding spec, the
@@ -6146,329 +6131,329 @@ doğru yol About/About.xml&apos;dir.
 Bakınız: https://www.rimworldwiki.com/wiki/Modding_Tutorials/About.xml</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="859"/>
+        <location filename="../app/views/settings_dialog.py" line="835"/>
         <source>Mod list options</source>
         <translation>Mod listesi seçenekleri</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="887"/>
+        <location filename="../app/views/settings_dialog.py" line="863"/>
         <source>Notifies to download mods that may be missing in the active modlist</source>
         <translation>Etkin mod listesinde eksik olabilecek modların indirilmesi konusunda bildirimde bulunur</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="897"/>
+        <location filename="../app/views/settings_dialog.py" line="873"/>
         <source>Notifies and displays the mods that have the same packageid</source>
         <translation>Aynı paket kimliğine sahip modları bildirir ve görüntüler</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="905"/>
+        <location filename="../app/views/settings_dialog.py" line="881"/>
         <source>Show recently updated mods indicator</source>
         <translation>Yakın zamanda güncellenen mod göstergesini göster</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="909"/>
+        <location filename="../app/views/settings_dialog.py" line="885"/>
         <source>Shows an icon on Steam Workshop mods that were updated within the configured number of days. The update time is refreshed when RimDeck refreshes its metadata.</source>
         <translation>Yapılandırılan gün sayısı içinde güncellenen Steam Atölyesi modlarında bir simge gösterir. RimDeck meta verilerini yenilediğinde güncelleme süresi de yenilenir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="921"/>
+        <location filename="../app/views/settings_dialog.py" line="897"/>
         <source>Days to consider a mod recently updated:</source>
         <translation>Yakın zamanda güncellenen bir modun dikkate alınması gereken günler:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="934"/>
+        <location filename="../app/views/settings_dialog.py" line="910"/>
         <source>Show startup load time per mod</source>
         <translation>Mod başına başlangıç ​​yükleme süresini göster</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="938"/>
+        <location filename="../app/views/settings_dialog.py" line="914"/>
         <source>Shows each mod&apos;s game startup time, measured by the &apos;Loading Progress&apos; mod. Requires that mod with its &apos;Track startup loading impact&apos; setting enabled, and a saved startup impact report (StartupImpactData.xml in the RimWorld save data folder).</source>
         <translation>&apos;Yükleme İlerlemesi&apos; modu tarafından ölçülen, her modun oyun başlatma süresini gösterir. Bu modun &apos;Başlangıç ​​yükleme etkisini izle&apos; ayarının etkin olmasını ve kaydedilmiş bir başlangıç ​​etki raporunu (RimWorld kaydetme verileri klasöründe StartupImpactData.xml) gerektirir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="951"/>
+        <location filename="../app/views/settings_dialog.py" line="927"/>
         <source>Hides invalid mods, not recommended to enable</source>
         <translation>Geçersiz modları gizler, etkinleştirilmesi önerilmez</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="965"/>
+        <location filename="../app/views/settings_dialog.py" line="941"/>
         <source>Inactive Mods Sorting</source>
         <translation>Etkin Olmayan Modların Sıralanması</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="970"/>
+        <location filename="../app/views/settings_dialog.py" line="946"/>
         <source>Save inactive mods sort state</source>
         <translation>Etkin olmayan modların sıralama durumunu kaydet</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="980"/>
+        <location filename="../app/views/settings_dialog.py" line="956"/>
         <source>DB Builder</source>
         <translation>Veritabanı Oluşturucu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="989"/>
+        <location filename="../app/views/settings_dialog.py" line="965"/>
         <source>When building the database:</source>
         <translation>Veritabanını oluştururken:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="994"/>
+        <location filename="../app/views/settings_dialog.py" line="970"/>
         <source>Get PublishedFileIDs from locally installed mods.</source>
         <translation>Yerel modlardan PublishedFileIDs leri al.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1007"/>
+        <location filename="../app/views/settings_dialog.py" line="983"/>
         <source>Get PublishedFileIDs from the Steam Workshop.</source>
         <translation>Steam Workshop&apos;tan PublicyFileids alın.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1023"/>
+        <location filename="../app/views/settings_dialog.py" line="999"/>
         <source>Query DLC dependency data with Steamworks API</source>
         <translation>Steamworks API ile DLC Bağımlılık Verilerini Sorgu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1028"/>
+        <location filename="../app/views/settings_dialog.py" line="1004"/>
         <source>Update database instead of overwriting</source>
         <translation>Üzerine yazma yerine veritabanı güncelle</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1039"/>
+        <location filename="../app/views/settings_dialog.py" line="1015"/>
         <source>Steam API key:</source>
         <translation>Steam API Anahtarı:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1057"/>
+        <location filename="../app/views/settings_dialog.py" line="1033"/>
         <source>Download all published Workshop mods via:</source>
         <translation>Yayınlanmış tüm atölye modlarını aşağıdakilerle indirin:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1061"/>
-        <location filename="../app/views/settings_dialog.py" line="1126"/>
+        <location filename="../app/views/settings_dialog.py" line="1037"/>
+        <location filename="../app/views/settings_dialog.py" line="1102"/>
         <source>SteamCMD</source>
         <translation>Steamcmd</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1066"/>
+        <location filename="../app/views/settings_dialog.py" line="1042"/>
         <source>Steam</source>
         <translation>Buhar</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1080"/>
+        <location filename="../app/views/settings_dialog.py" line="1056"/>
         <source>Compare Databases</source>
         <translation>Veritabanlarını karşılaştırın</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1084"/>
+        <location filename="../app/views/settings_dialog.py" line="1060"/>
         <source>Merge Databases</source>
         <translation>Birleştirme veritabanları</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1090"/>
+        <location filename="../app/views/settings_dialog.py" line="1066"/>
         <source>Build Database</source>
         <translation>Veritabanı Oluştur</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1101"/>
+        <location filename="../app/views/settings_dialog.py" line="1077"/>
         <source>Database expiry in seconds for example, 604800 for 7 days. and 0 for no expiry.</source>
         <translation>Veritabanının geçerlilik süresi saniye cinsinden, örneğin 7 gün için 604800. ve süre sonu olmaması için 0.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1132"/>
+        <location filename="../app/views/settings_dialog.py" line="1108"/>
         <source>Validate downloaded mods</source>
         <translation>İndirilen modları doğrulayın</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1137"/>
+        <location filename="../app/views/settings_dialog.py" line="1113"/>
         <source>Automatically clear depot cache</source>
         <translation>Depo önbelleğini otomatik olarak temizleyin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1161"/>
+        <location filename="../app/views/settings_dialog.py" line="1137"/>
         <source>SteamCMD installation location</source>
         <translation>SteamCMD kurulum konumu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1178"/>
+        <location filename="../app/views/settings_dialog.py" line="1154"/>
         <source>Clear depot cache</source>
         <translation>Clear Depot önbelleği</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1187"/>
+        <location filename="../app/views/settings_dialog.py" line="1163"/>
         <source>Import .acf</source>
         <translation>İçe Aktar .acf</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1190"/>
+        <location filename="../app/views/settings_dialog.py" line="1166"/>
         <source>Delete .acf</source>
         <translation>Sil .acf</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1193"/>
+        <location filename="../app/views/settings_dialog.py" line="1169"/>
         <source>Install SteamCMD</source>
         <translation>Steamcmd&apos;yi kurun</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1197"/>
+        <location filename="../app/views/settings_dialog.py" line="1173"/>
         <source>todds</source>
         <translation>küçük çocuklar</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1202"/>
+        <location filename="../app/views/settings_dialog.py" line="1178"/>
         <source>Quality preset</source>
         <translation>Kalite ön ayarı</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1206"/>
+        <location filename="../app/views/settings_dialog.py" line="1182"/>
         <source>Optimized - Recommended for RimWorld</source>
         <translation>Optimize edilmiş - Rimworld için önerilir</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1215"/>
+        <location filename="../app/views/settings_dialog.py" line="1191"/>
         <source>If -p as in path is not specified, path from current active or all mods selection will be used.</source>
         <translation>Yolda -p belirtilmezse, geçerli etkin veya tüm mod seçiminin yolu kullanılacaktır.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1232"/>
+        <location filename="../app/views/settings_dialog.py" line="1208"/>
         <source>When optimizing textures</source>
         <translation>Dokuları optimize ederken</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1237"/>
+        <location filename="../app/views/settings_dialog.py" line="1213"/>
         <source>Optimize active mods only</source>
         <translation>Yalnızca etkin modları optimize et</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1241"/>
+        <location filename="../app/views/settings_dialog.py" line="1217"/>
         <source>Optimize all mods</source>
         <translation>Tüm modları optimize et</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1246"/>
+        <location filename="../app/views/settings_dialog.py" line="1222"/>
         <source>Enable dry-run mode</source>
         <translation>Kuru çalıştırma modunu etkinleştirin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1250"/>
+        <location filename="../app/views/settings_dialog.py" line="1226"/>
         <source>Overwrite existing optimized textures</source>
         <translation>Mevcut optimize edilmiş dokuların üzerine yazın</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1268"/>
+        <location filename="../app/views/settings_dialog.py" line="1244"/>
         <source>Automatically run todds before launching the game</source>
         <translation>Oyunu başlatmadan önce todds&apos;u otomatik olarak çalıştır</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1291"/>
+        <location filename="../app/views/settings_dialog.py" line="1267"/>
         <source>Text Editor command location</source>
         <translation>Metin Düzenleyici komut konumu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1348"/>
+        <location filename="../app/views/settings_dialog.py" line="1324"/>
         <source>Theme Settings</source>
         <translation>Tema Ayarları</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1358"/>
+        <location filename="../app/views/settings_dialog.py" line="1334"/>
         <source>Enable to use theme / stylesheet instead of system Theme</source>
         <translation>Sistem teması yerine tema / stil sayfası kullanmayı etkinleştirin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1381"/>
+        <location filename="../app/views/settings_dialog.py" line="1357"/>
         <source>Open Theme Location</source>
         <translation>Tema Konumu Açık</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1385"/>
+        <location filename="../app/views/settings_dialog.py" line="1361"/>
         <source>Font Settings</source>
         <translation>Yazı Tipi Ayarları</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1393"/>
+        <location filename="../app/views/settings_dialog.py" line="1369"/>
         <source>Font Family</source>
         <translation>Yazı tipi ailesi</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1405"/>
+        <location filename="../app/views/settings_dialog.py" line="1381"/>
         <source>Font Size</source>
         <translation>Yazı tipi boyutu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1416"/>
+        <location filename="../app/views/settings_dialog.py" line="1392"/>
         <source>Reset</source>
         <translation>Sıfırlamak</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1432"/>
+        <location filename="../app/views/settings_dialog.py" line="1408"/>
         <source>Language Setting</source>
         <translation>Dil Ayarı</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1442"/>
+        <location filename="../app/views/settings_dialog.py" line="1418"/>
         <source>Select Language (Restart required to apply changes)</source>
         <translation>Dili seçin (değişiklikleri uygulamak için gerekli yeniden başlat)</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1459"/>
-        <location filename="../app/views/settings_dialog.py" line="1621"/>
+        <location filename="../app/views/settings_dialog.py" line="1435"/>
+        <location filename="../app/views/settings_dialog.py" line="1597"/>
         <source>RimDeck restart required for some settings</source>
         <translation>Bazı ayarlar için RimDeck&apos;un yeniden başlatılması gerekiyor</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1465"/>
+        <location filename="../app/views/settings_dialog.py" line="1441"/>
         <source>Constrain dialogues to main window monitor</source>
         <translation>Diyalogları ana pencere monitörüyle sınırlandırın</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1496"/>
+        <location filename="../app/views/settings_dialog.py" line="1472"/>
         <source>Main Window Launch State</source>
         <translation>Ana Pencere Başlatma Durumu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1519"/>
+        <location filename="../app/views/settings_dialog.py" line="1495"/>
         <source>Browser Window Launch State</source>
         <translation>Tarayıcı Penceresi Başlatma Durumu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1526"/>
+        <location filename="../app/views/settings_dialog.py" line="1502"/>
         <source>Settings Window Launch State</source>
         <translation>Ayarlar Penceresi Başlatma Durumu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1541"/>
+        <location filename="../app/views/settings_dialog.py" line="1517"/>
         <source>Custom Width:</source>
         <translation>Özel Genişlik:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1552"/>
+        <location filename="../app/views/settings_dialog.py" line="1528"/>
         <source>Custom Height:</source>
         <translation>Özel Yükseklik:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1608"/>
+        <location filename="../app/views/settings_dialog.py" line="1584"/>
         <source>Advanced</source>
         <translation>Gelişmiş</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1626"/>
+        <location filename="../app/views/settings_dialog.py" line="1602"/>
         <source>Enable debug logging</source>
         <translation>Hata ayıklama günlüğünü etkinleştir</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1630"/>
+        <location filename="../app/views/settings_dialog.py" line="1606"/>
         <source>Enable watchdog file monitor daemon</source>
         <translation>WatchDog Dosya Monitör Daemon</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="948"/>
+        <location filename="../app/views/settings_dialog.py" line="924"/>
         <source>Hide invalid mods when filtering</source>
         <translation>Filtreleme sırasında geçersiz modları gizle</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="894"/>
+        <location filename="../app/views/settings_dialog.py" line="870"/>
         <source>Show duplicate mods warning</source>
         <translation>Yinelenen Modlar Uyarısını Göster</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1638"/>
+        <location filename="../app/views/settings_dialog.py" line="1614"/>
         <source>Check for mod updates on refresh</source>
         <translation>Yenileme ile ilgili mod güncellemelerini kontrol edin</translation>
     </message>
@@ -6478,37 +6463,37 @@ Bakınız: https://www.rimworldwiki.com/wiki/Modding_Tutorials/About.xml</transl
         <translation>Steam istemcisi entegrasyonunu etkinleştirin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="883"/>
+        <location filename="../app/views/settings_dialog.py" line="859"/>
         <source>Download missing mods automatically</source>
         <translation>Eksik modları otomatik olarak indirin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="864"/>
+        <location filename="../app/views/settings_dialog.py" line="840"/>
         <source>Render Unity Rich Text in mod descriptions</source>
         <translation>Mod açıklamalarında birlik zengin bir metin oluşturun</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1643"/>
+        <location filename="../app/views/settings_dialog.py" line="1619"/>
         <source>Update databases on startup</source>
         <translation>Başlangıçtaki veritabanlarını güncelleyin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1701"/>
+        <location filename="../app/views/settings_dialog.py" line="1677"/>
         <source>Rentry Auth:</source>
         <translation>Rentry Auth:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1708"/>
+        <location filename="../app/views/settings_dialog.py" line="1684"/>
         <source>Obtain rentry auth code by emailing: support@rentry.co</source>
         <translation>E -posta ile Rentry Auth kodunu edinin: support@renry.co</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1718"/>
+        <location filename="../app/views/settings_dialog.py" line="1694"/>
         <source>GitHub username:</source>
         <translation>GitHub Kullanıcı Adı:</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1726"/>
+        <location filename="../app/views/settings_dialog.py" line="1702"/>
         <source>GitHub personal access token:</source>
         <translation>Github Kişisel Erişim Jetonu:</translation>
     </message>
@@ -6528,30 +6513,30 @@ Bakınız: https://www.rimworldwiki.com/wiki/Modding_Tutorials/About.xml</transl
         <translation>Gibi olmalı: C: ​​\ Program Dosyaları (x86) \ Steam \ SteamApps \ Common \ Rimworld \ Mods</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1148"/>
+        <location filename="../app/views/settings_dialog.py" line="1124"/>
         <source>Delete before update</source>
         <translation>Güncellemeden önce sil</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1151"/>
+        <location filename="../app/views/settings_dialog.py" line="1127"/>
         <source>This is useful if you want to ensure clean mod updates.</source>
         <translation>Temiz mod güncellemelerini sağlamak istiyorsanız bu yararlıdır.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1487"/>
-        <location filename="../app/views/settings_dialog.py" line="1510"/>
+        <location filename="../app/views/settings_dialog.py" line="1463"/>
+        <location filename="../app/views/settings_dialog.py" line="1486"/>
         <source>Maximized</source>
         <translation>Maksimum</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1488"/>
-        <location filename="../app/views/settings_dialog.py" line="1511"/>
+        <location filename="../app/views/settings_dialog.py" line="1464"/>
+        <location filename="../app/views/settings_dialog.py" line="1487"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1489"/>
-        <location filename="../app/views/settings_dialog.py" line="1512"/>
+        <location filename="../app/views/settings_dialog.py" line="1465"/>
+        <location filename="../app/views/settings_dialog.py" line="1488"/>
         <source>Custom size</source>
         <translation>Özel boyut</translation>
     </message>
@@ -6632,54 +6617,44 @@ Bakınız: https://www.rimworldwiki.com/wiki/Modding_Tutorials/About.xml</transl
         <translation>Bu, aux meta veri DB veri silme için zaman sınırının düzenlenmesini sağlar.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="772"/>
-        <source>Alphabetical sorting may produce incorrect results with complex mod lists. Topological sorting is recommended.</source>
-        <translation>Alfabetik sıralama, karmaşık mod listelerinde yanlış sonuçlar doğurabilir. Topolojik sıralama önerilir.</translation>
-    </message>
-    <message>
-        <location filename="../app/views/settings_dialog.py" line="777"/>
-        <source>(Deprecated — use Topological instead)</source>
-        <translation>(Kullanımdan kaldırıldı - bunun yerine Topolojik&apos;i kullanın)</translation>
-    </message>
-    <message>
-        <location filename="../app/views/settings_dialog.py" line="795"/>
+        <location filename="../app/views/settings_dialog.py" line="771"/>
         <source>If enabled, also uses moddependencies as loadTheseBefore, and mods will be sorted such that dependencies are loaded before the dependent mod.</source>
         <translation>Etkinleştirilirse, modDeDensings&apos;i yüklemeden önce de kullanır ve modlar bağımlılıklar bağımlı moddan önce yüklenecek şekilde sıralanır.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1000"/>
+        <location filename="../app/views/settings_dialog.py" line="976"/>
         <source>Mods you wish to update must be installed, as the initial DB is built including data from mods&apos; About.xml files.</source>
         <translation>Mods &apos;hakkında.xml dosyalarından veriler dahil olmak üzere ilk DB oluşturulduğundan, güncellemek istediğiniz modlar yüklenmelidir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1013"/>
+        <location filename="../app/views/settings_dialog.py" line="989"/>
         <source>Mods to be updated don&apos;t have to be installed, as the initial DB is built by scraping the Steam Workshop.</source>
         <translation>Güncellenecek modların yüklenmesi gerekmez, çünkü ilk DB buhar atölyesi kazıyarak oluşturulur.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1116"/>
+        <location filename="../app/views/settings_dialog.py" line="1092"/>
         <source>Internal Tools</source>
         <translation>Dahili Araçlar</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1141"/>
+        <location filename="../app/views/settings_dialog.py" line="1117"/>
         <source>Automatically clear the depot cache before downloading mods through SteamCMD.
 This may potentially prevent some issues with downloading mods such as download failures and deleted mods repopulating.</source>
         <translation>Steamcmd üzerinden modları indirmeden önce depo önbelleğini otomatik olarak temizleyin.
 Bu, indirme hataları ve silinen modlar gibi indirme modlarının yeniden düzenlenmesi gibi bazı sorunları önleyebilir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1182"/>
+        <location filename="../app/views/settings_dialog.py" line="1158"/>
         <source>Clear the depot cache manually. This may be useful if you encounter issues with downloading mods through SteamCMD.</source>
         <translation>Depo önbelleğini manuel olarak temizleyin. Steamcmd aracılığıyla modları indirme sorunları ile karşılaşırsanız bu yararlı olabilir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1338"/>
+        <location filename="../app/views/settings_dialog.py" line="1314"/>
         <source>Appearance</source>
         <translation>Dış görünüş</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1362"/>
+        <location filename="../app/views/settings_dialog.py" line="1338"/>
         <source>To add your own theme / stylesheet 
 
 1) Create a new-folder in &apos;themes&apos; folder in your &apos;RimDeck&apos; config folder 
@@ -6703,47 +6678,47 @@ NOT
 Klasörün adı temanın adı olarak kullanılacak ve herhangi bir geçersiz tema göz ardı edilecektir</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1471"/>
+        <location filename="../app/views/settings_dialog.py" line="1447"/>
         <source>Min is {MIN_SIZE} and Max is {MAX_SIZE}. Values outside this range will be reset to defaults.</source>
         <translation>Min  ve max . Bu aralığın dışındaki değerler varsayılanlara sıfırlanacaktır. {MAX_SIZE} {MIN_SIZE}</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1634"/>
+        <location filename="../app/views/settings_dialog.py" line="1610"/>
         <source>Clear also moves DLC</source>
         <translation>Clear DLC&apos;yi de hareket ettiriyor</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="875"/>
+        <location filename="../app/views/settings_dialog.py" line="851"/>
         <source>Apply mod coloring to background instead of text</source>
         <translation>Metin yerine arka plana mod boyama uygulayın</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="868"/>
+        <location filename="../app/views/settings_dialog.py" line="844"/>
         <source>Enable this option to render Unity Rich Text in mod descriptions. Images will not be displayed.</source>
         <translation>Mod açıklamalarında Unity Zengin Metin oluşturmak için bu seçeneği etkinleştirin. Görüntüler görüntülenmeyecek.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1647"/>
+        <location filename="../app/views/settings_dialog.py" line="1623"/>
         <source>Enable this option to automatically update enabled databases when RimDeck starts. This will check for updates and download them if available.</source>
         <translation>Rimdeck başladığında etkin veritabanlarını otomatik olarak güncellemek için bu seçeneği etkinleştirin. Bu, güncellemeleri kontrol eder ve varsa indirir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1210"/>
+        <location filename="../app/views/settings_dialog.py" line="1186"/>
         <source>Custom todds command</source>
         <translation>Özel Todds komutu</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1225"/>
+        <location filename="../app/views/settings_dialog.py" line="1201"/>
         <source>eg: {todds_example}</source>
         <translation>Örn: {todds_example}</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1256"/>
+        <location filename="../app/views/settings_dialog.py" line="1232"/>
         <source>Automatically delete .dds files if no corresponding .png file exists</source>
         <translation>Karşılık gelen .png dosyası yoksa otomatik olarak .dds dosyalarını silin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1261"/>
+        <location filename="../app/views/settings_dialog.py" line="1237"/>
         <source>This will delete .dds files that are not paired with a .png file,
 
 This checks may take few seconds depending on the number of .dds files present.</source>
@@ -6752,59 +6727,59 @@ This checks may take few seconds depending on the number of .dds files present.<
 Bu kontroller, mevcut .dds dosyalarının sayısına bağlı olarak birkaç saniye sürebilir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="828"/>
+        <location filename="../app/views/settings_dialog.py" line="804"/>
         <source>Prefer versioned About.xml tags over base tags</source>
         <translation>Temel Etiketler üzerinden Hakkında Versiyon</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1280"/>
+        <location filename="../app/views/settings_dialog.py" line="1256"/>
         <source>External Tools</source>
         <translation>Harici araçlar</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1302"/>
+        <location filename="../app/views/settings_dialog.py" line="1278"/>
         <source>Additional Arguments (Opening Folders)</source>
         <translation>Ek Argümanlar (Klasörler Açma)</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1307"/>
+        <location filename="../app/views/settings_dialog.py" line="1283"/>
         <source>Additional Arguments (Opening Single File)</source>
         <translation>Ek bağımsız değişkenler (tek dosyayı açma)</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="802"/>
+        <location filename="../app/views/settings_dialog.py" line="778"/>
         <source>Use alternativePackageIds as satisfying dependencies</source>
         <translation>Tatmin edici bağımlılıklar olarak alternatifpackageIds kullanın</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="806"/>
+        <location filename="../app/views/settings_dialog.py" line="782"/>
         <source>If enabled, an alternativePackageIds entry in About.xml can satisfy a mod&apos;s dependency when the main dependency is missing. 
 E.g., &apos;oels.vehiclemapframework&apos;, alternatives: &apos;oels.vehiclemapframework.dev&apos;</source>
         <translation>Etkinleştirilirse, bir alternatifPackageIds girişi. 
 Örneğin, &apos;Oels.Vehiclemapframework&apos;, alternatifler: &apos;Oels.Vehiclemapframework.dev&apos;</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1654"/>
+        <location filename="../app/views/settings_dialog.py" line="1630"/>
         <source>Include mod notes in mod name search filter</source>
         <translation>Mod adı arama filtresine mod notlarını dahil edin</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1658"/>
+        <location filename="../app/views/settings_dialog.py" line="1634"/>
         <source>This option will include searching mod notes when searching by mod name.</source>
         <translation>Bu seçenek, mod adına göre arama yaparken mod notlarının aranmasını içerecektir.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1665"/>
+        <location filename="../app/views/settings_dialog.py" line="1641"/>
         <source>Create backup before RimDeck update</source>
         <translation>Rimdeck güncellemesinden önce yedekleme oluştur</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1669"/>
+        <location filename="../app/views/settings_dialog.py" line="1645"/>
         <source>Recommended to keep this enabled as it creates a backup before updating RimDeck, This helps prevent any unwanted changes or data getting deleted.</source>
         <translation>Rimdeck&apos;u güncellemeden önce bir yedek oluşturduğu için bunu etkin tutmanız önerilir, bu da istenmeyen değişikliklerin veya verilerin silinmesini önlemeye yardımcı olur.</translation>
     </message>
     <message>
-        <location filename="../app/views/settings_dialog.py" line="1675"/>
+        <location filename="../app/views/settings_dialog.py" line="1651"/>
         <source>Maximum number of backups to keep:</source>
         <translation>Tutulması gereken maksimum yedekleme sayısı:</translation>
     </message>

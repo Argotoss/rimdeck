@@ -756,30 +756,6 @@ This basically preserves your mod coloring, user notes etc. for this many second
         tab_layout = QVBoxLayout(tab)
         tab_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 
-        # Sort mods group
-        _, sort_group_box_layout = self._add_group_box(tab_layout)
-
-        sorting_label = self._make_section_label(self.tr("Sorting Method"))
-        sort_group_box_layout.addWidget(sorting_label)
-
-        self.sorting_topological_radio = QRadioButton(self.tr("Topologically"))
-        sort_group_box_layout.addWidget(self.sorting_topological_radio)
-
-        alphabetical_layout = QHBoxLayout()
-        self.sorting_alphabetical_radio = QRadioButton(self.tr("Alphabetically"))
-        self.sorting_alphabetical_radio.setToolTip(
-            self.tr(
-                "Alphabetical sorting may produce incorrect results with complex mod lists. "
-                "Topological sorting is recommended."
-            )
-        )
-        alphabetical_layout.addWidget(self.sorting_alphabetical_radio)
-        alphabetical_warning = QLabel(self.tr("(Deprecated — use Topological instead)"))
-        alphabetical_warning.setStyleSheet("color: #e8a838; font-style: italic;")
-        alphabetical_layout.addWidget(alphabetical_warning)
-        alphabetical_layout.addStretch()
-        sort_group_box_layout.addLayout(alphabetical_layout)
-
         # Dependencies group
         _, deps_group_box_layout = self._add_group_box(tab_layout)
 

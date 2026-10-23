@@ -5,8 +5,6 @@ from collections.abc import Mapping
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-import pytest
-
 if "steamworks" not in sys.modules:
     sys.modules["steamworks"] = MagicMock()
 
@@ -222,10 +220,7 @@ class TestEdgeCases:
         assert success
         assert result == ["/mods/copy1", "/mods/copy2"]
 
-    @pytest.mark.parametrize(
-        "method", [SortMethod.TOPOLOGICAL, SortMethod.ALPHABETICAL]
-    )
-    def test_entries_without_about_xml_stay_active(self, method: SortMethod) -> None:
+    def test_entries_without_about_xml_stay_active(self) -> None:
         """A scenario or invalid folder in the active list is kept, after the mods."""
         scenario = ScenarioMod(name="My Scenario")
         scenario.mod_path = Path("/mods/scenario")
@@ -233,7 +228,7 @@ class TestEdgeCases:
             "/mods/a": make_listed_mod("/mods/a", name="A", package_id="mod.a"),
             "/mods/scenario": scenario,
         }
-        success, result = _pipeline(mods, sort_method=method)
+        success, result = _pipeline(mods)
         assert success
         assert result == ["/mods/a", "/mods/scenario"]
 

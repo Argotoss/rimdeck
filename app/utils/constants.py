@@ -15,7 +15,6 @@ DEFAULT_MISSING_PACKAGEID = "missing.packageid"
 
 
 class SortMethod(str, Enum):
-    ALPHABETICAL = "Alphabetical"
     TOPOLOGICAL = "Topological"
 
 

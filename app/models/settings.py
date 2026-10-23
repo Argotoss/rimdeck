@@ -602,6 +602,14 @@ class Settings(QObject):
                 continue
             setattr(self, key, value)
 
+        if self.sorting_algorithm != SortMethod.TOPOLOGICAL:
+            # Alphabetical sort was removed: it ignored load rules.
+            logger.info(
+                f"Sorting algorithm {self.sorting_algorithm!r} is no longer"
+                " available, switching to topological"
+            )
+            self.sorting_algorithm = SortMethod.TOPOLOGICAL
+
         if "instances" in data:
             # Convert to Instance objects
             instances = {}

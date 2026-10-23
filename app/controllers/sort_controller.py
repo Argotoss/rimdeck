@@ -7,7 +7,6 @@ from app.models.metadata.metadata_structure import (
     CompiledDependencyData,
     ListedMod,
 )
-from app.sort.alphabetical_sort import do_alphabetical_sort
 from app.sort.dependencies import (
     extract_tier_subgraph,
     get_dependencies_recursive,
@@ -40,21 +39,10 @@ class Sorter:
             if isinstance(mod, AboutXmlMod):
                 self._active_package_ids.add(str(mod.package_id))
 
-        # TODO(debt): Both do_topo_sort and do_alphabetical_sort re-derive
-        # packageid_to_path and name lookup dicts from these same inputs.
-        # Precompute them here and pass down when sort function signatures
-        # are finalized in PR 3.
-
         if isinstance(sort_method, (SortMethod, str)):
             logger.info(f"Created sorter instance with {sort_method} sort method")
 
-            if sort_method == SortMethod.ALPHABETICAL:
-                logger.warning(
-                    "Alphabetical sort is deprecated and may produce incorrect results "
-                    "with complex mod lists. Consider switching to Topological sort."
-                )
-                self.sort_method = do_alphabetical_sort
-            elif sort_method == SortMethod.TOPOLOGICAL:
+            if sort_method == SortMethod.TOPOLOGICAL:
                 self.sort_method = do_topo_sort
             else:
                 raise NotImplementedError(f"Sort method {sort_method} not implemented")

@@ -2,7 +2,6 @@ from PySide6.QtCore import Slot
 
 from app.controllers.settings_tabs.base_tab_controller import BaseTabController
 from app.models.settings import Settings
-from app.utils.constants import SortMethod
 from app.utils.event_bus import EventBus
 from app.views.settings_dialog import SettingsDialog
 
@@ -36,11 +35,6 @@ class SortingTabController(BaseTabController):
         # radio buttons use if/elif (only setChecked(True) on match),
         # some checkboxes use if-guard (only set when True),
         # others use unconditional setChecked(value).
-        if self.settings.sorting_algorithm == SortMethod.ALPHABETICAL:
-            self.dialog.sorting_alphabetical_radio.setChecked(True)
-        elif self.settings.sorting_algorithm == SortMethod.TOPOLOGICAL:
-            self.dialog.sorting_topological_radio.setChecked(True)
-
         if self.settings.use_moddependencies_as_loadTheseBefore:
             self.dialog.use_moddependencies_as_loadTheseBefore.setChecked(True)
         if self.settings.use_alternative_package_ids_as_satisfying_dependencies:
@@ -87,11 +81,6 @@ class SortingTabController(BaseTabController):
         )
 
     def update_model_from_view(self) -> None:
-        if self.dialog.sorting_alphabetical_radio.isChecked():
-            self.settings.sorting_algorithm = SortMethod.ALPHABETICAL
-        elif self.dialog.sorting_topological_radio.isChecked():
-            self.settings.sorting_algorithm = SortMethod.TOPOLOGICAL
-
         self.settings.use_moddependencies_as_loadTheseBefore = (
             self.dialog.use_moddependencies_as_loadTheseBefore.isChecked()
         )

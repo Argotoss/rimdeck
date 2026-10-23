@@ -78,22 +78,6 @@ class TestSorterBasic:
         assert success
         assert result.index("/mods/b") < result.index("/mods/a")
 
-    def test_alphabetical_sort(self) -> None:
-        mods = {
-            "/mods/z": make_listed_mod("/mods/z", name="Zebra", package_id="mod.z"),
-            "/mods/a": make_listed_mod("/mods/a", name="Alpha", package_id="mod.a"),
-        }
-        compiled = _build_compiled(deps={"mod.z": set(), "mod.a": set()})
-        sorter = Sorter(
-            sort_method=SortMethod.ALPHABETICAL,
-            compiled_data=compiled,
-            mods_metadata=mods,
-            active_mod_paths={"/mods/z", "/mods/a"},
-        )
-        success, result = sorter.sort()
-        assert success
-        assert result == ["/mods/a", "/mods/z"]
-
     def test_invalid_sort_method_raises(self) -> None:
         compiled = _build_compiled()
         with pytest.raises((NotImplementedError, ValueError)):

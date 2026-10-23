@@ -4,31 +4,10 @@ from unittest.mock import MagicMock
 
 from app.controllers.settings_tabs.sorting_tab_controller import SortingTabController
 from app.models.settings import Settings
-from app.utils.constants import SortMethod
 
 
 class TestSortingTabUpdateView:
     """Test update_view_from_model pushes model state into dialog widgets."""
-
-    def test_topological_algorithm_sets_topological_radio(
-        self, sorting_tab: tuple[SortingTabController, Settings, MagicMock]
-    ) -> None:
-        controller, settings, dialog = sorting_tab
-        settings.sorting_algorithm = SortMethod.TOPOLOGICAL
-
-        controller.update_view_from_model()
-
-        dialog.sorting_topological_radio.setChecked.assert_called_with(True)
-
-    def test_alphabetical_algorithm_sets_alphabetical_radio(
-        self, sorting_tab: tuple[SortingTabController, Settings, MagicMock]
-    ) -> None:
-        controller, settings, dialog = sorting_tab
-        settings.sorting_algorithm = SortMethod.ALPHABETICAL
-
-        controller.update_view_from_model()
-
-        dialog.sorting_alphabetical_radio.setChecked.assert_called_with(True)
 
     def test_unconditional_checkboxes_pushed_to_view(
         self, sorting_tab: tuple[SortingTabController, Settings, MagicMock]
@@ -81,36 +60,10 @@ class TestSortingTabUpdateView:
 class TestSortingTabUpdateModel:
     """Test update_model_from_view reads dialog widget state into model."""
 
-    def test_alphabetical_radio_sets_algorithm(
-        self, sorting_tab: tuple[SortingTabController, Settings, MagicMock]
-    ) -> None:
-        controller, settings, dialog = sorting_tab
-        settings.sorting_algorithm = SortMethod.TOPOLOGICAL
-        dialog.sorting_alphabetical_radio.isChecked.return_value = True
-        dialog.sorting_topological_radio.isChecked.return_value = False
-
-        controller.update_model_from_view()
-
-        assert settings.sorting_algorithm == SortMethod.ALPHABETICAL
-
-    def test_topological_radio_sets_algorithm(
-        self, sorting_tab: tuple[SortingTabController, Settings, MagicMock]
-    ) -> None:
-        controller, settings, dialog = sorting_tab
-        settings.sorting_algorithm = SortMethod.ALPHABETICAL
-        dialog.sorting_alphabetical_radio.isChecked.return_value = False
-        dialog.sorting_topological_radio.isChecked.return_value = True
-
-        controller.update_model_from_view()
-
-        assert settings.sorting_algorithm == SortMethod.TOPOLOGICAL
-
     def test_checkbox_values_read_into_model(
         self, sorting_tab: tuple[SortingTabController, Settings, MagicMock]
     ) -> None:
         controller, settings, dialog = sorting_tab
-        dialog.sorting_alphabetical_radio.isChecked.return_value = False
-        dialog.sorting_topological_radio.isChecked.return_value = True
         dialog.use_moddependencies_as_loadTheseBefore.isChecked.return_value = True
         dialog.use_alternative_package_ids_as_satisfying_dependencies_checkbox.isChecked.return_value = False
         dialog.check_deps_checkbox.isChecked.return_value = False
@@ -136,8 +89,6 @@ class TestSortingTabUpdateModel:
     ) -> None:
         """The indicator checkbox and threshold spinbox are read back into the model."""
         controller, settings, dialog = sorting_tab
-        dialog.sorting_alphabetical_radio.isChecked.return_value = True
-        dialog.sorting_topological_radio.isChecked.return_value = False
         dialog.mod_list_updated_indicator_checkbox.isChecked.return_value = True
         dialog.mod_list_updated_threshold_spinbox.value.return_value = 14
 
