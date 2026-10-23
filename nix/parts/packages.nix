@@ -86,6 +86,7 @@
       testFiles = lib.fileset.unions [
         runtimeFiles
         ../../tests
+        ../../packaging/sign_update_manifest.py
         ../../pyproject.toml
         ../../translation_helper.py
       ];
