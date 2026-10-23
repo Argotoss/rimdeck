@@ -12,6 +12,7 @@ from app.models.metadata.metadata_factory import (
     create_rules_from_external_rules,
     read_rules_db,
     read_steam_db,
+    steam_required_dependencies,
 )
 from app.models.metadata.metadata_structure import (
     AboutXmlMod,
@@ -416,6 +417,10 @@ class MetadataMediator:
                             mod.community_rules = create_rules_from_external_rules(
                                 external_rule=self.community_rules.rules[mod.package_id]
                             )
+
+                        mod.community_rules.dependencies.update(
+                            steam_required_dependencies(mod, self.steam_db)
+                        )
 
                     results[mod.uuid] = mod
                 except Exception as e:

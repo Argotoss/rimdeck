@@ -737,11 +737,46 @@ def create_rules_from_external_rules(external_rule: ExternalRule) -> Rules:
 
     rules.load_before = CaseInsensitiveSet(external_rule.loadBefore.keys())
     rules.load_after = CaseInsensitiveSet(external_rule.loadAfter.keys())
+    rules.incompatible_with = CaseInsensitiveSet(external_rule.incompatibleWith.keys())
 
     rules.load_first = external_rule.loadTop.value
     rules.load_last = external_rule.loadBottom.value
 
     return rules
+
+
+def steam_required_dependencies(
+    mod: AboutXmlMod, steam_db: SteamDbSchema | None
+) -> dict[CaseInsensitiveStr, DependencyMod]:
+    """Dependencies from a Workshop mod's Steam "required items".
+
+    Only used for Workshop mods whose About.xml declares no dependencies:
+    when the author wrote modDependencies, those are trusted as complete.
+
+    :param mod: The parsed mod.
+    :param steam_db: The loaded Steam Workshop database, if any.
+    :return: package ID -> dependency, for required items the database knows.
+    """
+    if steam_db is None or mod.about_rules.dependencies:
+        return {}
+    if mod.mod_type not in (ModType.STEAM_WORKSHOP, ModType.STEAM_CMD):
+        return {}
+    entry = steam_db.database.get(str(mod.published_file_id or ""))
+    if entry is None:
+        return {}
+    dependencies: dict[CaseInsensitiveStr, DependencyMod] = {}
+    for workshop_id in entry.dependencies:
+        required = steam_db.database.get(str(workshop_id))
+        if required is None or not required.packageId:
+            continue
+        package_id = CaseInsensitiveStr(required.packageId)
+        if package_id == mod.package_id:
+            continue
+        dependency = DependencyMod(package_id=package_id)
+        dependency.name = required.name or required.steamName or str(package_id)
+        dependency.workshop_url = required.url
+        dependencies[package_id] = dependency
+    return dependencies
 
 
 def _find_about_xml(mod_path: Path) -> Path | None:
