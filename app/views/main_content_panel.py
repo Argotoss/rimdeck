@@ -1019,10 +1019,11 @@ class MainContent(QObject):
         self.mods_panel.reset_all_filters_and_search("Active")
         self.mods_panel.reset_all_filters_and_search("Inactive")
 
-        # Get active mods (exclude dividers)
-        active_mods = {
+        # Get active mods (exclude dividers), in their current list order
+        current_order = [
             u for u in self.mods_panel.active_mods_list.paths if not is_divider_uuid(u)
-        }
+        ]
+        active_mods = set(current_order)
 
         # Compile metadata for active mods so newly-added ones have dependency info
         self.metadata_controller.compile()
@@ -1081,8 +1082,6 @@ class MainContent(QObject):
             if mod_entry and mod_entry.mod_path:
                 active_mod_paths.add(str(mod_entry.mod_path))
 
-        # Get the current order of active mods list and create a copy for comparison
-        current_order = active_mods
         try:
             sorter = Sorter(
                 self.settings.sorting_algorithm,
@@ -1115,6 +1114,7 @@ class MainContent(QObject):
             if mod_data.mod_path:
                 path_to_uuid[str(mod_data.mod_path)] = uuid
         new_order = [path_to_uuid[p] for p in new_order_paths if p in path_to_uuid]
+        new_order_set = set(new_order)
 
         # Log the sort result and the order
         logger.debug(
@@ -1142,7 +1142,7 @@ class MainContent(QObject):
                 [
                     uuid
                     for uuid in self.metadata_controller.mods_metadata
-                    if uuid not in set(new_order)
+                    if uuid not in new_order_set
                 ],
             )
             # Enable widgets again after inserting

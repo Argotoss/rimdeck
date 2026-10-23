@@ -54,7 +54,7 @@ Done when: sorting an already sorted list changes nothing, results are identical
 
 - [x] ~~[F20](findings.md#f20) Sort discards the user's order~~ Won't do: alphabetical order within each level is deliberate, so the same set of mods gives everyone the same load order.
 - [x] [F21](findings.md#f21) Sort is not deterministic. Done with F17: same-name ties are ordered by folder path.
-- [ ] [F22](findings.md#f22) Every sort moves dividers to the bottom
+- [x] [F22](findings.md#f22) Every sort moves dividers to the bottom
 - [x] ~~[F23](findings.md#f23) Dependencies don't affect load order by default~~ Won't do: only shown in a synthetic test; frameworks are tiered first and community rules fill missing load-after entries, so the default stays and the setting remains available.
 - [ ] [F24](findings.md#f24) Any cycle aborts the whole sort
 - [ ] [F25](findings.md#f25) Tier contradictions resolved silently
