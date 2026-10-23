@@ -599,19 +599,18 @@ class MetadataController(QObject):
         if self.metadata_mediator._mods_metadata is None:
             return False
 
-        prefer_versioned = self.settings.prefer_versioned_about_tags
-        worker = self.metadata_mediator._ParserWorker(
+        layout = resolve_game_layout(self.metadata_mediator.game_path)
+        content_root = (
+            layout.content_root
+            if layout is not None
+            else self.metadata_mediator.game_path
+        )
+        worker = self.metadata_mediator.create_parser_worker(
             [path],
-            self.metadata_mediator.game_version,
-            self.metadata_mediator.local_mods_path,
-            self.metadata_mediator.game_path,
-            self.metadata_mediator.workshop_mods_path,
-            self.metadata_mediator.user_rules,
-            self.metadata_mediator.community_rules,
-            self.metadata_mediator.steam_db,
+            content_root,
             QMutex(),
-            self.metadata_mediator.mods_metadata,
-            prefer_versioned,
+            self.settings.prefer_versioned_about_tags,
+            self.settings.case_insensitive_about_xml_lookup,
         )
         worker.run()
 

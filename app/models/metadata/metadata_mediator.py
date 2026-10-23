@@ -177,6 +177,42 @@ class MetadataMediator:
             logger.error(f"Failed to load Use This Instead DB: {e}")
             self._use_this_instead = None
 
+    def create_parser_worker(
+        self,
+        mod_paths: list[Path],
+        content_root: Path,
+        mutex: QMutex,
+        prefer_versioned: bool,
+        case_insensitive_about_xml: bool,
+    ) -> MetadataMediator._ParserWorker:
+        """Build a parser for some mod folders with the mediator's current state.
+
+        Full refreshes and single-mod reloads both go through here so a mod is
+        parsed the same way no matter how it was (re)loaded.
+
+        :param mod_paths: Mod folders to parse.
+        :param content_root: Folder holding the game's Data and Mods folders.
+        :param mutex: Guards writes into the shared metadata dict.
+        :param prefer_versioned: Prefer ByVersion About.xml tags.
+        :param case_insensitive_about_xml: Look up About.xml case-insensitively.
+        """
+        assert self.local_mods_path is not None
+        assert self._mods_metadata is not None
+        return self._ParserWorker(
+            mod_paths,
+            self.game_version,
+            self.local_mods_path,
+            content_root,
+            self.workshop_mods_path,
+            self.user_rules,
+            self.community_rules,
+            self.steam_db,
+            mutex,
+            self._mods_metadata,
+            prefer_versioned,
+            case_insensitive_about_xml,
+        )
+
     def refresh_metadata(
         self,
         prefer_versioned: bool = True,
@@ -260,17 +296,10 @@ class MetadataMediator:
         metadata_mutex = QMutex()
         self._mods_metadata = {}
         parsers = [
-            self._ParserWorker(
+            self.create_parser_worker(
                 mod_path_batch,
-                self.game_version,
-                self.local_mods_path,
                 layout.content_root,
-                self.workshop_mods_path,
-                self.user_rules,
-                self.community_rules,
-                self.steam_db,
                 metadata_mutex,
-                self._mods_metadata,
                 prefer_versioned,
                 case_insensitive_about_xml,
             )
