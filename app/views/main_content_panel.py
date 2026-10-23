@@ -104,9 +104,7 @@ from app.views.mods_panel import (
 from app.views.settings_dialog import SettingsDialog
 from app.views.task_progress_window import TaskProgressWindow
 from app.windows.duplicate_mods_panel import DuplicateModsPanel
-from app.windows.ignore_json_editor import IgnoreJsonEditor
 from app.windows.missing_dependencies_dialog import MissingDependenciesDialog
-from app.windows.missing_mod_properties_panel import MissingModPropertiesPanel
 from app.windows.missing_mods_panel import MissingModsPrompt
 from app.windows.modlist_history_panel import ModlistHistoryPanel
 from app.windows.rule_editor_panel import RuleEditor
@@ -282,10 +280,6 @@ class MainContent(QObject):
                 compact=False, initial_mode="community_rules"
             )
         )
-        EventBus().do_ignore_json_editor.connect(self._do_open_ignore_json_editor)
-        EventBus().do_check_missing_mod_properties.connect(
-            self.__check_and_warn_missing_mod_properties
-        )
 
         EventBus().do_add_zip_mod.connect(self._do_add_zip_mod)
         EventBus().do_browse_workshop.connect(self._do_browse_workshop)
@@ -350,7 +344,7 @@ class MainContent(QObject):
         self.inactive_mods_uuids_restore_state: list[str] = []
         self.duplicate_mods: dict[str, Any] = {}
         self._extract_progress_widget: TaskProgressWindow | None = None
-        self.window_manager = WindowManager(self.metadata_controller)
+        self.window_manager = WindowManager()
         self._active_loading_loop: QEventLoop | None = None
         self._refresh_in_progress: bool = False
 
@@ -744,58 +738,6 @@ class MainContent(QObject):
         else:
             logger.info("No missing mods found. Skipping...")
 
-    def __check_and_warn_missing_mod_properties(self) -> None:
-        """
-        Scan for mods with missing critical properties and notify the user.
-
-        This method checks all loaded mods for two critical properties:
-        1. Package ID (required for proper mod identification and dependencies)
-        2. Publish Field ID (required for Workshop mods to support updates)
-
-        If any mods are missing these properties, a dedicated panel is displayed
-        allowing the user to review the affected mods and contact authors.
-
-        The method handles all exceptions gracefully to prevent disrupting
-        the main application flow.
-        """
-        try:
-            # Identify mods with missing critical properties
-            missing_packageid_paths = self.window_manager.get_missing_packageid_paths()
-            missing_publishfieldid_paths = (
-                self.window_manager.get_missing_publishfieldid_paths()
-            )
-
-            # If no mods have missing properties, log and return early
-            if not missing_packageid_paths and not missing_publishfieldid_paths:
-                logger.info("No mods with missing properties found. Skipping...")
-                return
-
-            # Log summary statistics for debugging
-            missing_packageid_count = len(missing_packageid_paths)
-            missing_publishfieldid_count = len(missing_publishfieldid_paths)
-
-            logger.info(
-                f"Found {missing_packageid_count} mod(s) with missing Package ID and "
-                f"{missing_publishfieldid_count} mod(s) with missing Publish Field ID. "
-                f"Opening MissingModPropertiesPanel..."
-            )
-
-            # Display a unified panel showing all mods with missing properties,
-            # grouped by property type for better user comprehension
-            missing_mod_properties_panel = MissingModPropertiesPanel(
-                missing_packageid_mods=missing_packageid_paths,
-                missing_publishfieldid_mods=missing_publishfieldid_paths,
-                metadata_controller=self.metadata_controller,
-            )
-            self.window_manager.register(missing_mod_properties_panel)
-            # Make the panel modal to ensure user acknowledges the issues
-            missing_mod_properties_panel.setWindowModality(
-                Qt.WindowModality.ApplicationModal
-            )
-            missing_mod_properties_panel.show()
-        except Exception as e:
-            logger.error(f"Error checking mod properties: {e}")
-
     def __mod_list_slot(self, uuid: str, item: CustomListWidgetItem) -> None:
         """
         This slot method is triggered when the user clicks on an item
@@ -970,9 +912,6 @@ class MainContent(QObject):
 
             # check if we have missing mods, prompt user
             self.__missing_mods_prompt()
-
-            # Check if we have mods with missing properties (Package ID and/or Publish Field ID)
-            self.__check_and_warn_missing_mod_properties()
 
             # Check Workshop mods for updates if configured
             if self.settings.steam_mods_update_check:
@@ -2972,13 +2911,6 @@ class MainContent(QObject):
         self.rule_editor.setWindowModality(Qt.WindowModality.ApplicationModal)
         self.rule_editor.update_database_signal.connect(self._do_update_rules_database)
         self.rule_editor.show()
-
-    def _do_open_ignore_json_editor(self) -> None:
-        """Open the Ignore JSON Editor dialog."""
-        self.ignore_json_editor = IgnoreJsonEditor()
-        self.window_manager.register_attr(self, "ignore_json_editor")
-        self.ignore_json_editor.setWindowModality(Qt.WindowModality.ApplicationModal)
-        self.ignore_json_editor.show()
 
     def _do_configure_steam_db_file_path(self) -> None:
         # Input file

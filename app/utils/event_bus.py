@@ -46,7 +46,6 @@ class EventBus(QObject):
 
     # Edit Menu bar signals
     do_rule_editor = Signal()
-    do_ignore_json_editor = Signal()
     reset_warnings_signal = Signal()
     reset_mod_colors_signal = Signal()
 
@@ -121,7 +120,6 @@ class EventBus(QObject):
     refresh_started = Signal()
     refresh_finished = Signal()
     do_metadata_refresh_cache = Signal()
-    do_check_missing_mod_properties = Signal()
 
     # Dialog signals
     reset_settings_file = Signal()

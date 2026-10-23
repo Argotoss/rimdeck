@@ -1217,39 +1217,20 @@ class BaseModsPanel(QWidget):
         if not selected_indices:
             return
 
-        # Check if subclass has missing_publishfieldid_mods attribute (for explicit tracking)
-        missing_publishfieldid_mods = getattr(self, "missing_publishfieldid_mods", None)
-        use_explicit_mode = missing_publishfieldid_mods is not None
-
         missing_pfid_mods = [
             self.editor_model.item(row, 1).text()
             for row in selected_indices
-            if self._row_has_missing_pfid(
-                row, missing_publishfieldid_mods, use_explicit_mode
-            )
+            if self._row_has_missing_pfid(row)
             and self.editor_model.item(row, 1) is not None
         ]
 
         if missing_pfid_mods:
             self._show_missing_pfid_notification(missing_pfid_mods)
 
-    def _row_has_missing_pfid(
-        self,
-        row: int,
-        missing_publishfieldid_mods: list[str] | None,
-        use_explicit_mode: bool,
-    ) -> bool:
+    def _row_has_missing_pfid(self, row: int) -> bool:
         """Check if a mod at given row has missing Publish Field ID."""
-        if use_explicit_mode:
-            key = self._get_key_from_row(row)
-            return bool(
-                key
-                and missing_publishfieldid_mods
-                and key in missing_publishfieldid_mods
-            )
-        else:
-            pfid_item = self.editor_model.item(row, ColumnIndex.PUBLISHED_FILE_ID.value)
-            return bool(pfid_item and not pfid_item.text().strip())
+        pfid_item = self.editor_model.item(row, ColumnIndex.PUBLISHED_FILE_ID.value)
+        return bool(pfid_item and not pfid_item.text().strip())
 
     def _show_missing_pfid_notification(self, missing_pfid_mods: list[str]) -> None:
         """Show notification about mods without Publish Field ID."""

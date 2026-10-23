@@ -103,7 +103,6 @@ def mock_app_info(
     stub._theme_storage_folder = storage / "themes"
     stub._settings_file = storage / "settings.json"
     stub._user_rules_file = storage / "dbs" / "userRules.json"
-    stub._ignore_mods_file = storage / "dbs" / "ignore.json"
     stub._language_data_folder = base / "app" / "locales"
     stub._backups_folder = storage / "backups"
     stub._settings_backups_folder = storage / "backups" / "settings"

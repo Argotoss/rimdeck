@@ -967,66 +967,6 @@ Manage mods installed from GitHub releases.</source>
     </message>
 </context>
 <context>
-    <name>IgnoreJsonEditor</name>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="40"/>
-        <source>RimDeck - Manage Ignore List</source>
-        <translation>rimDeck - 無視リストの管理</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="49"/>
-        <source>Mods checked below will be removed from the ignore list.</source>
-        <translation>以下でチェックされた MOD は無視リストから削除されます。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="75"/>
-        <source>Remove Selected</source>
-        <translation>選択したものを削除</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="80"/>
-        <source>Save</source>
-        <translation>保存</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="85"/>
-        <source>Cancel</source>
-        <translation>キャンセル</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="124"/>
-        <location filename="../app/windows/ignore_json_editor.py" line="167"/>
-        <location filename="../app/windows/ignore_json_editor.py" line="174"/>
-        <source>Error</source>
-        <translation>エラー</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="125"/>
-        <source>Failed to load ignored mods: {e}</source>
-        <translation>{e}</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="157"/>
-        <source>Success</source>
-        <translation>成功</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="158"/>
-        <source>Ignore list has been saved successfully.</source>
-        <translation>無視リストが正常に保存されました。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="168"/>
-        <source>Failed to save changes to ignore list.</source>
-        <translation>無視リストへの変更を保存できませんでした。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="175"/>
-        <source>Error saving changes: {e}</source>
-        <translation>{e}</translation>
-    </message>
-</context>
-<context>
     <name>InstanceController</name>
     <message>
         <location filename="../app/controllers/instance_controller.py" line="48"/>
@@ -1366,879 +1306,879 @@ Manage mods installed from GitHub releases.</source>
 <context>
     <name>MainContent</name>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="496"/>
+        <location filename="../app/views/main_content_panel.py" line="490"/>
         <source>Essential path(s)</source>
         <translation>必須のパス</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="956"/>
+        <location filename="../app/views/main_content_panel.py" line="898"/>
         <source>Scanning mod sources and populating metadata...</source>
         <translation>モッドソースをスキャンしてメタデータを追加しています...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1119"/>
+        <location filename="../app/views/main_content_panel.py" line="1058"/>
         <source>Metadata not loaded</source>
         <translation>メタデータがロードされていません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1121"/>
+        <location filename="../app/views/main_content_panel.py" line="1060"/>
         <source>Mod metadata has not finished loading. Please wait and try again.</source>
         <translation>Mod メタデータの読み込みが完了していません。しばらく待ってからもう一度お試しください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1144"/>
+        <location filename="../app/views/main_content_panel.py" line="1083"/>
         <source>Sorting algorithm not implemented</source>
         <translation>ソートアルゴリズムが実装されていません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1145"/>
+        <location filename="../app/views/main_content_panel.py" line="1084"/>
         <source>The selected sorting algorithm is not implemented</source>
         <translation>選択されたソートアルゴリズムは実装されていません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1339"/>
+        <location filename="../app/views/main_content_panel.py" line="1278"/>
         <source>Failed to export to file</source>
         <translation>ファイルにエクスポートに失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1340"/>
+        <location filename="../app/views/main_content_panel.py" line="1279"/>
         <source>Failed to export active mods to file:</source>
         <translation>アクティブなモッドをファイルにエクスポートに失敗しました:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1409"/>
+        <location filename="../app/views/main_content_panel.py" line="1348"/>
         <source>Important</source>
         <translation>重要</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1460"/>
+        <location filename="../app/views/main_content_panel.py" line="1399"/>
         <source>Steam client integration not set up</source>
         <translation>Steamクライアントの統合が設定されていません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1462"/>
+        <location filename="../app/views/main_content_panel.py" line="1401"/>
         <source>Steam client integration is not set up. Please set it up to download mods using Steam</source>
         <translation>Steamクライアントの統合が設定されていません。Steamを使用してモッドをダウンロードするには、設定してください</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1472"/>
+        <location filename="../app/views/main_content_panel.py" line="1411"/>
         <source>Download Rentry Mods</source>
         <translation>Rentryモッドをダウンロード</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1473"/>
+        <location filename="../app/views/main_content_panel.py" line="1412"/>
         <source>Please select a download method.</source>
         <translation>ダウンロード方法を選択してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1475"/>
+        <location filename="../app/views/main_content_panel.py" line="1414"/>
         <source>Select which method you want to use to download missing Rentry mods.</source>
         <translation>不足しているRentryモッドをダウンロードするために使用する方法を選択してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1575"/>
+        <location filename="../app/views/main_content_panel.py" line="1514"/>
         <source>Export active mod list</source>
         <translation>アクティブなモッドをファイルにエクスポート</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1576"/>
+        <location filename="../app/views/main_content_panel.py" line="1515"/>
         <source>Copied active mod list report to clipboard...</source>
         <translation>アクティブなモッドをファイルにエクスポートしました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1577"/>
-        <location filename="../app/views/main_content_panel.py" line="1652"/>
+        <location filename="../app/views/main_content_panel.py" line="1516"/>
+        <location filename="../app/views/main_content_panel.py" line="1591"/>
         <source>Click &quot;Show Details&quot; to see the full report!</source>
         <translation>「詳細を表示」をクリックして、完全なレポートを表示してください！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1610"/>
-        <location filename="../app/views/main_content_panel.py" line="1618"/>
+        <location filename="../app/views/main_content_panel.py" line="1549"/>
+        <location filename="../app/views/main_content_panel.py" line="1557"/>
         <source>Report too long</source>
         <translation>レポートが長すぎます</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1612"/>
+        <location filename="../app/views/main_content_panel.py" line="1551"/>
         <source>Even the first mod exceeds the 200,000 character limit.</source>
         <translation>最初のMODでも20万文字制限を超えています。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1614"/>
+        <location filename="../app/views/main_content_panel.py" line="1553"/>
         <source>Cannot upload this report to Rentry.co.</source>
         <translation>このレポートは Rentry.co にアップロードできません。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1619"/>
+        <location filename="../app/views/main_content_panel.py" line="1558"/>
         <source>The mod list report exceeds 200,000 characters.</source>
         <translation>MODリストレポートは20万文字を超えています。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1621"/>
+        <location filename="../app/views/main_content_panel.py" line="1560"/>
         <source>Rentry.co may reject uploads that are too long. Would you like to truncate the report to the first {max_mods} mods or cancel the upload?</source>
         <translation>Rentry.co は長すぎるアップロードを拒否する場合があります。レポートを最初の {max_mods} 個の MOD まで切り詰めますか、それともアップロードをキャンセルしますか?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1624"/>
-        <location filename="../app/views/main_content_panel.py" line="1629"/>
+        <location filename="../app/views/main_content_panel.py" line="1563"/>
+        <location filename="../app/views/main_content_panel.py" line="1568"/>
         <source>Truncate to the first {max_mods} mods</source>
         <translation>最初の {max_mods} 個の MOD まで切り詰めます</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1648"/>
+        <location filename="../app/views/main_content_panel.py" line="1587"/>
         <source>Uploaded active mod list</source>
         <translation>アクティブなモッドをRentry.coにアップロード</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1650"/>
+        <location filename="../app/views/main_content_panel.py" line="1589"/>
         <source>Uploaded active mod list report to Rentry.co! The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{url}</source>
         <translation>アクティブな MOD リストのレポートを Rentry.co にアップロードしました。 URL がクリップボードにコピーされました:&lt;br&gt;&lt;br&gt;{url}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1657"/>
+        <location filename="../app/views/main_content_panel.py" line="1596"/>
         <source>Failed to upload</source>
         <translation>アップロードに失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1658"/>
+        <location filename="../app/views/main_content_panel.py" line="1597"/>
         <source>Failed to upload exported active mod list to Rentry.co</source>
         <translation>アクティブなモッドをRentry.coにエクスポートしました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1773"/>
+        <location filename="../app/views/main_content_panel.py" line="1712"/>
         <source>Could not open directory</source>
         <translation>ディレクトリを開けませんでした</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1774"/>
+        <location filename="../app/views/main_content_panel.py" line="1713"/>
         <source>{directory_name} path does not exist or is not set.</source>
         <translation>{directory_name}パスが存在しないか、設定されていません。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1777"/>
+        <location filename="../app/views/main_content_panel.py" line="1716"/>
         <source>Would you like to set the path now?</source>
         <translation>今すぐパスを設定しますか？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1778"/>
-        <location filename="../app/views/main_content_panel.py" line="1781"/>
+        <location filename="../app/views/main_content_panel.py" line="1717"/>
+        <location filename="../app/views/main_content_panel.py" line="1720"/>
         <source>Open settings</source>
         <translation>設定を開く</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1788"/>
-        <location filename="../app/views/main_content_panel.py" line="2791"/>
+        <location filename="../app/views/main_content_panel.py" line="1727"/>
+        <location filename="../app/views/main_content_panel.py" line="2730"/>
         <source>File not found</source>
         <translation>ファイルが見つかりません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1789"/>
+        <location filename="../app/views/main_content_panel.py" line="1728"/>
         <source>The file you are trying to upload does not exist.</source>
         <translation>アップロードしようとしているファイルは存在しません。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1790"/>
+        <location filename="../app/views/main_content_panel.py" line="1729"/>
         <source>File: {path}</source>
         <translation>ファイル: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1819"/>
+        <location filename="../app/views/main_content_panel.py" line="1758"/>
         <source>Uploaded file</source>
         <translation>ファイルをアップロードしました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3282"/>
+        <location filename="../app/views/main_content_panel.py" line="3214"/>
         <source>You may experience longer loading times or higher memory usage.&lt;br&gt;&lt;br&gt;Check the todds output window for details.</source>
         <translation>読み込み時間が長くなったり、メモリ使用量が増加したりする可能性があります。&lt;br&gt;&lt;br&gt;詳細については、todds 出力ウィンドウを確認してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1830"/>
+        <location filename="../app/views/main_content_panel.py" line="1769"/>
         <source>Failed to upload file.</source>
         <translation>ファイルのアップロードに失敗しました。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1230"/>
+        <location filename="../app/views/main_content_panel.py" line="1169"/>
         <source>Import failed</source>
         <translation>インポートに失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1231"/>
+        <location filename="../app/views/main_content_panel.py" line="1170"/>
         <source>Could not read the selected mod list file.</source>
         <translation>選択された MOD リスト ファイルを読み取れませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1810"/>
+        <location filename="../app/views/main_content_panel.py" line="1749"/>
         <source>Upload failed</source>
         <translation>Upload failed</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1811"/>
+        <location filename="../app/views/main_content_panel.py" line="1750"/>
         <source>Failed to upload log file to RimDeck Logs.</source>
         <translation>Failed to upload log file to RimDeck Logs.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1855"/>
+        <location filename="../app/views/main_content_panel.py" line="1794"/>
         <source>Game or config location is not set</source>
         <translation>ゲームまたは設定の場所が設定されていません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1857"/>
+        <location filename="../app/views/main_content_panel.py" line="1796"/>
         <source>Configure game and config locations before saving a mod list.</source>
         <translation>MOD リストを保存する前に、ゲームと構成の場所を構成します。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1870"/>
+        <location filename="../app/views/main_content_panel.py" line="1809"/>
         <source>Configured game location: {path}</source>
         <translation>設定されたゲームの場所: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1871"/>
-        <location filename="../app/views/main_content_panel.py" line="3205"/>
+        <location filename="../app/views/main_content_panel.py" line="1810"/>
+        <location filename="../app/views/main_content_panel.py" line="3137"/>
         <source>Checked content locations: {paths}</source>
         <translation>チェックされたコンテンツの場所: {paths}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1874"/>
+        <location filename="../app/views/main_content_panel.py" line="1813"/>
         <source>Discovered Data location: {path}</source>
         <translation>検出されたデータの場所: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1877"/>
+        <location filename="../app/views/main_content_panel.py" line="1816"/>
         <source>Not found</source>
         <translation>見つかりません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1879"/>
+        <location filename="../app/views/main_content_panel.py" line="1818"/>
         <source>Missing official modules: {package_ids}</source>
         <translation>公式モジュールがありません: {package_ids}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1885"/>
+        <location filename="../app/views/main_content_panel.py" line="1824"/>
         <source>The existing ModsConfig.xml could not be read or validated.</source>
         <translation>既存の ModsConfig.xml を読み取ることも検証することもできませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1888"/>
+        <location filename="../app/views/main_content_panel.py" line="1827"/>
         <source>Incomplete game content discovery</source>
         <translation>不完全なゲーム コンテンツの発見</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1890"/>
+        <location filename="../app/views/main_content_panel.py" line="1829"/>
         <source>RimDeck could not verify all official game content. Saving this list may remove Core or enabled DLC from ModsConfig.xml. Check the game content paths before continuing.</source>
         <translation>rimDeck はすべての公式ゲーム コンテンツを検証できませんでした。このリストを保存すると、コアまたは有効な DLC が ModsConfig.xml から削除される可能性があります。続行する前に、ゲーム コンテンツのパスを確認してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1892"/>
+        <location filename="../app/views/main_content_panel.py" line="1831"/>
         <source>Save anyway</source>
         <translation>とにかく保存する</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1928"/>
+        <location filename="../app/views/main_content_panel.py" line="1867"/>
         <source>Could not save active mods</source>
         <translation>アクティブなモッドを保存できませんでした</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1929"/>
+        <location filename="../app/views/main_content_panel.py" line="1868"/>
         <source>Failed to save active mods to file:</source>
         <translation>アクティブなモッドをファイルに保存できませんでした:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2024"/>
+        <location filename="../app/views/main_content_panel.py" line="1963"/>
         <source>Confirm texture deletion</source>
         <translation>テクスチャの削除を確認する</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2026"/>
+        <location filename="../app/views/main_content_panel.py" line="1965"/>
         <source>This will delete all optimized .dds textures from your active mods</source>
         <translation>これにより、アクティブな MOD から最適化された .dds テクスチャがすべて削除されます。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2029"/>
+        <location filename="../app/views/main_content_panel.py" line="1968"/>
         <source>Are you sure you want to delete all .dds textures? You can re-optimize them later if needed.</source>
         <translation>すべての .dds テクスチャを削除してもよろしいですか?必要に応じて、後で再最適化できます。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2033"/>
-        <location filename="../app/views/main_content_panel.py" line="2036"/>
+        <location filename="../app/views/main_content_panel.py" line="1972"/>
+        <location filename="../app/views/main_content_panel.py" line="1975"/>
         <source>Delete textures</source>
         <translation>テクスチャの削除</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2054"/>
+        <location filename="../app/views/main_content_panel.py" line="1993"/>
         <source>No valid paths for todds</source>
         <translation>トッズに有効なパスがありません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2055"/>
+        <location filename="../app/views/main_content_panel.py" line="1994"/>
         <source>todds could not find any valid mod folders to process.</source>
         <translation>todds は処理する有効な MOD フォルダーを見つけることができませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2071"/>
+        <location filename="../app/views/main_content_panel.py" line="2010"/>
         <source>Confirm ACF import</source>
         <translation>ACFインポートを確認する</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2072"/>
+        <location filename="../app/views/main_content_panel.py" line="2011"/>
         <source>This will replace your current steamcmd .acf file</source>
         <translation>これにより、現在の steamcmd .acf ファイルが置き換えられます。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2074"/>
+        <location filename="../app/views/main_content_panel.py" line="2013"/>
         <source>Are you sure you want to import .acf? This only works for steamcmd</source>
         <translation>.acf をインポートしてもよろしいですか?これはsteamcmdでのみ機能します</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2077"/>
-        <location filename="../app/views/main_content_panel.py" line="2082"/>
+        <location filename="../app/views/main_content_panel.py" line="2016"/>
+        <location filename="../app/views/main_content_panel.py" line="2021"/>
         <source>Import .acf</source>
         <translation>.acf をインポートする</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2105"/>
-        <location filename="../app/views/main_content_panel.py" line="2136"/>
-        <location filename="../app/views/main_content_panel.py" line="2140"/>
+        <location filename="../app/views/main_content_panel.py" line="2044"/>
+        <location filename="../app/views/main_content_panel.py" line="2075"/>
+        <location filename="../app/views/main_content_panel.py" line="2079"/>
         <source>Export Error</source>
         <translation>エクスポートエラー</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2106"/>
+        <location filename="../app/views/main_content_panel.py" line="2045"/>
         <source>ACF file not found at: {acf_path}</source>
         <translation>ACF ファイルが次の場所に見つかりません: {acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2126"/>
+        <location filename="../app/views/main_content_panel.py" line="2065"/>
         <source>Export Success</source>
         <translation>エクスポートの成功</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2127"/>
+        <location filename="../app/views/main_content_panel.py" line="2066"/>
         <source>Successfully exported ACF to {file_path}</source>
         <translation>ACF が {file_path} に正常にエクスポートされました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2133"/>
+        <location filename="../app/views/main_content_panel.py" line="2072"/>
         <source>Export failed: Permission denied - check file permissions</source>
         <translation>エクスポートに失敗しました: アクセス許可が拒否されました - ファイルのアクセス許可を確認してください</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2138"/>
+        <location filename="../app/views/main_content_panel.py" line="2077"/>
         <source>Export failed: {e}</source>
         <translation>エクスポートに失敗しました: {e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2259"/>
+        <location filename="../app/views/main_content_panel.py" line="2198"/>
         <source>Checking Steam Workshop mods for updates...</source>
         <translation>Steamワークショップのモッドの更新を確認しています...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2263"/>
+        <location filename="../app/views/main_content_panel.py" line="2202"/>
         <source>Failed to check for Workshop updates</source>
         <translation>Failed to check for Workshop updates</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2267"/>
+        <location filename="../app/views/main_content_panel.py" line="2206"/>
         <source>No Workshop mods to check for updates</source>
         <translation>アップデートをチェックするワークショップ MOD はありません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2272"/>
+        <location filename="../app/views/main_content_panel.py" line="2211"/>
         <source>Unable to check for updates</source>
         <translation>アップデートを確認できませんでした</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2302"/>
+        <location filename="../app/views/main_content_panel.py" line="2241"/>
         <source>All Workshop mods appear to be up to date!</source>
         <translation>すべてのワークショップモッドは最新の状態です！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2319"/>
-        <location filename="../app/views/main_content_panel.py" line="3311"/>
+        <location filename="../app/views/main_content_panel.py" line="2258"/>
+        <location filename="../app/views/main_content_panel.py" line="3243"/>
         <source>Steam Client Integration is disabled</source>
         <translation>Steam クライアント統合が無効になっています</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2344"/>
-        <location filename="../app/views/main_content_panel.py" line="2357"/>
-        <location filename="../app/views/main_content_panel.py" line="2368"/>
+        <location filename="../app/views/main_content_panel.py" line="2283"/>
+        <location filename="../app/views/main_content_panel.py" line="2296"/>
+        <location filename="../app/views/main_content_panel.py" line="2307"/>
         <source>RimDeck - SteamCMD setup</source>
         <translation>RimDeck - SteamCMDの設定</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2345"/>
-        <location filename="../app/views/main_content_panel.py" line="2436"/>
+        <location filename="../app/views/main_content_panel.py" line="2284"/>
+        <location filename="../app/views/main_content_panel.py" line="2375"/>
         <source>Unable to create SteamCMD runner!</source>
         <translation>SteamCMDランナーを作成できませんでした！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2346"/>
-        <location filename="../app/views/main_content_panel.py" line="2437"/>
+        <location filename="../app/views/main_content_panel.py" line="2285"/>
+        <location filename="../app/views/main_content_panel.py" line="2376"/>
         <source>There is an active process already running!</source>
         <translation>すでにアクティブなプロセスが実行中です！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2370"/>
+        <location filename="../app/views/main_content_panel.py" line="2309"/>
         <source>Unable to initiate SteamCMD installation. Local mods path not set!</source>
         <translation>SteamCMDのインストールを開始できません。ローカルモッドのパスが設定されていません！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2373"/>
+        <location filename="../app/views/main_content_panel.py" line="2312"/>
         <source>Please configure local mods path in Settings before attempting to install.</source>
         <translation>インストールを試みる前に、設定でローカルモッドのパスを設定してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2421"/>
-        <location filename="../app/views/main_content_panel.py" line="2435"/>
-        <location filename="../app/views/main_content_panel.py" line="2611"/>
+        <location filename="../app/views/main_content_panel.py" line="2360"/>
+        <location filename="../app/views/main_content_panel.py" line="2374"/>
+        <location filename="../app/views/main_content_panel.py" line="2550"/>
         <source>RimDeck</source>
         <translation>RimDeck</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2422"/>
-        <location filename="../app/views/main_content_panel.py" line="2612"/>
+        <location filename="../app/views/main_content_panel.py" line="2361"/>
+        <location filename="../app/views/main_content_panel.py" line="2551"/>
         <source>No PublishedFileIds were supplied in operation.</source>
         <translation>操作にPublishedFileIdが提供されていません。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2424"/>
-        <location filename="../app/views/main_content_panel.py" line="2614"/>
+        <location filename="../app/views/main_content_panel.py" line="2363"/>
+        <location filename="../app/views/main_content_panel.py" line="2553"/>
         <source>Please add mods to list before attempting to download.</source>
         <translation>ダウンロードを試みる前に、モッドをリストに追加してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2457"/>
+        <location filename="../app/views/main_content_panel.py" line="2396"/>
         <source>RimDeck - SteamCMD downloader</source>
         <translation>rimDeck - SteamCMD ダウンローダー</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2474"/>
+        <location filename="../app/views/main_content_panel.py" line="2413"/>
         <source>SteamCMD not found</source>
         <translation>SteamCMDが見つかりません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2475"/>
+        <location filename="../app/views/main_content_panel.py" line="2414"/>
         <source>SteamCMD executable was not found.</source>
         <translation>SteamCMDの実行可能ファイルが見つかりませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2477"/>
+        <location filename="../app/views/main_content_panel.py" line="2416"/>
         <source>Please setup an existing SteamCMD prefix, or setup a new prefix with &quot;Setup SteamCMD&quot;.</source>
         <translation>既存のSteamCMDプレフィックスを設定するか、&quot;Setup SteamCMD&quot;で新しいプレフィックスを設定してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2628"/>
+        <location filename="../app/views/main_content_panel.py" line="2567"/>
         <source>Processing Steam subscription action(s) via Steamworks API...</source>
         <translation>Steamworks APIを介してSteamサブスクリプションアクションを処理しています...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2655"/>
+        <location filename="../app/views/main_content_panel.py" line="2594"/>
         <source>Download or select from local</source>
         <translation>ダウンロードするか、ローカルから選択してください</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2657"/>
+        <location filename="../app/views/main_content_panel.py" line="2596"/>
         <source>Please select a ZIP file to add to the local mods directory.</source>
         <translation>ローカルモッズディレクトリに追加するZIPファイルを選択してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2660"/>
+        <location filename="../app/views/main_content_panel.py" line="2599"/>
         <source>You can download a ZIP file from the internet, or select a file from your local machine.</source>
         <translation>インターネットからZIPファイルをダウンロードするか、ローカルマシンからファイルを選択できます。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2671"/>
+        <location filename="../app/views/main_content_panel.py" line="2610"/>
         <source>Enter zip file url</source>
         <translation>ZIPファイルのURLを入力してください</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2672"/>
+        <location filename="../app/views/main_content_panel.py" line="2611"/>
         <source>Enter a zip file url (http/https) to download to local mods:</source>
         <translation>ローカルモッズにダウンロードするZIPファイルのURL（http/https）を入力してください：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2759"/>
+        <location filename="../app/views/main_content_panel.py" line="2698"/>
         <source>Failed to download zip file</source>
         <translation>ZIPファイルのダウンロードに失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2760"/>
+        <location filename="../app/views/main_content_panel.py" line="2699"/>
         <source>The zip file could not be downloaded.</source>
         <translation>ZIPファイルをダウンロードできませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2792"/>
+        <location filename="../app/views/main_content_panel.py" line="2731"/>
         <source>The selected file does not exist.</source>
         <translation>選択したファイルは存在しません。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2793"/>
+        <location filename="../app/views/main_content_panel.py" line="2732"/>
         <source>File: {file_path}</source>
         <translation>ファイル: {file_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2806"/>
+        <location filename="../app/views/main_content_panel.py" line="2745"/>
         <source>Unsupported Compression Method</source>
         <translation>サポートされていない圧縮方法</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2808"/>
+        <location filename="../app/views/main_content_panel.py" line="2747"/>
         <source>This ZIP file uses a compression method that is not supported by this version.</source>
         <translation>このZIPファイルは、このバージョンではサポートされていない圧縮方法を使用しています。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2817"/>
+        <location filename="../app/views/main_content_panel.py" line="2756"/>
         <source>Failed to extract zip file</source>
         <translation>ZIPファイルの抽出に失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2818"/>
+        <location filename="../app/views/main_content_panel.py" line="2757"/>
         <source>The zip file could not be extracted.</source>
         <translation>ZIPファイルを抽出できませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2851"/>
-        <location filename="../app/views/main_content_panel.py" line="2867"/>
+        <location filename="../app/views/main_content_panel.py" line="2790"/>
+        <location filename="../app/views/main_content_panel.py" line="2806"/>
         <source>Existing files or directories found</source>
         <translation>既存のファイルまたはディレクトリが見つかりました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2853"/>
+        <location filename="../app/views/main_content_panel.py" line="2792"/>
         <source>All files in the archive already exist in the target path.</source>
         <translation>アーカイブ内のすべてのファイルは、ターゲットパスにすでに存在します。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2869"/>
+        <location filename="../app/views/main_content_panel.py" line="2808"/>
         <source>The following files or directories already exist in the target path:</source>
         <translation>次のファイルまたはディレクトリは、ターゲットパスにすでに存在します：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2931"/>
+        <location filename="../app/views/main_content_panel.py" line="2870"/>
         <source>Extraction completed</source>
         <translation>抽出が完了しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2932"/>
+        <location filename="../app/views/main_content_panel.py" line="2871"/>
         <source>The ZIP file was successfully extracted!</source>
         <translation>ZIPファイルが正常に抽出されました！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2937"/>
+        <location filename="../app/views/main_content_panel.py" line="2876"/>
         <source>Extraction failed</source>
         <translation>抽出に失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2938"/>
+        <location filename="../app/views/main_content_panel.py" line="2877"/>
         <source>An error occurred during extraction.</source>
         <translation>抽出中にエラーが発生しました。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2949"/>
+        <location filename="../app/views/main_content_panel.py" line="2888"/>
         <source>git not found</source>
         <translation>gitが見つかりません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2950"/>
+        <location filename="../app/views/main_content_panel.py" line="2889"/>
         <source>git executable was not found in $PATH!</source>
         <translation>gitの実行可能ファイルが$PATHに見つかりませんでした！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3024"/>
+        <location filename="../app/views/main_content_panel.py" line="2956"/>
         <source>Edit Steam DB repo</source>
         <translation>Steam DBリポジトリを編集</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3025"/>
-        <location filename="../app/views/main_content_panel.py" line="3040"/>
+        <location filename="../app/views/main_content_panel.py" line="2957"/>
+        <location filename="../app/views/main_content_panel.py" line="2972"/>
         <source>Enter URL (https://github.com/AccountName/RepositoryName):</source>
         <translation>URLを入力してください（https://github.com/AccountName/RepositoryName）：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3039"/>
+        <location filename="../app/views/main_content_panel.py" line="2971"/>
         <source>Edit Community Rules DB repo</source>
         <translation>コミュニティルールDBリポジトリを編集</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3075"/>
+        <location filename="../app/views/main_content_panel.py" line="3007"/>
         <source>Edit Steam WebAPI key</source>
         <translation>Steam WebAPIキーを編集</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3076"/>
+        <location filename="../app/views/main_content_panel.py" line="3008"/>
         <source>Enter your personal 32 character Steam WebAPI key here:</source>
         <translation>ここに個人の32文字のSteam WebAPIキーを入力してください：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3113"/>
+        <location filename="../app/views/main_content_panel.py" line="3045"/>
         <source>Path: {path}</source>
         <translation>パス: {path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3127"/>
+        <location filename="../app/views/main_content_panel.py" line="3059"/>
         <source>RimDeck - DB Builder</source>
         <translation>RimDeck - DBビルダー</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3128"/>
+        <location filename="../app/views/main_content_panel.py" line="3060"/>
         <source>Do you want to continue?</source>
         <translation>続行しますか？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3147"/>
+        <location filename="../app/views/main_content_panel.py" line="3079"/>
         <source>Edit SteamDB expiry:</source>
         <translation>SteamDBの有効期限を編集:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3149"/>
+        <location filename="../app/views/main_content_panel.py" line="3081"/>
         <source>Enter your preferred expiry duration in seconds (default 1 week/604800 sec):</source>
         <translation>希望する有効期限を秒単位で入力してください（デフォルトは1週間/604800秒）:</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3160"/>
+        <location filename="../app/views/main_content_panel.py" line="3092"/>
         <source>Tried configuring Dynamic Query with a value that is not an integer.</source>
         <translation>整数ではない値で動的クエリを構成しようとしました。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3163"/>
+        <location filename="../app/views/main_content_panel.py" line="3095"/>
         <source>Please reconfigure the expiry value with an integer in terms of the seconds from epoch you would like your query to expire.</source>
         <translation>クエリの有効期限を切れるまでのエポックからの秒数を整数で再構成してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3190"/>
+        <location filename="../app/views/main_content_panel.py" line="3122"/>
         <source>Invalid game folder</source>
         <translation>無効なゲームフォルダー</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3192"/>
+        <location filename="../app/views/main_content_panel.py" line="3124"/>
         <source>RimWorld executable was not found in the configured game location.</source>
         <translation>構成されたゲームの場所に、RimWorld 実行可能ファイルが見つかりませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3200"/>
+        <location filename="../app/views/main_content_panel.py" line="3132"/>
         <source>Game content not found</source>
         <translation>ゲームコンテンツが見つかりません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3202"/>
+        <location filename="../app/views/main_content_panel.py" line="3134"/>
         <source>The game executable is valid, but RimDeck could not locate its content. The game may not find its Data or Mods folders. Check the game content paths before continuing.</source>
         <translation>ゲームの実行可能ファイルは有効ですが、RimDeck はそのコンテンツを見つけることができませんでした。ゲームに Data フォルダーまたは Mods フォルダーが見つからない可能性があります。続行する前に、ゲーム コンテンツのパスを確認してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3204"/>
+        <location filename="../app/views/main_content_panel.py" line="3136"/>
         <source>Run anyway</source>
         <translation>とにかく走ってください</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3277"/>
+        <location filename="../app/views/main_content_panel.py" line="3209"/>
         <source>todds Optimization Failed</source>
         <translation>toddsの最適化に失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3279"/>
+        <location filename="../app/views/main_content_panel.py" line="3211"/>
         <source>todds texture optimization failed (exit code: {exit_code}), but the game will launch anyway.</source>
         <translation>todds テクスチャの最適化に失敗しました (終了コード: {exit_code}) が、ゲームは起動します。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3313"/>
+        <location filename="../app/views/main_content_panel.py" line="3245"/>
         <source>Steam protocol launch requires Steam Client Integration to be enabled.</source>
         <translation>Steam プロトコルを起動するには、Steam クライアント統合を有効にする必要があります。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3316"/>
+        <location filename="../app/views/main_content_panel.py" line="3248"/>
         <source>Please enable Steam Client Integration in Settings → Steam to use this feature.</source>
         <translation>この機能を使用するには、「設定」→「Steam」で Steam クライアント統合を有効にしてください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3341"/>
-        <location filename="../app/views/main_content_panel.py" line="3355"/>
+        <location filename="../app/views/main_content_panel.py" line="3273"/>
+        <location filename="../app/views/main_content_panel.py" line="3287"/>
         <source>Use This Instead</source>
         <translation>これを代わりに使用</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3343"/>
+        <location filename="../app/views/main_content_panel.py" line="3275"/>
         <source>Please configure &quot;Use This Instead&quot; database in settings.</source>
         <translation>設定で「代わりにこれを使用する」データベースを構成してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3357"/>
+        <location filename="../app/views/main_content_panel.py" line="3289"/>
         <source>No suggestions were found in the &quot;Use This Instead&quot; database.</source>
         <translation>「これを代わりに使用」データベースに提案は見つかりませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3111"/>
+        <location filename="../app/views/main_content_panel.py" line="3043"/>
         <source>Failed to read existing database</source>
         <translation>既存のデータベースの読み込みに失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="497"/>
+        <location filename="../app/views/main_content_panel.py" line="491"/>
         <source>Essential path(s) are invalid or not set!</source>
         <translation>必須のパスが無効であるか、設定されていません。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="500"/>
+        <location filename="../app/views/main_content_panel.py" line="494"/>
         <source>RimDeck requires the below paths to be set.&lt;br/&gt;&lt;br/&gt;1) Game folder (Folder where RimWorld is installed).&lt;br/&gt;&lt;br/&gt;2) Config folder (Folder where ModsConfig.xml is located)&lt;br/&gt;&lt;br/&gt;3) Local mods folder (Mods folder inside the RimWorld installation).&lt;br/&gt;&lt;br/&gt;4) Steam mods folder (Only set if you use Steam user also enable Steam Client Integration)&lt;br/&gt;&lt;br/&gt;Try Using the autodetect functionality to set all paths automatically.&lt;br/&gt;&lt;br/&gt;Would you like to open the settings to configure them now?</source>
         <translation>rimDeck では以下のパスを設定する必要があります。&lt;br/&gt;&lt;br/&gt;1) ゲーム フォルダー (RimWorld がインストールされているフォルダー)。&lt;br/&gt;&lt;br/&gt;2) Config フォルダー (ModsConfig.xml があるフォルダー)&lt;br/&gt;&lt;br/&gt;3) ローカル mods フォルダー (RimWorld インストール内の Mods フォルダー)。&lt;br/&gt;&lt;br/&gt;4) Steam mods フォルダー (Steam ユーザーも Steam クライアントを有効にしている場合にのみ設定します)統合)&lt;br/&gt;&lt;br/&gt;自動検出機能を使用してすべてのパスを自動的に設定してみてください。&lt;br/&gt;&lt;br/&gt;今すぐ設定を開いて構成しますか?</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1148"/>
+        <location filename="../app/views/main_content_panel.py" line="1087"/>
         <source>This may be caused by malformed settings or improper migration between versions or different mod manager.&lt;br&gt;&lt;br&gt;Try resetting your settings, selecting a different sorting algorithm, or deleting your settings file.&lt;br&gt;&lt;br&gt;If the issue persists, please report it to the developers.</source>
         <translation>これは、不正な設定、バージョン間または異なる MOD マネージャー間の不適切な移行が原因である可能性があります。&lt;br&gt;&lt;br&gt;設定をリセットするか、別の並べ替えアルゴリズムを選択するか、設定ファイルを削除してみてください。&lt;br&gt;&lt;br&gt;問題が解決しない場合は、開発者に報告してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1411"/>
+        <location filename="../app/views/main_content_panel.py" line="1350"/>
         <source>You will need to redo Rentry import again after downloads complete.&lt;br&gt;&lt;br&gt;If there missing mods after download completes, they will be shown inside the missing mods panel.&lt;br&gt;&lt;br&gt;If RimDeck is still not able to download some mods, It&apos;s due to the mod data not being available in both Rentry link and steam database.</source>
         <translation>ダウンロードが完了したら、もう一度 Rentry のインポートをやり直す必要があります。&lt;br&gt;&lt;br&gt;ダウンロードの完了後に不足している MOD がある場合は、不足している MOD パネル内に表示されます。&lt;br&gt;&lt;br&gt;RimDeck がまだ一部の MOD をダウンロードできない場合は、Rentry リンクと Steam データベースの両方で MOD データが利用できないことが原因です。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1800"/>
+        <location filename="../app/views/main_content_panel.py" line="1739"/>
         <source>Uploading {path_name} to RimDeck Logs...</source>
         <translation>{path_name} をRimDeck ログにアップロードしています...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1820"/>
+        <location filename="../app/views/main_content_panel.py" line="1759"/>
         <source>Uploaded {path_name} to RimDeck Logs</source>
         <translation>{path_name} をRimDeck ログにアップロードしました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1824"/>
+        <location filename="../app/views/main_content_panel.py" line="1763"/>
         <source>The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{ret}</source>
         <translation>URL がクリップボードにコピーされました:&lt;br&gt;&lt;br&gt;{ret}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1831"/>
+        <location filename="../app/views/main_content_panel.py" line="1770"/>
         <source>Failed to upload to RimDeck Logs</source>
         <translation>rimDeck ログへのアップロードに失敗しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2057"/>
+        <location filename="../app/views/main_content_panel.py" line="1996"/>
         <source>None of the configured mod folder paths exist on disk.&lt;br&gt;&lt;br&gt;Please verify your Local Mods and Workshop folders are correctly set in Settings, then try again.</source>
         <translation>設定された MOD フォルダのパスがディスク上に存在しません。&lt;br&gt;&lt;br&gt;ローカル Mod フォルダとワークショップ フォルダが設定で正しく設定されていることを確認して、もう一度お試しください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2274"/>
+        <location filename="../app/views/main_content_panel.py" line="2213"/>
         <source>RimDeck was unable to check your Workshop mods for updates.</source>
         <translation>rimDeck はワークショップ MOD の更新をチェックできませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2282"/>
+        <location filename="../app/views/main_content_panel.py" line="2221"/>
         <source>Update check partially completed</source>
         <translation>更新チェックが部分的に完了しました</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2284"/>
+        <location filename="../app/views/main_content_panel.py" line="2223"/>
         <source>{failed} out of {total} Workshop mods could not be checked for updates.</source>
         <translation>{total} 個のワークショップ MOD のうち {failed} 個のアップデートをチェックできませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2321"/>
+        <location filename="../app/views/main_content_panel.py" line="2260"/>
         <source>This feature requires Steam Client Integration to be enabled in Settings.&lt;br&gt;&lt;br&gt;Please enable Steam Client Integration if you own the game on Steam.</source>
         <translation>この機能を使用するには、設定で Steam クライアント統合を有効にする必要があります。&lt;br&gt;&lt;br&gt;Steam でゲームを所有している場合は、Steam クライアント統合を有効にしてください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2761"/>
-        <location filename="../app/views/main_content_panel.py" line="2810"/>
-        <location filename="../app/views/main_content_panel.py" line="2819"/>
+        <location filename="../app/views/main_content_panel.py" line="2700"/>
+        <location filename="../app/views/main_content_panel.py" line="2749"/>
+        <location filename="../app/views/main_content_panel.py" line="2758"/>
         <source>File: {file_path}&lt;br&gt;Error: {e}</source>
         <translation>ファイル: {file_path}&lt;br&gt;エラー: {e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2856"/>
+        <location filename="../app/views/main_content_panel.py" line="2795"/>
         <source>How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Cancel — Abort the operation.</source>
         <translation>どのように続行しますか?&lt;br&gt;&lt;br&gt;1) すべて上書き — 既存のファイルとディレクトリをすべて置き換えます。&lt;br&gt;2) キャンセル — 操作を中止します。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2872"/>
+        <location filename="../app/views/main_content_panel.py" line="2811"/>
         <source>{conflicts_list}&lt;br&gt;&lt;br&gt;How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Skip Existing — Extract only new files and leave existing ones untouched.&lt;br&gt;3) Cancel — Abort the extraction.</source>
         <translation>{conflicts_list}&lt;br&gt;&lt;br&gt;どのように処理しますか?&lt;br&gt;&lt;br&gt;1) すべて上書き — 既存のファイルとディレクトリをすべて置き換えます。&lt;br&gt;2) 既存をスキップ — 新しいファイルのみを抽出し、既存のファイルはそのままにしておきます。&lt;br&gt;3) キャンセル — 抽出を中止します。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2953"/>
+        <location filename="../app/views/main_content_panel.py" line="2892"/>
         <source>Git integration will not work without Git installed! Do you want to open download page for Git?&lt;br&gt;&lt;br&gt;If you just installed Git, please restart RimDeck for the PATH changes to take effect.</source>
         <translation>Git がインストールされていないと、Git 統合は機能しません。 Git のダウンロード ページを開きますか?&lt;br&gt;&lt;br&gt;Git をインストールしたばかりの場合は、PATH の変更を有効にするために、RimDeck を再起動してください。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3112"/>
+        <location filename="../app/views/main_content_panel.py" line="3044"/>
         <source>Failed to read the existing database!</source>
         <translation>既存のデータベースの読み込みに失敗しました！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3130"/>
+        <location filename="../app/views/main_content_panel.py" line="3062"/>
         <source>This operation will overwrite the {rules_source} database located at the following path:&lt;br&gt;&lt;br&gt;{path}</source>
         <translation>この操作により、次のパスにある {rules_source} データベースが上書きされます:&lt;br&gt;&lt;br&gt;{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3242"/>
+        <location filename="../app/views/main_content_panel.py" line="3174"/>
         <source>Unsaved Changes</source>
         <translation>未保存の変更</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3243"/>
+        <location filename="../app/views/main_content_panel.py" line="3175"/>
         <source>You have unsaved changes. What would you like to do?</source>
         <translation>未保存の変更があります。どうしますか？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3244"/>
-        <location filename="../app/views/main_content_panel.py" line="3246"/>
+        <location filename="../app/views/main_content_panel.py" line="3176"/>
+        <location filename="../app/views/main_content_panel.py" line="3178"/>
         <source>Save and Run</source>
         <translation>保存して実行</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3244"/>
-        <location filename="../app/views/main_content_panel.py" line="3252"/>
+        <location filename="../app/views/main_content_panel.py" line="3176"/>
+        <location filename="../app/views/main_content_panel.py" line="3184"/>
         <source>Run Anyway</source>
         <translation>とにかく実行</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1678"/>
+        <location filename="../app/views/main_content_panel.py" line="1617"/>
         <source>Import from RimWorld Save File</source>
         <translation>rimworld保存ファイルからインポートします</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1680"/>
+        <location filename="../app/views/main_content_panel.py" line="1619"/>
         <source>RimWorld save (*.rws);;All files (*.*)</source>
         <translation>rimworld save（*.rws）;;すべてのファイル（*。*）</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2144"/>
-        <location filename="../app/views/main_content_panel.py" line="2161"/>
+        <location filename="../app/views/main_content_panel.py" line="2083"/>
+        <location filename="../app/views/main_content_panel.py" line="2100"/>
         <source>Reset SteamCMD ACF data file</source>
         <translation>STEAMCMD ACFデータファイルをリセットします</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2145"/>
+        <location filename="../app/views/main_content_panel.py" line="2084"/>
         <source>Are you sure you want to reset SteamCMD ACF data file?</source>
         <translation>SteamCMD ACFデータファイルをリセットする必要がありますか？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2147"/>
+        <location filename="../app/views/main_content_panel.py" line="2086"/>
         <source>This file is created and used by steamcmd to track mod informaton, This action cannot be undone.</source>
         <translation>このファイルは作成され、STEAMCMDによってMOD Informatonを追跡するために使用されますが、このアクションを元に戻すことはできません。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2163"/>
+        <location filename="../app/views/main_content_panel.py" line="2102"/>
         <source>Successfully deleted SteamCMD ACF data file: {steamcmd_appworkshop_acf_path}</source>
         <translation>Steamcmd ACFデータファイルを正常に削除しました： {steamcmd_appworkshop_acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2168"/>
+        <location filename="../app/views/main_content_panel.py" line="2107"/>
         <source>ACF data file will be recreated when you download mods using steamcmd next time.</source>
         <translation>ACFデータファイルは、次回STEAMCMDを使用してMODをダウンロードすると再現されます。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2176"/>
+        <location filename="../app/views/main_content_panel.py" line="2115"/>
         <source>SteamCMD ACF data file does not exist</source>
         <translation>SteamCMD ACFデータファイルは存在しません</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2178"/>
+        <location filename="../app/views/main_content_panel.py" line="2117"/>
         <source>ACf file does not exist. It will be created when you download mods using steamcmd.</source>
         <translation>ACFファイルは存在しません。SteamCMDを使用してMODをダウンロードすると作成されます。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1845"/>
+        <location filename="../app/views/main_content_panel.py" line="1784"/>
         <source>Failed to open file.</source>
         <translation>ファイルを開くことができませんでした。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1847"/>
+        <location filename="../app/views/main_content_panel.py" line="1786"/>
         <source>Failed to open the file with default text editor. It may not exist.</source>
         <translation>デフォルトのテキストエディターでファイルを開くことに失敗しました。存在しない可能性があります。</translation>
     </message>
@@ -3219,295 +3159,290 @@ Manage mods installed from GitHub releases.</source>
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="../app/views/menu_bar.py" line="129"/>
+        <location filename="../app/views/menu_bar.py" line="128"/>
         <source>File</source>
         <translation>ファイル</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="131"/>
+        <location filename="../app/views/menu_bar.py" line="130"/>
         <source>Open Mod List…</source>
         <translation>モッドリストを開く…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="134"/>
+        <location filename="../app/views/menu_bar.py" line="133"/>
         <source>Append Mod List…</source>
         <translation>Append Mod List…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="138"/>
+        <location filename="../app/views/menu_bar.py" line="137"/>
         <source>Save Mod List As…</source>
         <translation>モッドリストを保存…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="141"/>
+        <location filename="../app/views/menu_bar.py" line="140"/>
         <source>Import</source>
         <translation>インポート</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="144"/>
+        <location filename="../app/views/menu_bar.py" line="143"/>
         <source>From Rentry.co</source>
         <translation>Rentry.coから</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="147"/>
+        <location filename="../app/views/menu_bar.py" line="146"/>
         <source>From Workshop collection</source>
         <translation>クリエイティブワークショップコレクションから</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="152"/>
+        <location filename="../app/views/menu_bar.py" line="151"/>
         <source>Export</source>
         <translation>エクスポート</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="155"/>
+        <location filename="../app/views/menu_bar.py" line="154"/>
         <source>To Clipboard…</source>
         <translation>クリップボードにコピー…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="158"/>
+        <location filename="../app/views/menu_bar.py" line="157"/>
         <source>To Rentry.co…</source>
         <translation>Rentry.coにエクスポート…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="162"/>
+        <location filename="../app/views/menu_bar.py" line="161"/>
         <source>Mod List History…</source>
         <translation>MODリスト履歴…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="179"/>
+        <location filename="../app/views/menu_bar.py" line="178"/>
         <source>Open...</source>
         <translation>開く…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="182"/>
+        <location filename="../app/views/menu_bar.py" line="181"/>
         <source>RimDeck</source>
         <translation>RimDeck</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="184"/>
+        <location filename="../app/views/menu_bar.py" line="183"/>
         <source>RimWorld</source>
         <translation>RimWorld</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="188"/>
-        <location filename="../app/views/menu_bar.py" line="198"/>
+        <location filename="../app/views/menu_bar.py" line="187"/>
+        <location filename="../app/views/menu_bar.py" line="197"/>
         <source>Root Directory</source>
         <translation>ルートディレクトリ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="191"/>
-        <location filename="../app/views/menu_bar.py" line="201"/>
+        <location filename="../app/views/menu_bar.py" line="190"/>
+        <location filename="../app/views/menu_bar.py" line="200"/>
         <source>Config Directory</source>
         <translation>設定ディレクトリ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="194"/>
-        <location filename="../app/views/menu_bar.py" line="204"/>
+        <location filename="../app/views/menu_bar.py" line="193"/>
+        <location filename="../app/views/menu_bar.py" line="203"/>
         <source>Logs Directory</source>
         <translation>ログディレクトリ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="207"/>
+        <location filename="../app/views/menu_bar.py" line="206"/>
         <source>Local Mods Directory</source>
         <translation>ローカルモッドディレクトリ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="210"/>
+        <location filename="../app/views/menu_bar.py" line="209"/>
         <source>Steam Mods Directory</source>
         <translation>Steamモッドディレクトリ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="216"/>
+        <location filename="../app/views/menu_bar.py" line="215"/>
         <source>Settings…</source>
         <translation>設定…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="219"/>
+        <location filename="../app/views/menu_bar.py" line="218"/>
         <source>Exit</source>
         <translation>終了</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="266"/>
+        <location filename="../app/views/menu_bar.py" line="265"/>
         <source>Edit</source>
         <translation>編集</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="267"/>
+        <location filename="../app/views/menu_bar.py" line="266"/>
         <source>Cut</source>
         <translation>切り取り</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="268"/>
+        <location filename="../app/views/menu_bar.py" line="267"/>
         <source>Copy</source>
         <translation>コピー</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="269"/>
+        <location filename="../app/views/menu_bar.py" line="268"/>
         <source>Paste</source>
         <translation>貼り付け</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="271"/>
+        <location filename="../app/views/menu_bar.py" line="270"/>
         <source>Rule Editor…</source>
         <translation>ルールエディタ…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="273"/>
-        <source>Ignore JSON Editor…</source>
-        <translation>JSON エディターを無視します…</translation>
-    </message>
-    <message>
-        <location filename="../app/views/menu_bar.py" line="276"/>
+        <location filename="../app/views/menu_bar.py" line="272"/>
         <source>Reset Warning Toggles</source>
         <translation>警告トグルをリセット</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="283"/>
+        <location filename="../app/views/menu_bar.py" line="279"/>
         <source>Auto-add Translations</source>
         <translation>翻訳の自動追加</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="294"/>
+        <location filename="../app/views/menu_bar.py" line="290"/>
         <source>View</source>
         <translation>ビュー</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="296"/>
+        <location filename="../app/views/menu_bar.py" line="292"/>
         <source>Show Translation Status</source>
         <translation>翻訳ステータスを表示</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="307"/>
+        <location filename="../app/views/menu_bar.py" line="303"/>
         <source>Download</source>
         <translation>ダウンロード</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="309"/>
+        <location filename="../app/views/menu_bar.py" line="305"/>
         <source>Download RimWorld Version</source>
         <translation>リムワールドのバージョンをダウンロード</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="313"/>
+        <location filename="../app/views/menu_bar.py" line="309"/>
         <source>Add Git Mod</source>
         <translation>Gitモッドを追加</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="316"/>
+        <location filename="../app/views/menu_bar.py" line="312"/>
         <source>Add Zip Mod</source>
         <translation>Zipモッドを追加</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="320"/>
+        <location filename="../app/views/menu_bar.py" line="316"/>
         <source>Browse Workshop</source>
         <translation>クリエイティブワークショップを閲覧</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="323"/>
+        <location filename="../app/views/menu_bar.py" line="319"/>
         <source>Update Workshop Mods</source>
         <translation>クリエイティブワークショップを更新</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="326"/>
+        <location filename="../app/views/menu_bar.py" line="322"/>
         <source>Update Git Mods</source>
         <translation>Git Mod を更新する</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="330"/>
+        <location filename="../app/views/menu_bar.py" line="326"/>
         <source>GitHub Mods</source>
         <translation>GitHub モッド</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="334"/>
+        <location filename="../app/views/menu_bar.py" line="330"/>
         <source>Verify Game Files</source>
         <translation>ゲームファイルの検証</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="345"/>
+        <location filename="../app/views/menu_bar.py" line="341"/>
         <source>Instances</source>
         <translation>インスタンス</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="346"/>
+        <location filename="../app/views/menu_bar.py" line="342"/>
         <source>Current: &quot;Default&quot;</source>
         <translation>現在: &quot;Default&quot;</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="350"/>
+        <location filename="../app/views/menu_bar.py" line="346"/>
         <source>Backup Instance…</source>
         <translation>インスタンスをバックアップ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="353"/>
+        <location filename="../app/views/menu_bar.py" line="349"/>
         <source>Restore Instance…</source>
         <translation>インスタンスを復元</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="357"/>
+        <location filename="../app/views/menu_bar.py" line="353"/>
         <source>Clone Instance…</source>
         <translation>インスタンスをクローン</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="360"/>
+        <location filename="../app/views/menu_bar.py" line="356"/>
         <source>Create Instance…</source>
         <translation>インスタンスを作成</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="363"/>
+        <location filename="../app/views/menu_bar.py" line="359"/>
         <source>Delete Instance…</source>
         <translation>インスタンスを削除</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="374"/>
+        <location filename="../app/views/menu_bar.py" line="370"/>
         <source>Textures</source>
         <translation>テクスチャ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="376"/>
+        <location filename="../app/views/menu_bar.py" line="372"/>
         <source>Optimize Textures</source>
         <translation>テクスチャを最適化</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="380"/>
+        <location filename="../app/views/menu_bar.py" line="376"/>
         <source>Delete .dds Textures</source>
         <translation>DDSテクスチャを削除</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="385"/>
+        <location filename="../app/views/menu_bar.py" line="381"/>
         <source>Update</source>
         <translation>更新</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="387"/>
+        <location filename="../app/views/menu_bar.py" line="383"/>
         <source>Check for Updates…</source>
         <translation>更新を確認…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="390"/>
+        <location filename="../app/views/menu_bar.py" line="386"/>
         <source>Check for Updates on Startup</source>
         <translation>起動時に更新を確認</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="402"/>
+        <location filename="../app/views/menu_bar.py" line="398"/>
         <source>Help</source>
         <translation>ヘルプ</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="403"/>
+        <location filename="../app/views/menu_bar.py" line="399"/>
         <source>RimDeck Wiki…</source>
         <translation>RimDeck Wiki…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="150"/>
+        <location filename="../app/views/menu_bar.py" line="149"/>
         <source>From Save file…</source>
         <translation>保存ファイルから…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="404"/>
+        <location filename="../app/views/menu_bar.py" line="400"/>
         <source>RimDeck GitHub…</source>
         <translation>rimdeck github…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="279"/>
+        <location filename="../app/views/menu_bar.py" line="275"/>
         <source>Reset Mod Colors</source>
         <translation>mod色をリセットします</translation>
     </message>
@@ -3515,17 +3450,17 @@ Manage mods installed from GitHub releases.</source>
 <context>
     <name>MenuBarController</name>
     <message>
-        <location filename="../app/controllers/menu_bar_controller.py" line="227"/>
+        <location filename="../app/controllers/menu_bar_controller.py" line="224"/>
         <source>Current: {current_instance}</source>
         <translation>現在: {current_instance}</translation>
     </message>
     <message>
-        <location filename="../app/controllers/menu_bar_controller.py" line="245"/>
+        <location filename="../app/controllers/menu_bar_controller.py" line="242"/>
         <source>Verify Game Files</source>
         <translation>ゲームファイルの検証</translation>
     </message>
     <message>
-        <location filename="../app/controllers/menu_bar_controller.py" line="247"/>
+        <location filename="../app/controllers/menu_bar_controller.py" line="244"/>
         <source>Are you sure you want to verify RimWorld&apos;s game files through Steam?&lt;br&gt;&lt;br&gt;This process cannot be canceled once it has started.</source>
         <translation>Steam を通じて、RimWorld のゲーム ファイルを確認してもよろしいですか?&lt;br&gt;&lt;br&gt;このプロセスは開始するとキャンセルできません。</translation>
     </message>
@@ -3619,44 +3554,6 @@ All dependencies are satisfied. No missing dependencies found.</source>
         <location filename="../app/windows/missing_dependencies_dialog.py" line="57"/>
         <source>Dependency Manager</source>
         <translation>依存関係マネージャー</translation>
-    </message>
-</context>
-<context>
-    <name>MissingModPropertiesPanel</name>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="50"/>
-        <source>RimDeck - Mods with Missing Properties</source>
-        <translation>rimDeck - プロパティが欠落している MOD</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="51"/>
-        <source>Mods with Missing Properties detected!</source>
-        <translation>プロパティが欠落している Mod が検出されました。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="53"/>
-        <source>The following mods are missing important properties that may cause issues:
-
-• Missing Package ID: Mods without a valid Package ID in About.xml may have dependency and compatibility issues.
-• Missing Publish Field ID: Workshop mods without a Publish Field ID may not support redownloads and update checking.
-
-Please contact the mod authors to add these properties to their mods.</source>
-        <translation>次の MOD には、問題を引き起こす可能性がある重要なプロパティが欠落しています。
-
-• パッケージ ID がありません: About.xml に有効なパッケージ ID がない MOD には、依存関係や互換性の問題がある可能性があります。
-• パブリッシュ フィールド ID の欠落: パブリッシュ フィールド ID のないワークショップ MOD は、再ダウンロードと更新チェックをサポートしていない可能性があります。
-
-これらのプロパティを MOD に追加するには、MOD 作成者に問い合わせてください。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="69"/>
-        <source>Delete Mods</source>
-        <translation>MODの削除</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="78"/>
-        <source>Add to Ignore List</source>
-        <translation>無視リストに追加</translation>
     </message>
 </context>
 <context>
@@ -8108,13 +8005,13 @@ The following table displays Workshop mods available for update from Steam.</sou
 <context>
     <name>find_circular_dependencies</name>
     <message>
-        <location filename="../app/sort/topo_sort.py" line="86"/>
-        <location filename="../app/sort/topo_sort.py" line="89"/>
+        <location filename="../app/sort/topo_sort.py" line="87"/>
+        <location filename="../app/sort/topo_sort.py" line="90"/>
         <source>Unable to Sort</source>
         <translation>ソートできません</translation>
     </message>
     <message>
-        <location filename="../app/sort/topo_sort.py" line="90"/>
+        <location filename="../app/sort/topo_sort.py" line="91"/>
         <source>RimDeck found circular dependencies in your mods list. Please see the details for dependency loops.</source>
         <translation>RimDeckはMODリストに循環依存関係を見つけました。依存関係のループの詳細を確認してください。</translation>
     </message>

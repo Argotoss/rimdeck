@@ -968,66 +968,6 @@ Manage mods installed from GitHub releases.</source>
     </message>
 </context>
 <context>
-    <name>IgnoreJsonEditor</name>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="40"/>
-        <source>RimDeck - Manage Ignore List</source>
-        <translation>RimDeck - 管理忽略列表</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="49"/>
-        <source>Mods checked below will be removed from the ignore list.</source>
-        <translation>下面选中的模组将从忽略列表中移除。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="75"/>
-        <source>Remove Selected</source>
-        <translation>移除所选模组</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="80"/>
-        <source>Save</source>
-        <translation>保存</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="85"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="124"/>
-        <location filename="../app/windows/ignore_json_editor.py" line="167"/>
-        <location filename="../app/windows/ignore_json_editor.py" line="174"/>
-        <source>Error</source>
-        <translation>错误</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="125"/>
-        <source>Failed to load ignored mods: {e}</source>
-        <translation>加载忽略模组时失败：{e}</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="157"/>
-        <source>Success</source>
-        <translation>成功</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="158"/>
-        <source>Ignore list has been saved successfully.</source>
-        <translation>忽略列表已成功保存。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="168"/>
-        <source>Failed to save changes to ignore list.</source>
-        <translation>保存忽略列表的更改失败。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/ignore_json_editor.py" line="175"/>
-        <source>Error saving changes: {e}</source>
-        <translation>保存更改时出错：{e}</translation>
-    </message>
-</context>
-<context>
     <name>InstanceController</name>
     <message>
         <location filename="../app/controllers/instance_controller.py" line="48"/>
@@ -1367,879 +1307,879 @@ Manage mods installed from GitHub releases.</source>
 <context>
     <name>MainContent</name>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="496"/>
+        <location filename="../app/views/main_content_panel.py" line="490"/>
         <source>Essential path(s)</source>
         <translation>必需路径</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="956"/>
+        <location filename="../app/views/main_content_panel.py" line="898"/>
         <source>Scanning mod sources and populating metadata...</source>
         <translation>正在扫描模组来源，加载数据中...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1119"/>
+        <location filename="../app/views/main_content_panel.py" line="1058"/>
         <source>Metadata not loaded</source>
         <translation>元数据未加载</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1121"/>
+        <location filename="../app/views/main_content_panel.py" line="1060"/>
         <source>Mod metadata has not finished loading. Please wait and try again.</source>
         <translation>Mod 元数据尚未完成加载。请等待并重试。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1144"/>
+        <location filename="../app/views/main_content_panel.py" line="1083"/>
         <source>Sorting algorithm not implemented</source>
         <translation>排序算法未实现</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1145"/>
+        <location filename="../app/views/main_content_panel.py" line="1084"/>
         <source>The selected sorting algorithm is not implemented</source>
         <translation>所选的排序算法未实现</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1230"/>
+        <location filename="../app/views/main_content_panel.py" line="1169"/>
         <source>Import failed</source>
         <translation>导入失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1231"/>
+        <location filename="../app/views/main_content_panel.py" line="1170"/>
         <source>Could not read the selected mod list file.</source>
         <translation>无法读取选定的模组列表文件。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1339"/>
+        <location filename="../app/views/main_content_panel.py" line="1278"/>
         <source>Failed to export to file</source>
         <translation>无法导出到文件</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1340"/>
+        <location filename="../app/views/main_content_panel.py" line="1279"/>
         <source>Failed to export active mods to file:</source>
         <translation>无法导出启用模组列表到文件</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1409"/>
+        <location filename="../app/views/main_content_panel.py" line="1348"/>
         <source>Important</source>
         <translation>重要</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1460"/>
+        <location filename="../app/views/main_content_panel.py" line="1399"/>
         <source>Steam client integration not set up</source>
         <translation>Steam 客户端集成尚未设置</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1462"/>
+        <location filename="../app/views/main_content_panel.py" line="1401"/>
         <source>Steam client integration is not set up. Please set it up to download mods using Steam</source>
         <translation>Steam 客户端集成尚未设置。请设置以使用 Steam 下载模组</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1472"/>
+        <location filename="../app/views/main_content_panel.py" line="1411"/>
         <source>Download Rentry Mods</source>
         <translation>下载 Rentry 模组</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1473"/>
+        <location filename="../app/views/main_content_panel.py" line="1412"/>
         <source>Please select a download method.</source>
         <translation>请选择一种下载方式。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1475"/>
+        <location filename="../app/views/main_content_panel.py" line="1414"/>
         <source>Select which method you want to use to download missing Rentry mods.</source>
         <translation>请选择你想要用来下载缺失 Rentry 模组的方法。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1575"/>
+        <location filename="../app/views/main_content_panel.py" line="1514"/>
         <source>Export active mod list</source>
         <translation>导出启用模组列表</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1576"/>
+        <location filename="../app/views/main_content_panel.py" line="1515"/>
         <source>Copied active mod list report to clipboard...</source>
         <translation>复制启用模组列表报告到剪切板...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1577"/>
-        <location filename="../app/views/main_content_panel.py" line="1652"/>
+        <location filename="../app/views/main_content_panel.py" line="1516"/>
+        <location filename="../app/views/main_content_panel.py" line="1591"/>
         <source>Click &quot;Show Details&quot; to see the full report!</source>
         <translation>点击 &quot;显示详细信息&quot; 以查看完整报告！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1610"/>
-        <location filename="../app/views/main_content_panel.py" line="1618"/>
+        <location filename="../app/views/main_content_panel.py" line="1549"/>
+        <location filename="../app/views/main_content_panel.py" line="1557"/>
         <source>Report too long</source>
         <translation>报告过长</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1612"/>
+        <location filename="../app/views/main_content_panel.py" line="1551"/>
         <source>Even the first mod exceeds the 200,000 character limit.</source>
         <translation>即使第一个模组也超过了 200,000 字符的限制。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1614"/>
+        <location filename="../app/views/main_content_panel.py" line="1553"/>
         <source>Cannot upload this report to Rentry.co.</source>
         <translation>无法将此报告上传到 Rentry.co。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1619"/>
+        <location filename="../app/views/main_content_panel.py" line="1558"/>
         <source>The mod list report exceeds 200,000 characters.</source>
         <translation>模组列表报告超过 200,000 个字符。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1621"/>
+        <location filename="../app/views/main_content_panel.py" line="1560"/>
         <source>Rentry.co may reject uploads that are too long. Would you like to truncate the report to the first {max_mods} mods or cancel the upload?</source>
         <translation>Rentry.co 可能会拒绝太长的上传。你想要将报告截断到前 {max_mods} 个模组或取消上传吗？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1624"/>
-        <location filename="../app/views/main_content_panel.py" line="1629"/>
+        <location filename="../app/views/main_content_panel.py" line="1563"/>
+        <location filename="../app/views/main_content_panel.py" line="1568"/>
         <source>Truncate to the first {max_mods} mods</source>
         <translation>截断到第一个 {max_mods} 个 mod</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1648"/>
+        <location filename="../app/views/main_content_panel.py" line="1587"/>
         <source>Uploaded active mod list</source>
         <translation>上传启用的模组列表</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1650"/>
+        <location filename="../app/views/main_content_panel.py" line="1589"/>
         <source>Uploaded active mod list report to Rentry.co! The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{url}</source>
         <translation>已将活跃模组列表报告上传至 Rentry.co！该网址已复制到您的剪贴板：&lt;br&gt;&lt;br&gt;{url}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1657"/>
+        <location filename="../app/views/main_content_panel.py" line="1596"/>
         <source>Failed to upload</source>
         <translation>上传失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1658"/>
+        <location filename="../app/views/main_content_panel.py" line="1597"/>
         <source>Failed to upload exported active mod list to Rentry.co</source>
         <translation>上传导出的启用模组列表到 Rentry.co 失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1773"/>
+        <location filename="../app/views/main_content_panel.py" line="1712"/>
         <source>Could not open directory</source>
         <translation>无法打开目录</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1774"/>
+        <location filename="../app/views/main_content_panel.py" line="1713"/>
         <source>{directory_name} path does not exist or is not set.</source>
         <translation>{directory_name} 路径不存在或未设置。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1777"/>
+        <location filename="../app/views/main_content_panel.py" line="1716"/>
         <source>Would you like to set the path now?</source>
         <translation>是否要现在设置路径？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1778"/>
-        <location filename="../app/views/main_content_panel.py" line="1781"/>
+        <location filename="../app/views/main_content_panel.py" line="1717"/>
+        <location filename="../app/views/main_content_panel.py" line="1720"/>
         <source>Open settings</source>
         <translation>打开设置</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1788"/>
-        <location filename="../app/views/main_content_panel.py" line="2791"/>
+        <location filename="../app/views/main_content_panel.py" line="1727"/>
+        <location filename="../app/views/main_content_panel.py" line="2730"/>
         <source>File not found</source>
         <translation>无法找到文件</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1789"/>
+        <location filename="../app/views/main_content_panel.py" line="1728"/>
         <source>The file you are trying to upload does not exist.</source>
         <translation>你尝试上传的文件不存在。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1790"/>
+        <location filename="../app/views/main_content_panel.py" line="1729"/>
         <source>File: {path}</source>
         <translation>文件：{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1810"/>
+        <location filename="../app/views/main_content_panel.py" line="1749"/>
         <source>Upload failed</source>
         <translation>Upload failed</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1811"/>
+        <location filename="../app/views/main_content_panel.py" line="1750"/>
         <source>Failed to upload log file to RimDeck Logs.</source>
         <translation>Failed to upload log file to RimDeck Logs.</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1819"/>
+        <location filename="../app/views/main_content_panel.py" line="1758"/>
         <source>Uploaded file</source>
         <translation>上传文件</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1830"/>
+        <location filename="../app/views/main_content_panel.py" line="1769"/>
         <source>Failed to upload file.</source>
         <translation>上传文件失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1855"/>
+        <location filename="../app/views/main_content_panel.py" line="1794"/>
         <source>Game or config location is not set</source>
         <translation>未设置游戏或配置位置</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1857"/>
+        <location filename="../app/views/main_content_panel.py" line="1796"/>
         <source>Configure game and config locations before saving a mod list.</source>
         <translation>在保存模组列表之前配置游戏和配置位置。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1870"/>
+        <location filename="../app/views/main_content_panel.py" line="1809"/>
         <source>Configured game location: {path}</source>
         <translation>配置的游戏位置：{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1871"/>
-        <location filename="../app/views/main_content_panel.py" line="3205"/>
+        <location filename="../app/views/main_content_panel.py" line="1810"/>
+        <location filename="../app/views/main_content_panel.py" line="3137"/>
         <source>Checked content locations: {paths}</source>
         <translation>检查的内容位置：{paths}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1874"/>
+        <location filename="../app/views/main_content_panel.py" line="1813"/>
         <source>Discovered Data location: {path}</source>
         <translation>发现数据位置：{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1877"/>
+        <location filename="../app/views/main_content_panel.py" line="1816"/>
         <source>Not found</source>
         <translation>未找到</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1879"/>
+        <location filename="../app/views/main_content_panel.py" line="1818"/>
         <source>Missing official modules: {package_ids}</source>
         <translation>缺少官方模块：{package_ids}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1885"/>
+        <location filename="../app/views/main_content_panel.py" line="1824"/>
         <source>The existing ModsConfig.xml could not be read or validated.</source>
         <translation>无法读取或验证现有的 ModsConfig.xml。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1888"/>
+        <location filename="../app/views/main_content_panel.py" line="1827"/>
         <source>Incomplete game content discovery</source>
         <translation>游戏内容发现不完整</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1890"/>
+        <location filename="../app/views/main_content_panel.py" line="1829"/>
         <source>RimDeck could not verify all official game content. Saving this list may remove Core or enabled DLC from ModsConfig.xml. Check the game content paths before continuing.</source>
         <translation>RimDeck 无法验证所有官方游戏内容。保存此列表可能会从 ModsConfig.xml 中删除核心或启用的 DLC。在继续之前检查游戏内容路径。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1892"/>
+        <location filename="../app/views/main_content_panel.py" line="1831"/>
         <source>Save anyway</source>
         <translation>无论如何都要保存</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1928"/>
+        <location filename="../app/views/main_content_panel.py" line="1867"/>
         <source>Could not save active mods</source>
         <translation>无法保存启用模组</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1929"/>
+        <location filename="../app/views/main_content_panel.py" line="1868"/>
         <source>Failed to save active mods to file:</source>
         <translation>无法将启用模组保存到文件：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2024"/>
+        <location filename="../app/views/main_content_panel.py" line="1963"/>
         <source>Confirm texture deletion</source>
         <translation>确认纹理删除</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2026"/>
+        <location filename="../app/views/main_content_panel.py" line="1965"/>
         <source>This will delete all optimized .dds textures from your active mods</source>
         <translation>这将从您的活动模组中删除所有优化的 .dds 纹理</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2029"/>
+        <location filename="../app/views/main_content_panel.py" line="1968"/>
         <source>Are you sure you want to delete all .dds textures? You can re-optimize them later if needed.</source>
         <translation>您确定要删除所有 .dds 纹理吗？如果需要，您可以稍后重新优化它们。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2033"/>
-        <location filename="../app/views/main_content_panel.py" line="2036"/>
+        <location filename="../app/views/main_content_panel.py" line="1972"/>
+        <location filename="../app/views/main_content_panel.py" line="1975"/>
         <source>Delete textures</source>
         <translation>删除纹理</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2054"/>
+        <location filename="../app/views/main_content_panel.py" line="1993"/>
         <source>No valid paths for todds</source>
         <translation>todds 没有有效路径</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2055"/>
+        <location filename="../app/views/main_content_panel.py" line="1994"/>
         <source>todds could not find any valid mod folders to process.</source>
         <translation>todds 找不到任何有效的 mod 文件夹来处理。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2071"/>
+        <location filename="../app/views/main_content_panel.py" line="2010"/>
         <source>Confirm ACF import</source>
         <translation>确认 ACF 导入</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2072"/>
+        <location filename="../app/views/main_content_panel.py" line="2011"/>
         <source>This will replace your current steamcmd .acf file</source>
         <translation>这将替换您当前的 steamcmd .acf 文件</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2074"/>
+        <location filename="../app/views/main_content_panel.py" line="2013"/>
         <source>Are you sure you want to import .acf? This only works for steamcmd</source>
         <translation>您确定要导入 .acf 吗？这只适用于 steamcmd</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2077"/>
-        <location filename="../app/views/main_content_panel.py" line="2082"/>
+        <location filename="../app/views/main_content_panel.py" line="2016"/>
+        <location filename="../app/views/main_content_panel.py" line="2021"/>
         <source>Import .acf</source>
         <translation>导入.acf</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2105"/>
-        <location filename="../app/views/main_content_panel.py" line="2136"/>
-        <location filename="../app/views/main_content_panel.py" line="2140"/>
+        <location filename="../app/views/main_content_panel.py" line="2044"/>
+        <location filename="../app/views/main_content_panel.py" line="2075"/>
+        <location filename="../app/views/main_content_panel.py" line="2079"/>
         <source>Export Error</source>
         <translation>导出错误</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2106"/>
+        <location filename="../app/views/main_content_panel.py" line="2045"/>
         <source>ACF file not found at: {acf_path}</source>
         <translation>在以下位置找不到 ACF 文件：{acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2126"/>
+        <location filename="../app/views/main_content_panel.py" line="2065"/>
         <source>Export Success</source>
         <translation>导出成功</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2127"/>
+        <location filename="../app/views/main_content_panel.py" line="2066"/>
         <source>Successfully exported ACF to {file_path}</source>
         <translation>已成功将 ACF 导出到 {file_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2133"/>
+        <location filename="../app/views/main_content_panel.py" line="2072"/>
         <source>Export failed: Permission denied - check file permissions</source>
         <translation>导出失败：权限被拒绝 - 检查文件权限</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2138"/>
+        <location filename="../app/views/main_content_panel.py" line="2077"/>
         <source>Export failed: {e}</source>
         <translation>导出失败：{e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2259"/>
+        <location filename="../app/views/main_content_panel.py" line="2198"/>
         <source>Checking Steam Workshop mods for updates...</source>
         <translation>正在检查 Steam 创意工坊模组的更新...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2263"/>
+        <location filename="../app/views/main_content_panel.py" line="2202"/>
         <source>Failed to check for Workshop updates</source>
         <translation>Failed to check for Workshop updates</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2267"/>
+        <location filename="../app/views/main_content_panel.py" line="2206"/>
         <source>No Workshop mods to check for updates</source>
         <translation>没有创意工坊模组来检查更新</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2272"/>
+        <location filename="../app/views/main_content_panel.py" line="2211"/>
         <source>Unable to check for updates</source>
         <translation>无法检查更新</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2302"/>
+        <location filename="../app/views/main_content_panel.py" line="2241"/>
         <source>All Workshop mods appear to be up to date!</source>
         <translation>所有创意工坊模组似乎都是最新的！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2319"/>
-        <location filename="../app/views/main_content_panel.py" line="3311"/>
+        <location filename="../app/views/main_content_panel.py" line="2258"/>
+        <location filename="../app/views/main_content_panel.py" line="3243"/>
         <source>Steam Client Integration is disabled</source>
         <translation>Steam 客户端集成已禁用</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2344"/>
-        <location filename="../app/views/main_content_panel.py" line="2357"/>
-        <location filename="../app/views/main_content_panel.py" line="2368"/>
+        <location filename="../app/views/main_content_panel.py" line="2283"/>
+        <location filename="../app/views/main_content_panel.py" line="2296"/>
+        <location filename="../app/views/main_content_panel.py" line="2307"/>
         <source>RimDeck - SteamCMD setup</source>
         <translation>RimDeck - SteamCMD 安装</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2345"/>
-        <location filename="../app/views/main_content_panel.py" line="2436"/>
+        <location filename="../app/views/main_content_panel.py" line="2284"/>
+        <location filename="../app/views/main_content_panel.py" line="2375"/>
         <source>Unable to create SteamCMD runner!</source>
         <translation>无法创建SteamCMD Runner！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2346"/>
-        <location filename="../app/views/main_content_panel.py" line="2437"/>
+        <location filename="../app/views/main_content_panel.py" line="2285"/>
+        <location filename="../app/views/main_content_panel.py" line="2376"/>
         <source>There is an active process already running!</source>
         <translation>有一个活动进程正在运行！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2370"/>
+        <location filename="../app/views/main_content_panel.py" line="2309"/>
         <source>Unable to initiate SteamCMD installation. Local mods path not set!</source>
         <translation>无法启动SteamCMD安装。本地模组路径未设置！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2373"/>
+        <location filename="../app/views/main_content_panel.py" line="2312"/>
         <source>Please configure local mods path in Settings before attempting to install.</source>
         <translation>请在尝试安装之前在设置中配置本地模组路径。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2421"/>
-        <location filename="../app/views/main_content_panel.py" line="2435"/>
-        <location filename="../app/views/main_content_panel.py" line="2611"/>
+        <location filename="../app/views/main_content_panel.py" line="2360"/>
+        <location filename="../app/views/main_content_panel.py" line="2374"/>
+        <location filename="../app/views/main_content_panel.py" line="2550"/>
         <source>RimDeck</source>
         <translation>RimDeck</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2422"/>
-        <location filename="../app/views/main_content_panel.py" line="2612"/>
+        <location filename="../app/views/main_content_panel.py" line="2361"/>
+        <location filename="../app/views/main_content_panel.py" line="2551"/>
         <source>No PublishedFileIds were supplied in operation.</source>
         <translation>操作中未提供任何 PublishedFileIds</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2424"/>
-        <location filename="../app/views/main_content_panel.py" line="2614"/>
+        <location filename="../app/views/main_content_panel.py" line="2363"/>
+        <location filename="../app/views/main_content_panel.py" line="2553"/>
         <source>Please add mods to list before attempting to download.</source>
         <translation>请在尝试下载之前将模组添加到列表中。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2457"/>
+        <location filename="../app/views/main_content_panel.py" line="2396"/>
         <source>RimDeck - SteamCMD downloader</source>
         <translation>RimDeck - SteamCMD 下载器</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2474"/>
+        <location filename="../app/views/main_content_panel.py" line="2413"/>
         <source>SteamCMD not found</source>
         <translation>找不到 SteamCMD</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2475"/>
+        <location filename="../app/views/main_content_panel.py" line="2414"/>
         <source>SteamCMD executable was not found.</source>
         <translation>找不到 SteamCMD 的可执行程序</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2477"/>
+        <location filename="../app/views/main_content_panel.py" line="2416"/>
         <source>Please setup an existing SteamCMD prefix, or setup a new prefix with &quot;Setup SteamCMD&quot;.</source>
         <translation>请设置一个现有的 SteamCMD 前缀，或使用 &quot;Setup SteamCMD&quot; 设置一个新的前缀。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2628"/>
+        <location filename="../app/views/main_content_panel.py" line="2567"/>
         <source>Processing Steam subscription action(s) via Steamworks API...</source>
         <translation>通过 Steamworks API 处理 Steam 订阅操作...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2655"/>
+        <location filename="../app/views/main_content_panel.py" line="2594"/>
         <source>Download or select from local</source>
         <translation>下载或从本地选择</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2657"/>
+        <location filename="../app/views/main_content_panel.py" line="2596"/>
         <source>Please select a ZIP file to add to the local mods directory.</source>
         <translation>请选择一个 ZIP 文件以添加到本地模组目录。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2660"/>
+        <location filename="../app/views/main_content_panel.py" line="2599"/>
         <source>You can download a ZIP file from the internet, or select a file from your local machine.</source>
         <translation>你可以从互联网下载一个 ZIP 文件，或者从你的本地选择一个文件。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2671"/>
+        <location filename="../app/views/main_content_panel.py" line="2610"/>
         <source>Enter zip file url</source>
         <translation>输入 ZIP 文件 URL</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2672"/>
+        <location filename="../app/views/main_content_panel.py" line="2611"/>
         <source>Enter a zip file url (http/https) to download to local mods:</source>
         <translation>输入一个 ZIP 文件 URL (http/https) 以下载到本地模组：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2759"/>
+        <location filename="../app/views/main_content_panel.py" line="2698"/>
         <source>Failed to download zip file</source>
         <translation>下载 ZIP 文件失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2760"/>
+        <location filename="../app/views/main_content_panel.py" line="2699"/>
         <source>The zip file could not be downloaded.</source>
         <translation>ZIP 文件无法下载</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2792"/>
+        <location filename="../app/views/main_content_panel.py" line="2731"/>
         <source>The selected file does not exist.</source>
         <translation>选中的文件不存在。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2793"/>
+        <location filename="../app/views/main_content_panel.py" line="2732"/>
         <source>File: {file_path}</source>
         <translation>文件：{file_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2806"/>
+        <location filename="../app/views/main_content_panel.py" line="2745"/>
         <source>Unsupported Compression Method</source>
         <translation>不支持的压缩方法</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2808"/>
+        <location filename="../app/views/main_content_panel.py" line="2747"/>
         <source>This ZIP file uses a compression method that is not supported by this version.</source>
         <translation>此 ZIP 文件使用不支持的压缩方法。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2817"/>
+        <location filename="../app/views/main_content_panel.py" line="2756"/>
         <source>Failed to extract zip file</source>
         <translation>解压 ZIP 文件失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2818"/>
+        <location filename="../app/views/main_content_panel.py" line="2757"/>
         <source>The zip file could not be extracted.</source>
         <translation>ZIP 文件无法解压。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2851"/>
-        <location filename="../app/views/main_content_panel.py" line="2867"/>
+        <location filename="../app/views/main_content_panel.py" line="2790"/>
+        <location filename="../app/views/main_content_panel.py" line="2806"/>
         <source>Existing files or directories found</source>
         <translation>找到现有文件或目录</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2853"/>
+        <location filename="../app/views/main_content_panel.py" line="2792"/>
         <source>All files in the archive already exist in the target path.</source>
         <translation>压缩包中的所有文件已经存在于目标路径中。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2869"/>
+        <location filename="../app/views/main_content_panel.py" line="2808"/>
         <source>The following files or directories already exist in the target path:</source>
         <translation>以下文件或目录已经存在于目标路径中：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2931"/>
+        <location filename="../app/views/main_content_panel.py" line="2870"/>
         <source>Extraction completed</source>
         <translation>解压完成</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2932"/>
+        <location filename="../app/views/main_content_panel.py" line="2871"/>
         <source>The ZIP file was successfully extracted!</source>
         <translation>ZIP 文件成功解压！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2937"/>
+        <location filename="../app/views/main_content_panel.py" line="2876"/>
         <source>Extraction failed</source>
         <translation>解压失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2938"/>
+        <location filename="../app/views/main_content_panel.py" line="2877"/>
         <source>An error occurred during extraction.</source>
         <translation>在解压过程中发生错误。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2953"/>
+        <location filename="../app/views/main_content_panel.py" line="2892"/>
         <source>Git integration will not work without Git installed! Do you want to open download page for Git?&lt;br&gt;&lt;br&gt;If you just installed Git, please restart RimDeck for the PATH changes to take effect.</source>
         <translation>如果没有安装 Git，Git 集成将无法工作！您想打开 Git 下载页面吗？&lt;br&gt;&lt;br&gt;如果您刚刚安装了 Git，请重新启动 RimDeck 以使 PATH 更改生效。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3130"/>
+        <location filename="../app/views/main_content_panel.py" line="3062"/>
         <source>This operation will overwrite the {rules_source} database located at the following path:&lt;br&gt;&lt;br&gt;{path}</source>
         <translation>此操作将覆盖位于以下路径的 {rules_source} 数据库：&lt;br&gt;&lt;br&gt;{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3190"/>
+        <location filename="../app/views/main_content_panel.py" line="3122"/>
         <source>Invalid game folder</source>
         <translation>游戏文件夹无效</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3192"/>
+        <location filename="../app/views/main_content_panel.py" line="3124"/>
         <source>RimWorld executable was not found in the configured game location.</source>
         <translation>在配置的游戏位置中找不到 RimWorld 可执行文件。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3200"/>
+        <location filename="../app/views/main_content_panel.py" line="3132"/>
         <source>Game content not found</source>
         <translation>找不到游戏内容</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3202"/>
+        <location filename="../app/views/main_content_panel.py" line="3134"/>
         <source>The game executable is valid, but RimDeck could not locate its content. The game may not find its Data or Mods folders. Check the game content paths before continuing.</source>
         <translation>游戏可执行文件有效，但 RimDeck 无法找到其内容。游戏可能找不到其 Data 或 Mods 文件夹。在继续之前检查游戏内容路径。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3204"/>
+        <location filename="../app/views/main_content_panel.py" line="3136"/>
         <source>Run anyway</source>
         <translation>无论如何都要跑</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3277"/>
+        <location filename="../app/views/main_content_panel.py" line="3209"/>
         <source>todds Optimization Failed</source>
         <translation>todds 优化失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3279"/>
+        <location filename="../app/views/main_content_panel.py" line="3211"/>
         <source>todds texture optimization failed (exit code: {exit_code}), but the game will launch anyway.</source>
         <translation>todds 纹理优化失败（退出代码：{exit_code}），但游戏仍会启动。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3313"/>
+        <location filename="../app/views/main_content_panel.py" line="3245"/>
         <source>Steam protocol launch requires Steam Client Integration to be enabled.</source>
         <translation>Steam 协议启动需要启用 Steam 客户端集成。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3316"/>
+        <location filename="../app/views/main_content_panel.py" line="3248"/>
         <source>Please enable Steam Client Integration in Settings → Steam to use this feature.</source>
         <translation>请在“设置”→“Steam”中启用“Steam 客户端集成”才能使用此功能。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3343"/>
+        <location filename="../app/views/main_content_panel.py" line="3275"/>
         <source>Please configure &quot;Use This Instead&quot; database in settings.</source>
         <translation>请在设置中配置“使用此替代”数据库。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3357"/>
+        <location filename="../app/views/main_content_panel.py" line="3289"/>
         <source>No suggestions were found in the &quot;Use This Instead&quot; database.</source>
         <translation>在 &quot;替代为此&quot; 数据库中没有找到任何建议。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2949"/>
+        <location filename="../app/views/main_content_panel.py" line="2888"/>
         <source>git not found</source>
         <translation>找不到 git</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="497"/>
+        <location filename="../app/views/main_content_panel.py" line="491"/>
         <source>Essential path(s) are invalid or not set!</source>
         <translation>基本路径无效或未设置！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="500"/>
+        <location filename="../app/views/main_content_panel.py" line="494"/>
         <source>RimDeck requires the below paths to be set.&lt;br/&gt;&lt;br/&gt;1) Game folder (Folder where RimWorld is installed).&lt;br/&gt;&lt;br/&gt;2) Config folder (Folder where ModsConfig.xml is located)&lt;br/&gt;&lt;br/&gt;3) Local mods folder (Mods folder inside the RimWorld installation).&lt;br/&gt;&lt;br/&gt;4) Steam mods folder (Only set if you use Steam user also enable Steam Client Integration)&lt;br/&gt;&lt;br/&gt;Try Using the autodetect functionality to set all paths automatically.&lt;br/&gt;&lt;br/&gt;Would you like to open the settings to configure them now?</source>
         <translation>RimDeck 需要设置以下路径。&lt;br/&gt;&lt;br/&gt;1) 游戏文件夹（安装 RimWorld 的文件夹）。&lt;br/&gt;&lt;br/&gt;2) Config 文件夹（ModsConfig.xml 所在的文件夹）&lt;br/&gt;&lt;br/&gt;3) 本地 mods 文件夹（RimWorld 安装中的 Mods 文件夹）。&lt;br/&gt;&lt;br/&gt;4) Steam mods 文件夹（仅在使用 Steam 用户并启用 Steam 客户端时设置）集成）&lt;br/&gt;&lt;br/&gt;尝试使用自动检测功能自动设置所有路径。&lt;br/&gt;&lt;br/&gt;您想立即打开设置来配置它们吗？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1148"/>
+        <location filename="../app/views/main_content_panel.py" line="1087"/>
         <source>This may be caused by malformed settings or improper migration between versions or different mod manager.&lt;br&gt;&lt;br&gt;Try resetting your settings, selecting a different sorting algorithm, or deleting your settings file.&lt;br&gt;&lt;br&gt;If the issue persists, please report it to the developers.</source>
         <translation>这可能是由于格式错误的设置或版本或不同模组管理器之间的迁移不当造成的。&lt;br&gt;&lt;br&gt;尝试重置您的设置、选择不同的排序算法或删除您的设置文件。&lt;br&gt;&lt;br&gt;如果问题仍然存在，请将其报告给开发人员。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1411"/>
+        <location filename="../app/views/main_content_panel.py" line="1350"/>
         <source>You will need to redo Rentry import again after downloads complete.&lt;br&gt;&lt;br&gt;If there missing mods after download completes, they will be shown inside the missing mods panel.&lt;br&gt;&lt;br&gt;If RimDeck is still not able to download some mods, It&apos;s due to the mod data not being available in both Rentry link and steam database.</source>
         <translation>下载完成后，您需要重新进行 Rentry 导入。&lt;br&gt;&lt;br&gt;如果下载完成后缺少模组，它们将显示在缺少模组面板中。&lt;br&gt;&lt;br&gt;如果 RimDeck 仍然无法下载某些模组，这是因为 Rentry 链接和 Steam 数据库中都没有模组数据。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1800"/>
+        <location filename="../app/views/main_content_panel.py" line="1739"/>
         <source>Uploading {path_name} to RimDeck Logs...</source>
         <translation>正在将 {path_name} 上传到 RimDeck 日志...</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1820"/>
+        <location filename="../app/views/main_content_panel.py" line="1759"/>
         <source>Uploaded {path_name} to RimDeck Logs</source>
         <translation>已将 {path_name} 上传到 RimDeck 日志</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1824"/>
+        <location filename="../app/views/main_content_panel.py" line="1763"/>
         <source>The URL has been copied to your clipboard:&lt;br&gt;&lt;br&gt;{ret}</source>
         <translation>该网址已复制到您的剪贴板：&lt;br&gt;&lt;br&gt;{ret}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1831"/>
+        <location filename="../app/views/main_content_panel.py" line="1770"/>
         <source>Failed to upload to RimDeck Logs</source>
         <translation>无法上传至 RimDeck 日志</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2057"/>
+        <location filename="../app/views/main_content_panel.py" line="1996"/>
         <source>None of the configured mod folder paths exist on disk.&lt;br&gt;&lt;br&gt;Please verify your Local Mods and Workshop folders are correctly set in Settings, then try again.</source>
         <translation>磁盘上不存在已配置的 Mod 文件夹路径。&lt;br&gt;&lt;br&gt;请验证您的本地 Mod 和创意工坊文件夹是否在“设置”中正确设置，然后重试。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2274"/>
+        <location filename="../app/views/main_content_panel.py" line="2213"/>
         <source>RimDeck was unable to check your Workshop mods for updates.</source>
         <translation>RimDeck 无法检查您的创意工坊模组是否有更新。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2282"/>
+        <location filename="../app/views/main_content_panel.py" line="2221"/>
         <source>Update check partially completed</source>
         <translation>更新检查部分完成</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2284"/>
+        <location filename="../app/views/main_content_panel.py" line="2223"/>
         <source>{failed} out of {total} Workshop mods could not be checked for updates.</source>
         <translation>无法检查更新的 {failed} 个创意工坊模组（共 {total} 个）。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2321"/>
+        <location filename="../app/views/main_content_panel.py" line="2260"/>
         <source>This feature requires Steam Client Integration to be enabled in Settings.&lt;br&gt;&lt;br&gt;Please enable Steam Client Integration if you own the game on Steam.</source>
         <translation>此功能需要在“设置”中启用 Steam 客户端集成。&lt;br&gt;&lt;br&gt;如果您在 Steam 上拥有该游戏，请启用 Steam 客户端集成。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2761"/>
-        <location filename="../app/views/main_content_panel.py" line="2810"/>
-        <location filename="../app/views/main_content_panel.py" line="2819"/>
+        <location filename="../app/views/main_content_panel.py" line="2700"/>
+        <location filename="../app/views/main_content_panel.py" line="2749"/>
+        <location filename="../app/views/main_content_panel.py" line="2758"/>
         <source>File: {file_path}&lt;br&gt;Error: {e}</source>
         <translation>文件：{file_path}&lt;br&gt;错误：{e}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2856"/>
+        <location filename="../app/views/main_content_panel.py" line="2795"/>
         <source>How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Cancel — Abort the operation.</source>
         <translation>您想如何继续？&lt;br&gt;&lt;br&gt;1) 覆盖全部 — 替换所有现有文件和目录。&lt;br&gt;2) 取消 — 中止操作。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2872"/>
+        <location filename="../app/views/main_content_panel.py" line="2811"/>
         <source>{conflicts_list}&lt;br&gt;&lt;br&gt;How would you like to proceed?&lt;br&gt;&lt;br&gt;1) Overwrite All — Replace all existing files and directories.&lt;br&gt;2) Skip Existing — Extract only new files and leave existing ones untouched.&lt;br&gt;3) Cancel — Abort the extraction.</source>
         <translation>{conflicts_list}&lt;br&gt;&lt;br&gt;您想如何继续？&lt;br&gt;&lt;br&gt;1) 覆盖全部 — 替换所有现有文件和目录。&lt;br&gt;2) 跳过现有 — 只提取新文件，不影响现有文件。&lt;br&gt;3) 取消 — 中止提取。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2950"/>
+        <location filename="../app/views/main_content_panel.py" line="2889"/>
         <source>git executable was not found in $PATH!</source>
         <translation>在$ PATH中找不到 GIT 可执行文件！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3024"/>
+        <location filename="../app/views/main_content_panel.py" line="2956"/>
         <source>Edit Steam DB repo</source>
         <translation>编辑 Steam 数据库仓库</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3025"/>
-        <location filename="../app/views/main_content_panel.py" line="3040"/>
+        <location filename="../app/views/main_content_panel.py" line="2957"/>
+        <location filename="../app/views/main_content_panel.py" line="2972"/>
         <source>Enter URL (https://github.com/AccountName/RepositoryName):</source>
         <translation>输入 URL (https://github.com/AccountName/RepositoryName):</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3039"/>
+        <location filename="../app/views/main_content_panel.py" line="2971"/>
         <source>Edit Community Rules DB repo</source>
         <translation>编辑 社区规则 数据库仓库</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3075"/>
+        <location filename="../app/views/main_content_panel.py" line="3007"/>
         <source>Edit Steam WebAPI key</source>
         <translation>编辑 Steam WebAPI key</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3076"/>
+        <location filename="../app/views/main_content_panel.py" line="3008"/>
         <source>Enter your personal 32 character Steam WebAPI key here:</source>
         <translation>输入你的个人 32 字符 Steam WebAPI key：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3111"/>
+        <location filename="../app/views/main_content_panel.py" line="3043"/>
         <source>Failed to read existing database</source>
         <translation>读取现有数据库失败</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3112"/>
+        <location filename="../app/views/main_content_panel.py" line="3044"/>
         <source>Failed to read the existing database!</source>
         <translation>无法读取现有数据库！</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3113"/>
+        <location filename="../app/views/main_content_panel.py" line="3045"/>
         <source>Path: {path}</source>
         <translation>路径：{path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3127"/>
+        <location filename="../app/views/main_content_panel.py" line="3059"/>
         <source>RimDeck - DB Builder</source>
         <translation>RimDeck - 数据库构建器</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3128"/>
+        <location filename="../app/views/main_content_panel.py" line="3060"/>
         <source>Do you want to continue?</source>
         <translation>你想要继续吗？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3147"/>
+        <location filename="../app/views/main_content_panel.py" line="3079"/>
         <source>Edit SteamDB expiry:</source>
         <translation>编辑 SteamDB 有效期：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3149"/>
+        <location filename="../app/views/main_content_panel.py" line="3081"/>
         <source>Enter your preferred expiry duration in seconds (default 1 week/604800 sec):</source>
         <translation>输入你喜欢的有效期（默认 1 周/604800 秒）：</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3160"/>
+        <location filename="../app/views/main_content_panel.py" line="3092"/>
         <source>Tried configuring Dynamic Query with a value that is not an integer.</source>
         <translation>尝试使用不是整数的值配置动态查询。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3163"/>
+        <location filename="../app/views/main_content_panel.py" line="3095"/>
         <source>Please reconfigure the expiry value with an integer in terms of the seconds from epoch you would like your query to expire.</source>
         <translation>请重新配置有效期值，以秒为单位，表示你希望查询过期的时间。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3282"/>
+        <location filename="../app/views/main_content_panel.py" line="3214"/>
         <source>You may experience longer loading times or higher memory usage.&lt;br&gt;&lt;br&gt;Check the todds output window for details.</source>
         <translation>您可能会遇到更长的加载时间或更高的内存使用量。&lt;br&gt;&lt;br&gt;检查 todds 输出窗口以了解详细信息。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3341"/>
-        <location filename="../app/views/main_content_panel.py" line="3355"/>
+        <location filename="../app/views/main_content_panel.py" line="3273"/>
+        <location filename="../app/views/main_content_panel.py" line="3287"/>
         <source>Use This Instead</source>
         <translation>替代为此</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3242"/>
+        <location filename="../app/views/main_content_panel.py" line="3174"/>
         <source>Unsaved Changes</source>
         <translation>未保存的更改</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3243"/>
+        <location filename="../app/views/main_content_panel.py" line="3175"/>
         <source>You have unsaved changes. What would you like to do?</source>
         <translation>你有尚未保存的更改。你想要怎么做？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3244"/>
-        <location filename="../app/views/main_content_panel.py" line="3246"/>
+        <location filename="../app/views/main_content_panel.py" line="3176"/>
+        <location filename="../app/views/main_content_panel.py" line="3178"/>
         <source>Save and Run</source>
         <translation>保存并运行</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="3244"/>
-        <location filename="../app/views/main_content_panel.py" line="3252"/>
+        <location filename="../app/views/main_content_panel.py" line="3176"/>
+        <location filename="../app/views/main_content_panel.py" line="3184"/>
         <source>Run Anyway</source>
         <translation>仍然运行</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1678"/>
+        <location filename="../app/views/main_content_panel.py" line="1617"/>
         <source>Import from RimWorld Save File</source>
         <translation>从 RimWorld 存档文件导入</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1680"/>
+        <location filename="../app/views/main_content_panel.py" line="1619"/>
         <source>RimWorld save (*.rws);;All files (*.*)</source>
         <translation>RimWorld 存档 (*.rws);所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2144"/>
-        <location filename="../app/views/main_content_panel.py" line="2161"/>
+        <location filename="../app/views/main_content_panel.py" line="2083"/>
+        <location filename="../app/views/main_content_panel.py" line="2100"/>
         <source>Reset SteamCMD ACF data file</source>
         <translation>重置 SteamCMD ACF 数据文件</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2145"/>
+        <location filename="../app/views/main_content_panel.py" line="2084"/>
         <source>Are you sure you want to reset SteamCMD ACF data file?</source>
         <translation>你确定要重置 SteamCMD ACF 数据文件吗？</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2147"/>
+        <location filename="../app/views/main_content_panel.py" line="2086"/>
         <source>This file is created and used by steamcmd to track mod informaton, This action cannot be undone.</source>
         <translation>该文件是由 SteamCMD 创建和使用的，用于跟踪模组信息，该操作无法撤销。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2163"/>
+        <location filename="../app/views/main_content_panel.py" line="2102"/>
         <source>Successfully deleted SteamCMD ACF data file: {steamcmd_appworkshop_acf_path}</source>
         <translation>成功删除 SteamCMD ACF 数据文件： {steamcmd_appworkshop_acf_path}</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2168"/>
+        <location filename="../app/views/main_content_panel.py" line="2107"/>
         <source>ACF data file will be recreated when you download mods using steamcmd next time.</source>
         <translation>下次使用 SteamCMD 下载模组时，将重新创建 ACF 数据文件。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2176"/>
+        <location filename="../app/views/main_content_panel.py" line="2115"/>
         <source>SteamCMD ACF data file does not exist</source>
         <translation>SteamCMD ACF 数据文件不存在</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="2178"/>
+        <location filename="../app/views/main_content_panel.py" line="2117"/>
         <source>ACf file does not exist. It will be created when you download mods using steamcmd.</source>
         <translation>ACF 文件不存在。当你使用 SteamCMD 下载模组时，它将会被创建。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1845"/>
+        <location filename="../app/views/main_content_panel.py" line="1784"/>
         <source>Failed to open file.</source>
         <translation>无法打开文件。</translation>
     </message>
     <message>
-        <location filename="../app/views/main_content_panel.py" line="1847"/>
+        <location filename="../app/views/main_content_panel.py" line="1786"/>
         <source>Failed to open the file with default text editor. It may not exist.</source>
         <translation>无法使用默认文本编辑器打开文件。文件可能不存在。</translation>
     </message>
@@ -3220,295 +3160,290 @@ Manage mods installed from GitHub releases.</source>
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="../app/views/menu_bar.py" line="129"/>
+        <location filename="../app/views/menu_bar.py" line="128"/>
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="131"/>
+        <location filename="../app/views/menu_bar.py" line="130"/>
         <source>Open Mod List…</source>
         <translation>打开模组列表</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="138"/>
+        <location filename="../app/views/menu_bar.py" line="137"/>
         <source>Save Mod List As…</source>
         <translation>保存模组列表</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="141"/>
+        <location filename="../app/views/menu_bar.py" line="140"/>
         <source>Import</source>
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="158"/>
+        <location filename="../app/views/menu_bar.py" line="157"/>
         <source>To Rentry.co…</source>
         <translation>导出到 Rentry.co</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="182"/>
+        <location filename="../app/views/menu_bar.py" line="181"/>
         <source>RimDeck</source>
         <translation>RimDeck</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="184"/>
+        <location filename="../app/views/menu_bar.py" line="183"/>
         <source>RimWorld</source>
         <translation>RimWorld</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="188"/>
-        <location filename="../app/views/menu_bar.py" line="198"/>
+        <location filename="../app/views/menu_bar.py" line="187"/>
+        <location filename="../app/views/menu_bar.py" line="197"/>
         <source>Root Directory</source>
         <translation>根目录</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="191"/>
-        <location filename="../app/views/menu_bar.py" line="201"/>
+        <location filename="../app/views/menu_bar.py" line="190"/>
+        <location filename="../app/views/menu_bar.py" line="200"/>
         <source>Config Directory</source>
         <translation>配置目录</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="144"/>
+        <location filename="../app/views/menu_bar.py" line="143"/>
         <source>From Rentry.co</source>
         <translation>从 Rentry.co 导入</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="134"/>
+        <location filename="../app/views/menu_bar.py" line="133"/>
         <source>Append Mod List…</source>
         <translation>Append Mod List…</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="147"/>
+        <location filename="../app/views/menu_bar.py" line="146"/>
         <source>From Workshop collection</source>
         <translation>从 创意工坊合集 导入</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="152"/>
+        <location filename="../app/views/menu_bar.py" line="151"/>
         <source>Export</source>
         <translation>导出</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="155"/>
+        <location filename="../app/views/menu_bar.py" line="154"/>
         <source>To Clipboard…</source>
         <translation>导出到 剪切板</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="162"/>
+        <location filename="../app/views/menu_bar.py" line="161"/>
         <source>Mod List History…</source>
         <translation>模组列表历史记录...</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="179"/>
+        <location filename="../app/views/menu_bar.py" line="178"/>
         <source>Open...</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="194"/>
-        <location filename="../app/views/menu_bar.py" line="204"/>
+        <location filename="../app/views/menu_bar.py" line="193"/>
+        <location filename="../app/views/menu_bar.py" line="203"/>
         <source>Logs Directory</source>
         <translation>日志目录</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="207"/>
+        <location filename="../app/views/menu_bar.py" line="206"/>
         <source>Local Mods Directory</source>
         <translation>本地模组目录</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="210"/>
+        <location filename="../app/views/menu_bar.py" line="209"/>
         <source>Steam Mods Directory</source>
         <translation>Steam 模组目录</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="216"/>
+        <location filename="../app/views/menu_bar.py" line="215"/>
         <source>Settings…</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="219"/>
+        <location filename="../app/views/menu_bar.py" line="218"/>
         <source>Exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="266"/>
+        <location filename="../app/views/menu_bar.py" line="265"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="267"/>
+        <location filename="../app/views/menu_bar.py" line="266"/>
         <source>Cut</source>
         <translation>剪切</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="268"/>
+        <location filename="../app/views/menu_bar.py" line="267"/>
         <source>Copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="269"/>
+        <location filename="../app/views/menu_bar.py" line="268"/>
         <source>Paste</source>
         <translation>粘贴</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="271"/>
+        <location filename="../app/views/menu_bar.py" line="270"/>
         <source>Rule Editor…</source>
         <translation>规则编辑器</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="273"/>
-        <source>Ignore JSON Editor…</source>
-        <translation>忽略编辑器</translation>
-    </message>
-    <message>
-        <location filename="../app/views/menu_bar.py" line="283"/>
+        <location filename="../app/views/menu_bar.py" line="279"/>
         <source>Auto-add Translations</source>
         <translation>自动添加翻译</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="294"/>
+        <location filename="../app/views/menu_bar.py" line="290"/>
         <source>View</source>
         <translation>看法</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="296"/>
+        <location filename="../app/views/menu_bar.py" line="292"/>
         <source>Show Translation Status</source>
         <translation>显示翻译状态</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="307"/>
+        <location filename="../app/views/menu_bar.py" line="303"/>
         <source>Download</source>
         <translation>下载</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="309"/>
+        <location filename="../app/views/menu_bar.py" line="305"/>
         <source>Download RimWorld Version</source>
         <translation>下载环世界版本</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="313"/>
+        <location filename="../app/views/menu_bar.py" line="309"/>
         <source>Add Git Mod</source>
         <translation>添加 Git 模组</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="316"/>
+        <location filename="../app/views/menu_bar.py" line="312"/>
         <source>Add Zip Mod</source>
         <translation>添加 Zip 模组</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="320"/>
+        <location filename="../app/views/menu_bar.py" line="316"/>
         <source>Browse Workshop</source>
         <translation>浏览创意工坊</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="323"/>
+        <location filename="../app/views/menu_bar.py" line="319"/>
         <source>Update Workshop Mods</source>
         <translation>更新创意工坊模组</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="326"/>
+        <location filename="../app/views/menu_bar.py" line="322"/>
         <source>Update Git Mods</source>
         <translation>更新 Git 模组</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="330"/>
+        <location filename="../app/views/menu_bar.py" line="326"/>
         <source>GitHub Mods</source>
         <translation>GitHub 模组</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="334"/>
+        <location filename="../app/views/menu_bar.py" line="330"/>
         <source>Verify Game Files</source>
         <translation>验证游戏文件</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="345"/>
+        <location filename="../app/views/menu_bar.py" line="341"/>
         <source>Instances</source>
         <translation>实例</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="346"/>
+        <location filename="../app/views/menu_bar.py" line="342"/>
         <source>Current: &quot;Default&quot;</source>
         <translation>当前：默认</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="350"/>
+        <location filename="../app/views/menu_bar.py" line="346"/>
         <source>Backup Instance…</source>
         <translation>备份实例</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="353"/>
+        <location filename="../app/views/menu_bar.py" line="349"/>
         <source>Restore Instance…</source>
         <translation>恢复实例</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="357"/>
+        <location filename="../app/views/menu_bar.py" line="353"/>
         <source>Clone Instance…</source>
         <translation>克隆实例</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="360"/>
+        <location filename="../app/views/menu_bar.py" line="356"/>
         <source>Create Instance…</source>
         <translation>创建实例</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="363"/>
+        <location filename="../app/views/menu_bar.py" line="359"/>
         <source>Delete Instance…</source>
         <translation>删除实例</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="374"/>
+        <location filename="../app/views/menu_bar.py" line="370"/>
         <source>Textures</source>
         <translation>纹理</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="376"/>
+        <location filename="../app/views/menu_bar.py" line="372"/>
         <source>Optimize Textures</source>
         <translation>优化纹理</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="380"/>
+        <location filename="../app/views/menu_bar.py" line="376"/>
         <source>Delete .dds Textures</source>
         <translation>删除 .dds 纹理</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="385"/>
+        <location filename="../app/views/menu_bar.py" line="381"/>
         <source>Update</source>
         <translation>更新</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="403"/>
+        <location filename="../app/views/menu_bar.py" line="399"/>
         <source>RimDeck Wiki…</source>
         <translation>RimDeck Wiki</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="387"/>
+        <location filename="../app/views/menu_bar.py" line="383"/>
         <source>Check for Updates…</source>
         <translation>检查更新</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="276"/>
+        <location filename="../app/views/menu_bar.py" line="272"/>
         <source>Reset Warning Toggles</source>
         <translation>重置警告状态</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="390"/>
+        <location filename="../app/views/menu_bar.py" line="386"/>
         <source>Check for Updates on Startup</source>
         <translation>启动时检查更新</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="402"/>
+        <location filename="../app/views/menu_bar.py" line="398"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="404"/>
+        <location filename="../app/views/menu_bar.py" line="400"/>
         <source>RimDeck GitHub…</source>
         <translation>RimDeck GitHub</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="150"/>
+        <location filename="../app/views/menu_bar.py" line="149"/>
         <source>From Save file…</source>
         <translation>从 游戏存档导入</translation>
     </message>
     <message>
-        <location filename="../app/views/menu_bar.py" line="279"/>
+        <location filename="../app/views/menu_bar.py" line="275"/>
         <source>Reset Mod Colors</source>
         <translation>重置模组颜色</translation>
     </message>
@@ -3516,17 +3451,17 @@ Manage mods installed from GitHub releases.</source>
 <context>
     <name>MenuBarController</name>
     <message>
-        <location filename="../app/controllers/menu_bar_controller.py" line="227"/>
+        <location filename="../app/controllers/menu_bar_controller.py" line="224"/>
         <source>Current: {current_instance}</source>
         <translation>当前：{current_instance}</translation>
     </message>
     <message>
-        <location filename="../app/controllers/menu_bar_controller.py" line="245"/>
+        <location filename="../app/controllers/menu_bar_controller.py" line="242"/>
         <source>Verify Game Files</source>
         <translation>验证游戏文件</translation>
     </message>
     <message>
-        <location filename="../app/controllers/menu_bar_controller.py" line="247"/>
+        <location filename="../app/controllers/menu_bar_controller.py" line="244"/>
         <source>Are you sure you want to verify RimWorld&apos;s game files through Steam?&lt;br&gt;&lt;br&gt;This process cannot be canceled once it has started.</source>
         <translation>您确定要通过 Steam 验证 RimWorld 的游戏文件吗？&lt;br&gt;&lt;br&gt;此过程一旦开始就无法取消。</translation>
     </message>
@@ -3620,44 +3555,6 @@ All dependencies are satisfied. No missing dependencies found.</source>
         <location filename="../app/windows/missing_dependencies_dialog.py" line="57"/>
         <source>Dependency Manager</source>
         <translation>依赖管理</translation>
-    </message>
-</context>
-<context>
-    <name>MissingModPropertiesPanel</name>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="50"/>
-        <source>RimDeck - Mods with Missing Properties</source>
-        <translation>RimDeck - 缺少属性的模组</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="51"/>
-        <source>Mods with Missing Properties detected!</source>
-        <translation>检测到缺少属性的模组！</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="53"/>
-        <source>The following mods are missing important properties that may cause issues:
-
-• Missing Package ID: Mods without a valid Package ID in About.xml may have dependency and compatibility issues.
-• Missing Publish Field ID: Workshop mods without a Publish Field ID may not support redownloads and update checking.
-
-Please contact the mod authors to add these properties to their mods.</source>
-        <translation>以下模组缺少重要属性，可能会导致问题：
-
-• 缺少包名：About.xml 中没有有效包名的模组可能会有依赖性和兼容性问题。
-• 缺少发布文件 ID：没有发布文件 ID 的创意工坊模组可能不支持重新下载和更新检查。
-
-请联系模组作者将这些属性添加到他们的模组中。</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="69"/>
-        <source>Delete Mods</source>
-        <translation>删除模组</translation>
-    </message>
-    <message>
-        <location filename="../app/windows/missing_mod_properties_panel.py" line="78"/>
-        <source>Add to Ignore List</source>
-        <translation>添加到忽略列表</translation>
     </message>
 </context>
 <context>
@@ -8113,13 +8010,13 @@ The following table displays Workshop mods available for update from Steam.</sou
 <context>
     <name>find_circular_dependencies</name>
     <message>
-        <location filename="../app/sort/topo_sort.py" line="86"/>
-        <location filename="../app/sort/topo_sort.py" line="89"/>
+        <location filename="../app/sort/topo_sort.py" line="87"/>
+        <location filename="../app/sort/topo_sort.py" line="90"/>
         <source>Unable to Sort</source>
         <translation>无法排序</translation>
     </message>
     <message>
-        <location filename="../app/sort/topo_sort.py" line="90"/>
+        <location filename="../app/sort/topo_sort.py" line="91"/>
         <source>RimDeck found circular dependencies in your mods list. Please see the details for dependency loops.</source>
         <translation>RimDeck 在你的模组列表中发现了循环依赖。请查看详细信息以了解循环依赖。</translation>
     </message>
