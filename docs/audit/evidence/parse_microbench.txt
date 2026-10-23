@@ -1,0 +1,2 @@
+mods=606 single-thread parse: 329 ms; with setter using __dict__.pop instead of hasattr: 280 ms
+mods=2006 single-thread parse: 1001 ms; with setter using __dict__.pop instead of hasattr: 1010 ms

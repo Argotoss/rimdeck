@@ -1,0 +1,64 @@
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 12%]
+........................................................................ [ 17%]
+......................s................................................. [ 21%]
+....2026-10-23 15:32:00.755 | DEBUG    | app.models.animations:handle_data:118 - Received <class 'NoneType'> from thread
+2026-10-23 15:32:00.755 | DEBUG    | app.models.animations:prepare_stop_animation:124 - Flagging animation to complete
+.................................................................... [ 25%]
+.....................................s.................................. [ 29%]
+........................................................................ [ 34%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 46%]
+........................................................................ [ 51%]
+........................sssssssssssssssssssssssssss..................... [ 55%]
+........................................................................ [ 59%]
+........................................................................ [ 63%]
+........................................................................ [ 68%]
+.................................................s.s.................... [ 72%]
+........................................................................ [ 76%]
+........................................................................ [ 80%]
+........................................................................ [ 85%]
+........................................................................ [ 89%]
+........................................................................ [ 93%]
+........................................................................ [ 97%]
+...................................                                      [100%]
+=============================== warnings summary ===============================
+tests/views/test_mods_panel.py::test_rows_inserted_converts_plain_dropped_item
+  app/views/mods_panel.py:4180: RuntimeWarning: libpyside: Failed to disconnect (<bound method ModListWidget.handle_rows_inserted of <app.views.mods_panel.ModListWidget(0x752a6b800) at 0x135c9a6c0>>) from signal "rowsInserted(QModelIndex,int,int)".
+    self.model().rowsInserted.disconnect(self.handle_rows_inserted)
+
+tests/views/test_mods_panel.py::test_rows_inserted_converts_plain_dropped_item
+  app/views/mods_panel.py:4184: RuntimeWarning: libpyside: Failed to disconnect (<bound method ModListWidget.handle_rows_removed of <app.views.mods_panel.ModListWidget(0x752a6b800) at 0x135c9a6c0>>) from signal "rowsAboutToBeRemoved(QModelIndex,int,int)".
+    self.model().rowsAboutToBeRemoved.disconnect(self.handle_rows_removed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 25 durations =============================
+2.48s call     tests/models/metadata/test_metadata_factory.py::test_read_steam_db_large
+2.22s call     tests/utils/test_privatebin.py::TestBuildPastePayload::test_ciphertext_decrypts_correctly
+2.21s call     tests/utils/test_privatebin.py::TestBuildPastePayload::test_different_calls_produce_different_keys
+1.13s call     tests/utils/test_privatebin.py::TestUploadToPrivatebin::test_successful_upload_returns_url
+1.12s call     tests/utils/test_privatebin.py::TestBuildPastePayload::test_returns_dict_with_required_keys
+1.11s call     tests/utils/test_privatebin.py::TestUploadToPrivatebin::test_server_error_status_returns_failure
+1.11s call     tests/utils/test_privatebin.py::TestUploadToPrivatebin::test_connection_error_returns_failure
+1.10s call     tests/utils/test_privatebin.py::TestBuildPastePayload::test_ciphertext_is_valid_base64
+1.10s call     tests/utils/test_privatebin.py::TestUploadToPrivatebin::test_http_error_returns_failure
+1.09s call     tests/utils/test_privatebin.py::TestBuildPastePayload::test_paste_url_key_is_nonempty_string
+1.09s call     tests/utils/test_privatebin.py::TestBuildPastePayload::test_adata_structure
+0.69s call     tests/models/metadata/test_metadata_factory.py::test_get_rules_db_large_db
+0.10s call     tests/windows/test_missing_dependencies_dialog.py::test_show_dialog_is_non_modal_and_returns_selected
+0.10s call     tests/windows/test_missing_dependencies_dialog.py::test_show_dialog_reject_returns_empty
+0.09s call     tests/controllers/test_settings_location_validation.py::test_choosing_game_uses_derived_mods_or_keeps_explicit_path[True]
+0.08s setup    tests/views/test_main_content_downloader_list.py::TestOpenSteamBrowserRestoresPendingSnapshot::test_restores_snapshot_into_freshly_created_browser
+0.07s call     tests/windows/test_github_mods_panel.py::TestUninstallButton::test_uninstall_button_exists_in_layout
+0.06s call     tests/utils/test_files.py::TestCleanupOldBackups::test_keeps_specified_number
+0.06s call     tests/utils/test_files.py::TestCleanupOldBackups::test_keep_negative_one_keeps_all
+0.06s call     tests/utils/test_files.py::TestCreateSavesBackup::test_compression_count_limits_files
+0.06s call     tests/services/test_instance_service_lifetime.py::test_instance_service_survives_without_external_reference
+0.05s call     tests/services/test_instance_service_lifetime.py::test_retained_service_still_receives_events
+0.05s call     tests/controllers/test_troubleshooting.py::TestSteamUtilities::test_steam_cleanup_orphaned_workshop_user_cancels
+0.05s setup    tests/utils/test_git_utils_detached_head.py::test_check_updates_attached_head_unchanged
+0.04s setup    tests/utils/test_git_utils_detached_head.py::test_check_updates_with_detached_head
+1660 passed, 31 skipped, 2 warnings in 26.75s
+uv run pytest --doctest-modules --no-qt-log -q -p no:cacheprovider   21.87s user 2.97s system 88% cpu 28.115 total

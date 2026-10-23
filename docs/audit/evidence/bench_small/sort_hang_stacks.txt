@@ -1,0 +1,60 @@
+
+--- main thread @ 3.0s cpu=4.14s
+  File "dev/audit_tools/repro_sort_hang.py", line 92, in <module>
+    sort_btn.click()
+  File "app/views/main_content_panel.py", line 1091, in _do_sort
+    selected_deps = dialog.show_dialog(
+  File "app/windows/missing_dependencies_dialog.py", line 148, in show_dialog
+    loop.exec()
+
+--- main thread @ 6.0s cpu=4.14s
+  File "dev/audit_tools/repro_sort_hang.py", line 92, in <module>
+    sort_btn.click()
+  File "app/views/main_content_panel.py", line 1091, in _do_sort
+    selected_deps = dialog.show_dialog(
+  File "app/windows/missing_dependencies_dialog.py", line 148, in show_dialog
+    loop.exec()
+
+--- main thread @ 9.0s cpu=4.14s
+  File "dev/audit_tools/repro_sort_hang.py", line 92, in <module>
+    sort_btn.click()
+  File "app/views/main_content_panel.py", line 1091, in _do_sort
+    selected_deps = dialog.show_dialog(
+  File "app/windows/missing_dependencies_dialog.py", line 148, in show_dialog
+    loop.exec()
+Thread 0x000000017230f000 [Thread-6 (sampler)] (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 373 in wait
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 670 in wait
+  File "dev/audit_tools/repro_sort_hang.py", line 62 in sampler
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1024 in run
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1082 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1044 in _bootstrap
+
+Thread 0x0000000171303000 [Thread-3] (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 369 in wait
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/queue.py", line 199 in get
+  File ".venv/lib/python3.14/site-packages/watchdog/observers/api.py", line 379 in dispatch_events
+  File ".venv/lib/python3.14/site-packages/watchdog/observers/api.py", line 213 in run
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1082 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1044 in _bootstrap
+
+Thread 0x00000001702f7000 [Thread-5] (most recent call first):
+  File ".venv/lib/python3.14/site-packages/watchdog/observers/fsevents.py", line 308 in run
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1082 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1044 in _bootstrap
+
+Thread 0x000000016f2eb000 [Thread-4] (most recent call first):
+  File ".venv/lib/python3.14/site-packages/watchdog/observers/fsevents.py", line 308 in run
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1082 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1044 in _bootstrap
+
+Thread 0x000000016e2df000 [Thread-2] (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 369 in wait
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/queue.py", line 199 in get
+  File ".venv/lib/python3.14/site-packages/watchdog/observers/api.py", line 379 in dispatch_events
+  File ".venv/lib/python3.14/site-packages/watchdog/observers/api.py", line 213 in run
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1082 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1044 in _bootstrap
+
+Current thread 0x0000000202c9f080 (most recent call first):
+  File "dev/audit_tools/repro_sort_hang.py", line 95 in <module>

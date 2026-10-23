@@ -1,0 +1,17 @@
+// markdownlint-cli2 options (local check/fix mode).
+// The rule set lives in .markdownlint.json, which is read by BOTH
+// markdownlint-cli2 (via `just markdownlint-fix`) and the Nix git-hooks
+// markdownlint hook (which imports the same file) so policies stay in sync.
+// Do not add a `config` property here: a .markdownlint.json in the same
+// directory overrides it automatically.
+{
+  "noBanner": true,
+  "noProgress": true,
+  "globs": [
+    "docs/**/*.md",
+    "*.md"
+  ],
+  "ignores": [
+    "LICENSE.md"
+  ]
+}

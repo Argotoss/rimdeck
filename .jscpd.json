@@ -1,0 +1,14 @@
+{
+    "threshold": 0,
+    "gitignore": true,
+    "ignore": [
+        "**/submodules/**",
+        "**/docs/audit/**",
+        "**/.git/**",
+        "**/*.md",
+        "**/*.xml",
+        "**/locales/**",
+        "**/.github/**",
+        "**/.venv/**"
+    ]
+}

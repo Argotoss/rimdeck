@@ -1,0 +1,3 @@
+before: .git exists = True commits = 1
+handler returned repaired = True (git_pull maps this to GitPullResult.UP_TO_DATE)
+after: .git exists = False | working tree files kept = ['About.xml']

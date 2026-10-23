@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>io.github.argotoss.RimDeck</id>
+    <url type="homepage">https://github.com/Argotoss/rimdeck</url>
+    <url type="vcs-browser">https://github.com/Argotoss/rimdeck</url>
+
+    <name>RimDeck</name>
+    <summary>Mod manager for RimWorld</summary>
+
+    <metadata_license>MIT</metadata_license>
+    <project_license>GPL-3.0-only</project_license>
+    <categories>
+        <category>Game</category>
+    </categories>
+    <description>
+        <p>A free and open source multi-platform mod manager for the video game RimWorld.
+            Includes support for Windows, Linux, and Mac.</p>
+    </description>
+
+    <launchable type="desktop-id">io.github.argotoss.RimDeck.desktop</launchable>
+    <content_rating type="oars-1.1">
+        <content_attribute id="violence-cartoon">moderate</content_attribute>
+        <content_attribute id="violence-fantasy">moderate</content_attribute>
+        <content_attribute id="violence-bloodshed">intense</content_attribute>
+        <content_attribute id="violence-desecration">intense</content_attribute>
+        <content_attribute id="violence-slavery">intense</content_attribute>
+        <content_attribute id="drugs-alcohol">moderate</content_attribute>
+        <content_attribute id="drugs-narcotics">moderate</content_attribute>
+        <content_attribute id="drugs-tobacco">moderate</content_attribute>
+        <content_attribute id="sex-nudity">mild</content_attribute>
+        <content_attribute id="sex-themes">mild</content_attribute>
+        <content_attribute id="language-profanity">moderate</content_attribute>
+    </content_rating>
+
+
+    <developer id="io.github.argotoss">
+        <name>RimDeck Team</name>
+    </developer>
+</component>

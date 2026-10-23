@@ -1,0 +1,697 @@
+AppController() construct                                          386.6 ms
+main_window.show() + initialize_content(is_initial=True)          7641.2 ms
+recalculate_list_errors_warnings('Active')                          49.4 ms
+recalculate_list_errors_warnings('Inactive')                        42.7 ms
+inactive search keystroke 'v'                                       56.1 ms
+inactive search keystroke 'va'                                      39.5 ms
+inactive search keystroke 'van'                                     15.8 ms
+inactive search keystroke 'vani'                                    47.7 ms
+inactive search keystroke 'vanil'                                   17.5 ms
+inactive search keystroke 'vanill'                                  15.8 ms
+inactive search keystroke 'vanilla'                                 15.5 ms
+inactive search clear                                               17.9 ms
+active search 'vanilla'                                             76.3 ms
+active search clear                                                 17.2 ms
+_do_sort(check_deps=False)                                        3438.7 ms
+_do_sort(check_deps=True) [dialog stubbed]                        5007.9 ms
+_do_sort again (already sorted)                                   3436.1 ms
+
+===== PROFILE: AppController() construct
+         72498 function calls (70829 primitive calls) in 0.387 seconds
+
+   Ordered by: cumulative time
+   List reduced from 2026 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.018    0.018    0.387    0.387 app/controllers/app_controller.py:27(__init__)
+        1    0.000    0.000    0.147    0.147 app/controllers/app_controller.py:148(initialize_main_window)
+        1    0.001    0.001    0.147    0.147 app/views/main_window.py:56(__init__)
+      126    0.010    0.000    0.106    0.001 app/utils/gui_info.py:35(__init__)
+        1    0.096    0.096    0.096    0.096 {method 'lineSpacing' of 'PySide6.QtGui.QFontMetrics' objects}
+        1    0.000    0.000    0.046    0.046 app/controllers/app_controller.py:75(initialize_settings)
+        1    0.000    0.000    0.040    0.040 app/controllers/app_controller.py:63(set_theme)
+        1    0.003    0.003    0.037    0.037 app/views/settings_dialog.py:37(__init__)
+        1    0.000    0.000    0.034    0.034 app/views/settings_dialog.py:92(_init_tabs)
+        1    0.000    0.000    0.033    0.033 app/views/main_content_panel.py:138(__init__)
+        1    0.031    0.031    0.031    0.031 {built-in method setStyle}
+        1    0.000    0.000    0.029    0.029 app/controllers/app_controller.py:123(initialize_metadata_controller)
+        2    0.000    0.000    0.029    0.014 app/controllers/metadata_db_controller.py:108(get_or_create_cached_instance)
+        1    0.000    0.000    0.028    0.028 app/controllers/metadata_db_controller.py:36(__init__)
+        1    0.000    0.000    0.027    0.027 app/controllers/metadata_db_controller.py:16(__init__)
+        1    0.000    0.000    0.027    0.027 <sqlalchemy generated warned() wrapper for sqlalchemy.engine.create.create_engine>:1(create_engine)
+      2/1    0.000    0.000    0.027    0.027 .venv/lib/python3.14/site-packages/sqlalchemy/util/deprecations.py:249(warned)
+        1    0.000    0.000    0.027    0.027 .venv/lib/python3.14/site-packages/sqlalchemy/engine/create.py:93(create_engine)
+     13/2    0.000    0.000    0.026    0.013 <frozen importlib._bootstrap>:1360(_find_and_load)
+        1    0.000    0.000    0.026    0.026 app/views/main_content_panel.py:178(_init_widgets)
+     13/2    0.000    0.000    0.026    0.013 <frozen importlib._bootstrap>:1308(_find_and_load_unlocked)
+     13/2    0.000    0.000    0.025    0.013 <frozen importlib._bootstrap>:914(_load_unlocked)
+     12/2    0.000    0.000    0.025    0.013 <frozen importlib._bootstrap_external>:753(exec_module)
+        2    0.001    0.000    0.025    0.012 app/views/mods_panel.py:4264(__init__)
+    35/10    0.000    0.000    0.025    0.002 {built-in method builtins.exec}
+     47/5    0.000    0.000    0.025    0.005 <frozen importlib._bootstrap>:483(_call_with_frames_removed)
+      583    0.021    0.000    0.022    0.000 {method 'addWidget' of 'PySide6.QtWidgets.QBoxLayout' objects}
+       67    0.021    0.000    0.022    0.000 {method 'setLayout' of 'PySide6.QtWidgets.QWidget' objects}
+        1    0.000    0.000    0.022    0.022 .venv/lib/python3.14/site-packages/sqlalchemy/engine/url.py:761(_get_entrypoint)
+        1    0.000    0.000    0.022    0.022 .venv/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py:486(load)
+
+
+
+===== PROFILE: main_window.show() + initialize_content(is_initial=True)
+         12157751 function calls (11903233 primitive calls) in 7.628 seconds
+
+   Ordered by: cumulative time
+   List reduced from 2143 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    7.323    7.323 app/views/main_content_panel.py:930(_do_refresh)
+        1    0.000    0.000    3.713    3.713 app/views/main_content_panel.py:817(__repopulate_lists)
+        1    0.000    0.000    3.337    3.337 app/views/main_content_panel.py:645(_insert_data_into_lists)
+        2    0.018    0.009    3.239    1.620 app/views/mods_panel.py:3944(recreate_mod_list)
+    16182    0.031    0.000    3.142    0.000 app/controllers/metadata_db_controller.py:152(get)
+    16182    0.050    0.000    2.501    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+ 2006/511    0.006    0.000    2.328    0.005 app/models/metadata/metadata_factory.py:381(_set_mod_type)
+2006/1347    0.003    0.000    2.135    0.002 app/models/metadata/metadata_structure.py:313(mod_path)
+        1    0.000    0.000    2.096    2.096 app/views/main_content_panel.py:884(do_threaded_loading_animation)
+        1    0.497    0.497    2.086    2.086 {method 'exec_' of 'PySide6.QtCore.QEventLoop' objects}
+    18329    0.007    0.000    2.011    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+    18329    0.057    0.000    2.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+    16183    0.031    0.000    2.003    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+        1    0.000    0.000    1.912    1.912 app/views/mods_panel.py:3913(recreate_mod_list_and_sort)
+     2006    0.011    0.000    1.770    0.001 app/utils/custom_list_widget_item_metadata.py:26(__init__)
+        1    0.000    0.000    1.583    1.583 app/models/animations.py:147(run)
+        1    0.005    0.005    1.583    1.583 app/controllers/metadata_controller.py:114(refresh_metadata)
+4102/3471    0.002    0.000    1.555    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:674(is_dir)
+        1    0.000    0.000    1.487    1.487 app/views/main_content_panel.py:747(__check_and_warn_missing_mod_properties)
+        1    0.000    0.000    1.486    1.486 app/windows/missing_mod_properties_panel.py:31(__init__)
+    18329    0.012    0.000    1.423    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+     6012    0.003    0.000    1.363    0.000 app/controllers/metadata_db_controller.py:172(get_or_create)
+     6018    0.003    0.000    1.079    0.000 app/utils/aux_db_utils.py:11(auxdb_get_aux_db_entry)
+    18329    0.010    0.000    1.044    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+    18329    0.007    0.000    1.034    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+    18329    0.042    0.000    1.026    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1628(_execute_clauseelement)
+        1    0.000    0.000    0.973    0.973 app/models/metadata/metadata_mediator.py:179(refresh_metadata)
+        1    0.000    0.000    0.970    0.970 app/windows/missing_mod_properties_panel.py:280(_populate_from_metadata)
+        1    0.004    0.004    0.968    0.968 app/windows/base_mods_panel.py:1092(_populate_mods)
+12182/3134    0.006    0.000    0.801    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:663(exists)
+
+
+
+===== PROFILE: recalculate_list_errors_warnings('Active')
+         90063 function calls (89363 primitive calls) in 0.049 seconds
+
+   Ordered by: cumulative time
+   List reduced from 166 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.049    0.049 app/views/mods_panel.py:5050(recalculate_list_errors_warnings)
+        1    0.012    0.012    0.046    0.046 app/views/mods_panel.py:3504(recalculate_internal_errors_warnings)
+     5054    0.008    0.000    0.008    0.000 {built-in method tr}
+      807    0.001    0.000    0.007    0.000 app/utils/custom_list_widget_item.py:17(setData)
+      808    0.001    0.000    0.006    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+      807    0.000    0.000    0.005    0.000 app/views/mods_panel.py:3496(_check_version_mismatch)
+      807    0.004    0.000    0.005    0.000 app/controllers/metadata_controller.py:451(is_version_mismatch)
+      807    0.000    0.000    0.004    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+     1043    0.004    0.000    0.004    0.000 {method 'index' of 'list' objects}
+       35    0.000    0.000    0.004    0.000 app/views/mods_panel.py:646(repolish)
+      807    0.002    0.000    0.003    0.000 app/views/mods_panel.py:3463(_check_load_order_violations)
+       35    0.000    0.000    0.002    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       35    0.000    0.000    0.002    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+       35    0.000    0.000    0.002    0.000 app/views/mods_panel.py:570(resizeEvent)
+   770/70    0.001    0.000    0.002    0.000 app/views/mods_panel.py:467(count_icons)
+     6456    0.001    0.000    0.002    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+     1639    0.001    0.000    0.002    0.000 app/views/mods_panel.py:1349(item)
+      807    0.001    0.000    0.001    0.000 app/views/mods_panel.py:3436(_check_incompatibilities)
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:2876(get_all_mod_list_items)
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3006(check_widgets_visible)
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3015(get_visible_indexes)
+      807    0.001    0.000    0.001    0.000 app/views/mods_panel.py:3407(_check_missing_dependencies)
+        1    0.001    0.001    0.001    0.001 {method 'indexAt' of 'PySide6.QtWidgets.QListView' objects}
+     3403    0.001    0.000    0.001    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+     3228    0.001    0.000    0.001    0.000 app/models/metadata/metadata_structure.py:104(__iter__)
+     2456    0.001    0.000    0.001    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1639    0.001    0.000    0.001    0.000 {function ModListWidget.item at 0x118ad01a0}
+     4557    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+     5017    0.001    0.000    0.001    0.000 {built-in method builtins.getattr}
+     6456    0.001    0.000    0.001    0.000 {built-in method builtins.setattr}
+
+
+
+===== PROFILE: recalculate_list_errors_warnings('Inactive')
+         88827 function calls (88127 primitive calls) in 0.043 seconds
+
+   Ordered by: cumulative time
+   List reduced from 142 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.043    0.043 app/views/mods_panel.py:5050(recalculate_list_errors_warnings)
+        1    0.009    0.009    0.042    0.042 app/views/mods_panel.py:3504(recalculate_internal_errors_warnings)
+     7502    0.009    0.000    0.009    0.000 {built-in method tr}
+     1199    0.006    0.000    0.006    0.000 {method 'index' of 'list' objects}
+     1199    0.000    0.000    0.006    0.000 app/views/mods_panel.py:3496(_check_version_mismatch)
+     1199    0.001    0.000    0.006    0.000 app/utils/custom_list_widget_item.py:17(setData)
+     1199    0.004    0.000    0.006    0.000 app/controllers/metadata_controller.py:451(is_version_mismatch)
+     1199    0.001    0.000    0.004    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+     1199    0.000    0.000    0.003    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       35    0.000    0.000    0.002    0.000 app/views/mods_panel.py:646(repolish)
+     9592    0.001    0.000    0.002    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+       35    0.000    0.000    0.001    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       35    0.000    0.000    0.001    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+     1225    0.001    0.000    0.001    0.000 app/views/mods_panel.py:1349(item)
+       35    0.000    0.000    0.001    0.000 app/views/mods_panel.py:570(resizeEvent)
+   770/70    0.001    0.000    0.001    0.000 app/views/mods_panel.py:467(count_icons)
+     4971    0.001    0.000    0.001    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+     6170    0.001    0.000    0.001    0.000 {built-in method builtins.getattr}
+     9592    0.001    0.000    0.001    0.000 {built-in method builtins.setattr}
+     1225    0.001    0.000    0.001    0.000 {function ModListWidget.item at 0x118ad01a0}
+     1234    0.001    0.000    0.001    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     5008    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+     1199    0.000    0.000    0.000    0.000 app/views/mods_panel.py:3500(_check_use_this_instead)
+       35    0.000    0.000    0.000    0.000 {method 'boundingRect' of 'PySide6.QtGui.QFontMetrics' objects}
+     1199    0.000    0.000    0.000    0.000 {function CustomListWidgetItem.setData at 0x118b7d7a0}
+     5991    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+     1225    0.000    0.000    0.000    0.000 {method 'itemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+     1200    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:212(mods_metadata)
+     3598    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+     1199    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:217(game_version)
+
+
+
+===== PROFILE: inactive search keystroke 'v'
+         91017 function calls (89052 primitive calls) in 0.056 seconds
+
+   Ordered by: cumulative time
+   List reduced from 580 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.056    0.056 app/views/mods_panel.py:4989(on_inactive_mods_search)
+        1    0.003    0.003    0.056    0.056 app/views/mods_panel.py:5202(signal_search_and_filters)
+        1    0.000    0.000    0.044    0.044 app/views/mods_panel.py:3006(check_widgets_visible)
+       20    0.000    0.000    0.043    0.002 app/views/mods_panel.py:2948(create_widget_for_item)
+       20    0.004    0.000    0.032    0.002 app/views/mods_panel.py:135(__init__)
+       40    0.000    0.000    0.019    0.000 app/utils/aux_db_utils.py:189(auxdb_get_mod_tags)
+       20    0.000    0.000    0.010    0.001 app/views/mods_panel.py:485(get_tool_tip_text)
+       40    0.000    0.000    0.010    0.000 app/controllers/metadata_db_controller.py:152(get)
+       75    0.000    0.000    0.010    0.000 app/views/mods_panel.py:807(update_tags_label)
+       80    0.000    0.000    0.010    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+       80    0.000    0.000    0.009    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+       40    0.000    0.000    0.008    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+       80    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+       80    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:561(__get__)
+    80/40    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1068(get)
+       20    0.005    0.000    0.006    0.000 {method 'setItemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+       40    0.000    0.000    0.006    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+       40    0.000    0.000    0.006    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1113(_fire_loader_callables)
+       40    0.000    0.000    0.006    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:906(_load_for_state)
+       40    0.000    0.000    0.006    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:1040(_emit_lazyload)
+       20    0.000    0.000    0.006    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/functools.py:1110(__get__)
+       20    0.000    0.000    0.006    0.000 app/models/metadata/metadata_structure.py:399(c_sharp_mod)
+       20    0.000    0.000    0.005    0.000 app/utils/files.py:14(subfolder_contains_candidate_path)
+     1219    0.001    0.000    0.005    0.000 app/utils/custom_list_widget_item.py:17(setData)
+       80    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+       80    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+       80    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1628(_execute_clauseelement)
+       20    0.000    0.000    0.004    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py:672(__exit__)
+       20    0.000    0.000    0.004    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py:254(shutdown)
+     1220    0.001    0.000    0.004    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+
+
+
+===== PROFILE: inactive search keystroke 'va'
+         74487 function calls (72559 primitive calls) in 0.039 seconds
+
+   Ordered by: cumulative time
+   List reduced from 580 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.039    0.039 app/views/mods_panel.py:4989(on_inactive_mods_search)
+        1    0.003    0.003    0.039    0.039 app/views/mods_panel.py:5202(signal_search_and_filters)
+        1    0.000    0.000    0.026    0.026 app/views/mods_panel.py:3006(check_widgets_visible)
+       12    0.000    0.000    0.024    0.002 app/views/mods_panel.py:2948(create_widget_for_item)
+       12    0.002    0.000    0.018    0.001 app/views/mods_panel.py:135(__init__)
+       24    0.000    0.000    0.011    0.000 app/utils/aux_db_utils.py:189(auxdb_get_mod_tags)
+     1211    0.001    0.000    0.007    0.000 app/utils/custom_list_widget_item.py:17(setData)
+       12    0.000    0.000    0.006    0.000 app/views/mods_panel.py:485(get_tool_tip_text)
+       24    0.000    0.000    0.005    0.000 app/controllers/metadata_db_controller.py:152(get)
+       79    0.000    0.000    0.005    0.000 app/views/mods_panel.py:807(update_tags_label)
+     1212    0.001    0.000    0.005    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+       48    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+       48    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+       24    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+       67    0.000    0.000    0.004    0.000 app/views/mods_panel.py:646(repolish)
+     1223    0.000    0.000    0.004    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       48    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+       12    0.003    0.000    0.004    0.000 {method 'setItemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+       48    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:561(__get__)
+    48/24    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1068(get)
+       24    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1113(_fire_loader_callables)
+       24    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:906(_load_for_state)
+       24    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+       24    0.000    0.000    0.003    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:1040(_emit_lazyload)
+       91    0.000    0.000    0.003    0.000 app/views/mods_panel.py:570(resizeEvent)
+       12    0.000    0.000    0.003    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/functools.py:1110(__get__)
+       12    0.000    0.000    0.003    0.000 app/models/metadata/metadata_structure.py:399(c_sharp_mod)
+       48    0.000    0.000    0.003    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+       12    0.000    0.000    0.003    0.000 app/utils/files.py:14(subfolder_contains_candidate_path)
+       48    0.000    0.000    0.003    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+
+
+
+===== PROFILE: inactive search keystroke 'van'
+         45784 function calls (44324 primitive calls) in 0.016 seconds
+
+   Ordered by: cumulative time
+   List reduced from 94 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.016    0.016 app/views/mods_panel.py:4989(on_inactive_mods_search)
+        1    0.003    0.003    0.016    0.016 app/views/mods_panel.py:5202(signal_search_and_filters)
+     1199    0.001    0.000    0.007    0.000 app/utils/custom_list_widget_item.py:17(setData)
+     1200    0.001    0.000    0.006    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+     1199    0.000    0.000    0.005    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       67    0.000    0.000    0.004    0.000 app/views/mods_panel.py:646(repolish)
+       79    0.000    0.000    0.003    0.000 app/views/mods_panel.py:570(resizeEvent)
+       67    0.000    0.000    0.003    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       67    0.000    0.000    0.002    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+ 1606/146    0.001    0.000    0.002    0.000 app/views/mods_panel.py:467(count_icons)
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3006(check_widgets_visible)
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3015(get_visible_indexes)
+     1225    0.000    0.000    0.001    0.000 app/views/mods_panel.py:1349(item)
+       79    0.001    0.000    0.001    0.000 {method 'boundingRect' of 'PySide6.QtGui.QFontMetrics' objects}
+        1    0.000    0.000    0.001    0.001 {method 'indexAt' of 'PySide6.QtWidgets.QListView' objects}
+     1199    0.000    0.000    0.001    0.000 app/controllers/metadata_controller.py:337(get_mod)
+     2398    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+     1266    0.000    0.000    0.000    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1225    0.000    0.000    0.000    0.000 {function ModListWidget.item at 0x118ad01a0}
+     1199    0.000    0.000    0.000    0.000 {function CustomListWidgetItem.setData at 0x118b7d7a0}
+     2733    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+     1199    0.000    0.000    0.000    0.000 {method 'setHidden' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1534    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+     1199    0.000    0.000    0.000    0.000 app/models/divider.py:7(is_divider_uuid)
+     1199    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:212(mods_metadata)
+     1225    0.000    0.000    0.000    0.000 {method 'itemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+     2398    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+      620    0.000    0.000    0.000    0.000 {method 'children' of 'PySide6.QtCore.QObject' objects}
+     1603    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+     2439    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+
+
+
+===== PROFILE: inactive search keystroke 'vani'
+         86701 function calls (84391 primitive calls) in 0.048 seconds
+
+   Ordered by: cumulative time
+   List reduced from 580 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.048    0.048 app/views/mods_panel.py:4989(on_inactive_mods_search)
+        1    0.003    0.003    0.048    0.048 app/views/mods_panel.py:5202(signal_search_and_filters)
+        1    0.000    0.000    0.034    0.034 app/views/mods_panel.py:3006(check_widgets_visible)
+       16    0.000    0.000    0.033    0.002 app/views/mods_panel.py:2948(create_widget_for_item)
+       16    0.003    0.000    0.024    0.002 app/views/mods_panel.py:135(__init__)
+       32    0.000    0.000    0.015    0.000 app/utils/aux_db_utils.py:189(auxdb_get_mod_tags)
+       16    0.000    0.000    0.008    0.000 app/views/mods_panel.py:485(get_tool_tip_text)
+       32    0.000    0.000    0.007    0.000 app/controllers/metadata_db_controller.py:152(get)
+       99    0.000    0.000    0.007    0.000 app/views/mods_panel.py:807(update_tags_label)
+       64    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+       64    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+     1215    0.001    0.000    0.007    0.000 app/utils/custom_list_widget_item.py:17(setData)
+       32    0.000    0.000    0.006    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+     1216    0.001    0.000    0.006    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+       64    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+       83    0.001    0.000    0.005    0.000 app/views/mods_panel.py:646(repolish)
+       16    0.004    0.000    0.005    0.000 {method 'setItemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+       64    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:561(__get__)
+    64/32    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1068(get)
+       32    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1113(_fire_loader_callables)
+       32    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:906(_load_for_state)
+       32    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+       32    0.000    0.000    0.005    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:1040(_emit_lazyload)
+     1231    0.000    0.000    0.005    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       16    0.000    0.000    0.004    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/functools.py:1110(__get__)
+       16    0.000    0.000    0.004    0.000 app/models/metadata/metadata_structure.py:399(c_sharp_mod)
+       64    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+       16    0.000    0.000    0.004    0.000 app/utils/files.py:14(subfolder_contains_candidate_path)
+       64    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+       64    0.000    0.000    0.004    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1628(_execute_clauseelement)
+
+
+
+===== PROFILE: inactive search keystroke 'vanil'
+         49204 function calls (47384 primitive calls) in 0.017 seconds
+
+   Ordered by: cumulative time
+   List reduced from 94 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.017    0.017 app/views/mods_panel.py:4989(on_inactive_mods_search)
+        1    0.003    0.003    0.017    0.017 app/views/mods_panel.py:5202(signal_search_and_filters)
+     1199    0.001    0.000    0.009    0.000 app/utils/custom_list_widget_item.py:17(setData)
+     1200    0.001    0.000    0.007    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+     1199    0.000    0.000    0.006    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       83    0.001    0.000    0.006    0.000 app/views/mods_panel.py:646(repolish)
+       99    0.000    0.000    0.003    0.000 app/views/mods_panel.py:570(resizeEvent)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+ 2002/182    0.001    0.000    0.003    0.000 app/views/mods_panel.py:467(count_icons)
+        1    0.000    0.000    0.002    0.002 app/views/mods_panel.py:3006(check_widgets_visible)
+        1    0.000    0.000    0.002    0.002 app/views/mods_panel.py:3015(get_visible_indexes)
+       99    0.001    0.000    0.001    0.000 {method 'boundingRect' of 'PySide6.QtGui.QFontMetrics' objects}
+        1    0.000    0.000    0.001    0.001 {method 'indexAt' of 'PySide6.QtWidgets.QListView' objects}
+     1225    0.000    0.000    0.001    0.000 app/views/mods_panel.py:1349(item)
+     1199    0.000    0.000    0.001    0.000 app/controllers/metadata_controller.py:337(get_mod)
+     2398    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+     1282    0.000    0.000    0.000    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1225    0.000    0.000    0.000    0.000 {function ModListWidget.item at 0x118ad01a0}
+     1199    0.000    0.000    0.000    0.000 {function CustomListWidgetItem.setData at 0x118b7d7a0}
+     2813    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+     1199    0.000    0.000    0.000    0.000 {method 'setHidden' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1614    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+     1199    0.000    0.000    0.000    0.000 app/models/divider.py:7(is_divider_uuid)
+     3042    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+      775    0.000    0.000    0.000    0.000 {method 'children' of 'PySide6.QtCore.QObject' objects}
+       25    0.000    0.000    0.000    0.000 {method 'elidedText' of 'PySide6.QtGui.QFontMetrics' objects}
+     1225    0.000    0.000    0.000    0.000 {method 'itemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+     1199    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:212(mods_metadata)
+      593    0.000    0.000    0.000    0.000 {method 'pixmap' of 'PySide6.QtWidgets.QLabel' objects}
+
+
+
+===== PROFILE: inactive search keystroke 'vanill'
+         48064 function calls (46404 primitive calls) in 0.016 seconds
+
+   Ordered by: cumulative time
+   List reduced from 89 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.016    0.016 app/views/mods_panel.py:4989(on_inactive_mods_search)
+        1    0.003    0.003    0.016    0.016 app/views/mods_panel.py:5202(signal_search_and_filters)
+     1199    0.001    0.000    0.008    0.000 app/utils/custom_list_widget_item.py:17(setData)
+     1200    0.001    0.000    0.007    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+     1199    0.000    0.000    0.006    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       83    0.001    0.000    0.005    0.000 app/views/mods_panel.py:646(repolish)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:570(resizeEvent)
+ 1826/166    0.001    0.000    0.002    0.000 app/views/mods_panel.py:467(count_icons)
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3006(check_widgets_visible)
+       83    0.001    0.000    0.001    0.000 {method 'boundingRect' of 'PySide6.QtGui.QFontMetrics' objects}
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3015(get_visible_indexes)
+     1225    0.000    0.000    0.001    0.000 app/views/mods_panel.py:1349(item)
+     1199    0.000    0.000    0.001    0.000 app/controllers/metadata_controller.py:337(get_mod)
+     2398    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+     1282    0.000    0.000    0.000    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1199    0.000    0.000    0.000    0.000 {function CustomListWidgetItem.setData at 0x118b7d7a0}
+     1199    0.000    0.000    0.000    0.000 {method 'setHidden' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1614    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+     2813    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+     1199    0.000    0.000    0.000    0.000 app/models/divider.py:7(is_divider_uuid)
+     1225    0.000    0.000    0.000    0.000 {function ModListWidget.item at 0x118ad01a0}
+     2781    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+     1199    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:212(mods_metadata)
+     2398    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+     1225    0.000    0.000    0.000    0.000 {method 'itemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+      540    0.000    0.000    0.000    0.000 {method 'pixmap' of 'PySide6.QtWidgets.QLabel' objects}
+        1    0.000    0.000    0.000    0.000 {method 'indexAt' of 'PySide6.QtWidgets.QListView' objects}
+     1826    0.000    0.000    0.000    0.000 {method 'isHidden' of 'PySide6.QtWidgets.QWidget' objects}
+
+
+
+===== PROFILE: inactive search keystroke 'vanilla'
+         48064 function calls (46404 primitive calls) in 0.015 seconds
+
+   Ordered by: cumulative time
+   List reduced from 89 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.015    0.015 app/views/mods_panel.py:4989(on_inactive_mods_search)
+        1    0.003    0.003    0.015    0.015 app/views/mods_panel.py:5202(signal_search_and_filters)
+     1199    0.001    0.000    0.008    0.000 app/utils/custom_list_widget_item.py:17(setData)
+     1200    0.001    0.000    0.007    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+     1199    0.000    0.000    0.005    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       83    0.001    0.000    0.005    0.000 app/views/mods_panel.py:646(repolish)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:570(resizeEvent)
+ 1826/166    0.001    0.000    0.002    0.000 app/views/mods_panel.py:467(count_icons)
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3006(check_widgets_visible)
+       83    0.001    0.000    0.001    0.000 {method 'boundingRect' of 'PySide6.QtGui.QFontMetrics' objects}
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3015(get_visible_indexes)
+     1225    0.000    0.000    0.001    0.000 app/views/mods_panel.py:1349(item)
+     1199    0.000    0.000    0.001    0.000 app/controllers/metadata_controller.py:337(get_mod)
+     2398    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+     1282    0.000    0.000    0.000    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1199    0.000    0.000    0.000    0.000 {function CustomListWidgetItem.setData at 0x118b7d7a0}
+     1199    0.000    0.000    0.000    0.000 {method 'setHidden' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1614    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+     2813    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+     1199    0.000    0.000    0.000    0.000 app/models/divider.py:7(is_divider_uuid)
+     2781    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+     1225    0.000    0.000    0.000    0.000 {function ModListWidget.item at 0x118ad01a0}
+     1199    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:212(mods_metadata)
+     2398    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+     1225    0.000    0.000    0.000    0.000 {method 'itemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+      540    0.000    0.000    0.000    0.000 {method 'pixmap' of 'PySide6.QtWidgets.QLabel' objects}
+        1    0.000    0.000    0.000    0.000 {method 'indexAt' of 'PySide6.QtWidgets.QListView' objects}
+     2398    0.000    0.000    0.000    0.000 {built-in method builtins.setattr}
+
+
+
+===== PROFILE: inactive search clear
+         45367 function calls (43627 primitive calls) in 0.018 seconds
+
+   Ordered by: cumulative time
+   List reduced from 96 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.018    0.018 app/views/mods_panel.py:4995(on_inactive_mods_search_clear)
+        1    0.000    0.000    0.018    0.018 app/views/mods_panel.py:5150(signal_clear_search)
+        1    0.003    0.003    0.018    0.018 app/views/mods_panel.py:5202(signal_search_and_filters)
+     1199    0.001    0.000    0.008    0.000 app/utils/custom_list_widget_item.py:17(setData)
+     1200    0.001    0.000    0.007    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+     1199    0.000    0.000    0.006    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       83    0.001    0.000    0.005    0.000 app/views/mods_panel.py:646(repolish)
+        1    0.000    0.000    0.004    0.004 app/views/mods_panel.py:3006(check_widgets_visible)
+        1    0.000    0.000    0.004    0.004 app/views/mods_panel.py:3015(get_visible_indexes)
+        1    0.003    0.003    0.004    0.004 {method 'indexAt' of 'PySide6.QtWidgets.QListView' objects}
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       91    0.000    0.000    0.003    0.000 app/views/mods_panel.py:570(resizeEvent)
+       83    0.000    0.000    0.003    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+ 1914/174    0.001    0.000    0.002    0.000 app/views/mods_panel.py:467(count_icons)
+       91    0.001    0.000    0.001    0.000 {method 'boundingRect' of 'PySide6.QtGui.QFontMetrics' objects}
+     1225    0.000    0.000    0.001    0.000 app/views/mods_panel.py:1349(item)
+     1199    0.000    0.000    0.001    0.000 app/controllers/metadata_controller.py:337(get_mod)
+     2398    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+     1199    0.000    0.000    0.000    0.000 {method 'setHidden' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1282    0.000    0.000    0.000    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1199    0.000    0.000    0.000    0.000 {function CustomListWidgetItem.setData at 0x118b7d7a0}
+     1614    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+     1225    0.000    0.000    0.000    0.000 {method 'itemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+     1199    0.000    0.000    0.000    0.000 app/models/divider.py:7(is_divider_uuid)
+     2911    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+     2813    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+     1199    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:212(mods_metadata)
+     1225    0.000    0.000    0.000    0.000 {function ModListWidget.item at 0x118ad01a0}
+      173    0.000    0.000    0.000    0.000 app/views/mods_panel.py:1720(eventFilter)
+      566    0.000    0.000    0.000    0.000 {method 'pixmap' of 'PySide6.QtWidgets.QLabel' objects}
+
+
+
+===== PROFILE: active search 'vanilla'
+         117850 function calls (115360 primitive calls) in 0.076 seconds
+
+   Ordered by: cumulative time
+   List reduced from 583 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.076    0.076 app/views/mods_panel.py:4972(on_active_mods_search)
+        1    0.002    0.002    0.076    0.076 app/views/mods_panel.py:5202(signal_search_and_filters)
+        1    0.000    0.000    0.064    0.064 app/views/mods_panel.py:3006(check_widgets_visible)
+       30    0.000    0.000    0.063    0.002 app/views/mods_panel.py:2948(create_widget_for_item)
+       30    0.005    0.000    0.045    0.001 app/views/mods_panel.py:135(__init__)
+       60    0.000    0.000    0.027    0.000 app/utils/aux_db_utils.py:189(auxdb_get_mod_tags)
+       30    0.000    0.000    0.015    0.000 app/views/mods_panel.py:485(get_tool_tip_text)
+       60    0.000    0.000    0.014    0.000 app/controllers/metadata_db_controller.py:152(get)
+       95    0.000    0.000    0.014    0.000 app/views/mods_panel.py:807(update_tags_label)
+      120    0.000    0.000    0.014    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+      120    0.000    0.000    0.013    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+       60    0.000    0.000    0.011    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+      120    0.000    0.000    0.010    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+       30    0.008    0.000    0.010    0.000 {method 'setItemWidget' of 'PySide6.QtWidgets.QListWidget' objects}
+      120    0.000    0.000    0.009    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:561(__get__)
+   120/60    0.000    0.000    0.009    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1068(get)
+       60    0.000    0.000    0.009    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1113(_fire_loader_callables)
+       60    0.000    0.000    0.009    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:906(_load_for_state)
+       60    0.000    0.000    0.009    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+       60    0.001    0.000    0.009    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:1040(_emit_lazyload)
+      120    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+       30    0.000    0.000    0.007    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/functools.py:1110(__get__)
+      120    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+       30    0.000    0.000    0.007    0.000 app/models/metadata/metadata_structure.py:399(c_sharp_mod)
+      120    0.000    0.000    0.007    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1628(_execute_clauseelement)
+       30    0.000    0.000    0.007    0.000 app/utils/files.py:14(subfolder_contains_candidate_path)
+       65    0.001    0.000    0.006    0.000 app/views/mods_panel.py:646(repolish)
+       30    0.000    0.000    0.005    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py:672(__exit__)
+       30    0.000    0.000    0.005    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py:254(shutdown)
+       32    0.000    0.000    0.005    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py:1097(join)
+
+
+
+===== PROFILE: active search clear
+         44161 function calls (42561 primitive calls) in 0.017 seconds
+
+   Ordered by: cumulative time
+   List reduced from 99 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.017    0.017 app/views/mods_panel.py:4978(on_active_mods_search_clear)
+        1    0.000    0.000    0.017    0.017 app/views/mods_panel.py:5150(signal_clear_search)
+        1    0.002    0.002    0.017    0.017 app/views/mods_panel.py:5202(signal_search_and_filters)
+      807    0.000    0.000    0.007    0.000 app/utils/custom_list_widget_item.py:17(setData)
+      808    0.001    0.000    0.006    0.000 {method 'emit' of 'PySide6.QtCore.SignalInstance' objects}
+      807    0.000    0.000    0.005    0.000 app/views/mods_panel.py:3038(handle_item_data_changed)
+       65    0.000    0.000    0.005    0.000 app/views/mods_panel.py:646(repolish)
+       95    0.000    0.000    0.004    0.000 app/views/mods_panel.py:570(resizeEvent)
+        1    0.000    0.000    0.003    0.003 app/views/mods_panel.py:3006(check_widgets_visible)
+        1    0.000    0.000    0.003    0.003 app/views/mods_panel.py:3015(get_visible_indexes)
+        1    0.002    0.002    0.003    0.003 {method 'indexAt' of 'PySide6.QtWidgets.QListView' objects}
+       65    0.000    0.000    0.003    0.000 app/views/mods_panel.py:824(set_tags_visible)
+       65    0.000    0.000    0.003    0.000 app/views/mods_panel.py:411(_resize_text_after_icon_toggle)
+ 1760/160    0.001    0.000    0.003    0.000 app/views/mods_panel.py:467(count_icons)
+        1    0.000    0.000    0.002    0.002 app/views/mods_panel.py:3285(apply_collapse_states)
+     2446    0.001    0.000    0.001    0.000 app/views/mods_panel.py:1349(item)
+       95    0.001    0.000    0.001    0.000 {method 'boundingRect' of 'PySide6.QtGui.QFontMetrics' objects}
+       76    0.001    0.000    0.001    0.000 {method 'elidedText' of 'PySide6.QtGui.QFontMetrics' objects}
+        1    0.000    0.000    0.001    0.001 app/views/mods_panel.py:3278(_update_divider_mod_counts)
+     2486    0.001    0.000    0.001    0.000 {method 'data' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     1614    0.000    0.000    0.000    0.000 {method 'setHidden' of 'PySide6.QtWidgets.QListWidgetItem' objects}
+     2446    0.000    0.000    0.000    0.000 {function ModListWidget.item at 0x118ad01a0}
+      807    0.000    0.000    0.000    0.000 app/controllers/metadata_controller.py:337(get_mod)
+     4360    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+     1614    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:224(__setitem__)
+      710    0.000    0.000    0.000    0.000 {method 'pixmap' of 'PySide6.QtWidgets.QLabel' objects}
+     2855    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+      870    0.000    0.000    0.000    0.000 {method 'children' of 'PySide6.QtCore.QObject' objects}
+      807    0.000    0.000    0.000    0.000 {function CustomListWidgetItem.setData at 0x118b7d7a0}
+     1132    0.000    0.000    0.000    0.000 app/utils/custom_list_widget_item_metadata.py:215(__getitem__)
+
+
+
+===== PROFILE: _do_sort(check_deps=False)
+         6960314 function calls (6835298 primitive calls) in 3.437 seconds
+
+   Ordered by: cumulative time
+   List reduced from 880 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.017    0.017    3.438    3.438 app/views/main_content_panel.py:1061(_do_sort)
+        1    0.000    0.000    3.312    3.312 app/views/main_content_panel.py:645(_insert_data_into_lists)
+        2    0.018    0.009    3.212    1.606 app/views/mods_panel.py:3944(recreate_mod_list)
+    12172    0.023    0.000    2.188    0.000 app/controllers/metadata_db_controller.py:152(get)
+        1    0.000    0.000    1.904    1.904 app/views/mods_panel.py:3913(recreate_mod_list_and_sort)
+     2006    0.011    0.000    1.772    0.001 app/utils/custom_list_widget_item_metadata.py:26(__init__)
+    12172    0.038    0.000    1.711    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+    14314    0.005    0.000    1.383    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+    14314    0.043    0.000    1.378    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+    12172    0.023    0.000    1.332    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+    14314    0.010    0.000    1.096    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+     6018    0.003    0.000    1.080    0.000 app/utils/aux_db_utils.py:11(auxdb_get_aux_db_entry)
+    14314    0.008    0.000    0.801    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+    14314    0.006    0.000    0.793    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+    14314    0.033    0.000    0.787    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1628(_execute_clauseelement)
+     2142    0.003    0.000    0.702    0.000 app/utils/aux_db_utils.py:189(auxdb_get_mod_tags)
+     2006    0.004    0.000    0.636    0.000 app/controllers/metadata_db_controller.py:118(update)
+    14314    0.023    0.000    0.500    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1777(_execute_context)
+42534/18462    0.030    0.000    0.404    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py:93(_go)
+     2006    0.001    0.000    0.404    0.000 app/controllers/metadata_db_controller.py:172(get_or_create)
+     2006    0.001    0.000    0.400    0.000 app/utils/aux_db_utils.py:96(auxdb_get_mod_warning_toggled)
+    14314    0.023    0.000    0.376    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1836(_exec_single_context)
+     2006    0.001    0.000    0.346    0.000 app/utils/aux_db_utils.py:44(auxdb_get_mod_color)
+     2006    0.001    0.000    0.340    0.000 app/utils/aux_db_utils.py:71(auxdb_get_mod_user_notes)
+    69428    0.111    0.000    0.337    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/coercions.py:323(expect)
+    20332    0.004    0.000    0.325    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:561(__get__)
+8296/6154    0.003    0.000    0.321    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1068(get)
+     2142    0.001    0.000    0.306    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1113(_fire_loader_callables)
+52972/14314    0.021    0.000    0.306    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/operators.py:741(__eq__)
+     2142    0.005    0.000    0.305    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:906(_load_for_state)
+
+
+
+===== PROFILE: _do_sort(check_deps=True) [dialog stubbed]
+         11402014 function calls (11280264 primitive calls) in 5.008 seconds
+
+   Ordered by: cumulative time
+   List reduced from 809 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.018    0.018    5.008    5.008 app/views/main_content_panel.py:1061(_do_sort)
+        1    0.000    0.000    3.451    3.451 app/views/main_content_panel.py:645(_insert_data_into_lists)
+        2    0.019    0.009    3.352    1.676 app/views/mods_panel.py:3944(recreate_mod_list)
+    12172    0.023    0.000    2.319    0.000 app/controllers/metadata_db_controller.py:152(get)
+     2006    0.011    0.000    1.908    0.001 app/utils/custom_list_widget_item_metadata.py:26(__init__)
+        1    0.000    0.000    1.907    1.907 app/views/mods_panel.py:3913(recreate_mod_list_and_sort)
+    12172    0.038    0.000    1.840    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+        1    0.002    0.002    1.453    1.453 app/services/dependency_resolver.py:154(build_dependencies_dialog_context)
+       32    0.276    0.009    1.451    0.045 app/services/dependency_resolver.py:116(resolve_dependency_workshop_id)
+    14314    0.005    0.000    1.395    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+    14314    0.043    0.000    1.389    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+    12172    0.023    0.000    1.338    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+    14314    0.010    0.000    1.107    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+     6018    0.003    0.000    1.082    0.000 app/utils/aux_db_utils.py:11(auxdb_get_aux_db_entry)
+       32    0.072    0.002    0.979    0.031 app/services/dependency_resolver.py:54(_resolve_from_about_xml)
+     2142    0.003    0.000    0.838    0.000 app/utils/aux_db_utils.py:189(auxdb_get_mod_tags)
+    14314    0.008    0.000    0.808    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+    14314    0.006    0.000    0.800    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+    14314    0.033    0.000    0.794    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1628(_execute_clauseelement)
+    25824    0.029    0.000    0.700    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/xml/etree/ElementTree.py:1217(parse)
+    25824    0.059    0.000    0.669    0.000 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/xml/etree/ElementTree.py:557(parse)
+     2006    0.004    0.000    0.641    0.000 app/controllers/metadata_db_controller.py:118(update)
+    14314    0.023    0.000    0.506    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1777(_execute_context)
+42534/18462    0.030    0.000    0.407    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py:93(_go)
+     2006    0.001    0.000    0.406    0.000 app/controllers/metadata_db_controller.py:172(get_or_create)
+     2006    0.001    0.000    0.400    0.000 app/utils/aux_db_utils.py:96(auxdb_get_mod_warning_toggled)
+    14314    0.023    0.000    0.381    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1836(_exec_single_context)
+     2006    0.001    0.000    0.345    0.000 app/utils/aux_db_utils.py:44(auxdb_get_mod_color)
+     2006    0.001    0.000    0.342    0.000 app/utils/aux_db_utils.py:71(auxdb_get_mod_user_notes)
+    69428    0.111    0.000    0.339    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/coercions.py:323(expect)
+
+
+
+===== PROFILE: _do_sort again (already sorted)
+         6847066 function calls (6725316 primitive calls) in 3.436 seconds
+
+   Ordered by: cumulative time
+   List reduced from 781 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.018    0.018    3.436    3.436 app/views/main_content_panel.py:1061(_do_sort)
+        1    0.000    0.000    3.331    3.331 app/views/main_content_panel.py:645(_insert_data_into_lists)
+        2    0.019    0.009    3.232    1.616 app/views/mods_panel.py:3944(recreate_mod_list)
+    12172    0.023    0.000    2.203    0.000 app/controllers/metadata_db_controller.py:152(get)
+        1    0.000    0.000    1.911    1.911 app/views/mods_panel.py:3913(recreate_mod_list_and_sort)
+     2006    0.011    0.000    1.786    0.001 app/utils/custom_list_widget_item_metadata.py:26(__init__)
+    12172    0.038    0.000    1.722    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2795(first)
+    14314    0.005    0.000    1.394    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2406(execute)
+    14314    0.043    0.000    1.389    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py:2201(_execute_internal)
+    12172    0.023    0.000    1.343    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/query.py:2916(_iter)
+    14314    0.010    0.000    1.105    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/context.py:306(orm_execute_statement)
+     6018    0.003    0.000    1.088    0.000 app/utils/aux_db_utils.py:11(auxdb_get_aux_db_entry)
+    14314    0.008    0.000    0.809    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1414(execute)
+    14314    0.006    0.000    0.801    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py:524(_execute_on_connection)
+    14314    0.033    0.000    0.795    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1628(_execute_clauseelement)
+     2142    0.003    0.000    0.708    0.000 app/utils/aux_db_utils.py:189(auxdb_get_mod_tags)
+     2006    0.004    0.000    0.643    0.000 app/controllers/metadata_db_controller.py:118(update)
+    14314    0.023    0.000    0.505    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1777(_execute_context)
+42534/18462    0.030    0.000    0.410    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py:93(_go)
+     2006    0.001    0.000    0.407    0.000 app/controllers/metadata_db_controller.py:172(get_or_create)
+     2006    0.001    0.000    0.402    0.000 app/utils/aux_db_utils.py:96(auxdb_get_mod_warning_toggled)
+    14314    0.023    0.000    0.380    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py:1836(_exec_single_context)
+     2006    0.001    0.000    0.347    0.000 app/utils/aux_db_utils.py:44(auxdb_get_mod_color)
+     2006    0.001    0.000    0.344    0.000 app/utils/aux_db_utils.py:71(auxdb_get_mod_user_notes)
+    69428    0.112    0.000    0.340    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/coercions.py:323(expect)
+    20332    0.004    0.000    0.328    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:561(__get__)
+8296/6154    0.003    0.000    0.324    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1068(get)
+     2142    0.001    0.000    0.309    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py:1113(_fire_loader_callables)
+52972/14314    0.021    0.000    0.309    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/sql/operators.py:741(__eq__)
+     2142    0.005    0.000    0.308    0.000 .venv/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py:906(_load_for_state)
+
+

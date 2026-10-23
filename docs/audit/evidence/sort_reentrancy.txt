@@ -1,0 +1,6 @@
+[ 1.9s] dialogs open=1; main window enabled=True -> clicking Sort again
+[ 3.8s] dialogs open=2; user closes the FIRST (outer Sort's) dialog
+[ 3.9s] after closing it: outer Sort returned? no; dialogs open=1
+[ 7.8s] outer Sort still waiting (returned=False); dialogs open=1; closing remaining
+[ 8.8s] inner Sort returned
+[10.2s] outer Sort returned

@@ -1,0 +1,9 @@
+[submodule "submodules/steamfiles"]
+	path = submodules/steamfiles
+	url = https://github.com/RimSort/steamfiles
+	ignore = dirty
+[submodule "submodules/SteamworksPy"]
+	path = submodules/SteamworksPy
+	url = https://github.com/RimSort/SteamworksPy
+	branch = master
+	ignore = dirty

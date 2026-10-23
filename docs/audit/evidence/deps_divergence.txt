@@ -1,0 +1,2 @@
+Sort pre-check dialog (dependency_resolver): {'some.mod': {'brrainz.harmony'}}
+Mod list error icon (mods_panel._check_missing_dependencies + _has_replacement): Harmony counted as satisfied by Prepatcher

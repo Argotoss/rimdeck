@@ -1,0 +1,17 @@
+refresh_metadata (cold: parse + aux db + acf)                    584.4 ms
+refresh_metadata (warm, 2nd run)                                 486.0 ms
+get_mods_from_list(ModsConfig.xml)                                18.7 ms
+compile() (CompiledDependencyData.build)                           3.3 ms
+compile(use_moddependencies_as_loadTheseBefore=True)               1.6 ms
+Sorter(Topological).sort()                                         0.7 ms
+Sorter(Alphabetical).sort()                                        1.4 ms
+get_missing_dependencies(active)                                   0.2 ms
+build_dependencies_dialog_context(active) [sort pre-check]       247.6 ms
+is_version_mismatch() x all mods                                   1.6 ms
+has_alternative_mod() x all mods                                   0.2 ms
+sort_paths(inactive, MODNAME)                                      0.2 ms
+sort_paths(inactive, FILESYSTEM_MODIFIED_TIME)                     1.9 ms
+sort_paths(inactive, MOD_TAGS)                                    67.8 ms
+recreate_mod_list item-metadata pattern (active)                 255.9 ms
+recreate_mod_list item-metadata pattern (inactive)               239.6 ms
+baseline: pure-python substring search over all mods               0.4 ms

@@ -1,0 +1,6 @@
+ids: author.my_steamworks, plain.mod (both duplicated local+workshop)
+active: ['/local/steamworks', '/workshop/111', '/local/plain']
+missing: []
+
+ids: plain.mod listed twice in ModsConfig
+active: ['/local/plain']

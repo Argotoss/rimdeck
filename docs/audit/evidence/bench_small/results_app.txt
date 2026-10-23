@@ -1,0 +1,22 @@
+AppController() construct                                          342.4 ms
+main_window.show() + initialize_content(is_initial=True)          3451.0 ms
+recalculate_list_errors_warnings('Active')                          13.4 ms
+recalculate_list_errors_warnings('Inactive')                        10.0 ms
+inactive search keystroke 'v'                                       51.9 ms
+inactive search keystroke 'va'                                      24.0 ms
+inactive search keystroke 'van'                                      4.7 ms
+inactive search keystroke 'vani'                                    11.5 ms
+inactive search keystroke 'vanil'                                    4.2 ms
+inactive search keystroke 'vanill'                                   4.0 ms
+inactive search keystroke 'vanilla'                                  4.4 ms
+inactive search clear                                                9.3 ms
+active search 'vanilla'                                             34.4 ms
+active search clear                                                  9.3 ms
+_do_sort(check_deps=False)                                         667.2 ms
+_do_sort(check_deps=True) [dialog stubbed]                         856.8 ms
+_do_sort again (already sorted)                                    694.7 ms
+_do_refresh(is_initial=False) [Refresh button] #1                 3777.0 ms
+_do_refresh(is_initial=False) [Refresh button] #2                 4063.8 ms
+_do_refresh(is_initial=False) [Refresh button] #3                 4214.4 ms
+_do_refresh(is_initial=False) [Refresh button] #4                 4305.7 ms
+_do_refresh(is_initial=False) [Refresh button] #5                 4687.8 ms

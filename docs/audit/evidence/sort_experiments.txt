@@ -1,0 +1,39 @@
+
+### E1 simple 2-cycle (A after B, B after A)
+ok=False result=[] warning_details=['a -> b']
+-> whole sort aborted; unrelated mod 'c' is not sorted either; no partial result
+
+### E2 cycle enumeration blow-up (dense SCC, as from a bad community rule set)
+n=6:      0.8 ms, cycles listed in dialog=409, details chars=10880
+n=7:      2.2 ms, cycles listed in dialog=2365, details chars=77420
+n=8:     13.6 ms, cycles listed in dialog=16064, details chars=625422
+n=9:    102.7 ms, cycles listed in dialog=125664, details chars=5667070
+
+### E3 duplicate packageId active twice (local copy + workshop copy)
+active in=3 sorted out=2 -> ['Dup (workshop)', 'other']
+
+### E4 non-About mods (scenario / invalid folder) in the active list
+active in=3 sorted out=2 -> ['a', 'b']
+
+### E5 modDependencies without loadAfter (default setting deps_as_order=False)
+default: ['AA Uses Library', 'ZZ Library']  (dependent before its dependency)
+use_moddependencies_as_loadTheseBefore=True: ['ZZ Library', 'AA Uses Library']
+
+### E6 random DAGs: constraint satisfaction, topo vs alphabetical
+Topological: total loadBefore/loadAfter violations over 200 random DAGs = 0
+Alphabetical: total loadBefore/loadAfter violations over 200 random DAGs = 145
+
+### E7 tier contradictions are resolved silently
+ok=True ['Z Load Last', 'X', 'HugsLib'] violations=[]
+
+### E8 the current order is ignored (unconstrained mods are re-alphabetised)
+user order C, A, B (B after C) -> sorted ['A', 'C', 'B']
+
+### E9 determinism across PYTHONHASHSEED (two mods share a display name)
+seed 1: Topological ['lib.core', 'author1.patch', 'author3.patch', 'author2.patch'] | Alphabetical ['lib.core', 'author1.patch', 'author2.patch', 'author3.patch']
+seed 2: Topological ['lib.core', 'author3.patch', 'author2.patch', 'author1.patch'] | Alphabetical ['lib.core', 'author1.patch', 'author3.patch', 'author2.patch']
+seed 3: Topological ['lib.core', 'author3.patch', 'author2.patch', 'author1.patch'] | Alphabetical ['lib.core', 'author3.patch', 'author1.patch', 'author2.patch']
+seed 4: Topological ['lib.core', 'author3.patch', 'author1.patch', 'author2.patch'] | Alphabetical ['lib.core', 'author2.patch', 'author3.patch', 'author1.patch']
+seed 5: Topological ['lib.core', 'author3.patch', 'author2.patch', 'author1.patch'] | Alphabetical ['lib.core', 'author1.patch', 'author2.patch', 'author3.patch']
+seed 6: Topological ['lib.core', 'author2.patch', 'author3.patch', 'author1.patch'] | Alphabetical ['lib.core', 'author1.patch', 'author2.patch', 'author3.patch']
+distinct orders: 6
